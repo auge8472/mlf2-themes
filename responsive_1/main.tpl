@@ -65,13 +65,13 @@
 <div id="subnav-2">{include file="$theme/subtemplates/subnavigation_2.inc.tpl"}</div>
 </div>
 
-<div id="content">
+<main role="main" id="content">
 {if $subtemplate}
 {include file="$theme/subtemplates/$subtemplate"}
 {else}
 {$content|default:""}
 {/if}
-</div>
+</main>
 
 <footer>
 <div id="footer-1">{if $total_users_online}{#counter_users_online#|replace:"[total_postings]":$total_postings|replace:"[total_threads]":$total_threads|replace:"[registered_users]":$registered_users|replace:"[total_users_online]":$total_users_online|replace:"[registered_users_online]":$registered_users_online|replace:"[unregistered_users_online]":$unregistered_users_online}{else}{#counter#|replace:"[total_postings]":$total_postings|replace:"[total_threads]":$total_threads|replace:"[registered_users]":$registered_users}{/if}<br />
