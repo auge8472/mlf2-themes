@@ -2,7 +2,7 @@
 <form action="index.php" method="get" accept-charset="{#charset#}">
 <div style="margin-bottom:20px;">
 <input type="hidden" name="mode" value="search" />
-<input type="text" name="search" value="{$search|default:""}" size="30" />
+<input type="search" name="search" value="{$search|default:""}" size="30" />
 {if $categories}
 <select size="1" name="p_category">
 <option value="0"{if $category==0} selected="selected"{/if}>{#all_categories#}</option>
