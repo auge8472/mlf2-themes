@@ -7,11 +7,11 @@
 * <http://developer.yahoo.com/yui/compressor/>.                        *
 ***********************************************************************/
 
-body                     { color:#000; background:#f9f9f9; margin:0; padding:0; font-family:verdana,arial,sans-serif; font-size:1em; font-size:1rem; }
+body                     { color:#000; background:#fff; margin:0; padding:0; font-family:verdana,arial,sans-serif; font-size:1em; font-size:1rem; }
 
 header                   { margin:0; padding:0; background:#d2ddea; }
 
-main, #content           { margin:0; padding:20px; min-height:200px; background:#fff; }
+main, #content           { margin:0; padding:20px; min-height:200px; }
 
 footer                   { clear:both; font-size:0.69em; line-height:1.5em; margin:0; padding:0; background:#f9f9f9; border-top:1px solid #bacbdf; }
 
