@@ -288,7 +288,7 @@ fieldset.inactive input  { color:#808080; }
 ul.filelist              { list-style-type:none; padding-left:0; margin-left:0; font-size:0.82em; line-height:1.7em !important; }
 ul.filelist img          { margin:0 5px -3px 0; padding:0; }
 
-span.admin               { /*border-bottom:1px dotted #c0c0c0;*/ }
+span.admin,
 span.mod                 { /*border-bottom:1px dotted #c0c0c0;*/ }
 ul.thread span.mod,
 ul.thread span.admin,
