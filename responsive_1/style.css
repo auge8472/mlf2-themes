@@ -93,12 +93,12 @@ select.small             { font-family:verdana,arial,sans-serif; font-size:0.82e
 #content .xsmall         { font-size:0.69em; line-height:1.19em; color:#808080; font-weight:normal; }
 #content .small          { font-size:0.69em; line-height:1.19em; font-weight:normal; }
 
-footer #footer-1         { margin:0; padding:7px 0 10px 20px; float:left; }
-footer #footer-2         { margin:0; padding:7px 20px 10px 0; text-align:right; }
-#footermenu              { margin:0 0 1em 0; list-style-type:none; }
-#footermenu li           { display:inline; margin-left:6px; padding-left:7px; background:url(images/bg_sprite_1.png) no-repeat 0 -1097px; }
+footer #footer-1         { margin:0; padding:0; }
+footer #footer-2         { margin:0; padding:0; }
+#footermenu              { margin:0 0 1em 0; padding:0; list-style-type:none; }
+#footermenu li           { display:inline; margin-left:6px; }
 #footermenu li:first-child
-                         { margin-left:0; padding-left:0; background:none; }
+                         { margin-left:0; padding:0; }
 
 #pbmlf                   { clear:both; margin:0; padding:0 20px 11px 20px; text-align:center; font-size:0.69em; color:#808080; }
 #pbmlf a                 { color:#808080; text-decoration:none; }
