@@ -9,7 +9,7 @@
 
 body                     { color:#000; background:#f9f9f9; margin:0; padding:0; font-family:verdana,arial,sans-serif; font-size:1em; font-size:1rem; }
 
-header                   { margin:0; padding:0; height:4.4em; background:#d2ddea; }
+header                   { margin:0; padding:0; background:#d2ddea; }
 
 main, #content           { margin:0; padding:20px; min-height:200px; background:#fff; }
 
@@ -39,20 +39,19 @@ img.previous:hover       { background:url(images/bg_sprite_2.png) no-repeat -6px
 img.hide-sidebar         { background:url(images/bg_sprite_2.png) no-repeat -9px -22px; }
 img.show-sidebar         { background:url(images/bg_sprite_2.png) no-repeat 0 -22px; }
 
-#logo                    { margin:0; padding:7px 0 7px 20px; float:left; }
-#logo .home              { margin:0 0 0.3em 0; padding:0; font-size:0.69em; }
-#logo h1                 { margin:0; padding:0; font-size:1.75em; }
+#logo                    { margin:0; padding:0; }
+#logo .home              { margin:0 0 0.3em 0; padding:0; font-size:1em; }
+#logo h1                 { margin:0; padding:0; font-size:1.5em; }
 #logo h1 a               { color:#000080; text-decoration:none; }
 #logo h1 a:hover         { color:#0000aa; text-decoration:none; }
 #logo .index             { margin:0; padding:0; font-size:0.82em; }
 
-#nav                     { margin:0; padding:7px 20px 7px 0; text-align:right; }
+#nav                     { margin:0; padding:0; }
 
-#usermenu                { margin:0 0 1em 0; font-size:0.69em; list-style-type:none; }
-#usermenu li             { display:inline; margin-left:6px; padding-left:7px; background:url(images/bg_sprite_1.png) no-repeat 0 -1097px; }
-#usermenu li:first-child { margin-left:0; padding-left:0; background:none; }
+#usermenu                { margin:0; padding: 0; font-size:0.69em; list-style-type:none; }
+#usermenu li             { display:inline; margin-left:6px; padding:0; }
+#usermenu li:first-child { margin-left:0; padding:0; }
 
-#topsearch               { display:inline; }
 #topsearch div           { display:inline; font-size:0.82em; }
 #topsearch label         { display:none; }
 #topsearch #search-input { font-family:verdana,arial,sans-serif; font-size:0.82em; width:14em; color:#808080; }
