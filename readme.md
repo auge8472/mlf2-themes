@@ -1,4 +1,4 @@
-# Attitional Templates for My Little Forum 2
+# Additional Templates for My Little Forum 2
 
 Author: H. August, post@auge8472.de, 2016  
 License: GPL3, see the file LICENSE
