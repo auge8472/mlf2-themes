@@ -84,13 +84,12 @@
 <ul id="footermenu">
 {if $settings.rss_feed==1}<li><a class="rss" href="index.php?mode=rss" title="{#rss_feed_postings_title#}">{#rss_feed_postings#}</a> &nbsp;<a class="rss" href="index.php?mode=rss&amp;items=thread_starts" title="{#rss_feed_new_threads_title#}">{#rss_feed_new_threads#}</a></li>{/if}<li><a href="index.php?mode=contact" title="{#contact_linktitle#}" rel="nofollow">{#contact_link#}</a></li>
 </ul></div>
-</footer>
-
 {*
 Please donate if you want to remove this link:
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1922497
 *}
 <div id="pbmlf"><a href="http://mylittleforum.net/">powered by my little forum</a></div>
+</footer>
 
 <!--[if IE]></div><![endif]-->
 
