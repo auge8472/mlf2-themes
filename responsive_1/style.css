@@ -11,7 +11,7 @@ body                     { color:#000; background:#fff; margin:0; padding:0; fon
 
 header                   { margin:0; padding:0; background:#d2ddea; }
 
-main, #content           { margin:0; padding:20px; min-height:200px; }
+main, #content           { margin:0; padding:0.75em 10px; padding:0.75rem 10px; min-height:200px; }
 
 footer                   { clear:both; font-size:0.69em; line-height:1.5em; margin:0; padding:0; background:#f9f9f9; border-top:1px solid #bacbdf; }
 
