@@ -15,8 +15,9 @@ main, #content           { margin:0; padding:20px; min-height:200px; }
 
 footer                   { clear:both; font-size:0.69em; line-height:1.5em; margin:0; padding:0; background:#f9f9f9; border-top:1px solid #bacbdf; }
 
-h1                       { margin-top:0; font-size:1.25em; font-weight:bold; }
-h2                       { margin-top:20px; font-size:1.25em; font-weight:bold; }
+h1                       { margin-top:0; font-size:1.25em; font-size:1.25rem; font-weight:bold; }
+h2                       { margin-top:20px; font-size:1.15em; font-size:1.15rem; font-weight:bold; }
+h3                       { font-size:1em; font-size:1rem; font-weight:bold; }
 p                        { margin-top:0; }
 img                      { border:0; }
 
