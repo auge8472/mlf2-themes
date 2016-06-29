@@ -59,7 +59,7 @@ img.show-sidebar         { background:url(images/bg_sprite_2.png) no-repeat 0 -2
 #topsearch #search-input:focus
                          { color:#000; }
 
-#subnav                  { margin:0; padding:0; background:#f9f9f9; border-top:1px solid #bacbdf; border-bottom:1px solid #bacbdf; line-height:1.8em; }
+#subnav                  { margin:0; padding:0; background:#f9f9f9; border-top:1px solid #bacbdf; border-bottom:1px solid #bacbdf; line-height:1.6em; }
 #subnav #subnav-1        { margin:0; padding:0; }
 #subnav #subnav-2        { margin:0; padding:0; }
 #subnav p.subnav         { margin:0; padding:0 0 0 12px; font-weight:bold; background:url(images/bg_sprite_1.png) no-repeat 0 -89px; }
