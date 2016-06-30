@@ -113,16 +113,19 @@ footer #footer-2         { margin:0; padding:0; }
 
 #latest-postings a.hide-sidebar
                          { position:absolute; top:2px; right:4px; margin:0; padding:0; line-height:11px; }
-#latest-postings ul      { list-style:none; margin:0; padding:0; }
-#latest-postings li      { margin:0; padding:0; line-height:1.5em; word-wrap:break-word; overflow:hidden; }
-#latest-postings a       { line-height:1.5em; text-decoration:none; display:block; margin:0; padding:3px 5px 3px 5px; }
+#latest-postings ul,
+#modmenu ul              { list-style:none; margin:0; padding:0; }
+#latest-postings li,
+#modmenu li              { margin:0; padding:0; word-wrap:break-word; overflow:hidden; }
+#latest-postings a,
+#modmenu a               { line-height:1.5em; text-decoration:none; display:block; margin:0; padding:3px 5px 3px 5px; color:#00c; }
 #latest-postings a span  { display:block; }
-#latest-postings a
-                         { color:#00c; }
 #latest-postings a:visited
                          { color:#808; }
-#latest-postings a:focus, #latest-postings a:hover
-                         { background:#efefef; text-decoration:none; }
+#latest-postings a:focus,
+#latest-postings a:hover,
+#modmenu a:focus,
+#modmenu a:hover         { background:#efefef; text-decoration:none; }
 #latest-postings a .posting-info
                          { color:#666; font-size: 0.82em; font-size: 0.82rem; }
 
@@ -131,7 +134,6 @@ footer #footer-2         { margin:0; padding:0; }
 #tagcloud strong         { font-weight:bold; }
 
 
-#mod-options             { list-style:none; margin:0; padding:5px; line-height:1.5em; }
 #mod-options a.delete-marked
                          { padding-left:13px; background:url(images/bg_sprite_4.png) no-repeat 0 -296px; }
 #mod-options a.manage    { padding-left:13px; background:url(images/bg_sprite_4.png) no-repeat 0 -347px; }
