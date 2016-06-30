@@ -118,10 +118,8 @@ footer #footer-2         { margin:0; padding:0; }
 #latest-postings li,
 #modmenu li              { margin:0; padding:0; word-wrap:break-word; overflow:hidden; }
 #latest-postings a,
-#modmenu a               { line-height:1.5em; text-decoration:none; display:block; margin:0; padding:3px 5px 3px 5px; }
+#modmenu a               { line-height:1.5em; text-decoration:none; display:block; margin:0; padding:3px 5px 3px 5px; color:#00c; }
 #latest-postings a span  { display:block; }
-#latest-postings a
-                         { color:#00c; }
 #latest-postings a:visited
                          { color:#808; }
 #latest-postings a:focus,
