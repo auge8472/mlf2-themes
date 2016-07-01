@@ -1,5 +1,5 @@
 {if $threads}
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table class="normaltab">
  <thead>
   <tr>{*
 {if $fold_threads==1}   <th>&nbsp;</th>{/if}*}
