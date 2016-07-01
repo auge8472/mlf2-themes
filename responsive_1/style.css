@@ -296,9 +296,9 @@ img.captcha              { border:1px solid #000; }
 .category                { color:#000080; font-size:0.82em; font-weight:normal; }
 .category-regusers       { color:#000080; font-size:0.82em; font-weight:normal; background:#e7e7e7; }
 .category-adminmod       { color:#000080; font-size:0.82em; font-weight:normal; background:#d5d5d5; }
-.category-b              { color:#0000cc; font-size:0.82em; font-weight:normal; }
-.category-regusers-b     { color:#0000cc; font-size:0.82em; font-weight:normal; border-bottom:1px dotted #0000cc; }
-.category-adminmod-b     { color:#0000cc; font-size:0.82em; font-weight:normal; border-bottom:1px solid #0000cc; }
+.category-b              { color:#00c; font-size:0.82em; font-weight:normal; }
+.category-regusers-b     { color:#00c; font-size:0.82em; font-weight:normal; border-bottom:1px dotted #00c; }
+.category-adminmod-b     { color:#00c; font-size:0.82em; font-weight:normal; border-bottom:1px solid #00c; }
 
 h3.preview               { margin:10px 0 3px 0; font-size:0.82em; font-weight:bold; color:red; }
 div.preview              { margin:0 0 25px 0; padding:10px; color:#000000; border:1px dotted red; }
