@@ -103,13 +103,18 @@ footer #footer-2         { margin:0; padding:0; }
 #pbmlf a                 { color:#808080; text-decoration:none; }
 
 #sidebar                 { position:relative; margin:0 0 1em 0; padding:0; }
+#bottombar               { position:relative; margin:1em 0 0 0; padding:0; }
 #sidebarcontent          { margin:0; padding:0; }
 #sidebarcontent div      { position:relative; z-index:2; margin: 0.5em 0 0 0; padding:0; background:#f9f9f9; border:1px solid #bacbdf; }
-#sidebar h3.sidebar,
+#sidebar h2,
+#bottombar h2,
 #sidebarcontent div h3   { line-height:1.6em; font-weight:normal; margin:0; padding:0 5px; background:#d2ddea; }
-#sidebar h3.sidebar      { padding-right:17px; border:1px solid #bacbdf; }
-#sidebar h3.sidebar a    { color:#000; text-decoration:none; z-index:2; }
-#sidebartoggle           { position:absolute; top:5px; right:4px; margin:0; padding:0; z-index:3; }
+#sidebar h2,
+#bottombar h2            { padding-right:17px; border:1px solid #bacbdf; font-size:1em; font-size:1rem; }
+#sidebar h2 a,
+#bottombar h2 a          { color:#000; text-decoration:none; z-index:2; }
+#sidebartoggle,
+#bottombarhandle         { position:absolute; top:5px; right:4px; margin:0; padding:0; z-index:3; }
 
 #latest-postings a.hide-sidebar
                          { position:absolute; top:2px; right:4px; margin:0; padding:0; line-height:11px; }
@@ -141,23 +146,6 @@ footer #footer-2         { margin:0; padding:0; }
 #mod-options a.delete-spam
                          { padding-left:13px; background-image:url(images/bg_sprite_3.png); background-repeat:no-repeat; background-position:0 -47px; }
 
-#bottombar               { position:relative; margin:20px 0 -20px 0; }
-#bottombar h3.sidebar    { position:relative; float:right; font-size:0.69em; line-height:1.6em; font-weight:normal; margin:0 0 20px 0; padding:0 17px 0 5px; background:#d2ddea url(images/bg_gradient_x.png) repeat-x 0 -140px; border:1px solid #bacbdf; }
-#bottombar h3.sidebar a  { color:#000; text-decoration:none; }
-#bottombarhandle         { position:absolute; top:0; right:4px; margin:0; padding:0; z-index:3; }
-#bottombar #sidebarcontent div { position:relative; z-index:2; background:#f9f9f9; border:1px solid #bacbdf; margin:0 0 20px 0; }
-#bottombar h3            { font-size:0.69em; line-height:1.7em; font-weight:normal; margin:0; padding:0 5px 0 5px; background:#d2ddea url(images/bg_gradient_x.png) repeat-x 0 -140px; }
-#bottombar p.tagcloud    { margin:0; padding:10px; font-size:0.69em; line-height:1.5em; }
-#bottombar p.tagcloud strong
-                         { font-weight:bold; font-size:1.051em; }
-#bottombar .xsmall       { font-size:0.82em; }
-#bottombar .latestposts  { margin:0; padding:10px 10px 7px 10px; font-size:0.69em; color:#808080; list-style-type:none; }
-#bottombar .latestposts li
-                         { padding-bottom:3px; }
-#bottombar .latestposts a
-                         { font-size:1.2em; }
-#bottombar .latestposts a:visited  { /*color:#800080;*/ }
-#bottombar #mod-options  { padding:10px; }
 
 #usersonline             { background:#f9f9f9; border:1px solid #bacbdf; margin:20px 0 20px 0; }
 #usersonline h3          { font-size:0.69em; line-height:1.7em; font-weight:normal; margin:0; padding:0 5px 0 5px; background:#d2ddea url(images/bg_gradient_x.png) repeat-x 0 -140px; }
