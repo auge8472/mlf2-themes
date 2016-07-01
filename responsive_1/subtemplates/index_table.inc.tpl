@@ -1,14 +1,18 @@
 {if $threads}
 <table class="normaltab" border="0" cellpadding="5" cellspacing="1">
-<tr>
-{*{if $fold_threads==1}<th style="width:10px;">&nbsp;</th>{/if}*}
-<th>{#subject#}</th>
-<th>{#author#}</th>
-<th>{#date#}</th>
-{if $settings.count_views}<th>{#views#}</th>{/if}
-<th>{#replies#}</th>
-{if $categories && $category<=0}<th>{#category#}</th>{/if}
-</tr>
+ <thead>
+  <tr>{*
+{if $fold_threads==1}   <th>&nbsp;</th>{/if}*}
+   <th>{#subject#}</th>
+   <th>{#author#}</th>
+   <th>{#date#}</th>
+{if $settings.count_views}   <th>{#views#}</th>
+{/if}
+   <th>{#replies#}</th>
+{if $categories && $category<=0}   <th>{#category#}</th>
+{/if}
+  </tr>
+ </thead>
 {foreach from=$threads item=thread}
 {cycle values="a,b" assign=c}
 <tr class="{$c}">
