@@ -1,10 +1,11 @@
 {config_load file=$language_file section="user"}
 <div id="usernav">
 <div id="usersearch">
-<label for="search-user">{#search_user#}</label><form action="index.php" method="get" accept-charset="{#charset#}">
+<form action="index.php" method="get" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="user" />
 <input id="search-user" type="text" name="search_user" value="{if $search_user}{$search_user}{else}{#search_user_default_value#}{/if}" size="25" alt="{#search_user_default_value#}" />{*&nbsp;<input type="image" src="{$THEMES_DIR}/{$theme}/images/submit.png" alt="[&raquo;]" />*}
+<label for="search-user">{#search_user#}</label>
 </div>
 </form>
 </div>
