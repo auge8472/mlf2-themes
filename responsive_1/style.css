@@ -323,6 +323,9 @@ table.normaltab tr.drag td
 
 /* tables on narrow screens*/
 @media screen and (max-width: 32em) {
+	table.normaltab {
+		border: none;
+	}
 	table thead {
 		display: none;
 	}
@@ -330,10 +333,12 @@ table.normaltab tr.drag td
 		display: block;
 	}
 	.normaltab tr {
-		border-bottom: 1px solid #bacbdf;
+		border: 1px solid #bacbdf;
+		margin-bottom: 0.25em;
+		margin-bottom: 0.25rem;
 	}
 	.normaltab tr:last-child {
-		border-bottom: none;
+		margin-bottom: 0;
 	}
 	td[data-header] {
 		background-color: #fff;
