@@ -309,7 +309,7 @@ table.normaltab th       { vertical-align:top; font-weight:bold; text-align:left
 table.normaltab td       { vertical-align:top; font-weight:normal; padding: 2px 4px; }
 table.normaltab tr.a     { background:#ddd; }
 table.normaltab tr.b     { background:#f6f6f6; }
-table.normaltab td.c     { width:150px; background:#d2ddea url(images/bg_gradient_y.png) repeat-y right center; }
+table.normaltab td.c     { width:150px; background:#d2ddea; }
 table.normaltab td.d     { background:#f5f5f5; }
 table.normaltab td.subject
                          { min-width:50%; }
@@ -346,8 +346,11 @@ table.normaltab tr.drag td
 	td[data-header]::before {
 		content: attr(data-header) ': ';
 	}
-	.normaltab .subject {
+	.normaltab .subject, table.normaltab td.c {
 		border-bottom: 1px dotted #bacbdf;
+	}
+	table.normaltab td.c {
+		width: auto;
 	}
 }
 
