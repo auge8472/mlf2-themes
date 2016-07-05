@@ -4,8 +4,8 @@
 <form action="index.php" method="get" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="user" />
-<input id="search-user" type="text" name="search_user" value="{if $search_user}{$search_user}{else}{#search_user_default_value#}{/if}" size="25" alt="{#search_user_default_value#}" />{*&nbsp;<input type="image" src="{$THEMES_DIR}/{$theme}/images/submit.png" alt="[&raquo;]" />*}
 <label for="search-user">{#search_user#}</label>
+<input id="search-user" type="search" name="search_user" value="{if $search_user}{$search_user}{/if}" placeholder="{#search_user_default_value#}" size="25" />{*&nbsp;<input type="image" src="{$THEMES_DIR}/{$theme}/images/submit.png" alt="[&raquo;]" />*}
 </div>
 </form>
 </div>
