@@ -329,7 +329,7 @@ table tr.drag td         { background:#ddd; }
 	table thead {
 		display: none;
 	}
-	tr, td {
+	tr, td, th {
 		display: block;
 	}
 	 tr {
