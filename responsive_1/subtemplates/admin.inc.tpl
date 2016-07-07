@@ -4,8 +4,7 @@
 <form id="settings" action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
-
+<table class="settings">
  <tbody>
   <tr>
    <th><strong>{#forum_name#}</strong>
@@ -278,7 +277,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table class="settings">
  <tbody>
 {section name=nr loop=$settings_sorted}
   <tr>
@@ -319,7 +318,7 @@
 </ul>
 {/if}
 {if $categories_count>0}
-<table id="sortable" class="normaltab" cellspacing="1" cellpadding="5">
+<table id="sortable">
  <thead>
   <tr>
    <th>{#category_name#}</th>
@@ -444,7 +443,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table>
  <thead>
   <tr>
    <th>&nbsp;</th>
@@ -524,7 +523,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="edit_user_id" value="{$edit_user_id}" />
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table class="settings">
  <tbody>
   <tr>
    <th><strong>{#edit_user_name#}</strong></th>
@@ -709,7 +708,7 @@
 </ul>
 {/if}
 {if $settings.smilies==1}
-<table id="sortable" class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table id="sortable">
  <thead>
   <tr>
    <th>{#smiley_image#}</th>
@@ -739,7 +738,7 @@
 <form action="index.php" method="post" class="normalform" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin">
-<table style="margin-top:20px;">
+<table>
  <thead>
   <tr>
    <td><label for="add_smiley">{#add_smiley#}</label></td>
@@ -786,7 +785,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table class="settings">
  <tbody>
   <tr>
    <th><strong>{#captcha#}</strong>
@@ -898,7 +897,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="delete_backup_files_confirm" value="" />
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table>
  <thead>
   <tr>
    <th>&#160;</th>
@@ -1062,7 +1061,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="id" value="{$id}" />
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table class="settings">
  <tbody>
   <tr>
    <th><strong>{#edit_smilies_smiley#}</strong></th>
@@ -1095,7 +1094,7 @@
 </form>
 {elseif $action=='pages'}
 {if $pages}
-<table id="sortable" class="normaltab" cellspacing="1" cellpadding="5">
+<table id="sortable">
  <thead>
   <tr>
    <th>{#page_title#}</th>
@@ -1139,7 +1138,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 {if $id}<input type="hidden" name="id" value="{$id}" />{/if}
-<table class="normaltab" border="0" cellpadding="5" cellspacing="1">
+<table class="settings">
  <tbody>
   <tr>
    <th><strong>{#page_title#}</strong></th>
