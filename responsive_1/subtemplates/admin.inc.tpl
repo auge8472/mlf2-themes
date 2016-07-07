@@ -293,7 +293,7 @@
 {elseif $action=='categories'}
 {if $entries_in_not_existing_categories>0}
 <form action="index.php" method="post" accept-charset="{#charset#}">
-<div style="margin:0px 0px 20px 0px; padding:10px; border:1px dotted red;">
+<div class="caution">
 <input type="hidden" name="mode" value="admin" />
 <p>{#entries_in_not_ex_cat#}</p>
 <p><input type="radio" name="entry_action" value="delete" checked="checked" />{#entries_in_not_ex_cat_del#}<br />
