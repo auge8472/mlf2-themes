@@ -934,7 +934,17 @@
 {/if}
 <ul class="adminmenu">
 <li><a href="index.php?mode=admin&amp;create_backup=0"><img src="{$THEMES_DIR}/{$theme}/images/backup.png" alt="" width="16" height="16" /><span>{#create_backup_complete#}</span></a></li>
-<li><span class="small">{#only_create_backup_of#} <a href="index.php?mode=admin&amp;create_backup=1"><span>{#backup_entries#}</span></a>, <a href="index.php?mode=admin&amp;create_backup=2"><span>{#backup_userdata#}</span></a>, <a href="index.php?mode=admin&amp;create_backup=3"><span>{#backup_settings#}</span></a>, <a href="index.php?mode=admin&amp;create_backup=4"><span>{#backup_categories#}</span></a>, <a href="index.php?mode=admin&amp;create_backup=5"><span>{#backup_pages#}</span></a>, <a href="index.php?mode=admin&amp;create_backup=6"><span>{#backup_smilies#}</span></a>, <a href="index.php?mode=admin&amp;create_backup=7"><span>{#backup_banlists#}</span></a></span></li>
+<li><span class="small">{#only_create_backup_of#}</span>
+ <ul>
+  <li><a href="index.php?mode=admin&amp;create_backup=1"><span>{#backup_entries#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=2"><span>{#backup_userdata#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=3"><span>{#backup_settings#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=4"><span>{#backup_categories#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=5"><span>{#backup_pages#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=6"><span>{#backup_smilies#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=7"><span>{#backup_banlists#}</span></a></li>
+ </ul>
+</li>
 </ul>
 {elseif $action=='delete_backup_files_confirm'}
 <p class="caution">{#caution#}</p>
@@ -1123,7 +1133,11 @@
 {else}
 <p>{#no_pages#}</p>
 {/if}
-<ul class="adminmenu"><li><a href="index.php?mode=admin&amp;action=edit_page"><img src="{$THEMES_DIR}/{$theme}/images/add_page.png" alt="" width="16" height="16" /><span>{#add_page_link#}</span></a></li></ul>
+<ul class="adminmenu">
+ <li>
+  <a href="index.php?mode=admin&amp;action=edit_page"><img src="{$THEMES_DIR}/{$theme}/images/add_page.png" alt="" width="16" height="16" /><span>{#add_page_link#}</span></a>
+ </li>
+</ul>
 {elseif $action=='edit_page'}
 {if $errors}
 <p class="caution">{#error_headline#}</p>
@@ -1183,14 +1197,14 @@
 {/if}
 {else}
 <ul class="adminmenu">
-<li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=user"><img src="{$THEMES_DIR}/{$theme}/images/user.png" alt="" width="16" height="16" /><span>{#user_administr_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=categories"><img src="{$THEMES_DIR}/{$theme}/images/categories.png" alt="" width="16" height="16" /><span>{#category_administr_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=smilies"><img src="{$THEMES_DIR}/{$theme}/images/smilies.png" alt="" width="16" height="16" /><span>{#smilies_administr_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=pages"><img src="{$THEMES_DIR}/{$theme}/images/pages.png" alt="" width="16" height="16" /><span>{#pages_administr_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=spam_protection"><img src="{$THEMES_DIR}/{$theme}/images/spam_protection.png" alt="" width="16" height="16" /><span>{#spam_protection_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=backup"><img src="{$THEMES_DIR}/{$theme}/images/backup.png" alt="" width="16" height="16" /><span>{#backup_restore_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=update"><img src="{$THEMES_DIR}/{$theme}/images/update.png" alt="" width="16" height="16" /><span>{#update_link#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=reset_uninstall"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="" width="16" height="16" /><span>{#reset_uninstall_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=user"><img src="{$THEMES_DIR}/{$theme}/images/user.png" alt="" width="16" height="16" /><span>{#user_administr_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=categories"><img src="{$THEMES_DIR}/{$theme}/images/categories.png" alt="" width="16" height="16" /><span>{#category_administr_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=smilies"><img src="{$THEMES_DIR}/{$theme}/images/smilies.png" alt="" width="16" height="16" /><span>{#smilies_administr_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=pages"><img src="{$THEMES_DIR}/{$theme}/images/pages.png" alt="" width="16" height="16" /><span>{#pages_administr_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=spam_protection"><img src="{$THEMES_DIR}/{$theme}/images/spam_protection.png" alt="" width="16" height="16" /><span>{#spam_protection_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=backup"><img src="{$THEMES_DIR}/{$theme}/images/backup.png" alt="" width="16" height="16" /><span>{#backup_restore_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=update"><img src="{$THEMES_DIR}/{$theme}/images/update.png" alt="" width="16" height="16" /><span>{#update_link#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;action=reset_uninstall"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="" width="16" height="16" /><span>{#reset_uninstall_link#}</span></a></li>
 </ul>
 {/if}
