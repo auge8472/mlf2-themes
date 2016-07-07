@@ -741,9 +741,9 @@
 <table>
  <thead>
   <tr>
-   <td><label for="add_smiley">{#add_smiley#}</label></td>
-   <td><label for="smiley_code">{#add_smiley_code#}</label></td>
-   <td>&nbsp;</td>
+   <th><label for="add_smiley">{#add_smiley#}</label></th>
+   <th><label for="smiley_code">{#add_smiley_code#}</label></th>
+   <th>&nbsp;</th>
   </tr>
  </thead>
  <tbody>
