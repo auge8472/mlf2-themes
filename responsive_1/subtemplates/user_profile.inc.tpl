@@ -20,7 +20,7 @@
 {/if}
 {if $user_real_name}
   <tr>
-   <th><p class="userdata"><strong>{#user_real_name#}</strong></p></th>
+   <th><strong>{#user_real_name#}</strong></th>
    <td class="d"><p class="userdata">{$user_real_name|default:'-'}</p></td>
   </tr>
 {/if}
@@ -42,29 +42,29 @@
   </tr>
 {if $user_last_login}
   <tr>
-   <th><strong>{#user_last_login#}</strong></p></th>
+   <th><strong>{#user_last_login#}</strong></th>
    <td class="d"><p class="userdata">{$user_last_login|default:'-'}</p></td>
   </tr>
 {/if}
   <tr>
-   <th><strong>{#user_logins#}</strong></p></th>
+   <th><strong>{#user_logins#}</strong></th>
    <td class="d"><p class="userdata">{$logins}</p></td>
   </tr>
   <tr>
-   <th><strong>{#logins_per_day#}</strong></p></th>
+   <th><strong>{#logins_per_day#}</strong></th>
    <td class="d"><p class="userdata">{$logins_per_day}</p></td>
   </tr>
   <tr>
-   <th><strong>{#user_postings#}</strong></p></th>
+   <th><strong>{#user_postings#}</strong></th>
    <td class="d"><p class="userdata">{$postings} ({$postings_percent}%){if $postings>0} &nbsp;<span class="small">[ <a href="index.php?mode=user&amp;action=show_posts&amp;id={$p_user_id}">{#show_postings_link#}</a> ]</span>{/if}</p></td>
   </tr>
   <tr>
-   <th><strong>{#postings_per_day#}</strong></p></th>
+   <th><strong>{#postings_per_day#}</strong></th>
    <td class="d"><p class="userdata">{$postings_per_day}</p></td>
   </tr>
 {if $last_posting_subject}
   <tr>
-   <th><strong>{#last_posting#}</strong></p></th>
+   <th><strong>{#last_posting#}</strong></th>
    <td class="d"><p class="userdata">{if $last_posting_subject}{$last_posting_time|date_format:#time_format#}: <a id="user-last-posting" href="index.php?mode=entry&amp;id={$last_posting_id}">{$last_posting_subject}</a>{else}-{/if}</p></td>
   </tr>
 {/if}
