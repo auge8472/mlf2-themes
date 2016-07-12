@@ -62,7 +62,6 @@ img.show-sidebar         { background:url(images/bg_sprite_2.png) no-repeat 0 -2
 #subnav                  { margin:0; padding:0; background:#f9f9f9; border-top:1px solid #bacbdf; border-bottom:1px solid #bacbdf; line-height:1.6em; }
 #subnav #subnav-1,
 #subnav #subnav-2        { margin:0; padding:0; }
-#subnav p.subnav         { margin:0; padding:0 0 0 12px; font-weight:bold; background:url(images/bg_sprite_1.png) no-repeat 0 -89px; }
 #subnav a,
 #subnav strong           { margin-left:10px; }
 #subnav .small           { font-size:0.82em; }
