@@ -68,20 +68,17 @@ img.show-sidebar         { background:url(images/bg_sprite_2.png) no-repeat 0 -2
 #subnav form             { display:inline; }
 #subnav form div         { display:inline; }
 
-#subnavmenu              { display:inline; margin:0; padding:0; list-style-type:none; }
-#subnavmenu li           { margin-left:10px; }
-#subnavmenu a.refresh    { padding-left:14px; background:url(images/bg_sprite_1.png) no-repeat 0 -498px; }
-#subnavmenu a.order-1    { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -548px; }
-#subnavmenu a.order-2    { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -598px; }
-#subnavmenu a.fold-1     { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -648px; }
-#subnavmenu a.fold-2     { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -698px; }
-#subnavmenu a.tableview  { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -748px; }
-#subnavmenu a.threadview { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -798px; }
-#subnavmenu a.openthread { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -848px; }
-#subnavmenu a.linear     { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -898px; }
-#subnavmenu a.hierarchic { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -948px; }
-#subnavmenu a.fold-postings
-                         { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -998px; }
+#subnav a.refresh        { padding-left:14px; background:url(images/bg_sprite_1.png) no-repeat 0 -498px; }
+#subnav a.order-1        { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -548px; }
+#subnav a.order-2        { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -598px; }
+#subnav a.fold-1         { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -648px; }
+#subnav a.fold-2         { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -698px; }
+#subnav a.tableview      { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -748px; }
+#subnav a.threadview     { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -798px; }
+#subnav a.openthread     { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -848px; }
+#subnav a.linear         { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -898px; }
+#subnav a.hierarchic     { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -948px; }
+#subnav a.fold-postings  { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -998px; }
 a.rss                    { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -1048px; }
 
 input.small,
