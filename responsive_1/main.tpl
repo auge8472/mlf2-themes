@@ -65,8 +65,8 @@
 </header>
 
 <div id="subnav">
-<div id="subnav-1">{include file="$theme/subtemplates/subnavigation_1.inc.tpl"}</div>
-<div id="subnav-2">{include file="$theme/subtemplates/subnavigation_2.inc.tpl"}</div>
+{include file="$theme/subtemplates/subnavigation_1.inc.tpl"}
+{include file="$theme/subtemplates/subnavigation_2.inc.tpl"}
 </div>
 
 <main role="main" id="content">
