@@ -39,12 +39,10 @@
 <script src="js/admin.min.js" type="text/javascript" charset="utf-8"></script>
 {/if}
 </head>
-
 <body>
 <!--[if IE]><div id="ie"><![endif]-->
 
 <header>
-
 <div id="logo">
 {if $settings.home_linkname}<p class="home"><a href="{$settings.home_linkaddress}">{$settings.home_linkname}</a></p>{/if}
 <h1><a href="./" title="{#forum_index_link_title#}">{$settings.forum_name|escape:"html"}</a></h1>
