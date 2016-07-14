@@ -16,9 +16,11 @@
 {if $tag_cloud}
 <div id="tagcloud">
 <h3>{#tag_cloud_hl#}</h3>
-<p id="tagcloud-container">{foreach from=$tag_cloud item=tag}
-{section name=strong_start start=0 loop=$tag.frequency}<strong>{/section}<a href="index.php?mode=search&amp;search={$tag.escaped}&amp;method=tags">{$tag.tag}</a> {section name=strong_end start=0 loop=$tag.frequency}</strong>{/section}
-{/foreach}</p>
+<ul>
+{foreach from=$tag_cloud item=tag}
+ <li><a href="index.php?mode=search&amp;search={$tag.escaped}&amp;method=tags">{section name=strong_start start=0 loop=$tag.frequency}<strong>{/section}{$tag.tag}{section name=strong_end start=0 loop=$tag.frequency}</strong>{/section}</a></li>
+{/foreach}
+</ul>
 </div>
 {/if}
 {if $admin || $mod}
