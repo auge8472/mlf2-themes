@@ -59,7 +59,7 @@
 {/if}
 </ul>
 <form id="topsearch" action="index.php" method="get" title="{#search_title#}" accept-charset="{#charset#}">
-<div><input type="hidden" name="mode" value="search" /><label for="search-input">{#search_marking#}</label>&nbsp;<input id="search-input" type="search" name="search" value="{#search_default_value#}" /><button>{#go#}</button></div>
+<div><input type="hidden" name="mode" value="search" /><label for="search-input">{#search_marking#}</label>&nbsp;<input id="search-input" type="search" name="search" placeholder="{#search_default_value#}" /><button>{#go#}</button></div>
 </form>
 </div>
 </header>
