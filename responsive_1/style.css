@@ -317,6 +317,17 @@ table p                  { font-size:1em; }
 table .small,
 table .xsmall            { font-size:0.82em; }
 table tr.drag td         { background:#ddd; }
+.settings th {
+	width: 40%;
+	max-width: 24em;
+}
+.settings th strong {
+	display: block;
+}
+.settings th .description {
+	font-weight: normal;
+	display: block;
+}
 
 /* tables on narrow screens*/
 @media screen and (max-width: 32em) {
@@ -343,11 +354,15 @@ table tr.drag td         { background:#ddd; }
 	td[data-header]::before {
 		content: attr(data-header) ': ';
 	}
-	.normaltab .subject, table.normaltab td.c {
+	.normaltab .subject, table.normaltab td.c, .settings th {
 		border-bottom: 1px dotted #bacbdf;
 	}
-	table.normaltab td.c {
+	table.normaltab td.c, .settings th, th, td {
 		width: auto;
+		max-width: 100%;
+	}
+	textarea {
+		width: calc(100% - 6px);
 	}
 }
 

@@ -528,7 +528,7 @@
  <tbody>
   <tr>
    <th><strong>{#edit_user_name#}</strong></th>
-   <td class="d"><input type="text" size="40" name="edit_user_name" value="{$edit_user_name}" maxlength="{$settings.name_maxlength}" /></td>
+   <td class="d"><input type="text" size="24" name="edit_user_name" value="{$edit_user_name}" maxlength="{$settings.name_maxlength}" /></td>
   </tr>
 {if $avatar}
   <tr>
@@ -573,7 +573,7 @@
   </tr>
   <tr>
    <th><strong>{#edit_user_birthday#}</strong></th>
-   <td class="d"><input type="text" size="40" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
+   <td class="d"><input type="text" size="12" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
   </tr>
   <tr>
    <th><strong>{#edit_user_location#}</strong></th>
@@ -581,11 +581,11 @@
   </tr>
   <tr>
    <th><strong>{#edit_user_profile#}</strong></th>
-   <td class="d"><textarea cols="65" rows="4" name="profile">{$profile}</textarea></td>
+   <td class="d"><textarea cols="65" rows="5" name="profile">{$profile}</textarea></td>
   </tr>
   <tr>
    <th><strong>{#edit_user_signature#}</strong></th>
-   <td class="d"><textarea cols="65" rows="4" name="signature">{$signature}</textarea></td>
+   <td class="d"><textarea cols="65" rows="5" name="signature">{$signature}</textarea></td>
   </tr>
 {if $languages}
   <tr>
