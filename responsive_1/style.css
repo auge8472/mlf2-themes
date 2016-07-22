@@ -357,6 +357,7 @@ table tr.drag td         { background:#ddd; }
 	}
 	td[data-header] {
 		background-color: #fff;
+		line-height: 1.3em;
 	}
 	td[data-header]::before {
 		content: attr(data-header) ': ';
