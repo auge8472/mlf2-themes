@@ -36,7 +36,7 @@
    <td class="d">
     <span>{$user_email}</span>&nbsp;
     <span class="small">[ <a href="index.php?mode=user&amp;action=edit_email">{#edit_email#}</a> ]</span><br />
-    <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if} /><label for="email_contact">{#edit_user_email_contact#}</label></span>
+    <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if} class="small-input" /><label for="email_contact">{#edit_user_email_contact#}</label></span>
    </td>
   </tr>
   <tr>
@@ -50,8 +50,8 @@
   <tr>
    <th><strong>{#edit_user_gender#}</strong></th>
    <td class="d">
-    <input id="male" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} /><label for="male">{#male#}</label><br />
-    <input id="female" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} /><label for="female">{#female#}</label>
+    <input id="male" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} class="small-input" /><label for="male">{#male#}</label><br />
+    <input id="female" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} class="small-input" /><label for="female">{#female#}</label>
    </td>
   </tr>
   <tr>
@@ -81,7 +81,7 @@
     </select>*}
     <ul class="checkboxlist">
 {foreach key=key item=val from=$categories}
-{if $key!=0}     <li><input id="category_{$key}" type="checkbox" name="category_selection[]" value="{$key}"{if isset($category_selection) && in_array($key,$category_selection)} checked="checked"{/if} /><label for="category_{$key}">{$val}</label></li>{/if}
+{if $key!=0}     <li><input id="category_{$key}" type="checkbox" name="category_selection[]" value="{$key}"{if isset($category_selection) && in_array($key,$category_selection)} checked="checked"{/if} class="small-input" /><label for="category_{$key}">{$val}</label></li>{/if}
 {/foreach}
     </ul>
    </td>
@@ -135,15 +135,15 @@
 {if $settings.autologin==1}
   <tr>
    <th><strong>{#edit_user_auto_login#}</strong></th>
-   <td class="d"><input id="auto_login" type="checkbox" name="auto_login" value="1"{if $auto_login==1} checked="checked"{/if} /><label for="auto_login">{#enable_auto_login#}</label></td>
+   <td class="d"><input id="auto_login" type="checkbox" name="auto_login" value="1"{if $auto_login==1} checked="checked"{/if} class="small-input" /><label for="auto_login">{#enable_auto_login#}</label></td>
   </tr>
 {/if}
 {if $mod||$admin}
   <tr>
    <th><strong>{#edit_user_notification#}</strong></th>
    <td class="d">
-    <input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if} /><label for="new_posting_notification">{#admin_mod_notif_posting#}</label><br />
-    <input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if} /><label for="new_user_notification">{#admin_mod_notif_register#}</label>
+    <input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if} class="small-input" /><label for="new_posting_notification">{#admin_mod_notif_posting#}</label><br />
+    <input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if} class="small-input" /><label for="new_user_notification">{#admin_mod_notif_register#}</label>
    </td>
   </tr>
 {/if}

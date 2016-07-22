@@ -95,7 +95,7 @@
 
 {if $settings.remember_userdata == 1 && $posting_mode==0 && !$user}
 <p>
-<input id="setcookie" class="checkbox" type="checkbox" name="setcookie" value="1"{if $setcookie} checked="checked"{/if} />&nbsp;<label for="setcookie">{#remember_userdata_marking#}</label>{if $cookie} &nbsp;<span id="delete_cookie"><a href="index.php?mode=delete_cookie">{#delete_cookie_linkname#}</a></span>{/if}
+<input id="setcookie" type="checkbox" name="setcookie" value="1"{if $setcookie} checked="checked"{/if} class="checkbox small-input" />&nbsp;<label for="setcookie">{#remember_userdata_marking#}</label>{if $cookie} &nbsp;<span id="delete_cookie"><a href="index.php?mode=delete_cookie">{#delete_cookie_linkname#}</a></span>{/if}
 </p>
 {/if}
 
@@ -219,26 +219,26 @@ JavaScript isn't available.
 <fieldset>
 {if $signature}
 <p>
-<input id="show_signature" type="checkbox" name="show_signature" value="1"{if $show_signature && $show_signature==1} checked="checked"{/if} />&nbsp;<label for="show_signature">{#show_signature_marking#}</label>
+<input id="show_signature" type="checkbox" name="show_signature" value="1"{if $show_signature && $show_signature==1} checked="checked"{/if} class="small-input" />&nbsp;<label for="show_signature">{#show_signature_marking#}</label>
 </p>
 {/if}
 
 {if $provide_email_notification}
 <p>
-<input id="email_notification" type="checkbox" name="email_notification" value="1"{if $email_notification && $email_notification==1} checked="checked"{/if} />&nbsp;<label for="email_notification">{if $id==0}{#email_notific_reply_thread#}{else}{#email_notific_reply_post#}{/if}</label>
+<input id="email_notification" type="checkbox" name="email_notification" value="1"{if $email_notification && $email_notification==1} checked="checked"{/if} class="small-input" />&nbsp;<label for="email_notification">{if $id==0}{#email_notific_reply_thread#}{else}{#email_notific_reply_post#}{/if}</label>
 </p>
 {/if}
 
 {if $provide_sticky}
 <p>
-<input id="sticky" type="checkbox" name="sticky" value="1"{if $sticky && $sticky==1} checked="checked"{/if} />&nbsp;<label for="sticky">{#sticky_thread#}</label>
+<input id="sticky" type="checkbox" name="sticky" value="1"{if $sticky && $sticky==1} checked="checked"{/if} class="small-input" />&nbsp;<label for="sticky">{#sticky_thread#}</label>
 </p>
 {/if}
 
 {if $terms_of_use_agreement}
 {assign var=terms_of_use_url value=$settings.terms_of_use_url}
 <p>
-<input id="terms_of_use_agree" type="checkbox" name="terms_of_use_agree" value="1"{if $terms_of_use_agree && $terms_of_use_agree==1} checked="checked"{/if} />&nbsp;<label for="terms_of_use_agree">{if $terms_of_use_url}{#terms_of_use_agreement#|replace:"[[":"<a id=\"terms_of_use\" href=\"$terms_of_use_url\">"|replace:"]]":"</a>"}{else}{#terms_of_use_agreement#|replace:"[[":""|replace:"]]":""}{/if}</label>
+<input id="terms_of_use_agree" type="checkbox" name="terms_of_use_agree" value="1"{if $terms_of_use_agree && $terms_of_use_agree==1} checked="checked"{/if} class="small-input" />&nbsp;<label for="terms_of_use_agree">{if $terms_of_use_url}{#terms_of_use_agreement#|replace:"[[":"<a id=\"terms_of_use\" href=\"$terms_of_use_url\">"|replace:"]]":"</a>"}{else}{#terms_of_use_agreement#|replace:"[[":""|replace:"]]":""}{/if}</label>
 </p>
 {/if}
 </fieldset>

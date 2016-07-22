@@ -51,7 +51,7 @@
 {/foreach}
     </select>
 {else}
-    <p><label for="time_difference">{#default_time_difference#}</label><br /><input id="time_difference" type="text" name="time_difference" value="{$settings.time_difference}" size="5" /></p>
+    <p><label for="time_difference">{#default_time_difference#}</label><br /><input id="time_difference" type="text" name="time_difference" value="{$settings.time_difference}" size="5" class="small-input" /></p>
 {/if}
    </td>
   </tr>
@@ -83,7 +83,7 @@
     <span class="description">{#terms_of_use_settings_desc#}</span></th>
    <td class="d">
     <p>
-     <input id="terms_of_use_agreement" type="checkbox" name="terms_of_use_agreement" value="1"{if $settings.terms_of_use_agreement==1} checked="checked"{/if} /><label id="terms_of_use_agreement_label" for="terms_of_use_agreement" class="{if $settings.terms_of_use_agreement==1}active{else}inactive{/if}">{#terms_of_use_settings_enabled#}</label>
+     <input id="terms_of_use_agreement" type="checkbox" name="terms_of_use_agreement" value="1"{if $settings.terms_of_use_agreement==1} checked="checked"{/if} class="small-input" /><label id="terms_of_use_agreement_label" for="terms_of_use_agreement" class="{if $settings.terms_of_use_agreement==1}active{else}inactive{/if}">{#terms_of_use_settings_enabled#}</label>
     </p>
     <p>
      <label id="terms_of_use_url_label" for="terms_of_use_url" class="{if $settings.terms_of_use_agreement==1}active{else}inactive{/if}">{#terms_of_use_url#}</label><br /><input id="terms_of_use_url" type="text" name="terms_of_use_url" value="{$settings.terms_of_use_url|escape}" size="40" />
@@ -94,33 +94,33 @@
    <th><strong>{#accession#}</strong>
     <span class="description">{#accession_desc#}</span></th>
    <td class="d">
-    <input id="access_for_all" type="radio" name="access_for_users_only" value="0"{if $settings.access_for_users_only==0} checked="checked"{/if} /><label id="access_for_all_label" for="access_for_all" class="{if $settings.access_for_users_only==0}active{else}inactive{/if}">{#all_users#}</label><br />
-    <input id="access_for_users_only" type="radio" name="access_for_users_only" value="1"{if $settings.access_for_users_only==1} checked="checked"{/if} /><label id="access_for_users_only_label" for="access_for_users_only" class="{if $settings.access_for_users_only==1}active{else}inactive{/if}">{#only_registered_users#}</label>
+    <input id="access_for_all" type="radio" name="access_for_users_only" value="0"{if $settings.access_for_users_only==0} checked="checked"{/if} class="small-input" /><label id="access_for_all_label" for="access_for_all" class="{if $settings.access_for_users_only==0}active{else}inactive{/if}">{#all_users#}</label><br />
+    <input id="access_for_users_only" type="radio" name="access_for_users_only" value="1"{if $settings.access_for_users_only==1} checked="checked"{/if} class="small-input" /><label id="access_for_users_only_label" for="access_for_users_only" class="{if $settings.access_for_users_only==1}active{else}inactive{/if}">{#only_registered_users#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#post_permission#}</strong>
     <span class="description">{#post_permission_desc#}</span></th>
    <td class="d">
-    <input id="entries_by_all" type="radio" name="entries_by_users_only" value="0"{if $settings.entries_by_users_only==0} checked="checked"{/if} /><label id="entries_by_all_label" for="entries_by_all" class="{if $settings.entries_by_users_only==0}active{else}inactive{/if}">{#all_users#}</label><br />
-    <input id="entries_by_users" type="radio" name="entries_by_users_only" value="1"{if $settings.entries_by_users_only==1} checked="checked"{/if} /><label id="entries_by_users_label" for="entries_by_users" class="{if $settings.entries_by_users_only==1}active{else}inactive{/if}">{#only_registered_users#}</label>
+    <input id="entries_by_all" type="radio" name="entries_by_users_only" value="0"{if $settings.entries_by_users_only==0} checked="checked"{/if} class="small-input" /><label id="entries_by_all_label" for="entries_by_all" class="{if $settings.entries_by_users_only==0}active{else}inactive{/if}">{#all_users#}</label><br />
+    <input id="entries_by_users" type="radio" name="entries_by_users_only" value="1"{if $settings.entries_by_users_only==1} checked="checked"{/if} class="small-input" /><label id="entries_by_users_label" for="entries_by_users" class="{if $settings.entries_by_users_only==1}active{else}inactive{/if}">{#only_registered_users#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#register_permission#}</strong>
     <span class="description">{#register_permission_desc#}</span></th>
    <td class="d">
-    <input id="register_mode_0" type="radio" name="register_mode" value="0"{if $settings.register_mode==0} checked="checked"{/if} /><label id="register_mode_0_label" for="register_mode_0" class="{if $settings.register_mode==0}active{else}inactive{/if}">{#register_self#}</label><br />
-    <input id="register_mode_1" type="radio" name="register_mode" value="1"{if $settings.register_mode==1} checked="checked"{/if} /><label id="register_mode_1_label" for="register_mode_1" class="{if $settings.register_mode==1}active{else}inactive{/if}">{#register_self_locked#}</label><br />
-    <input id="register_mode_2" type="radio" name="register_mode" value="2"{if $settings.register_mode==2} checked="checked"{/if} /><label id="register_mode_2_label" for="register_mode_2" class="{if $settings.register_mode==2}active{else}inactive{/if}">{#register_only_admin#}</label>
+    <input id="register_mode_0" type="radio" name="register_mode" value="0"{if $settings.register_mode==0} checked="checked"{/if} class="small-input" /><label id="register_mode_0_label" for="register_mode_0" class="{if $settings.register_mode==0}active{else}inactive{/if}">{#register_self#}</label><br />
+    <input id="register_mode_1" type="radio" name="register_mode" value="1"{if $settings.register_mode==1} checked="checked"{/if} class="small-input" /><label id="register_mode_1_label" for="register_mode_1" class="{if $settings.register_mode==1}active{else}inactive{/if}">{#register_self_locked#}</label><br />
+    <input id="register_mode_2" type="radio" name="register_mode" value="2"{if $settings.register_mode==2} checked="checked"{/if} class="small-input" /><label id="register_mode_2_label" for="register_mode_2" class="{if $settings.register_mode==2}active{else}inactive{/if}">{#register_only_admin#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#user_area#}</strong>
     <span class="description">{#user_area_desc#}</span></th>
    <td class="d">
-    <input id="public" type="radio" name="user_area_public" value="1"{if $settings.user_area_public==1} checked="checked"{/if} /><label id="public_label" for="public" class="{if $settings.user_area_public==1}active{else}inactive{/if}">{#public_accessible#}</label><br />
-    <input id="not_public" type="radio" name="user_area_public" value="0"{if $settings.user_area_public==0} checked="checked"{/if} /><label id="not_public_label" for="not_public" class="{if $settings.user_area_public==0}active{else}inactive{/if}">{#accessible_reg_users_only#}</label>
+    <input id="public" type="radio" name="user_area_public" value="1"{if $settings.user_area_public==1} checked="checked"{/if} class="small-input" /><label id="public_label" for="public" class="{if $settings.user_area_public==1}active{else}inactive{/if}">{#public_accessible#}</label><br />
+    <input id="not_public" type="radio" name="user_area_public" value="0"{if $settings.user_area_public==0} checked="checked"{/if} class="small-input" /><label id="not_public_label" for="not_public" class="{if $settings.user_area_public==0}active{else}inactive{/if}">{#accessible_reg_users_only#}</label>
    </td>
   </tr>
   <tr>
@@ -132,7 +132,7 @@
    <th><strong>{#tag_cloud#}</strong>
     <span class="description">{#tag_cloud_desc#}</span></th>
    <td class="d">
-    <input id="tag_cloud" type="checkbox" name="tag_cloud" value="1"{if $settings.tag_cloud==1} checked="checked"{/if} /><label id="tag_cloud_label" for="tag_cloud" class="{if $settings.tag_cloud==1}active{else}inactive{/if}">{#enable_tag_cloud#}</label>
+    <input id="tag_cloud" type="checkbox" name="tag_cloud" value="1"{if $settings.tag_cloud==1} checked="checked"{/if} class="small-input" /><label id="tag_cloud_label" for="tag_cloud" class="{if $settings.tag_cloud==1}active{else}inactive{/if}">{#enable_tag_cloud#}</label>
    </td>
   </tr>
   <tr>
@@ -140,28 +140,28 @@
     <span class="description">{#edit_postings_desc#}</span></th>
    <td class="d">
 {assign var="settings_edit_delay" value=$settings.edit_delay}
-{assign var="input_edit_delay" value="<input type=\"text\" name=\"edit_delay\" value=\"$settings_edit_delay\" size=\"3\" />"}
+{assign var="input_edit_delay" value="<input type=\"text\" name=\"edit_delay\" value=\"$settings_edit_delay\" size=\"3\" class=\"small-input\" />"}
 
     <p>
-     <input id="show_if_edited" type="checkbox" name="show_if_edited" value="1"{if $settings.show_if_edited==1} checked="checked"{/if} /><label id="show_if_edited_label" for="show_if_edited" class="{if $settings.show_if_edited==1}active{else}inactive{/if}">{#show_if_edited#|replace:"[minutes]":$input_edit_delay}</label><br />
-     <input id="dont_reg_edit_by_admin" type="checkbox" name="dont_reg_edit_by_admin" value="1"{if $settings.dont_reg_edit_by_admin==1} checked="checked"{/if} /><label id="dont_reg_edit_by_admin_label" for="dont_reg_edit_by_admin" class="{if $settings.dont_reg_edit_by_admin==1}active{else}inactive{/if}">{#dont_show_edit_by_admin#}</label><br />
-     <input id="dont_reg_edit_by_mod" type="checkbox" name="dont_reg_edit_by_mod" value="1"{if $settings.dont_reg_edit_by_mod==1} checked="checked"{/if} /><label id="dont_reg_edit_by_mod_label" for="dont_reg_edit_by_mod" class="{if $settings.dont_reg_edit_by_mod==1}active{else}inactive{/if}">{#dont_show_edit_by_mod#}</label>
+     <input id="show_if_edited" type="checkbox" name="show_if_edited" value="1"{if $settings.show_if_edited==1} checked="checked"{/if} class="small-input" /><label id="show_if_edited_label" for="show_if_edited" class="{if $settings.show_if_edited==1}active{else}inactive{/if}">{#show_if_edited#|replace:"[minutes]":$input_edit_delay}</label><br />
+     <input id="dont_reg_edit_by_admin" type="checkbox" name="dont_reg_edit_by_admin" value="1"{if $settings.dont_reg_edit_by_admin==1} checked="checked"{/if} class="small-input" /><label id="dont_reg_edit_by_admin_label" for="dont_reg_edit_by_admin" class="{if $settings.dont_reg_edit_by_admin==1}active{else}inactive{/if}">{#dont_show_edit_by_admin#}</label><br />
+     <input id="dont_reg_edit_by_mod" type="checkbox" name="dont_reg_edit_by_mod" value="1"{if $settings.dont_reg_edit_by_mod==1} checked="checked"{/if} class="small-input" /><label id="dont_reg_edit_by_mod_label" for="dont_reg_edit_by_mod" class="{if $settings.dont_reg_edit_by_mod==1}active{else}inactive{/if}">{#dont_show_edit_by_mod#}</label>
     </p>
     <p><em>{#edit_own_postings#}</em></p>
     <p>
-     <input id="edit_own_postings_all" type="radio" name="user_edit" value="2"{if $settings.user_edit==2} checked="checked"{/if} /><label id="edit_own_postings_all_label" for="edit_own_postings_all" class="{if $settings.user_edit==2}active{else}inactive{/if}">{#edit_own_postings_all#}</label><br />
-     <input id="edit_own_postings_users" type="radio" name="user_edit" value="1"{if $settings.user_edit==1} checked="checked"{/if} /><label id="edit_own_postings_users_label" for="edit_own_postings_users" class="{if $settings.user_edit==1}active{else}inactive{/if}">{#edit_own_postings_users#}</label><br />
-     <input id="edit_own_postings_disabled" type="radio" name="user_edit" value="0"{if $settings.user_edit==0} checked="checked"{/if} /><label id="edit_own_postings_disabled_label" for="edit_own_postings_disabled" class="{if $settings.user_edit==0}active{else}inactive{/if}">{#edit_own_postings_disabled#}</label>
+     <input id="edit_own_postings_all" type="radio" name="user_edit" value="2"{if $settings.user_edit==2} checked="checked"{/if} class="small-input" /><label id="edit_own_postings_all_label" for="edit_own_postings_all" class="{if $settings.user_edit==2}active{else}inactive{/if}">{#edit_own_postings_all#}</label><br />
+     <input id="edit_own_postings_users" type="radio" name="user_edit" value="1"{if $settings.user_edit==1} checked="checked"{/if} class="small-input" /><label id="edit_own_postings_users_label" for="edit_own_postings_users" class="{if $settings.user_edit==1}active{else}inactive{/if}">{#edit_own_postings_users#}</label><br />
+     <input id="edit_own_postings_disabled" type="radio" name="user_edit" value="0"{if $settings.user_edit==0} checked="checked"{/if} class="small-input" /><label id="edit_own_postings_disabled_label" for="edit_own_postings_disabled" class="{if $settings.user_edit==0}active{else}inactive{/if}">{#edit_own_postings_disabled#}</label>
     </p>
     <fieldset id="user_edit_details" class="{if $settings.user_edit==0}inactive{else}active{/if}">
 {assign var="settings_edit_max_time_period" value=$settings.edit_max_time_period}
-{assign var="input_edit_max_time_period" value="<input type=\"text\" id=\"edit_max_time_period\" name=\"edit_max_time_period\" value=\"$settings_edit_max_time_period\" size=\"3\" />"}
+{assign var="input_edit_max_time_period" value="<input type=\"text\" id=\"edit_max_time_period\" name=\"edit_max_time_period\" value=\"$settings_edit_max_time_period\" size=\"3\" class=\"small-input\" />"}
      <p>
       <label id="edit_max_time_period_label" for="edit_max_time_period">{#edit_max_time_period#|replace:"[minutes]":$input_edit_max_time_period}</label></p>
 {assign var="settings_edit_min_time_period" value=$settings.edit_min_time_period}
-{assign var="input_edit_min_time_period" value="<input type=\"text\" name=\"edit_min_time_period\" value=\"$settings_edit_min_time_period\" size=\"3\" />"}
+{assign var="input_edit_min_time_period" value="<input type=\"text\" name=\"edit_min_time_period\" value=\"$settings_edit_min_time_period\" size=\"3\" class=\"small-input\" />"}
      <p>
-      <input id="user_edit_if_no_replies" type="checkbox" name="user_edit_if_no_replies" value="1"{if $settings.user_edit_if_no_replies==1} checked="checked"{/if} /><label id="user_edit_if_no_replies_label" for="user_edit_if_no_replies" class="{if $settings.user_edit_if_no_replies==1}active{else}inactive{/if}">{#user_edit_if_no_replies#|replace:"[minutes]":$input_edit_min_time_period}</label>
+      <input id="user_edit_if_no_replies" type="checkbox" name="user_edit_if_no_replies" value="1"{if $settings.user_edit_if_no_replies==1} checked="checked"{/if} class="small-input" /><label id="user_edit_if_no_replies_label" for="user_edit_if_no_replies" class="{if $settings.user_edit_if_no_replies==1}active{else}inactive{/if}">{#user_edit_if_no_replies#|replace:"[minutes]":$input_edit_min_time_period}</label>
      </p>
     </fieldset>
    </td>
@@ -170,16 +170,16 @@
    <th><strong>{#bbcode#}</strong>
     <span class="description">{#bbcode_desc#}</span></th>
    <td class="d">
-    <input id="bbcode" type="checkbox" name="bbcode" value="1"{if $settings.bbcode==1} checked="checked"{/if} /><label id="bbcode_label" for="bbcode" class="{if $settings.bbcode==1}active{else}inactive{/if}">{#bbcodes_enabled#}</label><br />
-    <input id="bbcode_img" type="checkbox" name="bbcode_img" value="1"{if $settings.bbcode_img==1} checked="checked"{/if} /><label id="bbcode_img_label" for="bbcode_img" class="{if $settings.bbcode_img==1}active{else}inactive{/if}">{#bbcodes_img_enabled#}</label><br />
-    <input id="bbcode_flash" type="checkbox" name="bbcode_flash" value="1"{if $settings.bbcode_flash==1} checked="checked"{/if} /><label id="bbcode_flash_label" for="bbcode_flash" class="{if $settings.bbcode_flash==1}active{else}inactive{/if}">{#bbcodes_flash_enabled#}</label>
+    <input id="bbcode" type="checkbox" name="bbcode" value="1"{if $settings.bbcode==1} checked="checked"{/if} class="small-input" /><label id="bbcode_label" for="bbcode" class="{if $settings.bbcode==1}active{else}inactive{/if}">{#bbcodes_enabled#}</label><br />
+    <input id="bbcode_img" type="checkbox" name="bbcode_img" value="1"{if $settings.bbcode_img==1} checked="checked"{/if} class="small-input" /><label id="bbcode_img_label" for="bbcode_img" class="{if $settings.bbcode_img==1}active{else}inactive{/if}">{#bbcodes_img_enabled#}</label><br />
+    <input id="bbcode_flash" type="checkbox" name="bbcode_flash" value="1"{if $settings.bbcode_flash==1} checked="checked"{/if} class="small-input" /><label id="bbcode_flash_label" for="bbcode_flash" class="{if $settings.bbcode_flash==1}active{else}inactive{/if}">{#bbcodes_flash_enabled#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#smilies#}</strong>
     <span class="description">{#smilies_desc#}</span></th>
    <td class="d">
-    <input id="smilies" type="checkbox" name="smilies" value="1"{if $settings.smilies==1} checked="checked"{/if} /><label id="smilies_label" for="smilies" class="{if $settings.smilies==1}active{else}inactive{/if}">{#smilies_enabled#}</label>
+    <input id="smilies" type="checkbox" name="smilies" value="1"{if $settings.smilies==1} checked="checked"{/if} class="small-input" /><label id="smilies_label" for="smilies" class="{if $settings.smilies==1}active{else}inactive{/if}">{#smilies_enabled#}</label>
    </td>
   </tr>
   <tr>
@@ -187,16 +187,16 @@
     <span class="description">{#enamble_avatars_desc#}</span></th>
    <td class="d">
     <p>
-     <input id="avatars_profiles_postings" type="radio" name="avatars" value="2"{if $settings.avatars==2} checked="checked"{/if} /><label id="avatars_profiles_postings_label" for="avatars_profiles_postings" class="{if $settings.avatars==2}active{else}inactive{/if}">{#avatars_profiles_postings#}</label><br />
-     <input id="avatars_profiles" type="radio" name="avatars" value="1"{if $settings.avatars==1} checked="checked"{/if} /><label id="avatars_profiles_label" for="avatars_profiles" class="{if $settings.avatars==1}active{else}inactive{/if}">{#avatars_profiles#}</label><br />
-     <input id="avatars_disabled" type="radio" name="avatars" value="0"{if $settings.avatars==0} checked="checked"{/if} /><label id="avatars_disabled_label" for="avatars_disabled" class="{if $settings.avatars==0}active{else}inactive{/if}">{#disabled#}</label>
+     <input id="avatars_profiles_postings" type="radio" name="avatars" value="2"{if $settings.avatars==2} checked="checked"{/if} class="small-input" /><label id="avatars_profiles_postings_label" for="avatars_profiles_postings" class="{if $settings.avatars==2}active{else}inactive{/if}">{#avatars_profiles_postings#}</label><br />
+     <input id="avatars_profiles" type="radio" name="avatars" value="1"{if $settings.avatars==1} checked="checked"{/if} class="small-input" /><label id="avatars_profiles_label" for="avatars_profiles" class="{if $settings.avatars==1}active{else}inactive{/if}">{#avatars_profiles#}</label><br />
+     <input id="avatars_disabled" type="radio" name="avatars" value="0"{if $settings.avatars==0} checked="checked"{/if} class="small-input" /><label id="avatars_disabled_label" for="avatars_disabled" class="{if $settings.avatars==0}active{else}inactive{/if}">{#disabled#}</label>
     </p>
 {assign var="settings_avatar_max_width" value=$settings.avatar_max_width}
-{assign var="input_avatar_max_width" value="<input id=\"avatar_max_width\" type=\"text\" name=\"avatar_max_width\" value=\"$settings_avatar_max_width\" size=\"3\" />"}
+{assign var="input_avatar_max_width" value="<input id=\"avatar_max_width\" type=\"text\" name=\"avatar_max_width\" value=\"$settings_avatar_max_width\" size=\"3\" class=\"small-input\" />"}
 {assign var="settings_avatar_max_height" value=$settings.avatar_max_height}
-{assign var="input_avatar_max_height" value="<input type=\"text\" name=\"avatar_max_height\" value=\"$settings_avatar_max_height\" size=\"3\" />"}
+{assign var="input_avatar_max_height" value="<input type=\"text\" name=\"avatar_max_height\" value=\"$settings_avatar_max_height\" size=\"3\" class=\"small-input\" />"}
 {assign var="settings_avatar_max_filesize" value=$settings.avatar_max_filesize}
-{assign var="input_avatar_max_filesize" value="<input type=\"text\" name=\"avatar_max_filesize\" value=\"$settings_avatar_max_filesize\" size=\"3\" />"}
+{assign var="input_avatar_max_filesize" value="<input type=\"text\" name=\"avatar_max_filesize\" value=\"$settings_avatar_max_filesize\" size=\"3\" class=\"small-input\" />"}
     <p><label id="max_avatar_size_label" for="avatar_max_width" class="{if $settings.avatars==0}inactive{else}active{/if}">{#max_avatar_size#|replace:"[width]":$input_avatar_max_width|replace:"[height]":$input_avatar_max_height|replace:"[filesize]":$input_avatar_max_filesize}</label>
     </p>
    </td>
@@ -206,17 +206,17 @@
     <span class="description">{#upload_images_desc#}</span></th>
    <td class="d">
     <p>
-     <input id="upload_images_all" type="radio" name="upload_images" value="3"{if $settings.upload_images==3} checked="checked"{/if} /><label id="upload_images_all_label" for="upload_images_all" class="{if $settings.upload_images==3}active{else}inactive{/if}">{#upload_enabled_all#}</label><br />
-     <input id="upload_images_users" type="radio" name="upload_images" value="2"{if $settings.upload_images==2} checked="checked"{/if} /><label id="upload_images_users_label" for="upload_images_users" class="{if $settings.upload_images==2}active{else}inactive{/if}">{#upload_enabled_users#}</label><br />
-     <input id="upload_images_admins_mods" type="radio" name="upload_images" value="1"{if $settings.upload_images==1} checked="checked"{/if} /><label id="upload_images_admins_mods_label" for="upload_images_admins_mods" class="{if $settings.upload_images==1}active{else}inactive{/if}">{#upload_enabled_admins_mods#}</label><br />
-     <input id="upload_images_disabled" type="radio" name="upload_images" value="0"{if $settings.upload_images==0} checked="checked"{/if} /><label id="upload_images_disabled_label" for="upload_images_disabled" class="{if $settings.upload_images==0}active{else}inactive{/if}">{#disabled#}</label>
+     <input id="upload_images_all" type="radio" name="upload_images" value="3"{if $settings.upload_images==3} checked="checked"{/if} class="small-input" /><label id="upload_images_all_label" for="upload_images_all" class="{if $settings.upload_images==3}active{else}inactive{/if}">{#upload_enabled_all#}</label><br />
+     <input id="upload_images_users" type="radio" name="upload_images" value="2"{if $settings.upload_images==2} checked="checked"{/if} class="small-input" /><label id="upload_images_users_label" for="upload_images_users" class="{if $settings.upload_images==2}active{else}inactive{/if}">{#upload_enabled_users#}</label><br />
+     <input id="upload_images_admins_mods" type="radio" name="upload_images" value="1"{if $settings.upload_images==1} checked="checked"{/if} class="small-input" /><label id="upload_images_admins_mods_label" for="upload_images_admins_mods" class="{if $settings.upload_images==1}active{else}inactive{/if}">{#upload_enabled_admins_mods#}</label><br />
+     <input id="upload_images_disabled" type="radio" name="upload_images" value="0"{if $settings.upload_images==0} checked="checked"{/if} class="small-input" /><label id="upload_images_disabled_label" for="upload_images_disabled" class="{if $settings.upload_images==0}active{else}inactive{/if}">{#disabled#}</label>
     </p>
 {assign var="settings_upload_max_width" value=$settings.upload_max_img_width}
-{assign var="input_upload_max_width" value="<input id=\"upload_max_img_width\" type=\"text\" name=\"upload_max_img_width\" value=\"$settings_upload_max_width\" size=\"3\" />"}
+{assign var="input_upload_max_width" value="<input id=\"upload_max_img_width\" type=\"text\" name=\"upload_max_img_width\" value=\"$settings_upload_max_width\" size=\"3\" class=\"small-input\" />"}
 {assign var="settings_upload_max_height" value=$settings.upload_max_img_height}
-{assign var="input_upload_max_height" value="<input type=\"text\" name=\"upload_max_img_height\" value=\"$settings_upload_max_height\" size=\"3\" />"}
+{assign var="input_upload_max_height" value="<input type=\"text\" name=\"upload_max_img_height\" value=\"$settings_upload_max_height\" size=\"3\" class=\"small-input\" />"}
 {assign var="settings_upload_max_img_size" value=$settings.upload_max_img_size}
-{assign var="input_upload_max_filesize" value="<input type=\"text\" name=\"upload_max_img_size\" value=\"$settings_upload_max_img_size\" size=\"3\" />"}
+{assign var="input_upload_max_filesize" value="<input type=\"text\" name=\"upload_max_img_size\" value=\"$settings_upload_max_img_size\" size=\"3\" class=\"small-input\" />"}
     <p>
      <label id="max_upload_size_label" for="upload_max_img_width" class="{if $settings.upload_images==0}inactive{else}active{/if}">{#max_upload_size#|replace:"[width]":$input_upload_max_width|replace:"[height]":$input_upload_max_height|replace:"[filesize]":$input_upload_max_filesize}</label>
     </p>
@@ -225,19 +225,19 @@
   <tr>
    <th><strong>{#autolink#}</strong>
     <span class="description">{#autolink_desc#}</span></th>
-   <td class="d"><input id="autolink" type="checkbox" name="autolink" value="1"{if $settings.autolink==1} checked="checked"{/if} /><label id="autolink_label" for="autolink" class="{if $settings.autolink==1}active{else}inactive{/if}">{#autolink_enabled#}</label>
+   <td class="d"><input id="autolink" type="checkbox" name="autolink" value="1"{if $settings.autolink==1} checked="checked"{/if} class="small-input" /><label id="autolink_label" for="autolink" class="{if $settings.autolink==1}active{else}inactive{/if}">{#autolink_enabled#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#count_views#}</strong>
     <span class="description">{#count_views_desc#}</span></th>
-   <td class="d"><input id="count_views" type="checkbox" name="count_views" value="1"{if $settings.count_views==1} checked="checked"{/if} /><label id="count_views_label" for="count_views" class="{if $settings.count_views==1}active{else}inactive{/if}">{#views_counter_enabled#}</label>
+   <td class="d"><input id="count_views" type="checkbox" name="count_views" value="1"{if $settings.count_views==1} checked="checked"{/if} class="small-input" /><label id="count_views_label" for="count_views" class="{if $settings.count_views==1}active{else}inactive{/if}">{#views_counter_enabled#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#rss_feed#}</strong>
     <span class="description">{#rss_feed_desc#}</span></th>
-   <td class="d"><input id="rss_feed" type="checkbox" name="rss_feed" value="1"{if $settings.rss_feed==1} checked="checked"{/if} /><label id="rss_feed_label" for="rss_feed" class="{if $settings.rss_feed==1}active{else}inactive{/if}">{#rss_feed_enabled#}</label>
+   <td class="d"><input id="rss_feed" type="checkbox" name="rss_feed" value="1"{if $settings.rss_feed==1} checked="checked"{/if} class="small-input" /><label id="rss_feed_label" for="rss_feed" class="{if $settings.rss_feed==1}active{else}inactive{/if}">{#rss_feed_enabled#}</label>
    </td>
   </tr>
   <tr>
@@ -259,13 +259,13 @@
    <th><strong>{#forum_enabled_marking#}</strong>
     <span class="description">{#forum_enabled_desc#}</span></th>
    <td class="d">
-    <p><input id="forum_enabled" type="checkbox" name="forum_enabled" value="1"{if $settings.forum_enabled==1} checked="checked"{/if} /><label id="forum_enabled_label" for="forum_enabled" class="{if $settings.forum_enabled==1}active{else}inactive{/if}">{#forum_enabled#}</label></p>
+    <p><input id="forum_enabled" type="checkbox" name="forum_enabled" value="1"{if $settings.forum_enabled==1} checked="checked"{/if} class="small-input" /><label id="forum_enabled_label" for="forum_enabled" class="{if $settings.forum_enabled==1}active{else}inactive{/if}">{#forum_enabled#}</label></p>
     <p><label id="forum_disabled_message_label" for="forum_disabled_message" class="{if $settings.forum_enabled==1}inactive{else}active{/if}">{#forum_disabled_message#}</label><br /><input id="forum_disabled_message" type="text" name="forum_disabled_message" value="{$settings.forum_disabled_message|escape}" size="40" /></p>
    </td>
   </tr>
   <tr>
    <th>&nbsp;</th>
-   <td class="d"><p class="small"><input id="clear_chache" type="checkbox" name="clear_cache" value="1" /><label for="clear_chache">{#clear_chache#}</label></p></td>
+   <td class="d"><p class="small"><input id="clear_chache" type="checkbox" name="clear_cache" value="1" class="small-input" /><label for="clear_chache">{#clear_chache#}</label></p></td>
   </tr>
  </tbody>
 </table>
@@ -296,8 +296,8 @@
 <div class="caution">
 <input type="hidden" name="mode" value="admin" />
 <p>{#entries_in_not_ex_cat#}</p>
-<p><input type="radio" name="entry_action" value="delete" checked="checked" />{#entries_in_not_ex_cat_del#}<br />
-<input type="radio" name="entry_action" value="move" />{#entries_in_not_ex_cat_mov#}
+<p><input type="radio" name="entry_action" value="delete" checked="checked" class="small-input" />{#entries_in_not_ex_cat_del#}<br />
+<input type="radio" name="entry_action" value="move" class="small-input" />{#entries_in_not_ex_cat_mov#}
 <select class="kat" size="1" name="move_category">
 {foreach key=key item=val from=$categories}
 {if $key!=0}<option value="{$key}">{$val}</option>{/if}
@@ -351,9 +351,9 @@
 <label for="new_category" class="main">{#new_category#}</label><br />
 <input id="new_category" type="text" name="new_category" size="25" value="{if $new_category}{$new_category}{/if}" /><br /><br />
 <strong>{#category_accessible_by#}</strong><br />
-<input id="cat_accessible_all" type="radio" name="accession" value="0"{if !$accession || acession==0} checked="checked"{/if} /><label for="cat_accessible_all">{#cat_accessible_all#}</label><br />
-<input id="cat_accessible_reg_users" type="radio" name="accession" value="1"{if acession==1} checked="checked"{/if} /><label for="cat_accessible_reg_users">{#cat_accessible_reg_users#}</label><br />
-<input id="cat_accessible_admin_mod" type="radio" name="accession" value="2"{if acession==2} checked="checked"{/if} /><label for="cat_accessible_admin_mod">{#cat_accessible_admin_mod#}</label><br /><br />
+<input id="cat_accessible_all" type="radio" name="accession" value="0"{if !$accession || acession==0} checked="checked"{/if} class="small-input" /><label for="cat_accessible_all">{#cat_accessible_all#}</label><br />
+<input id="cat_accessible_reg_users" type="radio" name="accession" value="1"{if acession==1} checked="checked"{/if} class="small-input" /><label for="cat_accessible_reg_users">{#cat_accessible_reg_users#}</label><br />
+<input id="cat_accessible_admin_mod" type="radio" name="accession" value="2"{if acession==2} checked="checked"{/if} class="small-input" /><label for="cat_accessible_admin_mod">{#cat_accessible_admin_mod#}</label><br /><br />
 <input type="submit" value="{#submit_button_ok#}" />
 </div>
 </form>
@@ -374,9 +374,9 @@
 <strong>{#edit_category#}</strong><br />
 <input type="text" name="category" value="{$edit_category}" size="25" /><br /><br />
 <strong>{#category_accessible_by#}</strong><br />
-<input id="cat_accessible_all" type="radio" name="accession" value="0"{if $edit_accession==0} checked="checked"{/if} /><label for="cat_accessible_all">{#cat_accessible_all#}</label><br />
-<input id="cat_accessible_reg_users" type="radio" name="accession" value="1"{if $edit_accession==1} checked="checked"{/if} /><label for="cat_accessible_reg_users">{#cat_accessible_reg_users#}</label><br />
-<input id="cat_accessible_admin_mod" type="radio" name="accession" value="2"{if $edit_accession==2} checked="checked"{/if} /><label for="cat_accessible_admin_mod">{#cat_accessible_admin_mod#}</label><br /><br />
+<input id="cat_accessible_all" type="radio" name="accession" value="0"{if $edit_accession==0} checked="checked"{/if} class="small-input" /><label for="cat_accessible_all">{#cat_accessible_all#}</label><br />
+<input id="cat_accessible_reg_users" type="radio" name="accession" value="1"{if $edit_accession==1} checked="checked"{/if} class="small-input" /><label for="cat_accessible_reg_users">{#cat_accessible_reg_users#}</label><br />
+<input id="cat_accessible_admin_mod" type="radio" name="accession" value="2"{if $edit_accession==2} checked="checked"{/if} class="small-input" /><label for="cat_accessible_admin_mod">{#cat_accessible_admin_mod#}</label><br /><br />
 <input type="submit" name="edit_category_submit" value="{#submit_button_ok#}" />
 </div>
 </form>
@@ -396,8 +396,8 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="category_id" value="{$category_id}" />
-<p><input type="radio" name="delete_mode" value="complete" checked="checked" /> {#delete_category_compl#}</p></td>
-<p><input type="radio" name="delete_mode" value="keep_entries" /> {if $categories_count <= 1}{#del_cat_keep_entries#}
+<p><input type="radio" name="delete_mode" value="complete" checked="checked" class="small-input" /> {#delete_category_compl#}</p></td>
+<p><input type="radio" name="delete_mode" value="keep_entries" class="small-input" /> {if $categories_count <= 1}{#del_cat_keep_entries#}
 {else}{#del_cat_move_entries#}
 <select class="kat" size="1" name="move_category">
 <option value="0">&nbsp;</option>
@@ -463,7 +463,7 @@
 {section name=row loop=$userdata}
 {cycle values="a,b" assign=c}
   <tr class="{$c}">
-   <td><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" /></td>
+   <td><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" class="small-input" /></td>
    <td>{if $userdata[row].inactive}<span title="{#user_inactive#}" class="username inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$userdata[row].user_name}" class="username">{$userdata[row].user_name}</a>{/if}</td>
    <td data-header="{#user_email#}"><span class="small"><a href="mailto:{$userdata[row].user_email}" title="{#mailto_user_lt#|replace:"[user]":$userdata[row].user_name}">{$userdata[row].user_email}</a></span></td>
    <td data-header="{#user_type#}"><span class="small">{if $userdata[row].user_type==2}{#admin#}{elseif $userdata[row].user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
@@ -536,7 +536,7 @@
    <td class="d">
     <p class="userdata">
      <img src="{$avatar.image}" alt="{#avatar_img_alt#}" width="{$avatar.width}" height="{$avatar.height}" /><br />
-     <input id="delete_avatar" type="checkbox" name="delete_avatar" value="1"{if $delete_avatar=="1"} checked="checked"{/if} /><label for="delete_avatar">{#delete_avatar#}</label>
+     <input id="delete_avatar" type="checkbox" name="delete_avatar" value="1"{if $delete_avatar=="1"} checked="checked"{/if} class="small-input" /><label for="delete_avatar">{#delete_avatar#}</label>
     </p>
    </td>
   </tr>
@@ -544,16 +544,16 @@
   <tr>
    <th><strong>{#edit_user_type#}</strong></th>
    <td class="d">
-    <input id="edit_user_type_0" type="radio" name="edit_user_type" value="0"{if $edit_user_type==0} checked="checked"{/if} /><label for="edit_user_type_0">{#user#}</label><br />
-    <input id="edit_user_type_1" type="radio" name="edit_user_type" value="1"{if $edit_user_type==1} checked="checked"{/if} /><label for="edit_user_type_1">{#mod#}</label><br />
-    <input id="edit_user_type_2" type="radio" name="edit_user_type" value="2"{if $edit_user_type==2} checked="checked"{/if} /><label for="edit_user_type_2">{#admin#}</label>
+    <input id="edit_user_type_0" type="radio" name="edit_user_type" value="0"{if $edit_user_type==0} checked="checked"{/if} class="small-input" /><label for="edit_user_type_0">{#user#}</label><br />
+    <input id="edit_user_type_1" type="radio" name="edit_user_type" value="1"{if $edit_user_type==1} checked="checked"{/if} class="small-input" /><label for="edit_user_type_1">{#mod#}</label><br />
+    <input id="edit_user_type_2" type="radio" name="edit_user_type" value="2"{if $edit_user_type==2} checked="checked"{/if} class="small-input" /><label for="edit_user_type_2">{#admin#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#edit_user_email#}</strong></th>
    <td class="d">
     <input type="text" size="40" name="user_email" value="{$user_email}" /><br />
-    <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if} /><label for="email_contact">{#edit_user_email_contact#}</label></span>
+    <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if} class="small-input" /><label for="email_contact">{#edit_user_email_contact#}</label></span>
    </td>
   </tr>
   <tr>
@@ -567,8 +567,8 @@
   <tr>
    <th><strong>{#edit_user_gender#}</strong></th>
    <td class="d">
-    <input id="user_gender_1" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} /><label for="user_gender_1">{#male#}</label><br />
-    <input id="user_gender_2" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} /><label for="user_gender_2">{#female#}</label>
+    <input id="user_gender_1" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} class="small-input" /><label for="user_gender_1">{#male#}</label><br />
+    <input id="user_gender_2" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} class="small-input" /><label for="user_gender_2">{#female#}</label>
    </td>
   </tr>
   <tr>
@@ -634,8 +634,8 @@
   <tr>
    <th><strong>{#edit_user_notification#}</strong></th>
    <td class="d">
-    <input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if} /><label for="new_posting_notification">{#admin_mod_notif_posting#}</label><br />
-    <input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if} /><label for="new_user_notification">{#admin_mod_notif_register#}</label>
+    <input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if} class="small-input" /><label for="new_posting_notification">{#admin_mod_notif_posting#}</label><br />
+    <input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if} class="small-input" /><label for="new_user_notification">{#admin_mod_notif_register#}</label>
    </td>
   </tr>
 {/if}
@@ -693,7 +693,7 @@
 <input id="ar_pw" type="password" size="25" name="ar_pw" maxlength="50" /></p>
 <p><label for="ar_pw_conf" class="main">{#register_pw_conf#}</label><br />
 <input id="ar_pw_conf" type="password" size="25" name="ar_pw_conf" maxlength="50" /></p>
-<p><input id="ar_send_userdata" type="checkbox" name="ar_send_userdata" value="true"{if $ar_send_userdata} checked="checked"{/if} /> <label for="ar_send_userdata">{#register_send_userdata#}</label></p>
+<p><input id="ar_send_userdata" type="checkbox" name="ar_send_userdata" value="true"{if $ar_send_userdata} checked="checked"{/if} class="small-input" /> <label for="ar_send_userdata">{#register_send_userdata#}</label></p>
 <p><input type="submit" name="register_submit" value="{#submit_button_ok#}" /></p>
 </div>
 </form>
@@ -796,21 +796,21 @@
      <tbody>
       <tr>
        <td><strong>{#captcha_posting#}</strong></td>
-       <td><input id="captcha_posting_0" type="radio" name="captcha_posting" value="0"{if $captcha_posting==0} checked="checked"{/if} /><label for="captcha_posting_0">{#captcha_disabled#}</label></td>
-       <td><input id="captcha_posting_1" type="radio" name="captcha_posting" value="1"{if $captcha_posting==1} checked="checked"{/if} /><label for="captcha_posting_1">{#captcha_mathematical#}</label></td>
-       <td><input id="captcha_posting_2" type="radio" name="captcha_posting" value="2"{if $captcha_posting==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} /><label for="captcha_posting_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
+       <td><input id="captcha_posting_0" type="radio" name="captcha_posting" value="0"{if $captcha_posting==0} checked="checked"{/if} class="small-input" /><label for="captcha_posting_0">{#captcha_disabled#}</label></td>
+       <td><input id="captcha_posting_1" type="radio" name="captcha_posting" value="1"{if $captcha_posting==1} checked="checked"{/if} class="small-input" /><label for="captcha_posting_1">{#captcha_mathematical#}</label></td>
+       <td><input id="captcha_posting_2" type="radio" name="captcha_posting" value="2"{if $captcha_posting==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_posting_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
       </tr>
       <tr>
        <td><strong>{#captcha_email#}</strong></td>
-       <td><input id="captcha_email_0" type="radio" name="captcha_email" value="0"{if $captcha_email==0} checked="checked"{/if} /><label for="captcha_email_0">{#captcha_disabled#}</label></td>
-       <td><input id="captcha_email_1" type="radio" name="captcha_email" value="1"{if $captcha_email==1} checked="checked"{/if} /><label for="captcha_email_1">{#captcha_mathematical#}</label></td>
-       <td><input id="captcha_email_2" type="radio" name="captcha_email" value="2"{if $captcha_email==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} /><label for="captcha_email_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
+       <td><input id="captcha_email_0" type="radio" name="captcha_email" value="0"{if $captcha_email==0} checked="checked"{/if} class="small-input" /><label for="captcha_email_0">{#captcha_disabled#}</label></td>
+       <td><input id="captcha_email_1" type="radio" name="captcha_email" value="1"{if $captcha_email==1} checked="checked"{/if} class="small-input" /><label for="captcha_email_1">{#captcha_mathematical#}</label></td>
+       <td><input id="captcha_email_2" type="radio" name="captcha_email" value="2"{if $captcha_email==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_email_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
       </tr>
       <tr>
        <td><strong>{#captcha_register#}</strong></td>
-       <td><input id="captcha_register_0" type="radio" name="captcha_register" value="0"{if $captcha_register==0} checked="checked"{/if} /><label for="captcha_register_0">{#captcha_disabled#}</label></td>
-       <td><input id="captcha_register_1" type="radio" name="captcha_register" value="1"{if $captcha_register==1} checked="checked"{/if} /><label for="captcha_register_1">{#captcha_mathematical#}</label></td>
-       <td><input id="captcha_register_2" type="radio" name="captcha_register" value="2"{if $captcha_register==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} /><label for="captcha_register_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
+       <td><input id="captcha_register_0" type="radio" name="captcha_register" value="0"{if $captcha_register==0} checked="checked"{/if} class="small-input" /><label for="captcha_register_0">{#captcha_disabled#}</label></td>
+       <td><input id="captcha_register_1" type="radio" name="captcha_register" value="1"{if $captcha_register==1} checked="checked"{/if} class="small-input" /><label for="captcha_register_1">{#captcha_mathematical#}</label></td>
+       <td><input id="captcha_register_2" type="radio" name="captcha_register" value="2"{if $captcha_register==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_register_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
       </tr>
      </tbody>
     </table>
@@ -822,12 +822,12 @@
   <tr>
    <th><strong>{#stop_forum_spam#}</strong>
     <span class="description">{#stop_forum_spam_desc#}</span></th>
-   <td class="d"><input id="stop_forum_spam" type="checkbox" name="stop_forum_spam" value="1"{if $stop_forum_spam==1} checked="checked"{/if} /><label for="stop_forum_spam">{#stop_forum_spam_enable#}</label></td>
+   <td class="d"><input id="stop_forum_spam" type="checkbox" name="stop_forum_spam" value="1"{if $stop_forum_spam==1} checked="checked"{/if} class="small-input" /><label for="stop_forum_spam">{#stop_forum_spam_enable#}</label></td>
   </tr>
   <tr>
    <th><strong>{#bad_behavior#}</strong>
     <span class="description">{#bad_behavior_desc#}</span></th>
-   <td class="d"><input id="bad_behavior" type="checkbox" name="bad_behavior" value="1"{if $bad_behavior==1} checked="checked"{/if} /><label for="bad_behavior">{#bad_behavior_enable#}</label></td>
+   <td class="d"><input id="bad_behavior" type="checkbox" name="bad_behavior" value="1"{if $bad_behavior==1} checked="checked"{/if} class="small-input" /><label for="bad_behavior">{#bad_behavior_enable#}</label></td>
   </tr>
   <tr>
    <th><strong>{#akismet#}</strong>
@@ -835,12 +835,12 @@
    <td class="d">
     <p>{#akismet_key#}<br /><input type="text" name="akismet_key" value="{$akismet_key}" size="25" /></p>
     <p>
-     <input id="akismet_entry_check" type="checkbox" name="akismet_entry_check" value="1"{if $akismet_entry_check==1} checked="checked"{/if} /><label for="akismet_entry_check">{#akismet_entry#}</label><br />
-     <input id="akismet_mail_check" type="checkbox" name="akismet_mail_check" value="1"{if $akismet_mail_check==1} checked="checked"{/if} /><label for="akismet_mail_check">{#akismet_mail#}</label><br />
-     <input id="akismet_check_registered" type="checkbox" name="akismet_check_registered" value="1"{if $akismet_check_registered==1} checked="checked"{/if} /><label for="akismet_check_registered">{#akismet_registered#}</label>
+     <input id="akismet_entry_check" type="checkbox" name="akismet_entry_check" value="1"{if $akismet_entry_check==1} checked="checked"{/if} class="small-input" /><label for="akismet_entry_check">{#akismet_entry#}</label><br />
+     <input id="akismet_mail_check" type="checkbox" name="akismet_mail_check" value="1"{if $akismet_mail_check==1} checked="checked"{/if} class="small-input" /><label for="akismet_mail_check">{#akismet_mail#}</label><br />
+     <input id="akismet_check_registered" type="checkbox" name="akismet_check_registered" value="1"{if $akismet_check_registered==1} checked="checked"{/if} class="small-input" /><label for="akismet_check_registered">{#akismet_registered#}</label>
     </p>
     <p>
-     <input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if} /><label for="save_spam">{#akismet_save_spam#}</label><br />{#akismet_auto_delete_spam#}<br />
+     <input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if} class="small-input" /><label for="save_spam">{#akismet_save_spam#}</label><br />{#akismet_auto_delete_spam#}<br />
      <input type="text" name="auto_delete_spam" value="{$auto_delete_spam}" size="5" />
     </p>
    </td>
@@ -872,8 +872,8 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
-<p><input id="delete_postings" type="checkbox" name="delete_postings" value="true" /><label for="delete_postings"> {#delete_postings#}</label></p>
-<p><input id="delete_userdata" type="checkbox" name="delete_userdata" value="true" /><label for="delete_userdata"> {#delete_userdata#}</label></p>
+<p><input id="delete_postings" type="checkbox" name="delete_postings" value="true" class="small-input" /><label for="delete_postings"> {#delete_postings#}</label></p>
+<p><input id="delete_userdata" type="checkbox" name="delete_userdata" value="true" class="small-input" /><label for="delete_userdata"> {#delete_userdata#}</label></p>
 <p>{#admin_confirm_password#}<br />
 <input type="password" size="20" name="confirm_pw" /> <input type="submit" name="reset_forum_confirmed" value="{#reset_forum_submit#}" /></p>
 </div>
@@ -912,7 +912,7 @@
 {foreach from=$backup_files item=file}
 {cycle values="a,b" assign=c}
   <tr class="{$c}">
-   <td><input type="checkbox" name="delete_backup_files[]" value="{$file.file}" /></td>
+   <td><input type="checkbox" name="delete_backup_files[]" value="{$file.file}" class="small-input" /></td>
    <td>{$file.file}</td>
    <td data-header="{#backup_date#}">{$file.date|date_format:#time_format#}</td>
    <td data-header="{#backup_size#}">{$file.size}</td>
@@ -1172,8 +1172,8 @@
   <tr>
    <th><strong>{#page_access#}</strong></th>
    <td class="d">
-    <input type="radio" name="access" value="0"{if $access==0} checked="checked"{/if} /><span class="small">{#page_access_public#}</span>
-    <input type="radio" name="access" value="1"{if $access==1} checked="checked"{/if} /><span class="small">{#page_access_reg_users#}</span>
+    <input type="radio" name="access" value="0"{if $access==0} checked="checked"{/if} class="small-input" /><span class="small">{#page_access_public#}</span>
+    <input type="radio" name="access" value="1"{if $access==1} checked="checked"{/if} class="small-input" /><span class="small">{#page_access_reg_users#}</span>
    </td>
   </tr>
  </tbody>

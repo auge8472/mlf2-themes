@@ -14,7 +14,7 @@
 <p><label for="login" class="main">{#login_username#}</label><br /><input id="login" class="login" type="text" name="username" size="25" /></p>
 <p><label for="password" class="main">{#login_password#}</label><br /><input id="password" class="login" type="password" name="userpw" size="25" /></p>
 {if $settings.autologin==1}
-<p class="small"><input id="autologin" type="checkbox" name="autologin_checked" value="true" /> <label for="autologin">{#login_auto#}</label></p>
+<p class="small"><input id="autologin" type="checkbox" name="autologin_checked" value="true" class="small-input" /> <label for="autologin">{#login_auto#}</label></p>
 {/if}
 <p><input type="submit" value="{#login_submit#}" /></p>
 </div>
