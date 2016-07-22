@@ -131,10 +131,17 @@ footer #footer-2         { margin:0; padding:0; }
 #latest-postings a .posting-info
                          { color:#666; font-size: 0.82em; font-size: 0.82rem; }
 
-#tagcloud p              { margin:0; padding:5px; line-height:1.5em; }
-#tagcloud a.hide-sidebar { position:absolute; top:2px; right:4px; margin:0; padding:0; line-height:11px; }
-#tagcloud strong         { font-weight:bold; }
-
+#tagcloud ul {
+	margin: 0;
+	padding: 5px;
+	list-style: none;
+}
+#tagcloud li {
+	display: inline;
+}
+#tagcloud strong {
+	font-weight: bold;
+}
 
 #mod-options a.delete-marked
                          { padding-left:13px; background-image:url(images/bg_sprite_4.png); background-repeat:no-repeat; background-position:0 -296px; }
