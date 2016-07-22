@@ -83,9 +83,7 @@ a.rss                    { padding-left:13px; background:url(images/bg_sprite_1.
 
 input.small,
 select.small             { font-family:verdana,arial,sans-serif; font-size:0.82em; }
-#content p,
-#content ul,
-#content td              { line-height:1.5em; max-width:60em; }
+#content                 { line-height:150%; max-width:60em; }
 #content .xsmall         { font-size:0.69em; line-height:1.19em; color:#808080; font-weight:normal; }
 #content .small          { font-size:0.69em; line-height:1.19em; font-weight:normal; }
 
