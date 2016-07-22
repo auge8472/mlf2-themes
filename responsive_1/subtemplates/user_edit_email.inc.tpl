@@ -19,6 +19,6 @@
 <input id="new_email_confirm" type="text" size="25" name="new_email_confirm" value="" maxlength="{$settings.email_maxlength}" /></p>
 <p><label for="pw_new_email" class="main">{#edit_email_pw#}</label><br />
 <input id="pw_new_email" type="password" size="25" name="pw_new_email" /></p>
-<p><input type="submit" name="edit_email_submit" value="{#submit_button_ok#}" /></p>
+<p><button name="edit_email_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
 </form>

@@ -15,7 +15,10 @@
 <div>
 <input type="hidden" name="mode" value="posting" />
 <input type="hidden" name="id" value="{$id}" />
-<input type="submit" name="report_flag_ham_submit" value="{#report_flag_ham_submit#}" /> <input type="submit" name="flag_ham_submit" value="{#flag_ham_submit#}" />
+<p>
+ <button name="report_flag_ham_submit" value="{#report_flag_ham_submit#}">{#report_flag_ham_submit#}</button>
+ <button name="flag_ham_submit" value="{#flag_ham_submit#}">{#flag_ham_submit#}</button>
+</p>
 </div>
 </form>
 {/if}

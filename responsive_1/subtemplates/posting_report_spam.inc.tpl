@@ -28,7 +28,11 @@
 {if $order}<input type="hidden" name="order" value="{$order}" />{/if}
 {if $descasc}<input type="hidden" name="descasc" value="{$descasc}" />{/if}
 {if $category}<input type="hidden" name="category" value="{$category}" />{/if}
-<input type="submit" name="report_spam_delete_submit" value="{#report_spam_delete_submit#}" /> <input type="submit" name="report_spam_submit" value="{#report_spam_submit#}" /> <input type="submit" name="delete_submit" value="{#delete_only_submit#}" />
+<p>
+ <button name="report_spam_delete_submit" value="{#report_spam_delete_submit#}">{#report_spam_delete_submit#}</button>
+ <button name="report_spam_submit" value="{#report_spam_submit#}">{#report_spam_submit#}</button>
+ <button name="delete_submit" value="{#delete_only_submit#}">{#delete_only_submit#}</button>
+</p>
 </div>
 </form>
 {/if}

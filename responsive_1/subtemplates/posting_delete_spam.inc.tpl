@@ -8,7 +8,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="posting" />
-<input type="submit" name="delete_spam_submit" value="{#delete_posting_submit#}" />
+<p><button name="delete_spam_submit" value="{#delete_posting_submit#}">{#delete_posting_submit#}</button></p>
 </div>
 </form>
 {/if}

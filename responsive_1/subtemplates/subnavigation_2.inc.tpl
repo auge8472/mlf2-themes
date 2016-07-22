@@ -27,7 +27,7 @@
 {/if}
 {/foreach}
 </select>
-<noscript><div class="inline"><input class="small" type="submit" value="&raquo;" title="{#go#}" /></div></noscript>
+<noscript><div class="inline"><button class="small" value="&raquo;">{#go#}</button></div></noscript>
 </div></form>{/if}
 {if $pagination_top}
 <!-- subnavigation_2.inc.tpl, $pagination_top -->
@@ -42,7 +42,7 @@
 {if $item!=0} <option value="{$item}"{if $item==$page} selected="selected"{/if}>{$item}</option>{/if}
 {/foreach}
 </select>
-<noscript><div class="inline"><input class="small" type="submit" value="&raquo;" title="{#go#}" /></div></noscript>
+<noscript><div class="inline"><button class="small" value="&raquo;">{#go#}</button></div></noscript>
 </div></form>
 </div>
 {if $pagination_top.next}

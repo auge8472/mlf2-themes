@@ -11,7 +11,7 @@
 <p><input id="mark_mode_1" type="radio" name="mark_mode" value="1" class="small-input" /><label for="mark_mode_1">{$smarty.config.mark_old_threads|replace:"[days]":$input_days}<br />
 <input id="mark_mode_2" type="radio" name="mark_mode" value="2" class="small-input" /><label for="mark_mode_2">{#mark_all_postings#}</label><br />
 <input id="mark_mode_3" type="radio" name="mark_mode" value="3" class="small-input" /><label for="mark_mode_3">{#unmark_all_postings#}</label></p>
-<p><input type="submit" name="mark_submit" value="{#submit_button_ok#}" /></p>
+<p><button name="mark_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </fieldset>
 </form>
 
@@ -22,7 +22,7 @@
 <p><input id="lock_mode_1" type="radio" name="lock_mode" value="1" class="small-input" /><label for="lock_mode_1">{$smarty.config.lock_old_threads|replace:"[days]":$input_days}<br />
 <input id="lock_mode_2" type="radio" name="lock_mode" value="2" class="small-input" /><label for="lock_mode_2">{#lock_all_postings#}</label><br />
 <input id="lock_mode_3" type="radio" name="lock_mode" value="3" class="small-input" /><label for="lock_mode_3">{#unlock_all_postings#}</label></p>
-<p><input type="submit" name="lock_submit" value="{#submit_button_ok#}" /></p>
+<p><button name="lock_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </fieldset>
 </form>
 {/if}

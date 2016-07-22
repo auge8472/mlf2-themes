@@ -149,6 +149,6 @@
 {/if}
  </tbody>
 </table>
-<input type="submit" name="edit_user_submit" value="{#userdata_submit_button#}" />
+<p><button name="edit_user_submit" value="{#userdata_submit_button#}">{#userdata_submit_button#}</button></p>
 </div>
 </form>

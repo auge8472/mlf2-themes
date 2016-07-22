@@ -16,7 +16,7 @@
 {if $settings.autologin==1}
 <p class="small"><input id="autologin" type="checkbox" name="autologin_checked" value="true" class="small-input" /> <label for="autologin">{#login_auto#}</label></p>
 {/if}
-<p><input type="submit" value="{#login_submit#}" /></p>
+<p><button type="submit" value="{#login_submit#}">{#login_submit#}</button></p>
 </div>
 </form>
 <p class="small">{#login_advice#}</p>

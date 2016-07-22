@@ -37,6 +37,6 @@
 <label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><input id="captcha_code" type="text" name="captcha_code" value="" size="5" /></p>
 {/if}
 {/if}
-<p><input type="submit" name="register_submit" value="{#submit_button_ok#}" /></p>
+<p><button name="register_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
 </form>
