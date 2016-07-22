@@ -301,7 +301,10 @@ td span.mod              { cursor:help; }
 img.captcha              { border:1px solid #000; }
 
 /* categories: */
-.category                { color:#000080; font-size:0.82em; font-weight:normal; }
+.category {
+	color: #000080;
+	font-weight: normal;
+}
 .category-regusers       { color:#000080; font-size:0.82em; font-weight:normal; background:#e7e7e7; }
 .category-adminmod       { color:#000080; font-size:0.82em; font-weight:normal; background:#d5d5d5; }
 .category-b              { color:#00c; font-size:0.82em; font-weight:normal; }
