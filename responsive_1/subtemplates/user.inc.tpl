@@ -64,12 +64,12 @@
 {/if}
 
 {if $users_online}
-<div id="usersonline">
+<aside id="usersonline">
 <h2>{#currently_online#}</h2>
 <ul>
 {foreach name="users_online" from=$users_online item=user}<li><a href="index.php?mode=user&amp;show_user={$user.id}">{$user.name}</a></li>{/foreach}
 </ul>
-</div>
+</aside>
 {/if}
 
 {else}
