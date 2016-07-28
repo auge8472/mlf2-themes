@@ -18,7 +18,7 @@
 <!-- subnavigation_2.inc.tpl, $categories && $mode=='index' -->
 <form action="index.php" method="get" accept-charset="{#charset#}" id="subnav-2"><div>
 <input type="hidden" name="mode" value="{$mode}" />
-<select class="small" size="1" name="category" title="{#category_title#}">
+<select size="1" name="category">
  <option value="0"{if $category==0} selected="selected"{/if}>{#all_categories#}</option>
 {if $category_selection} <option value="-1"{if $category==-1} selected="selected"{/if}>{#my_category_selection#}</option>
 {/if}
@@ -27,7 +27,7 @@
 {/if}
 {/foreach}
 </select>
-<noscript><div class="inline"><button class="small" value="&raquo;">{#go#}</button></div></noscript>
+<button value="&raquo;">{#go#}</button>
 </div></form>{/if}
 {if $pagination_top}
 <!-- subnavigation_2.inc.tpl, $pagination_top -->
