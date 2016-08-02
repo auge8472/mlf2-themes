@@ -42,6 +42,15 @@
 <h2 id="headline-{$element.id}">{$element.subject}{if $element.pid==0 && $category_name} <span class="category">({$category_name})</span>{/if}</h2>
 <p class="author">{if $element.location}{#posted_by_location#|replace:"[name]":$name|replace:"[email_hp]":$email_hp|replace:"[location]":"<span class=\"posting-location\">`$element.location`</span>"|replace:"[time]":"<span class=\"posting-time\">`$element.formated_time`</span>"}{else}{#posted_by#|replace:"[name]":$name|replace:"[email_hp]":$email_hp|replace:"[time]":"<span class=\"posting-time\">`$element.formated_time`</span>"}{/if} <span class="posting-ago">{if $element.ago.days>1}{#posting_several_days_ago#|replace:"[days]":$element.ago.days_rounded}{else}{if $element.ago.days==0 && $element.ago.hours==0}{#posting_minutes_ago#|replace:"[minutes]":$element.ago.minutes}{elseif $element.ago.days==0 && $element.ago.hours!=0}{#posting_hours_ago#|replace:"[hours]":$element.ago.hours|replace:"[minutes]":$element.ago.minutes}{else}{#posting_one_day_ago#|replace:"[hours]":$element.ago.hours|replace:"[minutes]":$element.ago.minutes}{/if}{/if}</span>{if $admin && $element.ip} <span class="posting-ip">{$element.ip}</span>{/if}{if $element.pid!=0}{assign var="parent_posting" value=$element.pid} <span class="op-link"><a href="#p{$element.pid}" title="{#original_posting_linktitle#|replace:"[name]":$data.$parent_posting.name}">@ {$data.$parent_posting.name}</a></span>{/if}{if $element.views} <span class="posting-views">{if $element.views==1}{#one_view#}{else}{#several_views#|replace:"[views]":$element.views}{/if}</span>{/if}{if $element.edited}<br />
 <span class="posting-edited">{#edited_by#|replace:"[name]":$element.edited_by|replace:"[time]":$element.formated_edit_time}</span>{/if}</p>
+{if $element.tags}
+<div class="tags">
+ <h3>{#tags_marking#}</h3>
+ <ul>
+{foreach name="tags" from=$element.tags item=tag}  <li><a href="index.php?mode=search&amp;search={$tag.escaped}&amp;method=tags">{$tag.display}</a></li>
+{/foreach}
+ </ul>
+</div>
+{/if}
 </header>
 <div class="wrapper" id="posting-{$element.id}">
 <div class="body">
@@ -53,10 +62,6 @@
 {if $element.signature}
 <p class="signature">--<br />
 {$element.signature}</p>
-{/if}
-{if $element.tags}
-<p class="tags">{#tags_marking#}<br />
-{foreach name="tags" from=$element.tags item=tag}<a href="index.php?mode=search&amp;search={$tag.escaped}&amp;method=tags">{$tag.display}</a>{if !$smarty.foreach.tags.last}, {/if}{/foreach}</p>
 {/if}
 </div>
 <footer class="posting-footer">
