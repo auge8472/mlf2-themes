@@ -44,12 +44,12 @@
 <p class="tags">{#tags_marking#}<br />
 {foreach name="tags" from=$tags item=tag}<a href="index.php?mode=search&amp;search={$tag.escaped}&amp;method=tags">{$tag.display}</a>{if !$smarty.foreach.tags.last}, {/if}{/foreach}</p>
 {/if}
-<div class="reply">{if $locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$id}&amp;back=entry" title="{#reply_link_title#}">{#reply_link#}</a>{else}<span class="locked">{#posting_locked#}</span>{/if}</div>
 <div class="info">
 {if $views}<span class="views">{if $views==1}{#one_view#}{else}{#several_views#|replace:"[views]":$views}{/if}</span>{else}&nbsp;{/if}
-{if $options}
 <footer class="posting-footer">
 <ul class="options">
+<li>{if $locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$id}&amp;back=entry" title="{#reply_link_title#}">{#reply_link#}</a>{else}<span class="locked">{#posting_locked#}</span>{/if}</li>
+{if $options}
 {if $options.edit}<li><a href="index.php?mode=posting&amp;edit={$id}&amp;back=entry" class="edit" title="{#edit_message_linktitle#}">{#edit_message_linkname#}</a></li>{/if}
 {if $options.delete}<li><a href="index.php?mode=posting&amp;delete_posting={$id}&amp;back=entry" class="delete" title="{#delete_message_linktitle#}">{#delete_message_linkname#}</a></li>{/if}
 {if $options.move}<li><a href="index.php?mode=posting&amp;move_posting={$id}&amp;back=entry" class="move" title="{#move_posting_linktitle#}">{#move_posting_linkname#}</a></li>{/if}
@@ -58,9 +58,9 @@
 {if $options.lock}<li><a href="index.php?mode=posting&amp;lock={$id}&amp;back=entry" class="{if $locked==0}lock{else}unlock{/if}" title="{if $locked==0}{#lock_linktitle#}{else}{#unlock_linktitle#}{/if}">{if $locked==0}{#lock_linkname#}{else}{#unlock_linkname#}{/if}</a></li>
 <li><a href="index.php?mode=posting&amp;lock_thread={$id}&amp;back=entry" class="lock-thread" title="{#lock_thread_linktitle#}">{#lock_thread_linkname#}</a></li>
 <li><a href="index.php?mode=posting&amp;unlock_thread={$id}&amp;back=entry" class="unlock-thread" title="{#unlock_thread_linktitle#}">{#unlock_thread_linkname#}</a></li>{/if}
-</ul>
 {/if}
 </div>
+</ul>
 </footer>
 </article>
 
