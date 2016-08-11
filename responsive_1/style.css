@@ -48,11 +48,6 @@ main {
 	min-height: 200px;
 }
 
-/* default links: */
-a                        { color:#0000cc; text-decoration:none; }
-a:visited                { color:#0000cc; }
-a:hover                  { color:#0000ff; text-decoration:underline; }
-a:active                 { color:#ff0000; }
 body > footer {
 	display: block;
 	clear: both;
@@ -84,6 +79,22 @@ img {
 }
 /* end: commonly used elements */
 
+/* default links */
+a {
+	color: #00c;
+	text-decoration: none;
+}
+a:visited {
+	color: #00a;
+}
+a:focus, a:hover {
+	color: #00f;
+	text-decoration: underline;
+}
+a:active {
+	color: #f00;
+}
+/* end: default links */
 
 /* strong links */
 a.stronglink             { padding-left:13px; color:#0000cc; text-decoration:none; font-weight:bold; background:url(images/bg_sprite_1.png) no-repeat 0 4px; }
