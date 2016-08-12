@@ -371,6 +371,14 @@ aside div h3 {
 	padding:0;
 }
 
+.thread-posting {
+	border: 1px solid #bacbdf;
+	margin: 0 0 0.5em 0;
+	margin: 0 0 0.5rem 0;
+	padding: 0;
+	min-width: 16em;
+	box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
+}
 
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
@@ -441,7 +449,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 .posting-footer a.unlock-thread
                          { padding-left:16px; background:url(images/bg_sprite_4.png) no-repeat 0 -250px; }
 
-.thread-posting          { position:relative; border-left:10px solid #d2ddea; border-right:1px solid #f0f0f0; border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0; margin:0 0 20px 0; padding:0 0 0 0; background:#fff; /*border-right:1px solid blue;border-top:1px solid blue;border-bottom:1px solid blue;*/ }
 .new                     { border-left:10px solid #88a9cf !important; }
 .thread-posting h1,
 .thread-posting h2       { margin:0 0 2px 0; padding:0; }
