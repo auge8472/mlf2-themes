@@ -449,6 +449,14 @@ article .body * {
 	margin: 0 0 0.5em 0;
 	margin: 0 0 0.5rem 0;
 }
+
+article blockquote {
+	color: #777;
+	font-style: italic;
+	background: url("images/quote.png") no-repeat left top;
+	padding: 0 0 0 1.25em;
+	padding: 0 0 0 1.25rem;
+}
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -493,7 +501,6 @@ img.no-text              { cursor:help; }
 pre                      { max-width:100%; overflow:auto; }
 code                     { font-family:"courier new",courier; color:#000080; }
 code.monospace           { color:#000; }
-blockquote               { margin:0; padding:0 0 0 30px; color:#6f6f6f; font-style:italic; background:url(images/quote.png) no-repeat top left; }
 blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 
 .posting-footer          { clear:both; margin:25px 0 0 0; padding:0 0 0 0; }
