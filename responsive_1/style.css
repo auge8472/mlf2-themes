@@ -479,6 +479,28 @@ article footer li {
 	margin: 0 5px 5px 0;
 	padding: 0;
 }
+
+article footer li a {
+	display: block;
+	margin: 0;
+	padding: 0 0.25em;
+	padding: 0 0.25rem;
+	border: 1px solid #bacbdf;
+}
+
+article footer li a:link,
+article footer li a:visited {
+	background-color: #f9f9f9;
+}
+
+article footer li a:focus,
+article footer li a:hover {
+	background-color: #d9efff;
+}
+
+article footer li a:active {
+	background-color: #e9f8ff;
+}
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -529,6 +551,7 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 .posting-footer .locked  { font-size:0.82em; color:#808080; padding-left:16px; background:url(images/locked.png) no-repeat 0 0; }
 .posting-footer .info    { text-align:right; }
 .posting-footer .views   { font-size:0.69em; color:#808080; }
+/*
 .posting-footer a.edit   { padding-left:16px; background:url(images/bg_sprite_3.png) no-repeat 0 2px; }
 .posting-footer a.delete { padding-left:13px; background:url(images/bg_sprite_3.png) no-repeat 0 -47px; }
 .posting-footer a.move   { padding-left:13px; background:url(images/bg_sprite_4.png) no-repeat 0 2px; }
@@ -539,7 +562,7 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
                          { padding-left:16px; background:url(images/bg_sprite_4.png) no-repeat 0 -200px; }
 .posting-footer a.unlock-thread
                          { padding-left:16px; background:url(images/bg_sprite_4.png) no-repeat 0 -250px; }
-
+*/
 .new                     { border-left:10px solid #88a9cf !important; }
 .hide-posting            { position:absolute; top:0; left:-10px; }
 
