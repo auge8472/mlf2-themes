@@ -543,7 +543,6 @@ code                     { font-family:"courier new",courier; color:#000080; }
 code.monospace           { color:#000; }
 blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 
-.posting-footer .reply   { font-size:0.82em; float:left; }
 .posting-footer .locked  { font-size:0.82em; color:#808080; padding-left:16px; background:url(images/locked.png) no-repeat 0 0; }
 .posting-footer .info    { text-align:right; }
 .posting-footer .views   { font-size:0.69em; color:#808080; }
