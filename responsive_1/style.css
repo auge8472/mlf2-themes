@@ -419,6 +419,26 @@ article header .author {
 article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .posting-views, article header .op-link {
 	display: none;
 }
+
+article .tags {
+	clear: both;
+}
+
+article .tags h3, article .tags ul {
+	font-size: 0.82em;
+	font-weight: normal;
+	margin: 0;
+}
+
+article .tags h3, article .tags ul, article .tags li {
+	display: inline;
+	padding: 0 0.15em 0 0;
+	padding: 0 0.15rem 0 0;
+}
+
+article .tags li:not(:last-child):after {
+	content: ", ";
+}
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -500,7 +520,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 .op-link,
 .op-link a               { font-size:0.9em; color:#808080; }
 
-#content p.tags          { margin:20px 0 0 0; padding:0; color:#808080; font-size:0.69em; line-height:1.42em; }
 #content p.signature     { margin:10px 0 0 0; padding:0; color:#808080; font-weight:normal; font-size:0.69em; line-height:1.42em; }
 
 h2.postingform           { margin:0 0 20px 0; }
