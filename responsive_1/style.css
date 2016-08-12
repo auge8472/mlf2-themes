@@ -533,14 +533,10 @@ article footer li a:active {
 }
 /* end: elements of the footer */
 
-.posting                 {  }
-.posting h1              { margin:0 0 2px 0; padding:0; }
-.posting h1 .category    { font-size:0.57em; }
 *+html .posting ul       { padding-left:17px; } /* IE 7 only */
 .posting li              { font-size:0.82em; line-height:1.5em; }
 .posting li li           { font-size:1em; }
 .quote                   { color:#6f6f6f; font-style:italic; }
-.edited, .ago            { font-size:0.82em; color:#808080; }
 img.no-text              { cursor:help; }
 pre                      { max-width:100%; overflow:auto; }
 code                     { font-family:"courier new",courier; color:#000080; }
