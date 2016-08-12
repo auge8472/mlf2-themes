@@ -380,6 +380,15 @@ aside div h3 {
 	box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 }
 
+article header {
+	overflow: hidden;
+	margin: 0;
+	padding: 5px;
+}
+article.thread-posting header {
+	background-color: #d0e8ff;
+}
+
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -454,7 +463,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 .thread-posting h2       { margin:0 0 2px 0; padding:0; }
 .thread-posting h1 .category
                          { font-size:0.57em; }
-.thread-posting .header  { background:#f5f5f5; margin:0 0 0 0; padding:0 0 5px 10px; }
 .thread-posting .header img.avatar
                          { position:relative; margin:0 0 20px 20px; padding:5px; background:#f5f5f5; float:right; }
 .thread-posting .body    { margin:0; padding:10px 10px 10px 10px; }
