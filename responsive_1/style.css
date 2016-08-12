@@ -410,6 +410,12 @@ article header .category {
 	font-size: 0.82rem;
 }
 
+article header .author {
+	color: #888;
+	font-size: 0.82em;
+	font-size: 0.82rem;
+}
+
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -445,7 +451,6 @@ article header .category {
 .posting                 {  }
 .posting h1              { margin:0 0 2px 0; padding:0; }
 .posting h1 .category    { font-size:0.57em; }
-.posting .author         { margin:1px 0 18px 0; font-style:italic; }
 .posting p               {  }
 *+html .posting ul       { padding-left:17px; } /* IE 7 only */
 .posting li              { font-size:0.82em; line-height:1.5em; }
@@ -480,7 +485,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 
 .new                     { border-left:10px solid #88a9cf !important; }
 .thread-posting .body    { margin:0; padding:10px 10px 10px 10px; }
-.thread-posting .author  { margin:1px 0 0 0; font-style:italic; }
 .thread-posting .posting-footer
                          { margin:10px; }
 .hide-posting            { position:absolute; top:0; left:-10px; }
