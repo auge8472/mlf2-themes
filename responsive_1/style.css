@@ -397,14 +397,6 @@ aside div h3 {
 }
 /* end: elements of the footer */
 
-#usersonline             { background:#f9f9f9; border:1px solid #bacbdf; margin:20px 0 20px 0; }
-#usersonline h2          { line-height:1.6em; font-size:1em; font-weight:normal; margin:0; padding:0 5px; background:#d2ddea; }
-#usersonline ul          { margin:0; padding:7px 5px; list-style:none; }
-#usersonline li          { display:inline; }
-#usersonline a           { display:inline-block; margin-right:0.25em; margin-right:0,25rem; }
-#usersonline a:not(:last-child):after
-                         { content:", "; }
-
 .posting                 {  }
 .posting img.avatar      { float:right; margin:0 0 20px 20px; }
 .posting h1              { margin:0 0 2px 0; padding:0; }
