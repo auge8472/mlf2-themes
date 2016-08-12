@@ -363,6 +363,13 @@ aside div h3 {
 }
 /* end: elements of #sidebar, #bottombar, aside */
 
+/* elements of the posting views */
+/* postings of a thread in the nested view */
+.reply-wrapper {
+	margin: 0 0 0 0.5em;
+	margin: 0 0 0 0.5rem;
+	padding:0;
+}
 
 
 /* elements of the footer */
@@ -450,7 +457,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 .hide-posting            { position:absolute; top:0; left:-10px; }
 
 .thread-wrapper          { margin:0; padding:0; }
-.reply-wrapper           { margin:0 0 0 20px; padding:0; list-style-type:none; }
 .deep-reply-wrapper      { margin:0 0 0 10px; padding:0; list-style-type:none; }
 .very-deep-reply-wrapper { margin:0; padding:0; list-style-type:none; }
 
