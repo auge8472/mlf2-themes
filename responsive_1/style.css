@@ -213,11 +213,12 @@ img.previous:hover       { background:url(images/bg_sprite_2.png) no-repeat -6px
 
 a.rss                    { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -1048px; }
 
-input.small,
-select.small             { font-family:verdana,arial,sans-serif; font-size:0.82em; }
-#content                 { line-height:150%; max-width:60em; }
-#content .xsmall         { font-size:0.69em; line-height:1.19em; color:#808080; font-weight:normal; }
-#content .small          { font-size:0.69em; line-height:1.19em; font-weight:normal; }
+/* elements of the main block */
+/* general rules */
+.xsmall, .small {
+	font-size: 0.69em;
+	line-height: 130%;
+}
 
 footer #footer-1         { margin:0; padding:0; }
 footer #footer-2         { margin:0; padding:0; }
