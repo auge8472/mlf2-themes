@@ -416,6 +416,9 @@ article header .author {
 	font-size: 0.82rem;
 }
 
+article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .posting-views, article header .op-link {
+	display: none;
+}
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
