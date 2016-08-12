@@ -439,6 +439,11 @@ article .tags h3, article .tags ul, article .tags li {
 article .tags li:not(:last-child):after {
 	content: ", ";
 }
+
+article .body {
+	margin: 0;
+	padding: 5px;
+}
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -507,7 +512,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
                          { padding-left:16px; background:url(images/bg_sprite_4.png) no-repeat 0 -250px; }
 
 .new                     { border-left:10px solid #88a9cf !important; }
-.thread-posting .body    { margin:0; padding:10px 10px 10px 10px; }
 .thread-posting .posting-footer
                          { margin:10px; }
 .hide-posting            { position:absolute; top:0; left:-10px; }
