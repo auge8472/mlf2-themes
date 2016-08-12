@@ -544,8 +544,6 @@ code.monospace           { color:#000; }
 blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 
 .posting-footer .locked  { font-size:0.82em; color:#808080; padding-left:16px; background:url(images/locked.png) no-repeat 0 0; }
-.posting-footer .info    { text-align:right; }
-.posting-footer .views   { font-size:0.69em; color:#808080; }
 /*
 .posting-footer a.edit   { padding-left:16px; background:url(images/bg_sprite_3.png) no-repeat 0 2px; }
 .posting-footer a.delete { padding-left:13px; background:url(images/bg_sprite_3.png) no-repeat 0 -47px; }
