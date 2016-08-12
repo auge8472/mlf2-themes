@@ -220,12 +220,6 @@ a.rss                    { padding-left:13px; background:url(images/bg_sprite_1.
 	line-height: 130%;
 }
 
-footer #footer-1         { margin:0; padding:0; }
-footer #footer-2         { margin:0; padding:0; }
-#footermenu              { margin:0 0 1em 0; padding:0; list-style-type:none; }
-#footermenu li           { display:inline; margin-left:6px; }
-#footermenu li:first-child
-                         { margin-left:0; padding:0; }
 /* elements of #sidebar, #bottombar, aside */
 aside h2, #sidebarcontent, #sidebarcontent div, aside div h3, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li, #latest-postings a, #modmenu a {
 	margin:0;
@@ -285,9 +279,6 @@ aside div h3 {
 	font-weight: normal;
 	background: #d2ddea;
 }
-
-#pbmlf                   { clear:both; margin:0; padding:0 20px 11px 20px; text-align:center; font-size:0.69em; color:#808080; }
-#pbmlf a                 { color:#808080; text-decoration:none; }
 
 #latest-postings ul, #modmenu ul {
 	list-style: none;
@@ -372,6 +363,39 @@ aside div h3 {
 }
 /* end: elements of #sidebar, #bottombar, aside */
 
+
+
+/* elements of the footer */
+#footer-1, #footer-2, #footermenu, #footermenu li {
+	margin: 0;
+	padding: 0;
+}
+#footermenu {
+	margin-bottom: 1em;
+	margin-bottom: 1rem;
+	list-style-type: none;
+}
+#footermenu li {
+	display: inline;
+	margin-left: 0.25em;
+}
+#footermenu li:first-child {
+	margin-left: 0;
+}
+
+#pbmlf {
+	clear: both;
+	margin: 0;
+	padding: 0 20px 11px 20px;
+	font-size: 0.69em;
+	text-align: center;
+	color: #808080;
+}
+#pbmlf a {
+	color: #808080;
+	text-decoration: none;
+}
+/* end: elements of the footer */
 
 #usersonline             { background:#f9f9f9; border:1px solid #bacbdf; margin:20px 0 20px 0; }
 #usersonline h2          { line-height:1.6em; font-size:1em; font-weight:normal; margin:0; padding:0 5px; background:#d2ddea; }
