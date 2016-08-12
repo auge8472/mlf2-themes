@@ -156,26 +156,61 @@ img.previous:hover       { background:url(images/bg_sprite_2.png) no-repeat -6px
 }
 /* end: elements of the page header */
 
+/* elements of the navigation bar below the page header */
+#subnav-1, #subnav-2 {
+	margin:0;
+	padding:0;
+}
+#subnav ul {
+	list-style: none;
+}
+#subnav form, #subnav form div {
+	display:inline;
+}
+#subnav a, #subnav form {
+	padding-left:14px;
+}
 
-#subnav #subnav-1,
-#subnav #subnav-2        { margin:0; padding:0; }
-#subnav a,
-#subnav strong           { margin-left:10px; }
-#subnav .small           { font-size:0.82em; }
-#subnav form             { display:inline; }
-#subnav form div         { display:inline; }
+#subnav-2 a {
+	background-image: url(images/bg_sprite_1.png);
+	background-repeat: no-repeat;
+}
+#subnav .refresh {
+	padding-left:14px;
+	background-position: 0 -493px;
+}
+#subnav .order-1 {
+	background-position: 0 -543px;
+}
+#subnav .order-2 {
+	background-position: 0 -593px;
+}
+#subnav .fold-1 {
+	background-position: 0 -643px;
+}
+#subnav .fold-2 {
+	background-position: 0 -693px;
+}
+#subnav .tableview {
+	background-position: 0 -743px;
+}
+#subnav .threadview {
+	background-position: 0 -793px;
+}
+#subnav .openthread {
+	background-position: 0 -843px;
+}
+#subnav .linear {
+	background-position: 0 -893px;
+}
+#subnav .hierarchic {
+	background-position: 0 -943px;
+}
+#subnav .fold-postings {
+	background-position: 0 -993px;
+}
+/* end: elements of the navigation bar below the page header */
 
-#subnav a.refresh        { padding-left:14px; background:url(images/bg_sprite_1.png) no-repeat 0 -498px; }
-#subnav a.order-1        { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -548px; }
-#subnav a.order-2        { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -598px; }
-#subnav a.fold-1         { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -648px; }
-#subnav a.fold-2         { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -698px; }
-#subnav a.tableview      { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -748px; }
-#subnav a.threadview     { padding-left:12px; background:url(images/bg_sprite_1.png) no-repeat 0 -798px; }
-#subnav a.openthread     { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -848px; }
-#subnav a.linear         { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -898px; }
-#subnav a.hierarchic     { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -948px; }
-#subnav a.fold-postings  { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -998px; }
 a.rss                    { padding-left:13px; background:url(images/bg_sprite_1.png) no-repeat 0 -1048px; }
 
 input.small,
