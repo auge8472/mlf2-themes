@@ -501,6 +501,9 @@ article footer li a:hover {
 article footer li a:active {
 	background-color: #e9f8ff;
 }
+/* end: elements of the posting views */
+/* end: elements of the main block */
+
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
