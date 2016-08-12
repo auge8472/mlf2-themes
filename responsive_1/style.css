@@ -389,6 +389,27 @@ article.thread-posting header {
 	background-color: #d0e8ff;
 }
 
+.avatar {
+	display: block;
+	border: 0;
+	border-radius: 5px;
+	float: left;
+	margin: 0 5px 5px 0;
+	padding: 0;
+}
+
+article header h2,
+article header p {
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+
+article header .category {
+	font-weight: normal;
+	font-size: 0.82em;
+	font-size: 0.82rem;
+}
+
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -422,7 +443,6 @@ article.thread-posting header {
 /* end: elements of the footer */
 
 .posting                 {  }
-.posting img.avatar      { float:right; margin:0 0 20px 20px; }
 .posting h1              { margin:0 0 2px 0; padding:0; }
 .posting h1 .category    { font-size:0.57em; }
 .posting .author         { margin:1px 0 18px 0; font-style:italic; }
@@ -459,12 +479,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
                          { padding-left:16px; background:url(images/bg_sprite_4.png) no-repeat 0 -250px; }
 
 .new                     { border-left:10px solid #88a9cf !important; }
-.thread-posting h1,
-.thread-posting h2       { margin:0 0 2px 0; padding:0; }
-.thread-posting h1 .category
-                         { font-size:0.57em; }
-.thread-posting .header img.avatar
-                         { position:relative; margin:0 0 20px 20px; padding:5px; background:#f5f5f5; float:right; }
 .thread-posting .body    { margin:0; padding:10px 10px 10px 10px; }
 .thread-posting .author  { margin:1px 0 0 0; font-style:italic; }
 .thread-posting .posting-footer
