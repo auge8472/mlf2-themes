@@ -466,6 +466,19 @@ article footer {
 article.thread-posting footer {
 	background-color: #f0f0ff;
 }
+
+article footer ul {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+article footer li {
+	float: left;
+	margin: 0 5px 5px 0;
+	padding: 0;
+}
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -516,9 +529,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 .posting-footer .locked  { font-size:0.82em; color:#808080; padding-left:16px; background:url(images/locked.png) no-repeat 0 0; }
 .posting-footer .info    { text-align:right; }
 .posting-footer .views   { font-size:0.69em; color:#808080; }
-.posting-footer .options { display:inline; font-size:0.69em !important; list-style-type:none; max-width:100% !important; padding:0; }
-.posting-footer .options li
-                         { display:inline; margin:0 0 0 1em; }
 .posting-footer a.edit   { padding-left:16px; background:url(images/bg_sprite_3.png) no-repeat 0 2px; }
 .posting-footer a.delete { padding-left:13px; background:url(images/bg_sprite_3.png) no-repeat 0 -47px; }
 .posting-footer a.move   { padding-left:13px; background:url(images/bg_sprite_4.png) no-repeat 0 2px; }
