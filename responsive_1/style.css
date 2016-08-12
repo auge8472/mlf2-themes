@@ -444,6 +444,11 @@ article .body {
 	margin: 0;
 	padding: 5px;
 }
+
+article .body * {
+	margin: 0 0 0.5em 0;
+	margin: 0 0 0.5rem 0;
+}
 /* elements of the footer */
 #footer-1, #footer-2, #footermenu, #footermenu li {
 	margin: 0;
@@ -479,7 +484,6 @@ article .body {
 .posting                 {  }
 .posting h1              { margin:0 0 2px 0; padding:0; }
 .posting h1 .category    { font-size:0.57em; }
-.posting p               {  }
 *+html .posting ul       { padding-left:17px; } /* IE 7 only */
 .posting li              { font-size:0.82em; line-height:1.5em; }
 .posting li li           { font-size:1em; }
