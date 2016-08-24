@@ -462,6 +462,15 @@ article blockquote {
 	max-width: 100%;
 }
 
+.body .signature {
+	margin: 0.5em 0 0 0;
+	margin: 0.5rem 0 0 0;
+	padding: 0;
+	color: #808080;
+	font-size: 0.82em;
+	line-height: 1.4em;
+}
+
 article footer {
 	margin: 0;
 	padding: 5px;
@@ -573,8 +582,6 @@ blockquote code          { font-family:"courier new",courier; color:#6f6f6f; }
 
 .op-link,
 .op-link a               { font-size:0.9em; color:#808080; }
-
-#content p.signature     { margin:10px 0 0 0; padding:0; color:#808080; font-weight:normal; font-size:0.69em; line-height:1.42em; }
 
 h2.postingform           { margin:0 0 20px 0; }
 p.reply-to               { margin:0 0 20px 0; }
