@@ -375,6 +375,44 @@ aside div h3 {
 }
 /* end: elements of #sidebar, #bottombar, aside */
 
+/* tables on narrow screens*/
+@media screen and (max-width: 32em) {
+	table {
+		border: none;
+	}
+	table thead {
+		display: none;
+	}
+	tr, td, th {
+		display: block;
+	}
+	tr {
+		border: 1px solid #bacbdf;
+		margin-bottom: 0.25em;
+		margin-bottom: 0.25rem;
+	}
+	 tr:last-child {
+		margin-bottom: 0;
+	}
+	td[data-header] {
+		background-color: #fff;
+		line-height: 1.3em;
+	}
+	td[data-header]::before {
+		content: attr(data-header) ': ';
+	}
+	.normaltab .subject, table.normaltab td.c, .settings th {
+		border-bottom: 1px dotted #bacbdf;
+	}
+	table.normaltab td.c, .settings th, th, td {
+		width: auto;
+		max-width: 100%;
+	}
+	textarea {
+		width: calc(100% - 6px);
+	}
+}
+
 /* elements of the posting views */
 /* postings of a thread in the nested view */
 .reply-wrapper {
@@ -711,43 +749,6 @@ table tr.drag td         { background:#ddd; }
 	display: block;
 }
 
-/* tables on narrow screens*/
-@media screen and (max-width: 32em) {
-	table {
-		border: none;
-	}
-	table thead {
-		display: none;
-	}
-	tr, td, th {
-		display: block;
-	}
-	 tr {
-		border: 1px solid #bacbdf;
-		margin-bottom: 0.25em;
-		margin-bottom: 0.25rem;
-	}
-	 tr:last-child {
-		margin-bottom: 0;
-	}
-	td[data-header] {
-		background-color: #fff;
-		line-height: 1.3em;
-	}
-	td[data-header]::before {
-		content: attr(data-header) ': ';
-	}
-	.normaltab .subject, table.normaltab td.c, .settings th {
-		border-bottom: 1px dotted #bacbdf;
-	}
-	table.normaltab td.c, .settings th, th, td {
-		width: auto;
-		max-width: 100%;
-	}
-	textarea {
-		width: calc(100% - 6px);
-	}
-}
 
 p.userdata               { margin:0; }
 .normalform              { font-size:0.82em; }
