@@ -375,6 +375,58 @@ aside div h3 {
 }
 /* end: elements of #sidebar, #bottombar, aside */
 
+/* table definitions */
+table {
+	width: 100%;
+	border: 1px solid #bacbdf;
+	border-collapse: collapse;
+}
+thead {
+	background: #d2ddea;
+}
+th {
+	vertical-align: top;
+	font-weight: bold;
+	text-align: left;
+	padding: 0.1em 0.2em;
+	padding: 0.1rem 0.2rem;
+}
+td {
+	vertical-align: top;
+	font-weight: normal;
+	padding: 0.2em;
+	padding: 0.2rem;
+}
+tbody tr:nth-child(odd) {
+	background:#eee;
+}
+tbody tr:nth-child(even) {
+	background:#fff;
+}
+td.subject {
+	min-width:50%;
+}
+table p {
+	font-size:1em;
+}
+td[data-header] {
+	font-size:0.82em;
+}
+.settings th {
+	width: 40%;
+	max-width: 24em;
+	background:#d2ddea;
+}
+.settings th strong {
+	display: block;
+}
+.settings th .description {
+	font-weight: normal;
+	display: block;
+}
+.settings .d {
+	background:#f5f5f5;
+}
 /* tables on narrow screens*/
 @media screen and (max-width: 32em) {
 	table {
@@ -725,30 +777,6 @@ h3.preview               { margin:10px 0 3px 0; font-size:0.82em; font-weight:bo
 div.preview              { margin:0 0 25px 0; padding:10px; color:#000000; border:1px dotted red; }
 
 table.wide               { width:100%; }
-table                    { width:100%; border:1px solid #bacbdf; background:#fff; border-collapse:collapse; }
-th                       { vertical-align:top; font-weight:bold; text-align:left; background:#d2ddea; padding: 2px 4px; }
-td                       { vertical-align:top; font-weight:normal; padding: 2px 4px; }
-tbody tr:nth-child(odd)  { background:#ddd; }
-tbody tr:nth-child(even) { background:#f6f6f6; }
-td.c                     { width:150px; background:#d2ddea; }
-td.d                     { background:#f5f5f5; }
-td.subject               { min-width:50%; }
-table p                  { font-size:1em; }
-table .small,
-table .xsmall            { font-size:0.82em; }
-table tr.drag td         { background:#ddd; }
-.settings th {
-	width: 40%;
-	max-width: 24em;
-}
-.settings th strong {
-	display: block;
-}
-.settings th .description {
-	font-weight: normal;
-	display: block;
-}
-
 
 p.userdata               { margin:0; }
 .normalform              { font-size:0.82em; }
