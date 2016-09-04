@@ -600,13 +600,11 @@ article footer li a {
 	border: 1px solid #bacbdf;
 }
 
-article footer li a:link,
-article footer li a:visited {
+article footer li a:link, article footer li a:visited {
 	background-color: #f9f9f9;
 }
 
-article footer li a:focus,
-article footer li a:hover {
+article footer li a:focus, article footer li a:hover {
 	background-color: #d9efff;
 }
 
