@@ -112,10 +112,22 @@ a.stronglink:focus, a.stronglink:hover {
 }
 /* end: strong links */
 
-img.next                 { background:url(images/bg_sprite_2.png) no-repeat 0 -11px; }
-img.next:hover           { background:url(images/bg_sprite_2.png) no-repeat -6px -11px; }
-img.previous             { background:url(images/bg_sprite_2.png) no-repeat 0 0; }
-img.previous:hover       { background:url(images/bg_sprite_2.png) no-repeat -6px 0; }
+img.next, img.next:focus, img.next:hover, img.previous, img.previous:focus, img.previous:hover {
+	background-image: url(images/bg_sprite_2.png);
+	background-repeat: no-repeat;
+}
+img.next {
+	background-position: 0 -11px;
+}
+img.next:focus, img.next:hover {
+	background-position: -6px -11px;
+}
+img.previous {
+	background-position: 0 0;
+}
+img.previous:focus, img.previous:hover {
+	background-position: -6px 0;
+}
 
 /* elements of the page header */
 #logo, #logo .home, #logo h1, #logo .index, #nav, #usermenu, #usermenu li {
