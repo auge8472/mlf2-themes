@@ -321,12 +321,12 @@ aside div h3 {
 	font-size: 0.82em;
 	font-size: 0.82rem;
 }
+
 #mod-options a.delete-marked, #mod-options a.manage, #mod-options a.report, #mod-options a.delete-spam {
 	padding-left: 14px;
 	background-image: url(images/bg_sprite_4.png);
 	background-repeat: no-repeat;
 }
-
 #mod-options a.delete-marked {
 	background-position: 2px -287px;
 }
@@ -352,7 +352,6 @@ aside div h3 {
 #tagcloud strong {
 	font-weight: bold;
 }
-
 #usersonline {
 	background: #f9f9f9;
 	border: 1px solid #bacbdf;
@@ -585,13 +584,11 @@ article footer ul {
 	padding: 0;
 	list-style: none;
 }
-
 article footer li {
 	float: left;
 	margin: 0 5px 5px 0;
 	padding: 0;
 }
-
 article footer li a {
 	display: block;
 	margin: 0;
@@ -599,15 +596,12 @@ article footer li a {
 	padding: 0 0.25rem;
 	border: 1px solid #bacbdf;
 }
-
 article footer li a:link, article footer li a:visited {
 	background-color: #f9f9f9;
 }
-
 article footer li a:focus, article footer li a:hover {
 	background-color: #d9efff;
 }
-
 article footer li a:active {
 	background-color: #e9f8ff;
 }
