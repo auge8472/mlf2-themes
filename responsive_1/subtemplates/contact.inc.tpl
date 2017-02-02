@@ -37,7 +37,7 @@
 <label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><input id="captcha_code" type="text" name="captcha_code" value="" size="5" /></p>
 {/if}
 {/if}
-<p><button name="message_submit" value="{#message_submit_caption#}" onclick="document.getElementById('throbber-submit').style.display = 'inline'">{#message_submit_caption#}</button> <img id="throbber-submit" style="display:none;" src="{$THEMES_DIR}/{$theme}/images/throbber_submit.gif" alt="" width="16" height="16" /></p>
+<p><button name="message_submit" value="{#message_submit_caption#}" onclick="document.getElementById('throbber-submit').classList.remove('js-visibility-hidden')">{#message_submit_caption#}</button> <img id="throbber-submit" class="js-visibility-hidden" src="{$THEMES_DIR}/{$theme}/images/throbber_submit.gif" alt="" width="16" height="16" /></p>
 </div>
 </form>
 {/if}
