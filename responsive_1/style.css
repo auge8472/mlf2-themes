@@ -371,7 +371,7 @@ aside div h3 {
 #tagcloud a, #usersonline a {
 	display:inline-block;
 	margin-right:0.25em;
-	margin-right:0,25rem;
+	margin-right:0.25rem;
 }
 #tagcloud a:not(:last-child):after, #usersonline a:not(:last-child):after {
 	content:", ";
