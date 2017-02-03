@@ -192,11 +192,11 @@
      <input id="avatars_disabled" type="radio" name="avatars" value="0"{if $settings.avatars==0} checked="checked"{/if} class="small-input" /><label id="avatars_disabled_label" for="avatars_disabled" class="{if $settings.avatars==0}active{else}inactive{/if}">{#disabled#}</label>
     </p>
 {assign var="settings_avatar_max_width" value=$settings.avatar_max_width}
-{assign var="input_avatar_max_width" value="<input id=\"avatar_max_width\" type=\"text\" name=\"avatar_max_width\" value=\"$settings_avatar_max_width\" size=\"3\" class=\"small-input\" />"}
+{assign var="input_avatar_max_width" value="<input id=\"avatar_max_width\" type=\"text\" name=\"avatar_max_width\" value=\"$settings_avatar_max_width\" size=\"5\" class=\"small-input\" />"}
 {assign var="settings_avatar_max_height" value=$settings.avatar_max_height}
-{assign var="input_avatar_max_height" value="<input type=\"text\" name=\"avatar_max_height\" value=\"$settings_avatar_max_height\" size=\"3\" class=\"small-input\" />"}
+{assign var="input_avatar_max_height" value="<input type=\"text\" name=\"avatar_max_height\" value=\"$settings_avatar_max_height\" size=\"5\" class=\"small-input\" />"}
 {assign var="settings_avatar_max_filesize" value=$settings.avatar_max_filesize}
-{assign var="input_avatar_max_filesize" value="<input type=\"text\" name=\"avatar_max_filesize\" value=\"$settings_avatar_max_filesize\" size=\"3\" class=\"small-input\" />"}
+{assign var="input_avatar_max_filesize" value="<input type=\"text\" name=\"avatar_max_filesize\" value=\"$settings_avatar_max_filesize\" size=\"5\" class=\"small-input\" />"}
     <p><label id="max_avatar_size_label" for="avatar_max_width" class="{if $settings.avatars==0}inactive{else}active{/if}">{#max_avatar_size#|replace:"[width]":$input_avatar_max_width|replace:"[height]":$input_avatar_max_height|replace:"[filesize]":$input_avatar_max_filesize}</label>
     </p>
    </td>
@@ -274,9 +274,11 @@
 </form>
 <p><a class="stronglink" href="index.php?mode=admin&amp;action=advanced_settings">{#advanced_settings_link#}</a></p>
 {elseif $action=='advanced_settings'}
+{if $saved}<p class="ok">{#settings_saved#}</p>{/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="return_to" value="advanced_settings" />
 <table class="settings">
  <tbody>
 {section name=nr loop=$settings_sorted}
@@ -685,6 +687,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <p><label for="ar_username" class="main">{#register_username#}</label><br />
 <input id="ar_username" type="text" size="25" name="ar_username" value="{$ar_username|default:''}" maxlength="{$settings.name_maxlength}" /></p>
 <p><label for="ar_email" class="main">{#register_email#}</label><br />
@@ -739,6 +742,7 @@
 <form action="index.php" method="post" class="normalform" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin">
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <table>
  <thead>
   <tr>
@@ -944,6 +948,9 @@
   <li><a href="index.php?mode=admin&amp;create_backup=5"><span>{#backup_pages#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;create_backup=6"><span>{#backup_smilies#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;create_backup=7"><span>{#backup_banlists#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=8"><span>{#backup_bookmarks#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=9"><span>{#backup_read_status#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;create_backup=10"><span>{#backup_temp_infos#}</span></a></li>
  </ul>
 </li>
 </ul>
@@ -1197,6 +1204,27 @@
 <p>{#page_doesnt_exist#}</p>
 {/if}
 {else}
+<div class="additional-admin-info">
+	<div id="admin-info-current-version">
+		<h3>{#actual_installed_version_header#}</h3>
+		<p>{#actual_installed_version#|replace:"[current_version_string]":$installed_version_number}</p>
+	</div>
+	{if $install_script_exists}
+	<div id="admin-info-install_script_exists">
+		<h3>{#warning_header#}</h3>
+		<p>{#warning_install_script_exists#}</p>
+	</div>
+	{/if}
+	<div id="admin-info-releases">
+	{if $latest_release_version}
+		<h3>{#releases_info_header#}</h3>
+		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download {$latest_release_version}</a></p>
+	{else}
+		<h3>{#releases_info_header#}</h3>
+		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
+	{/if}
+	</div>
+</div>
 <ul class="adminmenu">
  <li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
  <li><a href="index.php?mode=admin&amp;action=user"><img src="{$THEMES_DIR}/{$theme}/images/user.png" alt="" width="16" height="16" /><span>{#user_administr_link#}</span></a></li>
