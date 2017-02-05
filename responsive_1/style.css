@@ -322,7 +322,7 @@ aside div h3 {
 	font-size: 0.82rem;
 }
 
-#mod-options a.delete-marked, #mod-options a.manage, #mod-options a.report, #mod-options a.delete-spam {
+#mod-options a.delete-marked, #mod-options a.manage, #mod-options a.report, #mod-options a.delete-spam, #mod-options a.non-activated-users {
 	padding-left: 14px;
 	background-image: url(images/bg_sprite_4.png);
 	background-repeat: no-repeat;
@@ -341,8 +341,7 @@ aside div h3 {
 	background-position: 2px -38px;
 }
 #mod-options a.non-activated-users {
-	background-image: url(images/bg_sprite_4.png);
-	background-position: 0 -396px;
+	background-position: 1px -387px;
 }
 
 #tagcloud ul, #usersonline ul {
@@ -371,7 +370,7 @@ aside div h3 {
 #tagcloud a, #usersonline a {
 	display:inline-block;
 	margin-right:0.25em;
-	margin-right:0,25rem;
+	margin-right:0.25rem;
 }
 #tagcloud a:not(:last-child):after, #usersonline a:not(:last-child):after {
 	content:", ";
@@ -518,7 +517,7 @@ article header .author {
 	font-size: 0.82rem;
 }
 
-article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .posting-views, article header .op-link {
+article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .posting-views, article header .op-link, article header .interpunction {
 	display: none;
 }
 
