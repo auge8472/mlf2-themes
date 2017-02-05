@@ -517,7 +517,7 @@ article header .author {
 	font-size: 0.82rem;
 }
 
-article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .posting-views, article header .op-link {
+article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .posting-views, article header .op-link, article header .interpunction {
 	display: none;
 }
 
