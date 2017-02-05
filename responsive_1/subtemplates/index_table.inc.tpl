@@ -52,9 +52,9 @@
 {/if}
 
 {if $tag_cloud || $latest_postings || $admin || $mod}
-<aside id="bottombar">
+<aside id="bottombar"{if $usersettings.sidebar==0} class="js-display-fold"{/if}>
 <h2><a href="index.php?toggle_sidebar=true" title="{#toggle_sidebar#}">{#sidebar#}</a></h2>
-<div id="sidebarcontent"{if $usersettings.sidebar==0} class="js-display-fold"{/if}>
+<div id="sidebarcontent">
 {if $latest_postings}
 <div id="latest-postings">
 <h3>{#latest_postings_hl#}</h3>
