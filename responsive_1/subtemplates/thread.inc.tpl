@@ -63,7 +63,7 @@
 {$data.$element.signature}</p>
 {/if}
 </div>
-<footer class="posting-footer">
+<footer class="posting-footer item-tools">
 <ul class="options">
 <li>{if $data.$element.locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$data.$element.id}&amp;back=thread" title="{#reply_link_title#}">{#reply_link#}</a>{else}<span class="locked">{#posting_locked#}</span>{/if}</li>
 {if $data.$element.options}
