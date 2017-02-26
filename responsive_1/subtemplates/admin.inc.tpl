@@ -334,10 +334,10 @@
 {section name=row loop=$categories_list}
 {cycle values="a,b" assign=c}
   <tr id="id_{$categories_list[row].id}" class="{$c}">
-   <td><strong>{$categories_list[row].name}</strong></td>
-   <td>{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
-   <td>{$categories_list[row].threads_in_category}</td>
-   <td>{$categories_list[row].postings_in_category}</td>
+   <td data-header="{#category_name#}"><strong>{$categories_list[row].name}</strong></td>
+   <td data-header="{#category_accession#}">{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
+   <td data-header="{#category_topics#}">{$categories_list[row].threads_in_category}</td>
+   <td data-header="{#category_entries#}">{$categories_list[row].postings_in_category}</td>
    <td><a href="index.php?mode=admin&amp;edit_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" title="{#edit#}" alt="{#edit#}" width="16" height="16" /></a> &nbsp; <a href="index.php?mode=admin&amp;delete_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" title="{#delete#}" alt="{#delete#}" width="16" height="16"/></a> &nbsp; <a href="index.php?mode=admin&amp;move_up_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#up#}" title="{#up#}" width="16" height="16" /></a>&nbsp;<a href="index.php?mode=admin&amp;move_down_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#down#}" title="{#down#}" width="16" height="16" /></a></td>
   </tr>
 {/section}
