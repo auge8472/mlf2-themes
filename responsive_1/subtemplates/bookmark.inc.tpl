@@ -17,9 +17,9 @@
 					{cycle values="a,b" assign=c}
 					<tr id="id_{$row.bid}" class="{$c}">
 						<td><a href="index.php?id={$row.id}" title="{$row.subject}"><strong>{$row.subject}</strong></a></td>
-						<td>{if $row.user_id > 0}<a href="index.php?mode=user&amp;show_user={$row.user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$row.user_name}">{/if}<strong>{$row.user_name}</strong>{if $row.user_id > 0}</a>{/if}</td>
-						<td><span class="small">{$row.bookmark_time}</span></td>
-						<td><span class="small">{$row.posting_time}</span></td>
+						<td data-header="{#bookmark_user_name#}">{if $row.user_id > 0}<a href="index.php?mode=user&amp;show_user={$row.user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$row.user_name}">{/if}<strong>{$row.user_name}</strong>{if $row.user_id > 0}</a>{/if}</td>
+						<td data-header="{#bookmark_creation_time#}"><span class="small">{$row.bookmark_time}</span></td>
+						<td data-header="{#bookmark_posting_time#}"><span class="small">{$row.posting_time}</span></td>
 						<td><a href="index.php?mode=bookmarks&amp;edit_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" title="{#edit#}" alt="{#edit#}" width="16" height="16" /></a> &nbsp; <a href="index.php?mode=bookmarks&amp;delete_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" title="{#delete#}" alt="{#delete#}" width="16" height="16"/></a> &nbsp; <a href="index.php?mode=bookmarks&amp;move_up_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#up#}" title="{#up#}" width="16" height="16" /></a>&nbsp;<a href="index.php?mode=bookmarks&amp;move_down_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#down#}" title="{#down#}" width="16" height="16" /></a></td>
 					</tr>
 				{/foreach}
