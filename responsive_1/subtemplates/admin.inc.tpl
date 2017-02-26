@@ -1204,19 +1204,19 @@
 <p>{#page_doesnt_exist#}</p>
 {/if}
 {else}
-	<div id="admin-info-current-version">
 <aside id="additional-admin-info">
+	<div id="current-version">
 		<h3>{#actual_installed_version_header#}</h3>
 		<p>{#actual_installed_version#|replace:"[current_version_string]":$installed_version_number}</p>
 	</div>
 	{if $install_script_exists}
-	<div id="admin-info-install_script_exists">
+	<div id="install-script-exists">
 		<h3>{#warning_header#}</h3>
 		<p>{#warning_install_script_exists#}</p>
 	</div>
 	{/if}
-	<div id="admin-info-releases">
 	{if $latest_release_version}
+	<div id="releases">
 		<h3>{#releases_info_header#}</h3>
 		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download {$latest_release_version}</a></p>
 	{else}
