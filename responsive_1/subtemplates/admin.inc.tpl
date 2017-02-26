@@ -1204,8 +1204,8 @@
 <p>{#page_doesnt_exist#}</p>
 {/if}
 {else}
-<div class="additional-admin-info">
 	<div id="admin-info-current-version">
+<aside id="additional-admin-info">
 		<h3>{#actual_installed_version_header#}</h3>
 		<p>{#actual_installed_version#|replace:"[current_version_string]":$installed_version_number}</p>
 	</div>
@@ -1224,7 +1224,7 @@
 		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
 	{/if}
 	</div>
-</div>
+</aside>
 <ul class="adminmenu">
  <li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
  <li><a href="index.php?mode=admin&amp;action=user"><img src="{$THEMES_DIR}/{$theme}/images/user.png" alt="" width="16" height="16" /><span>{#user_administr_link#}</span></a></li>
