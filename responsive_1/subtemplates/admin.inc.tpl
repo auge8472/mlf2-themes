@@ -1215,12 +1215,15 @@
 		<p>{#warning_install_script_exists#}</p>
 	</div>
 	{/if}
-	{if $latest_release_version}
 	<div id="releases">
 		<h3>{#releases_info_header#}</h3>
+	{if $latest_release_version}
+		{if $latest_release_uri}
+		<p><a href="{$latest_release_uri}">Download {$latest_release_version}</a></p>
+		{else}
 		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download {$latest_release_version}</a></p>
+		{/if}
 	{else}
-		<h3>{#releases_info_header#}</h3>
 		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
 	{/if}
 	</div>
