@@ -233,7 +233,7 @@ a.rss                    { padding-left:13px; background:url(images/bg_sprite_1.
 }
 
 /* elements of #sidebar, #bottombar, aside */
-aside h2, #sidebarcontent, #sidebarcontent div, aside div h3, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li, #latest-postings a, #modmenu a {
+aside h2, #sidebarcontent, #sidebarcontent div, aside div h3, aside div p, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li, #latest-postings a, #modmenu a {
 	margin:0;
 }
 aside, #sidebar, #bottombar, aside h2, #sidebarcontent, #sidebarcontent div, aside div h3, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li {
@@ -275,7 +275,7 @@ aside h2 a:active {
 	margin: 0;
 	padding: 0;
 }
-#sidebarcontent div {
+#sidebarcontent div, aside div {
 	margin: 0.3em 0 0 0;
 	background: #f9f9f9;
 	border: 1px solid #bacbdf;
@@ -374,6 +374,16 @@ aside div h3 {
 }
 #tagcloud a:not(:last-child):after, #usersonline a:not(:last-child):after {
 	content:", ";
+}
+#additional-admin-info p {
+	line-height: 1.5em;
+	padding: 5px;
+}
+#install-script-exists h3 {
+	color: red;
+}
+#install-script-exists h3::before  {
+	content: url("images/caution.png"); padding-right: 5px;
 }
 /* end: elements of #sidebar, #bottombar, aside */
 
@@ -894,17 +904,8 @@ ul.pagination-index-table
 #codepicker ul a         { color:#000; display:block; text-decoration:none; padding:1px 5px 1px 5px; }
 #codepicker ul a:hover   { background:#e0e0e0; }
 
-.additional-admin-info   { float: right; }
-.additional-admin-info div
-                         { background: #f9f9f9; border: 1px solid #bacbdf; margin: 0 0 20px 0; padding: 0; width: 13em; }
-.additional-admin-info h3
-                         { margin: 0; padding: 0 5px; font-size: 0.69em; line-height: 1.7em; background: #d2ddea url("images/bg_gradient_x.png") repeat-x scroll 0 -150px; }
-.additional-admin-info p { font-size: 0.69em; line-height: 1.5em; margin: 0; padding: 5px; }
+/*.additional-admin-info   { float: right; }*/
 .adminmenu               { list-style-type:none; padding-left:0; margin-left:0; font-size:0.82em; line-height:1.7em !important; }
-#admin-info-install_script_exists h3
-                         { color: red; }
-#admin-info-install_script_exists h3::before
-                         { content: url("images/caution.png"); padding-right: 5px; }
 
 .adminmenu li            {  }
 .adminmenu a             { text-decoration:none; }
