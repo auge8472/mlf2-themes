@@ -905,14 +905,28 @@ ul.pagination-index-table
 #codepicker ul a:hover   { background:#e0e0e0; }
 
 /*.additional-admin-info   { float: right; }*/
-.adminmenu               { list-style-type:none; padding-left:0; margin-left:0; font-size:0.82em; line-height:1.7em !important; }
+.adminmenu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0.5rem 0;
+}
 
-.adminmenu li            {  }
-.adminmenu a             { text-decoration:none; }
-.adminmenu a:hover span  { text-decoration:underline; }
-.adminmenu a img         { margin:0 5px -3px 0; padding:0; }
-#content .adminmenu .small
-                         { font-size:0.82em; }
+.adminmenu li {
+	margin: 0.25rem 0;
+	padding: 0;
+}
+.adminmenu a {
+	display: block;
+	margin: 0;
+	padding: 0.125em 0.25em;
+	padding: 0.125rem 0.25rem;
+	text-decoration:none;
+	border: 1px solid #bacbdf;
+}
+.adminmenu a img {
+	margin:0 5px -3px 0;
+	padding:0;
+}
 
 .manage-postings         { border:1px solid #bacbdf; margin-top:25px; background:#f9f9f9; }
 .manage-postings legend  { font-size:0.82em; font-weight:bold; }
