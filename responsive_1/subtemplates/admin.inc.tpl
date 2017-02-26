@@ -334,11 +334,11 @@
 {section name=row loop=$categories_list}
 {cycle values="a,b" assign=c}
   <tr id="id_{$categories_list[row].id}" class="{$c}">
-   <td><strong>{$categories_list[row].name}</strong></td>
-   <td>{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
-   <td>{$categories_list[row].threads_in_category}</td>
-   <td>{$categories_list[row].postings_in_category}</td>
-   <td><a href="index.php?mode=admin&amp;edit_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" title="{#edit#}" alt="{#edit#}" width="16" height="16" /></a> &nbsp; <a href="index.php?mode=admin&amp;delete_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" title="{#delete#}" alt="{#delete#}" width="16" height="16"/></a> &nbsp; <a href="index.php?mode=admin&amp;move_up_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#up#}" title="{#up#}" width="16" height="16" /></a>&nbsp;<a href="index.php?mode=admin&amp;move_down_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#down#}" title="{#down#}" width="16" height="16" /></a></td>
+   <td data-header="{#category_name#}"><strong>{$categories_list[row].name}</strong></td>
+   <td data-header="{#category_accession#}">{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
+   <td data-header="{#category_topics#}">{$categories_list[row].threads_in_category}</td>
+   <td data-header="{#category_entries#}">{$categories_list[row].postings_in_category}</td>
+   <td class="item-tools"><a href="index.php?mode=admin&amp;edit_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" title="{#edit#}" alt="{#edit#}" width="16" height="16" /></a> &nbsp; <a href="index.php?mode=admin&amp;delete_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" title="{#delete#}" alt="{#delete#}" width="16" height="16"/></a> &nbsp; <a href="index.php?mode=admin&amp;move_up_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#up#}" title="{#up#}" width="16" height="16" /></a>&nbsp;<a href="index.php?mode=admin&amp;move_down_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#down#}" title="{#down#}" width="16" height="16" /></a></td>
   </tr>
 {/section}
  </tbody>
@@ -458,7 +458,7 @@
    <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=logins&amp;descasc={if $descasc=="ASC" && $order=="logins"}DESC{else}ASC{/if}&amp;ul={$ul}" title="{#order_linktitle#}">{#user_logins#}</a>{if $order=="logins" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9" />{elseif $order=="logins" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9" />{/if}</th>
    <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=last_login&amp;descasc={if $descasc=="ASC" && $order=="last_login"}DESC{else}ASC{/if}&amp;ul={$ul}" title="{#order_linktitle#}">{#last_login#}</a>{if $order=="last_login" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9" />{elseif $order=="last_login" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9" />{/if}</th>
    <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_lock&amp;descasc={if $descasc=="ASC" && $order=="user_lock"}DESC{else}ASC{/if}&amp;ul={$ul}" title="{#order_linktitle#}">{#lock#}</a>{if $order=="user_lock" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9" />{elseif $order=="user_lock" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9" />{/if}</th>
-   <th colspan="2">&nbsp;</th>
+   <th>&nbsp;</th>
   </tr>
  </thead>
  <tbody>
@@ -466,15 +466,14 @@
 {cycle values="a,b" assign=c}
   <tr class="{$c}">
    <td><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" class="small-input" /></td>
-   <td>{if $userdata[row].inactive}<span title="{#user_inactive#}" class="username inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$userdata[row].user_name}" class="username">{$userdata[row].user_name}</a>{/if}</td>
+   <td data-header="{#user_name#}">{if $userdata[row].inactive}<span title="{#user_inactive#}" class="username inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$userdata[row].user_name}" class="username">{$userdata[row].user_name}</a>{/if}</td>
    <td data-header="{#user_email#}"><span class="small"><a href="mailto:{$userdata[row].user_email}" title="{#mailto_user_lt#|replace:"[user]":$userdata[row].user_name}">{$userdata[row].user_email}</a></span></td>
    <td data-header="{#user_type#}"><span class="small">{if $userdata[row].user_type==2}{#admin#}{elseif $userdata[row].user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
    <td data-header="{#user_registered#}"><span class="small">{$userdata[row].registered_time|date_format:#time_format#}</span></td>
    <td data-header="{#user_logins#}"><span class="small">{$userdata[row].logins}</span></td>
    <td data-header="{#last_login#}"><span class="small">{if $userdata[row].logins > 0}{$userdata[row].last_login_time|date_format:#time_format#}{else}&nbsp;{/if}</span></td>
    <td data-header="{#lock#}"><span class="small">{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}{#unlocked#}{else}{#locked#}{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" title="{#lock_title#}">{#unlocked#}</a>{else}<a style="color:red;" href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" title="{#unlock_title#}">{#locked#}</a>{/if}</span></td>
-   <td><a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}"><img src="{$THEMES_DIR}/{$theme}/images/edit.png" alt="{#edit#}" width="16" height="16" /><span>{#edit#}</span></a></td>
-   <td><a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="{#delete#}" width="16" height="16" /><span>{#delete#}</span></a></td>
+   <td class="item-tools"><a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}"><img src="{$THEMES_DIR}/{$theme}/images/edit.png" alt="{#edit#}" width="16" height="16" /><span>{#edit#}</span></a> <a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="{#delete#}" width="16" height="16" /><span>{#delete#}</span></a></td>
   </tr>
 {/section}
  </tbody>
@@ -1204,27 +1203,30 @@
 <p>{#page_doesnt_exist#}</p>
 {/if}
 {else}
-<div class="additional-admin-info">
-	<div id="admin-info-current-version">
+<aside id="additional-admin-info">
+	<div id="current-version">
 		<h3>{#actual_installed_version_header#}</h3>
 		<p>{#actual_installed_version#|replace:"[current_version_string]":$installed_version_number}</p>
 	</div>
 	{if $install_script_exists}
-	<div id="admin-info-install_script_exists">
+	<div id="install-script-exists">
 		<h3>{#warning_header#}</h3>
 		<p>{#warning_install_script_exists#}</p>
 	</div>
 	{/if}
-	<div id="admin-info-releases">
+	<div id="releases">
+		<h3>{#releases_info_header#}</h3>
 	{if $latest_release_version}
-		<h3>{#releases_info_header#}</h3>
+		{if $latest_release_uri}
+		<p><a href="{$latest_release_uri}">Download {$latest_release_version}</a></p>
+		{else}
 		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download {$latest_release_version}</a></p>
+		{/if}
 	{else}
-		<h3>{#releases_info_header#}</h3>
 		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
 	{/if}
 	</div>
-</div>
+</aside>
 <ul class="adminmenu">
  <li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
  <li><a href="index.php?mode=admin&amp;action=user"><img src="{$THEMES_DIR}/{$theme}/images/user.png" alt="" width="16" height="16" /><span>{#user_administr_link#}</span></a></li>
