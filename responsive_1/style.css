@@ -147,18 +147,6 @@ img.previous:focus, img.previous:hover {
 	text-decoration: none;
 }
 
-#usermenu {
-	font-size: 0.82em;
-	list-style: none;
-}
-#usermenu li {
-	display: inline;
-	margin-left: 0.25em;
-}
-#usermenu li:first-child {
-	margin-left: 0;
-}
-
 #topsearch div {
 	display: inline;
 }
@@ -169,12 +157,16 @@ img.previous:focus, img.previous:hover {
 /* end: elements of the page header */
 
 /* elements of the navigation bar below the page header */
-#subnav-1, #subnav-2 {
+
+#submenu, #subnav-1, #subnav-2 {
 	margin:0;
 	padding:0;
 }
 #subnav ul {
 	list-style: none;
+}
+#subnav ul:not(:last-child) {
+	border-bottom: 1px solid #bacbdf;
 }
 #subnav form, #subnav form div {
 	display:inline;
@@ -233,10 +225,10 @@ a.rss                    { padding-left:13px; background:url(images/bg_sprite_1.
 }
 
 /* elements of #sidebar, #bottombar, aside */
-aside h2, #sidebarcontent, #sidebarcontent div, aside div h3, aside div p, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li, #latest-postings a, #modmenu a {
+aside h2, #sidebarcontent, aside section h3, aside section p, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li, #latest-postings a, #modmenu a {
 	margin:0;
 }
-aside, #sidebar, #bottombar, aside h2, #sidebarcontent, #sidebarcontent div, aside div h3, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li {
+aside, #sidebar, #bottombar, aside h2, #sidebarcontent, aside section h3, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li {
 	padding: 0;
 }
 #sidebar {
@@ -271,16 +263,16 @@ aside h2 a:focus, aside h2 a:hover {
 aside h2 a:active {
 	color: #643;
 }
-#sidebarcontent, #sidebarcontent div, aside div h3 {
+#sidebarcontent, aside section, aside section h3 {
 	margin: 0;
 	padding: 0;
 }
-#sidebarcontent div, aside div {
+aside section {
 	margin: 0.3em 0 0 0;
 	background: #f9f9f9;
 	border: 1px solid #bacbdf;
 }
-aside div h3 {
+aside section h3 {
 	font-size: 1em;
 	font-size: 1rem;
 	padding: 0 0.25em;
