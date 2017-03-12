@@ -1204,17 +1204,17 @@
 {/if}
 {else}
 <aside id="additional-admin-info">
-	<div id="current-version">
+	<section id="current-version">
 		<h3>{#actual_installed_version_header#}</h3>
 		<p>{#actual_installed_version#|replace:"[current_version_string]":$installed_version_number}</p>
-	</div>
+	</section>
 	{if $install_script_exists}
-	<div id="install-script-exists">
+	<section id="install-script-exists">
 		<h3>{#warning_header#}</h3>
 		<p>{#warning_install_script_exists#}</p>
-	</div>
+	</section>
 	{/if}
-	<div id="releases">
+	<section id="releases">
 		<h3>{#releases_info_header#}</h3>
 	{if $latest_release_version}
 		{if $latest_release_uri}
@@ -1225,7 +1225,7 @@
 	{else}
 		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
 	{/if}
-	</div>
+	</section>
 </aside>
 <ul class="adminmenu">
  <li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
