@@ -1203,39 +1203,41 @@
 <p>{#page_doesnt_exist#}</p>
 {/if}
 {else}
-<aside id="additional-admin-info">
-	<section id="current-version">
-		<h3>{#actual_installed_version_header#}</h3>
-		<p>{#actual_installed_version#|replace:"[current_version_string]":$installed_version_number}</p>
-	</section>
-	{if $install_script_exists}
-	<section id="install-script-exists">
-		<h3>{#warning_header#}</h3>
-		<p>{#warning_install_script_exists#}</p>
-	</section>
-	{/if}
-	<section id="releases">
-		<h3>{#releases_info_header#}</h3>
-	{if $latest_release_version}
-		{if $latest_release_uri}
-		<p><a href="{$latest_release_uri}">Download {$latest_release_version}</a></p>
-		{else}
-		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download {$latest_release_version}</a></p>
-		{/if}
-	{else}
-		<p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
-	{/if}
-	</section>
-</aside>
-<ul class="adminmenu">
- <li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=user"><img src="{$THEMES_DIR}/{$theme}/images/user.png" alt="" width="16" height="16" /><span>{#user_administr_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=categories"><img src="{$THEMES_DIR}/{$theme}/images/categories.png" alt="" width="16" height="16" /><span>{#category_administr_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=smilies"><img src="{$THEMES_DIR}/{$theme}/images/smilies.png" alt="" width="16" height="16" /><span>{#smilies_administr_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=pages"><img src="{$THEMES_DIR}/{$theme}/images/pages.png" alt="" width="16" height="16" /><span>{#pages_administr_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=spam_protection"><img src="{$THEMES_DIR}/{$theme}/images/spam_protection.png" alt="" width="16" height="16" /><span>{#spam_protection_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=backup"><img src="{$THEMES_DIR}/{$theme}/images/backup.png" alt="" width="16" height="16" /><span>{#backup_restore_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=update"><img src="{$THEMES_DIR}/{$theme}/images/update.png" alt="" width="16" height="16" /><span>{#update_link#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;action=reset_uninstall"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="" width="16" height="16" /><span>{#reset_uninstall_link#}</span></a></li>
-</ul>
+<div id="admin-menu-container">
+ <aside id="additional-admin-info">
+  <section id="current-version">
+   <h3>{#actual_installed_version_header#}</h3>
+   <p>{#actual_installed_version#|replace:"[current_version_string]":$installed_version_number}</p>
+  </section>
+ {if $install_script_exists}
+  <section id="install-script-exists">
+   <h3>{#warning_header#}</h3>
+   <p>{#warning_install_script_exists#}</p>
+  </section>
+ {/if}
+  <section id="releases">
+   <h3>{#releases_info_header#}</h3>
+ {if $latest_release_version}
+  {if $latest_release_uri}
+   <p><a href="{$latest_release_uri}">Download {$latest_release_version}</a></p>
+  {else}
+   <p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download {$latest_release_version}</a></p>
+  {/if}
+ {else}
+   <p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
+ {/if}
+  </section>
+ </aside>
+ <ul class="adminmenu">
+  <li><a href="index.php?mode=admin&amp;action=settings"><img src="{$THEMES_DIR}/{$theme}/images/settings.png" alt="" width="16" height="16" /><span>{#forum_settings_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=user"><img src="{$THEMES_DIR}/{$theme}/images/user.png" alt="" width="16" height="16" /><span>{#user_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=categories"><img src="{$THEMES_DIR}/{$theme}/images/categories.png" alt="" width="16" height="16" /><span>{#category_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=smilies"><img src="{$THEMES_DIR}/{$theme}/images/smilies.png" alt="" width="16" height="16" /><span>{#smilies_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=pages"><img src="{$THEMES_DIR}/{$theme}/images/pages.png" alt="" width="16" height="16" /><span>{#pages_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=spam_protection"><img src="{$THEMES_DIR}/{$theme}/images/spam_protection.png" alt="" width="16" height="16" /><span>{#spam_protection_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=backup"><img src="{$THEMES_DIR}/{$theme}/images/backup.png" alt="" width="16" height="16" /><span>{#backup_restore_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=update"><img src="{$THEMES_DIR}/{$theme}/images/update.png" alt="" width="16" height="16" /><span>{#update_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=reset_uninstall"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="" width="16" height="16" /><span>{#reset_uninstall_link#}</span></a></li>
+ </ul>
+</div>
 {/if}
