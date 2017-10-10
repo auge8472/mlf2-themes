@@ -30,12 +30,12 @@ body {
 body > header {
 	display: block;
 	background: #d2ddea;
-	padding: 0 10px 0 10px;
+	padding: 0.2rem 0.25rem;
 }
 
 #subnav {
 	background: #f9f9f9;
-	padding: 0 10px 0 10px;
+	padding: 0 0.25rem;
 	border-top: 1px solid #bacbdf;
 	border-bottom: 1px solid #bacbdf;
 	line-height: 1.6em;
@@ -44,14 +44,14 @@ body > header {
 main {
 	display: block;
 	padding: 0.75em 10px;
-	padding: 0.75rem 10px;
+	padding: 0.75rem 0.25rem;
 	min-height: 200px;
 }
 
 body > footer {
 	display: block;
 	clear: both;
-	padding: 0 10px 0 10px;
+	padding: 0 0.25rem;
 	font-size: 0.7em;
 	background: #f9f9f9;
 	border-top: 1px solid #bacbdf;
