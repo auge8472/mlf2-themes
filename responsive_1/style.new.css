@@ -29,7 +29,7 @@ body {
 
 body > header {
 	display: block;
-	background: #d2ddea;
+	background-color: hsl(210, 100%, 92%);
 	padding: 0.2rem 0.25rem;
 }
 
@@ -236,7 +236,7 @@ aside h2 {
 	font-size: 1rem;
 	line-height: 160%;
 	font-weight: normal;
-	background: #d2ddea;
+	background-color: hsl(210, 100%, 92%);
 	border: 1px solid #bacbdf;
 }
 aside h2 a {
@@ -451,7 +451,7 @@ td[data-header] {
 .settings th {
 	width: 40%;
 	max-width: 24em;
-	background:#d2ddea;
+	background-color: hsl(210, 100%, 92%);
 }
 .settings th strong {
 	display: block;
