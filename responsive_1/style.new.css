@@ -8,7 +8,7 @@
 ***********************************************************************/
 
 /* definitions for the main blocks of the pages */
-html, body, body > header, #top, #subnav, main, body > footer, #assistancemenu {
+html, body, body > header, #subnav, main, body > footer, #assistancemenu {
 	margin: 0;
 	padding: 0;
 }
