@@ -640,9 +640,9 @@ article .body * {
 article blockquote {
 	color: #777;
 	font-style: italic;
-	background: url("images/quote.png") no-repeat left top;
-	padding: 0 0 0 1.25em;
-	padding: 0 0 0 1.25rem;
+	border-left: 5px solid hsl(0, 0%, 75%);
+	padding: 0 0 0 0.5em;
+	padding: 0 0 0 0.5rem;
 }
 
 .body img {
