@@ -246,14 +246,15 @@
    <td class="d"><input type="text" name="threads_per_page" value="{$settings.threads_per_page|escape}" size="5" /></td>
   </tr>
   <tr>
-   <th><strong>{#reset_read_state#}</strong><br>
-    <span class="description">{#reset_read_state_desc#}</span></td>
+   <th><strong>{#reset_read_state#}</strong>
+    <span class="description">{#reset_read_state_desc#}</span></th>
    <td class="d">
     <p><input name="read_state_expiration_method" value="0" id="read_state_no_reset" type="radio"{if not isset($settings.read_state_expiration_method) or $settings.read_state_expiration_method==0} checked="checked"{/if} /><label for="read_state_no_reset">{#read_state_no_reset#}</label><br><input id="read_state_number_reset" name="read_state_expiration_method" value="1" type="radio"{if $settings.read_state_expiration_method==1} checked="checked"{/if} /><label for="read_state_number_reset">{#read_state_numbered_reset#}</label><br><input name="read_state_expiration_method" value="2" id="read_state_age_reset" type="radio"{if $settings.read_state_expiration_method==2} checked="checked"{/if} /><label for="read_state_age_reset">{#read_state_timeout_reset#}</label><br><input name="read_state_expiration_method" value="3" id="read_state_lock_reset" type="radio"{if $settings.read_state_expiration_method==3} checked="checked"{/if} /><label for="read_state_lock_reset">{#read_state_locktime_reset#}</label></p>
    </td>
   </tr>
   <tr>
-   <td class="c"><strong>{#read_state_value#}</strong><br><span class="small">{#read_state_value_desc#}</span></td>
+   <th><strong>{#read_state_value#}</strong>
+    <span class="description">{#read_state_value_desc#}</span></th>
    <td class="d"><input name="read_state_expiration_value" value="{$settings.read_state_expiration_value|escape}" size="5" type="text"></td>
   </tr>
   <tr>
