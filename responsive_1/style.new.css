@@ -448,6 +448,9 @@ td[data-header] {
 	font-size:0.82em;
 }
 
+.settings {
+	margin: 0 0 0.25em 0;
+}
 .settings th {
 	width: 40%;
 	max-width: 24em;
