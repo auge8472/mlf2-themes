@@ -580,6 +580,7 @@
   <tr>
    <th><strong>{#edit_user_gender#}</strong></th>
    <td class="d">
+    <input id="no-gender" type="radio" name="user_gender" value="0"{if $user_gender=="0"} checked="checked"{/if} class="small-input" /><label for="no-gender">{#gender_not_specified#}</label><br />
     <input id="user_gender_1" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} class="small-input" /><label for="user_gender_1">{#male#}</label><br />
     <input id="user_gender_2" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} class="small-input" /><label for="user_gender_2">{#female#}</label>
    </td>
