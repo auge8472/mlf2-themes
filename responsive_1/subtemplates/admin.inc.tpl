@@ -536,6 +536,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <input type="hidden" name="edit_user_id" value="{$edit_user_id}" />
 <table class="settings">
  <tbody>
