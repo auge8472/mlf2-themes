@@ -1,3 +1,5 @@
+<div id="main-container">
+<section id="main-thread-list">
 {if $threads}
 <table>
  <thead>
@@ -40,7 +42,7 @@
  </tbody>
 </table>
 {else}<p>{if $category!=0}{#no_messages_in_category#}{else}{#no_messages#}{/if}</p>{/if}
-
+</section>
 {if $pagination}
 <ul class="pagination pagination-index-table">
 {if $pagination.previous}<li><a href="index.php?mode={$mode}&amp;page={$pagination.previous}{if $category}&amp;category={$category}{/if}" title="{#previous_page_link_title#}">{#previous_page_link#}</a></li>{/if}
@@ -91,3 +93,4 @@
 </div>
 </aside>
 {/if}
+</div>

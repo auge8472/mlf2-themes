@@ -1,3 +1,4 @@
+<div id="main-container">
 {if $tag_cloud || $latest_postings || $admin || $mod}
 <aside id="sidebar"{if $usersettings.sidebar==0} class="js-display-fold"{/if}>
 <h2><a href="index.php?toggle_sidebar=true" title="{#toggle_sidebar#}">{#sidebar#}</a></h2>
@@ -38,7 +39,7 @@
 </div>
 </aside>
 {/if}
-
+<section id="main-thread-list">
 {if $threads}
 {foreach from=$threads item=thread}
 <ul id="thread-{$thread}" class="thread {if $fold_threads==1}folded{else}expanded{/if}">
@@ -53,7 +54,8 @@
 {else}
 <p>{if $category!=0}{#no_messages_in_category#}{else}{#no_messages#}{/if}</p>
 {/if}
-
+</section>
+</div>
 {if $pagination}
 <ul class="pagination pagination-index">
 {if $pagination.previous}<li><a href="index.php?mode={$mode}&amp;page={$pagination.previous}{if $category}&amp;category={$category}{/if}" title="{#previous_page_link_title#}">{#previous_page_link#}</a></li>{/if}
