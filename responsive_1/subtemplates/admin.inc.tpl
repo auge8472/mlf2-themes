@@ -894,7 +894,7 @@
 </div>
 </form>
 
-<hr style="margin:20px 0px 20px 0px; border-top: 1px dotted #808080; border-left: 0; border-right: 0; border-bottom: 0; height: 1px;"/>
+<hr />
 
 <h2>{#uninstall_forum#}</h2>
 <p>{#uninstall_forum_exp#}</p>
