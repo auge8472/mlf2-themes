@@ -110,6 +110,9 @@
 {if $key!=0}<option value="{$key}"{if $key==$p_category} selected="selected"{/if}>{$val}</option>{/if}
 {/foreach}
 </select></p>
+{if $posting_mode==0 && $id>0 || $posting_mode==1 && $pid>0}
+  <input type="hidden" name="p_category" value="{$p_category}" />
+{/if}
 {/if}
 
 <p><label for="subject" class="input">{#subject_marking#}</label>
