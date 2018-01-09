@@ -51,9 +51,9 @@
 			<div>
 				<input type="hidden" name="mode" value="bookmarks" />
 				<input type="hidden" name="id" value="{$bookmark.id}" />
-				<strong>{#edit_bookmark#}</strong><br />
-				<input type="text" name="bookmark" value="{$bookmark.title}" maxlength="255" size="25" /><br />
-				<input type="submit" name="edit_bookmark_submit" value="{#submit_button_ok#}" />
+				<label for="bookmark">{#edit_bookmark#}</label><br />
+				<input type="text" id="bookmark" name="bookmark" value="{$bookmark.title}" maxlength="255" size="25" /><br />
+				<button name="edit_bookmark_submit">{#submit_button_ok#}</button>
 			</div>
 		</form>
 	{else}
