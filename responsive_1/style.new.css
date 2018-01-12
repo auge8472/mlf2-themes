@@ -920,11 +920,21 @@ div.warning              {
 	#main-container {
 		flex-direction: row-reverse;
 	}
-	#additional-admin-info section {
-		width: calc(33.3% - 0.25rem);
+	#admin-menu-container #additional-admin-info, #main-container #main-thread-list {
+		margin-right: 0.5em;
 	}
-	.adminmenu li {
-		width: calc(33.3% - 0.25rem);
+	#admin-menu-container .adminmenu, #main-container #sidebar, #main-container #bottombar {
+		margin-left: 0.5em;
+	}
+	#additional-admin-info section:first-child, #admin-menu-container .adminmenu li:first-child {
+		margin-top: 0;
+	}
+	#additional-admin-info, #sidebar, #bottombar {
+		flex-grow: 1;
+		width: 15em;
+	}
+	.adminmenu, #main-thread-list {
+		flex-grow: 3;
 	}
 }
 
