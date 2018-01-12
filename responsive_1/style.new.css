@@ -305,13 +305,12 @@ aside section h3 {
 #latest-postings a:focus, #latest-postings a:hover, #modmenu a:focus, #modmenu a:hover {
 	background: #efefef;
 }
-#latest-postings a .posting-info {
 #latest-postings a:focus .entry-title, #latest-postings a:hover .entry-title, #modmenu a:focus, #modmenu a:hover {
 	text-decoration: underline;
 }
+#latest-postings a .entry-date {
 	color: #666;
-	font-size: 0.82em;
-	font-size: 0.82rem;
+	font-size: 0.9em;
 }
 
 #mod-options a.delete-marked, #mod-options a.manage, #mod-options a.report, #mod-options a.delete-spam, #mod-options a.non-activated-users {
