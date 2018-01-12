@@ -8,7 +8,7 @@
 ***********************************************************************/
 
 /* definitions for the main blocks of the pages */
-html, body, body > header, #top, #subnav, main, body > footer, #assistancemenu {
+html, body, body > header, #subnav, main, body > footer, #assistancemenu {
 	margin: 0;
 	padding: 0;
 }
@@ -29,13 +29,13 @@ body {
 
 body > header {
 	display: block;
-	background: #d2ddea;
-	padding: 0 10px 0 10px;
+	background-color: hsl(210, 100%, 92%);
+	padding: 0.2rem 0.25rem;
 }
 
 #subnav {
 	background: #f9f9f9;
-	padding: 0 10px 0 10px;
+	padding: 0 0.25rem;
 	border-top: 1px solid #bacbdf;
 	border-bottom: 1px solid #bacbdf;
 	line-height: 1.6em;
@@ -44,14 +44,14 @@ body > header {
 main {
 	display: block;
 	padding: 0.75em 10px;
-	padding: 0.75rem 10px;
+	padding: 0.75rem 0.25rem;
 	min-height: 200px;
 }
 
 body > footer {
 	display: block;
 	clear: both;
-	padding: 0 10px 0 10px;
+	padding: 0 0.25rem;
 	font-size: 0.7em;
 	background: #f9f9f9;
 	border-top: 1px solid #bacbdf;
@@ -62,7 +62,7 @@ body > footer {
 	right: 0;
 	z-index: 2;
 	background: #f9f9f9;
-	width: 10em;
+	width: 14em;
 	list-style: none;
 	border-top: 1px solid #bacbdf;
 	border-left: 1px solid #bacbdf;
@@ -236,7 +236,7 @@ aside h2 {
 	font-size: 1rem;
 	line-height: 160%;
 	font-weight: normal;
-	background: #d2ddea;
+	background-color: hsl(210, 100%, 92%);
 	border: 1px solid #bacbdf;
 }
 aside h2 a {
@@ -448,10 +448,13 @@ td[data-header] {
 	font-size:0.82em;
 }
 
+.settings {
+	margin: 0 0 0.25em 0;
+}
 .settings th {
 	width: 40%;
 	max-width: 24em;
-	background:#d2ddea;
+	background-color: hsl(210, 100%, 92%);
 }
 .settings th strong {
 	display: block;
@@ -464,7 +467,7 @@ td[data-header] {
 	background:#f5f5f5;
 }
 /* tables on narrow screens*/
-@media screen and (max-width: 32em) {
+@media screen and (max-width: 38em) {
 	table {
 		border: none;
 	}
@@ -640,9 +643,9 @@ article .body * {
 article blockquote {
 	color: #777;
 	font-style: italic;
-	background: url("images/quote.png") no-repeat left top;
-	padding: 0 0 0 1.25em;
-	padding: 0 0 0 1.25rem;
+	border-left: 5px solid hsl(0, 0%, 75%);
+	padding: 0 0 0 0.5em;
+	padding: 0 0 0 0.5rem;
 }
 
 .body img {

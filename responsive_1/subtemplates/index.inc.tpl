@@ -1,3 +1,4 @@
+<div id="main-container">
 {if $tag_cloud || $latest_postings || $admin || $mod}
 <aside id="sidebar"{if $usersettings.sidebar==0} class="js-display-fold"{/if}>
 <h2><a href="index.php?toggle_sidebar=true" title="{#toggle_sidebar#}">{#sidebar#}</a></h2>
@@ -6,8 +7,8 @@
 <section id="latest-postings">
 <h3>{#latest_postings_hl#}</h3>
 <ul id="latest-postings-container">
-{foreach from=$latest_postings item=posting} <li><a href="index.php?id={$posting.id}" title="{$posting.name}, {$posting.formated_time}{if $posting.category_name} ({$posting.category_name}){/if}"><span class="posting-title{if $posting.is_read} read{/if}">{if $posting.pid==0}<strong>{$posting.subject}</strong>{else}{$posting.subject}{/if}</span>
-  <span class="posting-info">{if $posting.ago.days>1}{#posting_several_days_ago#|replace:"[days]":$posting.ago.days_rounded}{else}{if $posting.ago.days==0 && $posting.ago.hours==0}{#posting_minutes_ago#|replace:"[minutes]":$posting.ago.minutes}{elseif $posting.ago.days==0 && $posting.ago.hours!=0}{#posting_hours_ago#|replace:"[hours]":$posting.ago.hours|replace:"[minutes]":$posting.ago.minutes}{else}{#posting_one_day_ago#|replace:"[hours]":$posting.ago.hours|replace:"[minutes]":$posting.ago.minutes}{/if}{/if}</span></a></li>
+{foreach from=$latest_postings item=posting} <li><a href="index.php?id={$posting.id}" title="{$posting.name}, {$posting.formated_time}{if $posting.category_name} ({$posting.category_name}){/if}"{if $posting.is_read} class="read"{/if}><span class="entry-title">{if $posting.pid==0}<strong>{$posting.subject}</strong>{else}{$posting.subject}{/if}</span>
+  <span class="entry-date">{if $posting.ago.days>1}{#posting_several_days_ago#|replace:"[days]":$posting.ago.days_rounded}{else}{if $posting.ago.days==0 && $posting.ago.hours==0}{#posting_minutes_ago#|replace:"[minutes]":$posting.ago.minutes}{elseif $posting.ago.days==0 && $posting.ago.hours!=0}{#posting_hours_ago#|replace:"[hours]":$posting.ago.hours|replace:"[minutes]":$posting.ago.minutes}{else}{#posting_one_day_ago#|replace:"[hours]":$posting.ago.hours|replace:"[minutes]":$posting.ago.minutes}{/if}{/if}</span></a></li>
 {/foreach}
 </ul>
 </section>
@@ -38,7 +39,7 @@
 </div>
 </aside>
 {/if}
-
+<section id="main-thread-list">
 {if $threads}
 {foreach from=$threads item=thread}
 <ul id="thread-{$thread}" class="thread {if $fold_threads==1}folded{else}expanded{/if}">
@@ -53,7 +54,8 @@
 {else}
 <p>{if $category!=0}{#no_messages_in_category#}{else}{#no_messages#}{/if}</p>
 {/if}
-
+</section>
+</div>
 {if $pagination}
 <ul class="pagination pagination-index">
 {if $pagination.previous}<li><a href="index.php?mode={$mode}&amp;page={$pagination.previous}{if $category}&amp;category={$category}{/if}" title="{#previous_page_link_title#}">{#previous_page_link#}</a></li>{/if}
