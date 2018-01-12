@@ -246,14 +246,15 @@
    <td class="d"><input type="text" name="threads_per_page" value="{$settings.threads_per_page|escape}" size="5" /></td>
   </tr>
   <tr>
-   <th><strong>{#reset_read_state#}</strong><br>
-    <span class="description">{#reset_read_state_desc#}</span></td>
+   <th><strong>{#reset_read_state#}</strong>
+    <span class="description">{#reset_read_state_desc#}</span></th>
    <td class="d">
-    <p><input name="read_state_expiration_method" value="0" id="read_state_no_reset" type="radio"{if not isset($settings.read_state_expiration_method) or $settings.read_state_expiration_method==0} checked="checked"{/if} /><label for="read_state_no_reset">{#read_state_no_reset#}</label><br><input id="read_state_number_reset" name="read_state_expiration_method" value="1" type="radio"{if $settings.read_state_expiration_method==1} checked="checked"{/if} /><label for="read_state_number_reset">{#read_state_numbered_reset#}</label><br><input name="read_state_expiration_method" value="2" id="read_state_age_reset" type="radio"{if $settings.read_state_expiration_method==2} checked="checked"{/if} /><label for="read_state_age_reset">{#read_state_timeout_reset#}</label><br><input name="read_state_expiration_method" value="3" id="read_state_lock_reset" type="radio"{if $settings.read_state_expiration_method==3} checked="checked"{/if} /><label for="read_state_lock_reset">{#read_state_locktime_reset#}</label></p>
+    <p><input name="read_state_expiration_method" class="small-input" value="0" id="read_state_no_reset" type="radio"{if not isset($settings.read_state_expiration_method) or $settings.read_state_expiration_method==0} checked="checked"{/if} /><label for="read_state_no_reset">{#read_state_no_reset#}</label><br><input id="read_state_number_reset" class="small-input" name="read_state_expiration_method" value="1" type="radio"{if $settings.read_state_expiration_method==1} checked="checked"{/if} /><label for="read_state_number_reset">{#read_state_numbered_reset#}</label><br><input name="read_state_expiration_method" class="small-input" value="2" id="read_state_age_reset" type="radio"{if $settings.read_state_expiration_method==2} checked="checked"{/if} /><label for="read_state_age_reset">{#read_state_timeout_reset#}</label><br><input name="read_state_expiration_method" class="small-input" value="3" id="read_state_lock_reset" type="radio"{if $settings.read_state_expiration_method==3} checked="checked"{/if} /><label for="read_state_lock_reset">{#read_state_locktime_reset#}</label></p>
    </td>
   </tr>
   <tr>
-   <td class="c"><strong>{#read_state_value#}</strong><br><span class="small">{#read_state_value_desc#}</span></td>
+   <th><strong>{#read_state_value#}</strong>
+    <span class="description">{#read_state_value_desc#}</span></th>
    <td class="d"><input name="read_state_expiration_value" value="{$settings.read_state_expiration_value|escape}" size="5" type="text"></td>
   </tr>
   <tr>
@@ -535,6 +536,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <input type="hidden" name="edit_user_id" value="{$edit_user_id}" />
 <table class="settings">
  <tbody>
@@ -579,13 +581,14 @@
   <tr>
    <th><strong>{#edit_user_gender#}</strong></th>
    <td class="d">
+    <input id="no-gender" type="radio" name="user_gender" value="0"{if $user_gender=="0"} checked="checked"{/if} class="small-input" /><label for="no-gender">{#gender_not_specified#}</label><br />
     <input id="user_gender_1" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} class="small-input" /><label for="user_gender_1">{#male#}</label><br />
     <input id="user_gender_2" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} class="small-input" /><label for="user_gender_2">{#female#}</label>
    </td>
   </tr>
   <tr>
    <th><strong>{#edit_user_birthday#}</strong></th>
-   <td class="d"><input type="text" size="12" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
+   <td class="d"><input type="date" size="12" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
   </tr>
   <tr>
    <th><strong>{#edit_user_location#}</strong></th>
@@ -893,7 +896,7 @@
 </div>
 </form>
 
-<hr style="margin:20px 0px 20px 0px; border-top: 1px dotted #808080; border-left: 0; border-right: 0; border-bottom: 0; height: 1px;"/>
+<hr />
 
 <h2>{#uninstall_forum#}</h2>
 <p>{#uninstall_forum_exp#}</p>
