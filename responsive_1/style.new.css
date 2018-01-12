@@ -914,6 +914,8 @@ div.warning              {
 		justify-content: space-between;
 		align-items: flex-start;
 	}
+	#main-container {
+		flex-direction: row-reverse;
 	}
 	#additional-admin-info section {
 		width: calc(33.3% - 0.25rem);
