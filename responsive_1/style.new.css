@@ -290,6 +290,7 @@ aside section h3 {
 	text-decoration: none;
 	display: block;
 	padding: 0.1em 0.2em;
+	background-color: #f0f0f0;
 	color: #00c;
 }
 #latest-postings a span {
