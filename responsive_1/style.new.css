@@ -902,12 +902,12 @@ div.warning              {
 
 
 @media screen and (min-width: 44em) {
-	body {
-		/*background: #f44;*/
 	body > header, nav#subnav, main, body > footer {
 		padding-left: 1em;
 		padding-right: 1em;
 	}
+	#bottombar {
+		margin-top: 0;
 	}
 	#admin-menu-container {
 		display: flex;
