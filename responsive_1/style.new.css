@@ -289,7 +289,7 @@ aside section h3 {
 	line-height: 1.5em;
 	text-decoration: none;
 	display: block;
-	padding: 3px 5px 3px 5px;
+	padding: 0.1em 0.2em;
 	color: #00c;
 }
 #latest-postings a span {
