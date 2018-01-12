@@ -415,6 +415,33 @@ aside section h3 {
 	padding:0;
 }
 
+ul.pagination {
+	margin: 0.75rem 0;
+	padding: 0;
+	list-style-type: none;
+}
+ul.pagination li {
+	display:inline;
+	margin-left: 0.5em;
+}
+ul.pagination li:first-child {
+	margin-left: 0;
+}
+ul.pagination a {
+	border: 1px solid #bacbdf;
+	background: #f9f9f9;
+	padding: 0.1em 0.4em;
+}
+ul.pagination a:focus, ul.pagination a:hover, ul.pagination a:active {
+	border:1px solid #00c;
+	background:#efefef;
+	text-decoration:none;
+}
+ul.pagination a:not([href]) {
+	border: 1px solid #bacbdf;
+	color: red;
+	font-weight: bold;
+}
 
 
 /* table definitions */
