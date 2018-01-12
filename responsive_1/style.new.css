@@ -296,8 +296,11 @@ aside section h3 {
 #latest-postings a span {
 	display: block;
 }
-#latest-postings a:visited {
-	color: #808;
+#latest-postings a:visited, #latest-postings a.read {
+	background-color: #fff;
+}
+#latest-postings li a:visited .entry-title, #latest-postings a.read .entry-title {
+	color:#808;
 }
 #latest-postings a:focus, #latest-postings a:hover, #modmenu a:focus, #modmenu a:hover {
 	background: #efefef;
