@@ -856,39 +856,9 @@ div.warning              {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 	}
-	}
 	.reply-wrapper {
 		margin: 0 0 0 0.75em;
 		margin: 0 0 0 0.75rem;
-	#additional-admin-info {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-	#additional-admin-info section {
-		width: calc(50% - 0.25rem);
-		margin: 0.25rem 0;
-	}
-	.adminmenu {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-	.adminmenu li {
-		width: calc(50% - 0.25rem);
-		text-align: center;
-	}
-	.adminmenu a {
-		height: 100%;
-		background: #eef;
-		padding: 0;
-		font-weight: bold;
-	}
-	.adminmenu a img, .adminmenu a span {
-		display: block;
-	}
-	.adminmenu a img {
-		margin: 0.1rem auto;
 	}
 	#pbmlf {
 		text-align: center;
