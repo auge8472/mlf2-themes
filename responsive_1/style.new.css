@@ -909,13 +909,11 @@ div.warning              {
 	#bottombar {
 		margin-top: 0;
 	}
-	#admin-menu-container {
+	#admin-menu-container, #main-container {
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: space-between;
+		align-items: flex-start;
 	}
-	#additional-admin-info {
-		/*justify-content: flex-start;*/
 	}
 	#additional-admin-info section {
 		width: calc(33.3% - 0.25rem);
