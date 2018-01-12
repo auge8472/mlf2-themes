@@ -457,14 +457,14 @@ th {
 	vertical-align: top;
 	font-weight: bold;
 	text-align: left;
-	padding: 0.1em 0.2em;
-	padding: 0.1rem 0.2rem;
+	padding: 0.1em 0.25em;
+	padding: 0.1rem 0.25rem;
 }
 td {
 	vertical-align: top;
 	font-weight: normal;
-	padding: 0.2em;
-	padding: 0.2rem;
+	padding: 0.25em;
+	padding: 0.25rem;
 }
 tbody tr:nth-child(odd) {
 	background:#eee;
