@@ -231,6 +231,7 @@ aside, #sidebar, #bottombar, aside h2, #sidebarcontent, aside section h3, #lates
 #bottombar {
 	margin: 1em 0 0 0;
 }
+/* main header with folding link */
 aside h2 {
 	font-size: 1em;
 	font-size: 1rem;
@@ -257,6 +258,7 @@ aside h2 a:focus, aside h2 a:hover {
 aside h2 a:active {
 	color: #643;
 }
+/* box containing the sidebars content boxes, the boxes itself and their headers */
 #sidebarcontent, aside section, aside section h3 {
 	margin: 0;
 	padding: 0;
@@ -278,6 +280,7 @@ aside section h3 {
 	background: #d2ddea;
 }
 
+/* box with the latest postings and the similar working modmenu */
 #latest-postings ul, #modmenu ul {
 	list-style: none;
 }
