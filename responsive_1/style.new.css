@@ -29,13 +29,13 @@ body {
 
 body > header {
 	display: block;
-	background-color: hsl(210, 100%, 92%);
+	background-color: hsl(210, 100%, 90%);
 	padding: 0.2rem 0.25rem;
 	border-bottom: 1px solid hsl(210, 100%, 84%);
 }
 
 #subnav {
-	background: #f9f9f9;
+	background: #f4f4f4;
 	padding: 0 0.25rem;
 	border-bottom: 1px solid #bacbdf;
 	line-height: 1.6em;
