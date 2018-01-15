@@ -45,11 +45,8 @@
 <!--[if IE]><div id="ie"><![endif]-->
 
 <header id="top">
-<div id="logo">
-{if $settings.home_linkname}<p class="home"><a href="{$settings.home_linkaddress}">{$settings.home_linkname}</a></p>{/if}
 <h1><a href="./" title="{#forum_index_link_title#}">{$settings.forum_name|escape:"html"}</a></h1>
-</div>
-
+{if $settings.home_linkname}<p class="home"><a href="{$settings.home_linkaddress}">{$settings.home_linkname}</a></p>{/if}
 <div id="nav">
 <form id="topsearch" action="index.php" method="get" title="{#search_title#}" accept-charset="{#charset#}">
 <div><input type="hidden" name="mode" value="search" /><label for="search-input">{#search_marking#}</label>&nbsp;<input id="search-input" type="search" name="search" placeholder="{#search_default_value#}" /><button>{#go#}</button></div>

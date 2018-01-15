@@ -125,7 +125,7 @@ a.stronglink:focus, a.stronglink:hover {
 
 
 /* elements of the page header */
-#logo, #logo .home, #logo h1, #logo .index, #nav, #usermenu, #usermenu li {
+.home, h1, .index, #nav, #usermenu, #usermenu li {
 	margin:0;
 	padding:0;
 }
