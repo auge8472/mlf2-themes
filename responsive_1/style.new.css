@@ -873,6 +873,10 @@ div.warning              {
 		padding-left: 1em;
 		padding-right: 1em;
 	}
+	body > header {
+		display: flex;
+		justify-content: space-between;
+	}
 	#bottombar {
 		margin-top: 0;
 	}
