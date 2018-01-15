@@ -126,12 +126,12 @@ a.stronglink:focus, a.stronglink:hover {
 
 /* elements of the page header */
 .home, h1, .index, #nav, #usermenu, #usermenu li {
-	margin:0;
-	padding:0;
-}
 #logo .home {
 	margin-bottom: 0.3em;
 	margin-bottom: 0.3rem;
+	margin: 0;
+	padding: 0.2em 0 0.1em 0;
+	padding: 0.2rem 0 0.1rem 0;
 }
 #logo h1 a {
 	color:#000080;
