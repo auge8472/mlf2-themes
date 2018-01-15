@@ -125,10 +125,10 @@ a.stronglink:focus, a.stronglink:hover {
 
 
 /* elements of the page header */
-.home, h1, .index, #nav, #usermenu, #usermenu li {
 #logo .home {
 	margin-bottom: 0.3em;
 	margin-bottom: 0.3rem;
+.home, h1, .index, #nav {
 	margin: 0;
 	padding: 0.2em 0 0.1em 0;
 	padding: 0.2rem 0 0.1rem 0;
@@ -153,7 +153,7 @@ a.stronglink:focus, a.stronglink:hover {
 
 /* elements of the navigation bar below the page header */
 
-#submenu, #subnav-1, #subnav-2 {
+#submenu, #usermenu, #subnav-1, #subnav-2 {
 	margin:0;
 	padding:0;
 }
