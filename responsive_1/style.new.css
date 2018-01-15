@@ -125,9 +125,6 @@ a.stronglink:focus, a.stronglink:hover {
 
 
 /* elements of the page header */
-#logo .home {
-	margin-bottom: 0.3em;
-	margin-bottom: 0.3rem;
 .home, h1, .index, #nav {
 	margin: 0;
 	padding: 0.2em 0 0.1em 0;
