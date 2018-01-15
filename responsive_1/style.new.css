@@ -853,6 +853,9 @@ div.warning              {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 	}
+	#subnav ul {
+		display: flex;
+	}
 	.reply-wrapper {
 		margin: 0 0 0 0.75em;
 		margin: 0 0 0 0.75rem;
