@@ -902,7 +902,7 @@ div.warning              {
 	}
 	#additional-admin-info, #sidebar, #bottombar {
 		flex-grow: 1;
-		width: 15em;
+		width: 20em;
 	}
 	.adminmenu, #main-thread-list {
 		flex-grow: 3;
