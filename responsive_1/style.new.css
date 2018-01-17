@@ -900,11 +900,10 @@ div.warning              {
 		margin-top: 0;
 	}
 	#additional-admin-info, #sidebar, #bottombar {
-		flex-grow: 1;
-		width: 20em;
+		flex: 0 0 20em;
 	}
 	.adminmenu, #main-thread-list {
-		flex-grow: 3;
+		flex: 1 1 auto;
 	}
 }
 
