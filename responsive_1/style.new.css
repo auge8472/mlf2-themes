@@ -260,7 +260,7 @@ aside h2 a:active {
 	padding: 0;
 }
 aside section {
-	margin: 0.3em 0 0 0;
+	margin: 0.25em 0 0 0;
 	background: #f9f9f9;
 	border: 1px solid #bacbdf;
 }
@@ -860,6 +860,9 @@ div.warning              {
 	}
 	#subnav li:last-child {
 		margin-right: 0;
+	}
+	aside section {
+		margin: 0.5em 0 0 0;
 	}
 	.reply-wrapper {
 		margin: 0 0 0 0.75em;
