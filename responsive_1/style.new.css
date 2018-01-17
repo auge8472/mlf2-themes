@@ -847,7 +847,7 @@ div.warning              {
 }
 
 /* navigation on wider screens */
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 32em) {
 	body > header, nav#subnav, main, body > footer {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
