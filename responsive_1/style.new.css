@@ -45,7 +45,6 @@ main {
 	display: block;
 	padding: 0.75em 10px;
 	padding: 0.75rem 0.25rem;
-	min-height: 200px;
 }
 
 body > footer {
