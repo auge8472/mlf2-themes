@@ -855,6 +855,12 @@ div.warning              {
 	#subnav ul {
 		display: flex;
 	}
+	#subnav li {
+		margin-right: 0.25em;
+	}
+	#subnav li:last-child {
+		margin-right: 0;
+	}
 	.reply-wrapper {
 		margin: 0 0 0 0.75em;
 		margin: 0 0 0 0.75rem;
