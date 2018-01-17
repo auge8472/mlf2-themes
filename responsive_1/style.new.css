@@ -283,6 +283,9 @@ aside section h3 {
 #latest-postings li, #modmenu li {
 	word-wrap: break-word;
 	overflow: hidden;
+	border-bottom: 1px solid #d8d8d8;
+}#latest-postings li:last-child, #modmenu li:last-child {
+	border-bottom: none;
 }
 #latest-postings a, #modmenu a {
 	line-height: 1.5em;
