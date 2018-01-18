@@ -221,11 +221,8 @@ aside h2, #sidebarcontent, aside section h3, aside section p, #latest-postings u
 aside, #sidebar, #bottombar, aside h2, #sidebarcontent, aside section h3, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li {
 	padding: 0;
 }
-#sidebar {
+#sidebar, #bottombar {
 	margin: 0 0 1em 0;
-}
-#bottombar {
-	margin: 1em 0 0 0;
 }
 /* main header with folding link */
 aside h2 {
