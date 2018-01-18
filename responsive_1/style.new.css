@@ -901,7 +901,7 @@ div.warning              {
 		margin-top: 0;
 	}
 	#additional-admin-info, #sidebar, #bottombar {
-		flex: 0 0 20em;
+		flex: 0 0 15em;
 	}
 	.adminmenu, #main-thread-list {
 		flex: 1 1 auto;
@@ -959,12 +959,18 @@ div.warning              {
 }
 
 @media screen and (min-width: 64em) {
+	#additional-admin-info, #sidebar, #bottombar {
+		flex: 0 0 17.5em;
+	}
 	.cell-date {
 		display: table-cell;
 	}
 }
 
 @media screen and (min-width: 72em) {
+	#additional-admin-info, #sidebar, #bottombar {
+		flex: 0 0 20em;
+	}
 	.cell-count-replies {
 		display: table-cell;
 	}
