@@ -698,6 +698,18 @@ article blockquote {
 	line-height: 1.4em;
 }
 
+.body pre {
+	padding: 0.25em;
+	white-space: pre-wrap;
+	border: 1px solid #ed0;
+	background-color: #ffd;
+	color: #224;
+}
+
+code {
+	color: #224;
+}
+
 article footer {
 	margin: 0;
 	padding: 5px 5px 0 5px;
