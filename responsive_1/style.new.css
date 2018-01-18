@@ -235,6 +235,7 @@ aside h2 {
 	font-weight: normal;
 	background-color: hsl(210, 100%, 92%);
 	border: 1px solid #bacbdf;
+	box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 }
 aside h2 a {
 	display: block;
@@ -263,6 +264,7 @@ aside section {
 	margin: 0.25em 0 0 0;
 	background: #f9f9f9;
 	border: 1px solid #bacbdf;
+	box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 }
 aside section h3 {
 	font-size: 1em;
