@@ -434,7 +434,8 @@
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="action" value="user" />
 <label for="search-user">{#search_user#}</label>
-<input id="search-user" type="search" name="search_user" value="{if $search_user}{$search_user}{/if}" placeholder="{#search_user_default_value#}" size="25" alt="{#search_user_default_value#}" />{*&nbsp;<input type="image" src="{$THEMES_DIR}/{$theme}/images/submit.png" alt="[&raquo;]" />*}
+<input id="search-user" type="search" name="search_user" value="{if $search_user}{$search_user}{/if}" placeholder="{#search_user_default_value#}" size="25" />
+<button>{#go#}</button>
 </div>
 </form>
 </div>
