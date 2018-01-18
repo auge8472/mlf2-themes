@@ -444,42 +444,55 @@ ul.pagination a:not([href]) {
 
 /* table definitions */
 table {
-	width: 100%;
-	border: 1px solid #bacbdf;
+	border: none;
 	border-collapse: collapse;
+	width: 100%;
 }
 thead {
-	background: #d2ddea;
+	display: none;
 }
-th {
+tbody, tr, th, td {
+	display: block;
+}
+tr {
+	border: 1px solid #bacbdf;
+	margin-bottom: 0.25em;
+	margin-bottom: 0.25rem;
+}
+tr:last-child {
+	margin-bottom: 0;
+}
+th, td {
 	vertical-align: top;
-	font-weight: bold;
-	text-align: left;
-	padding: 0.1em 0.25em;
-	padding: 0.1rem 0.25rem;
-}
-td {
-	vertical-align: top;
-	font-weight: normal;
-	padding: 0.25em;
-	padding: 0.25rem;
-}
-tbody tr:nth-child(odd) {
-	background:#eee;
-}
-tbody tr:nth-child(even) {
-	background:#fff;
-}
-
-td.subject {
-	min-width:50%;
-}
-table p {
-	font-size:1em;
 }
 td[data-header] {
+	background-color: #fff;
 	font-size:0.82em;
+	line-height: 1.3em;
 }
+td[data-header]::before {
+	content: attr(data-header) ': ';
+}
+.cell-date, .cell-count-views, .cell-count-replies {
+	display: none;
+}
+#main-thread-list tbody .cell-subject {
+	background-color: #dfefff;
+	border-bottom: 1px solid #bacbdf;
+}
+
+/* tables on narrow screens*/
+/*
+@media screen and (max-width: 38em) {
+	.normaltab .subject, table.normaltab td.c, .settings th {
+		border-bottom: 1px dotted #bacbdf;
+	}
+	table.normaltab td.c, .settings th, th, td {
+		width: auto;
+		max-width: 100%;
+	}
+}
+*/
 
 .settings {
 	margin: 0 0 0.25em 0;
@@ -500,41 +513,6 @@ td[data-header] {
 .settings .d {
 	background:#f5f5f5;
 }
-/* tables on narrow screens*/
-@media screen and (max-width: 38em) {
-	table {
-		border: none;
-	}
-	table thead {
-		display: none;
-	}
-	tr, td, th {
-		display: block;
-	}
-	tr {
-		border: 1px solid #bacbdf;
-		margin-bottom: 0.25em;
-		margin-bottom: 0.25rem;
-	}
-	 tr:last-child {
-		margin-bottom: 0;
-	}
-	td[data-header] {
-		background-color: #fff;
-		line-height: 1.3em;
-	}
-	td[data-header]::before {
-		content: attr(data-header) ': ';
-	}
-	.normaltab .subject, table.normaltab td.c, .settings th {
-		border-bottom: 1px dotted #bacbdf;
-	}
-	table.normaltab td.c, .settings th, th, td {
-		width: auto;
-		max-width: 100%;
-	}
-}
-
 
 /* form elements */
 
@@ -927,6 +905,74 @@ div.warning              {
 	}
 	.adminmenu, #main-thread-list {
 		flex: 1 1 auto;
+	}
+	/* table definitions */
+	table {
+		border: 1px solid #bacbdf;
+	}
+	thead {
+		display: table-header-group;
+		background: #d2ddea;
+	}
+	tbody {
+		display: table-row-group;
+	}
+	tr {
+		display: table-row;
+	}
+	tbody tr:nth-child(odd) {
+		background:#eee;
+	}
+	tbody tr:nth-child(even) {
+		background:#fff;
+	}
+	th, td {
+		display: table-cell;
+		border-right: 1px dotted #bacbdf;
+	}
+	th {
+		font-weight: bold;
+		text-align: left;
+		padding: 0.1em 0.25em;
+		padding: 0.1rem 0.25rem;
+	}
+	td {
+		font-weight: normal;
+		padding: 0.25em;
+		padding: 0.25rem;
+	}
+	td.subject {
+		min-width:55%;
+	}
+	td[data-header] {
+		background-color: transparent;
+	}
+	td[data-header]::before {
+		content: '';
+	}
+	#main-thread-list tbody tr:nth-child(odd) td.cell-subject {
+		background-color: #dfefff;
+	}
+	#main-thread-list tbody tr:nth-child(even) td.cell-subject {
+		background-color: #e8f8ff;
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.cell-date {
+		display: table-cell;
+	}
+}
+
+@media screen and (min-width: 72em) {
+	.cell-count-replies {
+		display: table-cell;
+	}
+}
+
+@media screen and (min-width: 80em) {
+	.cell-count-views {
+		display: table-cell;
 	}
 }
 

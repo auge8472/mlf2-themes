@@ -46,14 +46,14 @@
 <table>
  <thead>
   <tr>{*
-{if $fold_threads==1}   <th>&nbsp;</th>{/if}*}
-   <th>{#subject#}</th>
-   <th>{#author#}</th>
-   <th>{#date#}</th>
-{if $settings.count_views}   <th>{#views#}</th>
+{if $fold_threads==1}   <th class="cell-folder">&nbsp;</th>{/if}*}
+   <th class="cell-subject">{#subject#}</th>
+   <th class="cell-author">{#author#}</th>
+   <th class="cell-date">{#date#}</th>
+{if $settings.count_views}   <th class="cell-count-views">{#views#}</th>
 {/if}
-   <th>{#replies#}</th>
-{if $categories && $category<=0}   <th>{#category#}</th>
+   <th class="cell-count-replies">{#replies#}</th>
+{if $categories && $category<=0}   <th class="cell-category">{#category#}</th>
 {/if}
   </tr>
  </thead>
@@ -61,8 +61,8 @@
 {foreach from=$threads item=thread}
 {cycle values="a,b" assign=c}
   <tr class="{$c}">
-{*{if $fold_threads==1}   <td class="fold"></td>{/if}*}
-   <td class="subject">
+{*{if $fold_threads==1}   <td class="fold cell-folder"></td>{/if}*}
+   <td class="subject cell-subject">
 <ul id="thread-{$thread}" class="thread {if $fold_threads==1}folded{else}expanded{/if}">
 {function name=tree level=0}
 <li><a class="{if $data.$element.pid==0}opening-entry{else}following-entry{/if}{if $data.$element.new} new{/if}{if $data.$element.sticky==1} sticky{/if}{if $data.$element.locked==1} locked{/if}{if $data.$element.is_read} read{/if}" href="index.php?mode=thread&amp;id={$data.$element.tid}{if $data.$element.pid!=0}#p{$data.$element.id}{/if}" title="{$data.$element.name}, {$data.$element.formated_time}">{if $data.$element.spam==1}<span class="spam">{$data.$element.subject}</span>{else}{$data.$element.subject}{/if}</a>{if $data.$element.no_text} <img class="no-text" src="{$THEMES_DIR}/{$theme}/images/no_text.png" title="{#no_text_title#}" alt="[ {#no_text_alt#} ]" width="11" height="9" />{/if}<span id="p{$data.$element.id}" class="tail">{if $admin || $mod} <a id="marklink_{$data.$element.id}" href="index.php?mode=posting&amp;mark={$data.$element.id}" title="{#mark_linktitle#}">{if $data.$element.marked==0}<img id="markimg_{$data.$element.id}" src="{$THEMES_DIR}/{$theme}/images/unmarked.png" title="{#mark_linktitle#}" alt="[○]" width="11" height="11" />{else}<img id="markimg_{$data.$element.id}" src="{$THEMES_DIR}/{$theme}/images/marked.png" title="{#unmark_linktitle#}" alt="[●]" width="11" height="11" title="{#unmark_linktitle#}" />{/if}</a> <a href="index.php?mode=posting&amp;delete_posting={$data.$element.id}&amp;back=index" title="{#delete_posting_title#}"><img src="{$THEMES_DIR}/{$theme}/images/delete_posting.png" title="{#delete_posting_title#}" alt="[x]" width="9" height="9" /></a>{/if}</span>
@@ -72,12 +72,12 @@
 {tree element=$thread}
 </ul>
 </td>
-   <td data-header="{#author#}"><span class="value nowrap">{if $data.$thread.user_type==2}<span class="admin registered_user" title="{#administrator_title#}">{$data.$thread.name}</span>{elseif $data.$thread.user_type==1}<span class="mod registered_user" title="{#moderator_title#}">{$data.$thread.name}</span>{elseif $data.$thread.user_id>0}<span class="registered_user">{$data.$thread.name}</span>{else}{$data.$thread.name}{/if}</span></td>
-   <td data-header="{#date#}"><span class="value nowrap">{$data.$thread.formated_time}</span></td>
-{if $settings.count_views}   <td data-header="{#views#}"><span class="value">{$total_views.$thread}</span></td>
+   <td data-header="{#author#}" class="cell-author"><span class="value nowrap">{if $data.$thread.user_type==2}<span class="admin registered_user" title="{#administrator_title#}">{$data.$thread.name}</span>{elseif $data.$thread.user_type==1}<span class="mod registered_user" title="{#moderator_title#}">{$data.$thread.name}</span>{elseif $data.$thread.user_id>0}<span class="registered_user">{$data.$thread.name}</span>{else}{$data.$thread.name}{/if}</span></td>
+   <td data-header="{#date#}" class="cell-date"><span class="value nowrap">{$data.$thread.formated_time}</span></td>
+{if $settings.count_views}   <td data-header="{#views#}" class="cell-count-views"><span class="value">{$total_views.$thread}</span></td>
 {/if}
-   <td data-header="{#replies#}"><span class="value">{$replies.$thread}</span></td>
-{if $categories && $category<=0}   <td data-header="{#category#}">{if $data.$thread.category_name}<a href="index.php?mode=index&amp;category={$data.$thread.category}" title="{#change_category_link#|replace:"[category]":$data.$thread.category_name|escape:"html"}"><span class="value category nowrap">{$data.$thread.category_name}</span></a>{else}&nbsp;{/if}</td>
+   <td data-header="{#replies#}" class="cell-count-replies"><span class="value">{$replies.$thread}</span></td>
+{if $categories && $category<=0}   <td data-header="{#category#}" class="cell-category>{if $data.$thread.category_name}<a href="index.php?mode=index&amp;category={$data.$thread.category}" title="{#change_category_link#|replace:"[category]":$data.$thread.category_name|escape:"html"}"><span class="value category nowrap">{$data.$thread.category_name}</span></a>{else}&nbsp;{/if}</td>
 {/if}
 </tr>
 {/foreach}
