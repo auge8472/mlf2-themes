@@ -458,6 +458,7 @@ tr {
 	border: 1px solid #bacbdf;
 	margin-bottom: 0.25em;
 	margin-bottom: 0.25rem;
+	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 }
 tr:last-child {
 	margin-bottom: 0;
@@ -924,6 +925,7 @@ div.warning              {
 	}
 	tr {
 		display: table-row;
+		box-shadow: none;
 	}
 	tbody tr:nth-child(odd) {
 		background:#eee;
