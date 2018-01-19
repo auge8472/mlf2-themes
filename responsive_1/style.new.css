@@ -499,9 +499,8 @@ td[data-header]::before {
 	margin: 0 0 0.25em 0;
 }
 .settings th {
-	width: 40%;
-	max-width: 24em;
 	background-color: hsl(210, 100%, 92%);
+	text-align: left;
 }
 .settings th strong {
 	display: block;
@@ -967,6 +966,10 @@ div.warning              {
 	}
 	#main-thread-list tbody tr:nth-child(even) td.cell-subject {
 		background-color: #e8f8ff;
+	}
+	.settings th {
+		width: 40%;
+		max-width: 24em;
 	}
 }
 
