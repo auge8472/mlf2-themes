@@ -232,7 +232,7 @@ aside h2 {
 	font-weight: normal;
 	background-color: hsl(210, 100%, 92%);
 	border: 1px solid #bacbdf;
-	box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
+	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 }
 aside h2 a {
 	display: block;
@@ -261,7 +261,7 @@ aside section {
 	margin: 0.25em 0 0 0;
 	background: #f9f9f9;
 	border: 1px solid #bacbdf;
-	box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
+	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 }
 aside section h3 {
 	font-size: 1em;
@@ -580,7 +580,7 @@ ul.reply li {
 	margin: 0 0 0.5rem 0;
 	padding: 0;
 	min-width: 16em;
-	box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
+	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 }
 
 article header {
@@ -907,6 +907,9 @@ div.warning              {
 	}
 	.adminmenu, #main-thread-list {
 		flex: 1 1 auto;
+	}
+	aside h2, aside section, .thread-posting {
+		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 	}
 	/* table definitions */
 	table {
