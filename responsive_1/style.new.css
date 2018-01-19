@@ -519,7 +519,7 @@ td[data-header]::before {
 /* give all textareas and inputs (except radios and checkboxes)
   a proper width for narrow vieworts */
 textarea, input:not(.small-input) {
-	width: calc(100% - 6px);
+	width: calc(100% - 10px);
 }
 .hp {
 	display: none;
