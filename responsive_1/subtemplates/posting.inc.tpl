@@ -80,8 +80,8 @@
 </p>
 
 <p>
-<label for="email" class="input">{#email_marking#}</label>
-<input id="email" type="text" size="40" name="email" value="{if $email}{$email}{/if}" maxlength="{$settings.email_maxlength}" tabindex="2" />&nbsp;<span class="xsmall">{#optional_email#}</span>
+<label for="email" class="input">{#email_marking#} <span class="xsmall">{#optional_email#}</span></label>
+<input id="email" type="text" size="40" name="email" value="{if $email}{$email}{/if}" maxlength="{$settings.email_maxlength}" tabindex="2" />
 </p>
 
 <p class="hp">
@@ -90,8 +90,8 @@
 </p>
 
 <p>
-<label for="hp" class="input">{#hp_marking#}</label>
-<input id="hp" type="text" size="40" name="hp" value="{if $hp}{$hp}{/if}" maxlength="{$settings.hp_maxlength}" tabindex="3" />&nbsp;<span class="xsmall">{#optional#}</span>
+<label for="hp" class="input">{#hp_marking#} <span class="xsmall">{#optional#}</span></label>
+<input id="hp" type="text" size="40" name="hp" value="{if $hp}{$hp}{/if}" maxlength="{$settings.hp_maxlength}" tabindex="3" />
 </p>
 
 <p class="hp">
@@ -100,8 +100,8 @@
 </p>
 
 <p>
-<label for="location" class="input">{#location_marking#}</label>
-<input id="location" type="text" size="40" name="location" value="{if $location}{$location}{/if}" maxlength="{$settings.location_maxlength}" tabindex="4" />&nbsp;<span class="xsmall">{#optional#}</span>
+<label for="location" class="input">{#location_marking#} <span class="xsmall">{#optional#}</span></label>
+<input id="location" type="text" size="40" name="location" value="{if $location}{$location}{/if}" maxlength="{$settings.location_maxlength}" tabindex="4" />
 </p>
 
 {if $settings.remember_userdata == 1 && $posting_mode==0 && !$user}
@@ -132,8 +132,8 @@
 
 {if ($admin ||$mod) && $settings.tags}
 <p>
-<label for="tags" class="input">{#tags_marking#}</label>
-<input id="tags" type="text" size="50" name="tags" value="{$tags|default:""}" maxlength="253" tabindex="-1" />&nbsp;<span class="xsmall">{#tags_note#}</span>
+<label for="tags" class="input">{#tags_marking#} <span class="xsmall">{#tags_note#}</span></label>
+<input id="tags" type="text" size="50" name="tags" value="{$tags|default:""}" maxlength="253" tabindex="-1" />
 </p>
 {/if}
 </fieldset>
