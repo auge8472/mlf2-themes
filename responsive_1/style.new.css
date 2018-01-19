@@ -915,6 +915,7 @@ div.warning              {
 	/* table definitions */
 	table {
 		border: 1px solid #bacbdf;
+		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 	}
 	thead {
 		display: table-header-group;
