@@ -108,17 +108,18 @@ a:active {
 
 /* strong links */
 a.stronglink {
-	padding-left: 13px;
+	padding-left: 1em;
 	font-weight: bold;
-	background-image: url(images/bg_sprite_1.png);
+	background-image: url(images/arrow-b-right.svg);
 	background-repeat: no-repeat;
-	background-position: 0 8px;
+	background-size: 1em 1em;
+	background-position: 0 center;
 }
 a.stronglink:visited {
 	color: #00c;
 }
 a.stronglink:focus, a.stronglink:hover {
-	background-position: 0 -41px;
+	/*background-position: 0 -41px;*/
 }
 /* end: strong links */
 
@@ -163,7 +164,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	display:inline;
 }
 #subnav a, #subnav form {
-	padding-left:14px;
+	padding-left: 1em;
 }
 
 #subnav-2 a {

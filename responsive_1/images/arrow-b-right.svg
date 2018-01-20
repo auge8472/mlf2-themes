@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #arrow-right {
+   fill: #f80800;
+  }
+  ]]>
+ </style>
+ <polygon points="5,39 65,39 65,15 118,64 65,113 65,93 5,93" id="arrow-right" />
+</svg>
+
