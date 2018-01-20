@@ -4,12 +4,12 @@
   <![CDATA[
   path {
    stroke-width: 24px;
-   stroke: #bfc1be;
+   stroke: #f80800;
    fill: none;
   }
   polygon {
    stroke: none;
-   fill: #bfc1be;
+   fill: #f80800;
   }
   ]]>
  </style>
