@@ -568,6 +568,24 @@ ul.reply li {
 	text-decoration:underline;
 }
 
+.opening-entry, .following-entry {
+	padding-left: 1.2em;
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	background-position: 0 center;
+}
+.opening-entry {
+	background-image: url(images/thread-change-no.svg);
+}
+.opening-entry.sticky {
+	background-image: url(images/thread-pinned.svg), url(images/thread-change-no.svg);
+}
+.opening-entry.new {
+	background-image: url(images/thread-change-yes.svg);
+}
+.following-entry {
+	background-image: url(images/clasp-change-no.svg);
+}
 /* end: thread tree: */
 
 
