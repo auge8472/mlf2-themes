@@ -891,11 +891,8 @@ div.warning              {
 	#subnav ul {
 		display: flex;
 	}
-	#subnav li {
-		margin-right: 0.25em;
-	}
-	#subnav li:last-child {
-		margin-right: 0;
+	#subnav li:not(:first-child), #subnav-2 li:not(:first-child) {
+		margin-left: 0.25em;
 	}
 	aside section {
 		margin: 0.5em 0 0 0;
