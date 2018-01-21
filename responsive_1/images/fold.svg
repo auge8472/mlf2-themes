@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; }
+  #marker { stroke-width: 16px; stroke: #467; }
+  #opener { stroke-width: 16px; stroke: #8898aa; }
+  .reply { stroke-width: 14px; stroke: #bbbbdd; }
+  ]]>
+ </style>
+ <path id="marker" d="M0,9 H18" />
+ <path id="opener" d="M24,9 H104" />
+ <path class="reply" d="M18,32 H98" />
+ <path class="reply" d="M18,54 H92" />
+ <path class="reply" d="M36,76 H114" />
+ <path class="reply" d="M54,98 H128" />
+ <path class="reply" d="M36,120 H110" />
+</svg>
+

@@ -181,18 +181,6 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav .order-2 {
 	background-position: 0 -593px;
 }
-#subnav .fold-1 {
-	background-position: 0 -643px;
-}
-#subnav .fold-2 {
-	background-position: 0 -693px;
-}
-#subnav .tableview {
-	background-position: 0 -743px;
-}
-#subnav .threadview {
-	background-position: 0 -793px;
-}
 #subnav .openthread {
 	background-position: 0 -843px;
 }
@@ -204,6 +192,22 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 #subnav .fold-postings {
 	background-position: 0 -993px;
+}
+
+#subnav-2 a {
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-size: 0.75em 0.75em;
+	background-position: 0.1em center;
+}
+#subnav .fold-1 {
+	background-image: url(images/fold.svg);
+}
+#subnav .fold-2, #subnav .threadview {
+	background-image: url(images/unfold.svg);
+}
+#subnav .tableview {
+	background-image: url(images/threads-table.svg);
 }
 /* end: elements of the navigation bar below the page header */
 
