@@ -175,12 +175,6 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	padding-left:14px;
 	background-position: 0 -493px;
 }
-#subnav .order-1 {
-	background-position: 0 -543px;
-}
-#subnav .order-2 {
-	background-position: 0 -593px;
-}
 #subnav .openthread {
 	background-position: 0 -843px;
 }
@@ -208,6 +202,12 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 #subnav .tableview {
 	background-image: url(images/threads-table.svg);
+}
+#subnav .order-1 {
+	background-image: url(images/order-to-top.svg);
+}
+#subnav .order-2 {
+	background-image: url(images/order-to-bottom.svg);
 }
 /* end: elements of the navigation bar below the page header */
 

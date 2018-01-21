@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  polygon { stroke: none; }
+  #active { fill: #f80800; }
+  #inactive { fill: #ffa8a0; }
+  ]]>
+ </style>
+ <polygon id="active" points="58,0 58,128 33,128 33,48 16,48" />
+ <polygon id="inactive" points="70,128 70,0 95,0 95,80 112,80" />
+</svg>
+
