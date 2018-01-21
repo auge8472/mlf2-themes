@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  rect { fill: #fff; stroke-width: 8px; stroke: #222; }
+  path { fill: none; stroke-width: 7px; stroke: #222; }
+  ]]>
+ </style>
+ <rect x="4" y="20" width="120" height="88" />
+ <path d="M4,26 64,80 124,26" />
+</svg>
+
+
+

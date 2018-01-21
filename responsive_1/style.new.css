@@ -776,12 +776,17 @@ article footer li a:active {
 #footermenu li:first-child {
 	margin-left: 0;
 }
-.rss {
+.rss, a[href*='mode=contact'] {
 	padding-left: 1.2em;
-	background-image: url(images/rss-logo.svg);
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
 	background-position: 0 center;
+}
+.rss {
+	background-image: url(images/rss-logo.svg);
+}
+a[href*='mode=contact'] {
+	background-image: url(images/contact-email.svg);
 }
 
 #pbmlf {
