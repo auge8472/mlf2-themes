@@ -4,9 +4,9 @@
   <![CDATA[
   path { fill: none; }
   #marker { stroke-width: 16px; stroke: #467; }
-  #opener { stroke-width: 16px; }
-  .reply { stroke-width: 14px; }
-  #opener, .reply { stroke: #8898aa; }
+  #opener { stroke-width: 16px; stroke: #8898aa; }
+  .reply { stroke-width: 14px; stroke: #bbbbdd; }
+  polygon { stroke: none; fill: #f80800; }
   ]]>
  </style>
  <path id="marker" d="M0,9 H18" />
@@ -16,5 +16,6 @@
  <path class="reply" d="M36,76 H114" />
  <path class="reply" d="M54,98 H128" />
  <path class="reply" d="M36,120 H110" />
+ <polygon points="64,120 16,70, 38,70 38,20 90,20 90,70 112,70" />
 </svg>
 

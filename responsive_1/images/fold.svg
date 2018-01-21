@@ -6,6 +6,7 @@
   #marker { stroke-width: 16px; stroke: #467; }
   #opener { stroke-width: 16px; stroke: #8898aa; }
   .reply { stroke-width: 14px; stroke: #bbbbdd; }
+  polygon { stroke: none; fill: #f80800; }
   ]]>
  </style>
  <path id="marker" d="M0,9 H18" />
@@ -15,5 +16,6 @@
  <path class="reply" d="M36,76 H114" />
  <path class="reply" d="M54,98 H128" />
  <path class="reply" d="M36,120 H110" />
+ <polygon points="64,20 112,70 90,70 90,120 38,120 38,70 16,70" />
 </svg>
 
