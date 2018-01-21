@@ -171,10 +171,6 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	background-image: url(images/bg_sprite_1.png);
 	background-repeat: no-repeat;
 }
-#subnav .refresh {
-	padding-left:14px;
-	background-position: 0 -493px;
-}
 #subnav .openthread {
 	background-position: 0 -843px;
 }
@@ -193,6 +189,9 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	background-repeat: no-repeat;
 	background-size: 0.75em 0.75em;
 	background-position: 0.1em center;
+}
+#subnav .refresh {
+	background-image: url(images/reload.svg);
 }
 #subnav .fold-1 {
 	background-image: url(images/fold.svg);

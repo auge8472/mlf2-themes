@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; stroke-width: 12px; stroke: #f80800; }
+  polygon { stroke: none; fill: #f80800; }
+  ]]>
+ </style>
+ <path d="M 112,64 A 48 48, 0, 1, 1, 64,16" />
+ <polygon points="64,1 80,16 64,31" />
+</svg>
+
