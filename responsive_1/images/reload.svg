@@ -1,12 +1,11 @@
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
- <style type="text/css">
-  <![CDATA[
-  path { fill: none; stroke-width: 12px; stroke: #f80800; }
+  <style
+     type="text/css"
+     id="style4"><![CDATA[
+  path { fill: none; stroke-width: 16px; stroke: #f80800; }
   polygon { stroke: none; fill: #f80800; }
-  ]]>
- </style>
- <path d="M 112,64 A 48 48, 0, 1, 1, 64,16" />
- <polygon points="64,1 80,16 64,31" />
+  ]]></style>
+  <path d="m 96.129053,97.687483 a 46,46 0 1 1 0,-65.053824" />
+  <polygon points="64,36 64,0 90,18" transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,63.602141,-25.349097)" />
 </svg>
-
