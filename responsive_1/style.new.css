@@ -196,8 +196,11 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav .fold-1 {
 	background-image: url(images/fold.svg);
 }
-#subnav .fold-2, #subnav .threadview {
+#subnav .fold-2 {
 	background-image: url(images/unfold.svg);
+}
+#subnav .threadview {
+	background-image: url(images/threads-nested.svg);
 }
 #subnav .tableview {
 	background-image: url(images/threads-table.svg);
