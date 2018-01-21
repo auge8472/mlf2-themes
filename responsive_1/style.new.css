@@ -581,6 +581,12 @@ ul.reply li {
 .opening-entry.sticky {
 	background-image: url(images/thread-pinned.svg), url(images/thread-change-no.svg);
 }
+.opening-entry.locked {
+	background-image: url(images/thread-locked.svg), url(images/thread-change-no.svg);
+}
+.opening-entry.sticky.locked {
+	background-image: url(images/thread-locked.svg), url(images/thread-pinned.svg), url(images/thread-change-no.svg);
+}
 .opening-entry.new {
 	background-image: url(images/thread-change-yes.svg);
 }

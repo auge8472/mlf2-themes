@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #body { stroke-width: 0px; stroke: none; fill: #cb2; }
+  #light { stroke-width: 0px; stroke: none; fill: #dd2; }
+  #shadow { stroke-width: 0px; stroke: none; fill: #ba1; }
+  circle.keyhole { fill: #000; stroke-width: 0px; stroke: none; }
+  path.keyhole { fill: none; stroke-width: 5px; stroke: #000; }
+  path.shackle { fill: none; stroke-width: 11px; stroke: #6888a0; }
+  ]]>
+ </style>
+ <rect id="shadow" x="2" y="82" width="10" height="46" />
+ <rect id="body" x="12" y="82" width="52" height="46" />
+ <rect id="light" x="64" y="82" width="10" height="46" />
+ <circle class="keyhole" cx="38" cy="105" r="5" />
+ <path class="keyhole" d="M38,105 V117" />
+ <path class="shackle" d="M64,82 v-7 A 25 25, 0, 0, 0, 12,75 v7" />
+</svg>
+
