@@ -776,6 +776,13 @@ article footer li a:active {
 #footermenu li:first-child {
 	margin-left: 0;
 }
+.rss {
+	padding-left: 1.2em;
+	background-image: url(images/rss-logo.svg);
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	background-position: 0 center;
+}
 
 #pbmlf {
 	clear: both;
