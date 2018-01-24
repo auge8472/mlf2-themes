@@ -5,11 +5,10 @@
   path { fill: none; stroke-width: 16px; stroke: #8898aa; }
   ]]>
  </style>
- <path d="M0,9 H128" />
- <path d="M0,32 H128" />
- <path d="M0,54 H128" />
- <path d="M0,76 H128" />
- <path d="M0,98 H128" />
- <path d="M0,120 H128" />
+ <path d="M0,12 H128" />
+ <path d="M0,38 H128" />
+ <path d="M0,64 H128" />
+ <path d="M0,90 H128" />
+ <path d="M0,116 H128" />
 </svg>
 

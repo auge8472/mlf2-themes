@@ -4,17 +4,14 @@
   <![CDATA[
   path { fill: none; }
   #marker { stroke-width: 16px; stroke: #467; }
-  #opener { stroke-width: 16px; }
-  .reply { stroke-width: 14px; }
-  #opener, .reply { stroke: #8898aa; }
+  #opener, .reply { stroke-width: 16px; stroke: #8898aa; }
   ]]>
  </style>
- <path id="marker" d="M0,9 H18" />
- <path id="opener" d="M24,9 H104" />
- <path class="reply" d="M18,32 H98" />
- <path class="reply" d="M18,54 H92" />
- <path class="reply" d="M36,76 H114" />
- <path class="reply" d="M54,98 H128" />
- <path class="reply" d="M36,120 H110" />
+ <path id="marker" d="M0,12 H18" />
+ <path id="opener" d="M24,12 H104" />
+ <path class="reply" d="M18,38 H98" />
+ <path class="reply" d="M18,64 H92" />
+ <path class="reply" d="M36,90 H114" />
+ <path class="reply" d="M54,116 H128" />
 </svg>
 
