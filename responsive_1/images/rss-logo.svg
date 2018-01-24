@@ -4,13 +4,13 @@
   <![CDATA[
   rect { stroke: none; fill: #ea0; }
   circle { stroke: none; fill: #fff; }
-  path { fill: none; stroke-width: 14px; stroke: #fff; }
+  path { fill: none; stroke-width: 11px; stroke: #fff; }
   ]]>
  </style>
  <rect x="1" y="1" width="126" height="126" rx="18" ry="18" />
  <circle cx="26" cy="102" r="10" />
  <path d="M 26,75 A 26 26, 0, 0, 1, 53,102" />
- <path d="M 26,49 A 52 52, 0, 0, 1, 79,102" />
- <path d="M 26,23 A 78 78, 0, 0, 1, 105,102" />
+ <path d="M 26,50 A 51 51, 0, 0, 1, 78,102" />
+ <path d="M 26,25 A 76 76, 0, 0, 1, 103,102" />
 </svg>
 
