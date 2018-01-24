@@ -3,7 +3,7 @@
  <style type="text/css">
   <![CDATA[
   circle { fill: #e06f22; stroke-width: 0px; stroke: none; }
-  line { stroke-width: 12px; stroke: #6888a0; }
+  line { stroke-width: 12px; stroke: #467; }
   ]]>
  </style>
  <line x1="104" y1="24" x2="50" y2="76" />
