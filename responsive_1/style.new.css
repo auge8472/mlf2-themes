@@ -308,7 +308,7 @@ aside section h3 {
 	color:#808;
 }
 #latest-postings a:focus, #latest-postings a:hover, #modmenu a:focus, #modmenu a:hover {
-	background: #efefef;
+	background-color: #efefef;
 }
 #latest-postings a:focus .entry-title, #latest-postings a:hover .entry-title, #modmenu a:focus, #modmenu a:hover {
 	text-decoration: underline;
