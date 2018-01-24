@@ -630,13 +630,15 @@ article.thread-posting header {
 	background-color: #d0e8ff;
 }
 
-.avatar {
+header .avatar {
 	display: block;
 	border: 0;
 	border-radius: 5px;
 	float: left;
 	margin: 0 5px 5px 0;
 	padding: 0;
+	width: auto;
+	height: 3.5em;
 }
 
 article header h2,
