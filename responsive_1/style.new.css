@@ -171,15 +171,6 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	background-image: url(images/bg_sprite_1.png);
 	background-repeat: no-repeat;
 }
-#subnav .openthread {
-	background-position: 0 -843px;
-}
-#subnav .linear {
-	background-position: 0 -893px;
-}
-#subnav .hierarchic {
-	background-position: 0 -943px;
-}
 #subnav .fold-postings {
 	background-position: 0 -993px;
 }
@@ -210,6 +201,12 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 #subnav .order-2 {
 	background-image: url(images/order-to-bottom.svg);
+}
+#subnav .openthread, #subnav .hierarchic {
+	background-image: url(images/thread-entries-nested.svg);
+}
+#subnav .linear {
+	background-image: url(images/thread-entries-linear.svg);
 }
 /* end: elements of the navigation bar below the page header */
 

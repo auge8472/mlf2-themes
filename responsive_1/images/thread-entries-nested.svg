@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; stroke-width: 30px; }
+  .marker { stroke: #467; }
+  .subject { stroke: #8898aa; }
+  ]]>
+ </style>
+ <path class="marker" d="M8,20 H32" />
+ <path class="subject" d="M42,20 H120" />
+ <path class="marker" d="M28,62 H52" />
+ <path class="subject" d="M62,62 H120" />
+ <path class="marker" d="M28,104 H52" />
+ <path class="subject" d="M62,104 H120" />
+</svg>
+
