@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  circle { fill: #fff; stroke-width: 12px; stroke: #bbb; }
+  line { stroke-width: 12px; stroke: #6888a0; }
+  ]]>
+ </style>
+ <circle cx="64" cy="64" r="48" />
+</svg>
+

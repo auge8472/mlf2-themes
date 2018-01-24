@@ -318,17 +318,10 @@ aside section h3 {
 	font-size: 0.9em;
 }
 
-#mod-options a.delete-marked, #mod-options a.manage, #mod-options a.report, #mod-options a.delete-spam, #mod-options a.non-activated-users {
+#mod-options a.report, #mod-options a.delete-spam, #mod-options a.non-activated-users {
 	padding-left: 14px;
 	background-image: url(images/bg_sprite_4.png);
 	background-repeat: no-repeat;
-}
-
-#mod-options a.delete-marked {
-	background-position: 2px -287px;
-}
-#mod-options a.manage {
-	background-position: 2px -338px;
 }
 #mod-options a.report {
 	background-position: 2px -39px;
@@ -339,6 +332,19 @@ aside section h3 {
 }
 #mod-options a.non-activated-users {
 	background-position: 1px -387px;
+}
+
+#mod-options a {
+	padding-left: 1em;
+	background-repeat: no-repeat;
+	background-size: 0.75em 0.75em;
+	background-position: 0.1em center;
+}
+#mod-options a.delete-marked {
+	background-image: url(images/marker-cross.svg), url(images/marker-circle.svg);
+}
+#mod-options a.manage {
+	background-image: url(images/thread-change-no.svg);
 }
 
 #tagcloud ul, #usersonline ul {
