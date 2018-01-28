@@ -789,9 +789,11 @@ article footer li {
 article footer li a {
 	display: block;
 	margin: 0;
-	padding: 0 0.25em;
-	padding: 0 0.25rem;
+	padding: 0 0.25em 0 1.2em;
 	border: 1px solid #bacbdf;
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	background-position: 0 center;
 }
 article footer li a:link, article footer li a:visited {
 	background-color: #f9f9f9;
@@ -802,6 +804,18 @@ article footer li a:focus, article footer li a:hover {
 
 article footer li a:active {
 	background-color: #e9f8ff;
+}
+article footer a.add-bookmark {
+	background-image: url(images/notepad.svg);
+}
+article footer a.delete {
+	background-image: url(images/marker-cross.svg);
+}
+article footer a.lock, article footer a.lock-thread {
+	background-image: url(images/lock-closed.svg);
+}
+article footer a.unlock, article footer a.unlock-thread {
+	background-image: url(images/lock-open.svg);
 }
 /* end: elements of the posting views */
 /* end: elements of the main block */
