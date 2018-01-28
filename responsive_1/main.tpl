@@ -44,11 +44,11 @@
 <body>
 <!--[if IE]><div id="ie"><![endif]-->
 
-<header id="top">
+<header id="top" role="banner">
 <h1><a href="./" title="{#forum_index_link_title#}">{$settings.forum_name|escape:"html"}</a></h1>
 {if $settings.home_linkname}<p class="home"><a href="{$settings.home_linkaddress}">{$settings.home_linkname}</a></p>{/if}
 <div id="nav">
-<form id="topsearch" action="index.php" method="get" title="{#search_title#}" accept-charset="{#charset#}">
+<form id="topsearch" action="index.php" method="get" role="search" accept-charset="{#charset#}">
 <div><input type="hidden" name="mode" value="search" /><label for="search-input">{#search_marking#}</label>&nbsp;<input id="search-input" type="search" name="search" placeholder="{#search_default_value#}" /><button>{#go#}</button></div>
 </form>
 </div>
@@ -73,7 +73,7 @@
 {/if}
 </main>
 
-<footer>
+<footer role="contentinfo">
 <div id="footer-1">{if $total_users_online}{#counter_users_online#|replace:"[total_postings]":$total_postings|replace:"[total_threads]":$total_threads|replace:"[registered_users]":$registered_users|replace:"[total_users_online]":$total_users_online|replace:"[registered_users_online]":$registered_users_online|replace:"[unregistered_users_online]":$unregistered_users_online}{else}{#counter#|replace:"[total_postings]":$total_postings|replace:"[total_threads]":$total_threads|replace:"[registered_users]":$registered_users}{/if}<br />
 {if $forum_time_zone}{#forum_time_with_time_zone#|replace:'[time]':$forum_time|replace:'[time_zone]':$forum_time_zone}{else}{#forum_time#|replace:'[time]':$forum_time}{/if}</div>
 <div id="footer-2">
