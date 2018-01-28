@@ -420,11 +420,12 @@ aside section h3 {
 }
 .adminmenu a {
 	display: block;
-	margin: 0;
-	padding: 0.125em 0.25em;
-	padding: 0.125rem 0.25rem;
+	padding: 0.125em 0.25em 0.125em 1.65em;
 	text-decoration:none;
 	border: 1px solid #bacbdf;
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	background-position: 0.4em center;
 }
 .adminmenu a img {
 	margin:0 5px -3px 0;
