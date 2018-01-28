@@ -180,6 +180,9 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	background-repeat: no-repeat;
 	background-size: 0.75em 0.75em;
 	background-position: 0.1em center;
+#subnav a[href*='mode=bookmarks'] {
+	background-image: url(images/notepad.svg);
+}
 }
 #subnav .refresh {
 	background-image: url(images/reload.svg);

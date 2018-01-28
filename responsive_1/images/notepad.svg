@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <style type="text/css"><![CDATA[
+  #book-body { fill: #d8d0c0; stroke: #444; stroke-width: 6px;}
+  #front-cover { fill: #226; stroke: none; }
+  ]]></style>
+  <path id="book-body" d="M 24,116 24,16 36,8 110,8 110, 108" />
+ <path id="front-cover" d="M 26,16 96,24 96,124 26,116" />
+</svg>
