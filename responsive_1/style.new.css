@@ -422,6 +422,33 @@ aside section h3 {
 	margin:0 5px -3px 0;
 	padding:0;
 }
+.adminmenu a[href*='&action=settings'] {
+	background-image: url("images/settings-sliders.svg");
+}
+.adminmenu a[href*='&action=user'] {
+	background-image: url("images/users.svg");
+}
+.adminmenu a[href*='&action=categories'] {
+	background-image: url("images/categories.svg");
+}
+.adminmenu a[href*='&action=smilies'] {
+	background-image: url("images/smilies.svg");
+}
+.adminmenu a[href*='&action=pages'] {
+	background-image: url("images/files.svg");
+}
+.adminmenu a[href*='&action=spam_protection'] {
+	background-image: url("images/shield.svg");
+}
+.adminmenu a[href*='&action=backup'] {
+	background-image: url("images/floppy-disc.svg");
+}
+.adminmenu a[href*='&action=update'] {
+	background-image: url("images/software-update.svg");
+}
+.adminmenu a[href*='&action=reset_uninstall'] {
+	background-image: url("images/marker-cross.svg");
+}
 
 ul.pagination {
 	margin: 0.75rem 0;

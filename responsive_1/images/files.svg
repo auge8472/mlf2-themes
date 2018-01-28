@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  polygon { stroke-width: 4px; stroke: #888; fill: #f8f8f8; }
+  .corner { stroke: none; fill: #888; }
+  ]]>
+ </style>
+ <polygon points="49,3 105,3 119,17 119,100 49,100" />
+ <polygon class="corner" points="107,4 104,18 118,18" />
+ <polygon points="29,15 85,15 99,29 99,112 29,112" />
+ <polygon class="corner" points="84,16 84,30 98,30" />
+ <polygon points="9,27 65,27 79,41 79,124 9,124" />
+ <polygon class="corner" points="64,28 64,42 78,42" />
+</svg>
+

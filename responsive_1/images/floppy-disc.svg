@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #floppy, #hole { stroke: none; fill: #56d; }
+  #slider { fill: #ddd; }
+  #sticker { fill: #fff; }
+  path { fill: none; stroke-width: 8px; stroke: #555;}
+  ]]>
+ </style>
+ <polygon id="floppy" points="1,4 4,1 114,1 127,14 127,124 124,127 4,127 1,124" />
+ <rect id="slider" x="34" y="1" width="60" height="44" />
+ <rect id="hole" x="70" y="10" width="16" height="32" />
+ <rect id="sticker" x="21" y="68" width="86" height="40" />
+ <path d="M28,80 h60" />
+ <path d="M28,96 h48" />
+</svg>
+

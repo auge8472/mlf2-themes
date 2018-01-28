@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  ellipse { stroke: #fff; stroke-width: 4px; }
+  path { stroke: #fff; stroke-width: 4px; }
+  .back { fill: #467; }
+  .front { fill: #8898aa; }
+  ]]>
+ </style>
+ <ellipse class="back" cx="74" cy="44" rx="28" ry="36" />
+ <path class="back" d="M 26,112 A 2, 1.125, 0, 0, 1, 122,112 z" />
+ <ellipse class="front" cx="54" cy="58" rx="28" ry="36" />
+ <path class="front" d="M 6,126 A 2, 1.125, 0, 0, 1, 102,126 z" />
+</svg>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; }
+  .trace { stroke-width: 16px; stroke: #8898aa; }
+  .marker { stroke: #467; stroke-width: 32px; }
+  ]]>
+ </style>
+ <path class="trace" d="M24,4 V32" />
+ <path class="trace" d="M24,60 V124" />
+ <path class="trace" d="M64,4 V66" />
+ <path class="trace" d="M64,94 V124" />
+ <path class="trace" d="M104,4 V54" />
+ <path class="trace" d="M104,82 V124" />
+ <path class="marker" d="M24,38 v16" />
+ <path class="marker" d="M64,72 v16" />
+ <path class="marker" d="M104,60 v16" />
+</svg>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #cat1 { stroke: none; fill: #0c4; }
+  #cat2 { stroke: none; fill: #44f; }
+  #cat3 { stroke: none; fill: #dd0; }
+  ]]>
+ </style>
+ <rect id="cat1" x="69" y="1" width="58" height="126" rx="6" ry="6" />
+ <rect id="cat2" x="1" y="1" width="58" height="59" rx="6" ry="6" />
+ <rect id="cat3" x="1" y="69" width="58" height="59" rx="6" ry="6" />
+</svg>
+
