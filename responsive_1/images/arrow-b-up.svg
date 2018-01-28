@@ -2,11 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
  <style type="text/css">
   <![CDATA[
-  #arrow-right {
-   fill: #f80800;
-  }
+  polygon { stroke: none; fill: #f80800; }
   ]]>
  </style>
- <polygon points="118,64 65,113 65,88 5,88 5,40 65,40 65,15" id="arrow-right" />
+ <polygon points="64,10 113,63 88,63 88,123 40,123 40,63 15,63" />
 </svg>
 
