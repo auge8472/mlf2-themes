@@ -344,8 +344,7 @@
  </thead>
  <tbody id="items">
 {section name=row loop=$categories_list}
-{cycle values="a,b" assign=c}
-  <tr id="id_{$categories_list[row].id}" class="{$c}">
+  <tr id="id_{$categories_list[row].id}">
    <td data-header="{#category_name#}"><strong>{$categories_list[row].name}</strong></td>
    <td data-header="{#category_accession#}">{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
    <td data-header="{#category_topics#}">{$categories_list[row].threads_in_category}</td>
@@ -476,8 +475,7 @@
  </thead>
  <tbody>
 {section name=row loop=$userdata}
-{cycle values="a,b" assign=c}
-  <tr class="{$c}">
+  <tr>
    <td><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" class="small-input" /></td>
    <td data-header="{#user_name#}">{if $userdata[row].inactive}<span title="{#user_inactive#}" class="username inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$userdata[row].user_name}" class="username">{$userdata[row].user_name}</a>{/if}</td>
    <td data-header="{#user_email#}"><span class="small"><a href="mailto:{$userdata[row].user_email}" title="{#mailto_user_lt#|replace:"[user]":$userdata[row].user_name}">{$userdata[row].user_email}</a></span></td>
@@ -737,8 +735,7 @@
  </thead>
  <tbody id="items">
 {section name=row loop=$smilies}
-{cycle values="a,b" assign=c}
-  <tr id="id_{$smilies[row].id}" class="{$c}">
+  <tr id="id_{$smilies[row].id}">
    <td><img src="images/smilies/{$smilies[row].file}" alt="{$smilies[row].code_1}" /></td>
    <td data-header="{#smiley_codes#}">{$smilies[row].codes}</td>
    <td data-header="{#smiley_title#}">{$smilies[row].title}</td>
@@ -928,8 +925,7 @@
  </thread>
  <tbody>
 {foreach from=$backup_files item=file}
-{cycle values="a,b" assign=c}
-  <tr class="{$c}">
+  <tr>
    <td><input type="checkbox" name="delete_backup_files[]" value="{$file.file}" class="small-input" /></td>
    <td>{$file.file}</td>
    <td data-header="{#backup_date#}">{$file.date|date_format:#time_format#}</td>
@@ -1137,8 +1133,7 @@
  </thead>
  <tbody id="items">
 {section name=page loop=$pages}
-{cycle values="a,b" assign=c}
-  <tr id="id_{$pages[page].id}" class="{$c}">
+  <tr id="id_{$pages[page].id}">
    <td><a href="index.php?mode=page&amp;id={$pages[page].id}" title="{$pages[page].title}"><strong class="control">{$pages[page].title}</strong></a></td>
    <td data-header="{#page_menu_linkname#}"><span class="small">{if $pages[page].menu_linkname!=''}{$pages[page].menu_linkname}{else}&nbsp;{/if}</span></td>
    <td data-header="{#page_access#}"><span class="small">{if $pages[page].access==1}{#page_access_reg_users#}{elseif $pages[page].access==0}{#page_access_public#}{/if}</span></td>
