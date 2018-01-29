@@ -805,7 +805,7 @@ article footer li a:focus, article footer li a:hover {
 article footer li a:active {
 	background-color: #e9f8ff;
 }
-article footer a.add-bookmark {
+article footer a.add-bookmark, article footer a.delete-bookmark {
 	background-image: url(images/notepad.svg);
 }
 article footer a.delete {
