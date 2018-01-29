@@ -815,7 +815,7 @@ article footer a.add-bookmark, article footer a.delete-bookmark {
 article footer a.delete {
 	background-image: url(images/marker-cross.svg);
 }
-article footer a.lock, article footer a.lock-thread {
+article footer a.lock, article footer a.lock-thread, article footer li .locked {
 	background-image: url(images/lock-closed.svg);
 }
 article footer a.unlock, article footer a.unlock-thread {
