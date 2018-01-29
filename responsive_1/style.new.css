@@ -449,14 +449,20 @@ aside section h3 {
 .adminmenu a[href*='&action=spam_protection'] {
 	background-image: url("images/shield.svg");
 }
-.adminmenu a[href*='&action=backup'] {
+.adminmenu a[href*='&action=backup'], .adminmenu a[href*='create_backup=0'] {
 	background-image: url("images/floppy-disc.svg");
 }
 .adminmenu a[href*='&action=update'] {
 	background-image: url("images/software-update.svg");
 }
-.adminmenu a[href*='&action=reset_uninstall'] {
+.adminmenu a[href*='&action=reset_uninstall'], .adminmenu a[href*='&action=clear_userdata'] {
 	background-image: url("images/marker-cross.svg");
+}
+.adminmenu a[href*='&action=register'] {
+	background-image: url("images/user.svg");
+}
+.adminmenu a[href*='&action=email_list'] {
+	background-image: url("images/contact-email.svg");
 }
 
 ul.pagination {
@@ -822,6 +828,26 @@ article footer a.unlock, article footer a.unlock-thread {
 	background-image: url(images/lock-open.svg);
 }
 /* end: elements of the posting views */
+
+/* elements of admin interface */
+.editor, .terminator, .move-item-up, .move-item-down {
+	padding-left: 1.2em;
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	background-position: 0 center;
+}
+.editor {
+	background-image: url(images/file.svg);
+}
+.terminator {
+	background-image: url(images/marker-cross.svg);
+}
+.move-item-up {
+	background-image: url(images/arrow-b-up.svg);
+}
+.move-item-down {
+	background-image: url(images/arrow-b-down.svg);
+}
 /* end: elements of the main block */
 
 /* elements of the footer */

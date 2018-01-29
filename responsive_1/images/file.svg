@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  polygon { stroke-width: 4px; stroke: #888; fill: #f8f8f8; }
+  #corner { stroke: none; fill: #888; }
+  ]]>
+ </style>
+ <polygon points="24,12 86,12 104,32 104,116 24,116" />
+ <polygon id="corner" points="86,10 86,32 106,32" />
+</svg>
+

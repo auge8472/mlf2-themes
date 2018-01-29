@@ -349,7 +349,11 @@
    <td data-header="{#category_accession#}">{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
    <td data-header="{#category_topics#}">{$categories_list[row].threads_in_category}</td>
    <td data-header="{#category_entries#}">{$categories_list[row].postings_in_category}</td>
-   <td class="item-tools"><a href="index.php?mode=admin&amp;edit_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" title="{#edit#}" alt="{#edit#}" width="16" height="16" /></a> &nbsp; <a href="index.php?mode=admin&amp;delete_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" title="{#delete#}" alt="{#delete#}" width="16" height="16"/></a> &nbsp; <a href="index.php?mode=admin&amp;move_up_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#up#}" title="{#up#}" width="16" height="16" /></a>&nbsp;<a href="index.php?mode=admin&amp;move_down_category={$categories_list[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#down#}" title="{#down#}" width="16" height="16" /></a></td>
+   <td class="item-tools">
+    <a href="index.php?mode=admin&amp;edit_category={$categories_list[row].id}" class="editor"><span>{#edit#}</span></a> &nbsp;
+    <a href="index.php?mode=admin&amp;delete_category={$categories_list[row].id}" class="terminator"><span>{#delete#}</span></a>&nbsp;
+    <a href="index.php?mode=admin&amp;move_up_category={$categories_list[row].id}" class="move-item-up"><span>{#move_up#}</span></a>&nbsp;
+    <a href="index.php?mode=admin&amp;move_down_category={$categories_list[row].id}" class="move-item-down"><span>{#move_down#}</span></a></td>
   </tr>
 {/section}
  </tbody>
@@ -484,7 +488,7 @@
    <td data-header="{#user_logins#}"><span class="small">{$userdata[row].logins}</span></td>
    <td data-header="{#last_login#}"><span class="small">{if $userdata[row].logins > 0}{$userdata[row].last_login_time|date_format:#time_format#}{else}&nbsp;{/if}</span></td>
    <td data-header="{#lock#}"><span class="small">{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}{#unlocked#}{else}{#locked#}{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" title="{#lock_title#}">{#unlocked#}</a>{else}<a style="color:red;" href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" title="{#unlock_title#}">{#locked#}</a>{/if}</span></td>
-   <td class="item-tools"><a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}"><img src="{$THEMES_DIR}/{$theme}/images/edit.png" alt="{#edit#}" width="16" height="16" /><span>{#edit#}</span></a> <a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="{#delete#}" width="16" height="16" /><span>{#delete#}</span></a></td>
+   <td class="item-tools"><a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}" class="editor">{#edit#}</a> <a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}" class="terminator">{#delete#}</a></td>
   </tr>
 {/section}
  </tbody>
@@ -516,9 +520,9 @@
 <p><em>{#no_users#}</em></p>
 {/if}
 <ul class="adminmenu">
-<li><a href="index.php?mode=admin&amp;action=register"><img src="{$THEMES_DIR}/{$theme}/images/add_user.png" alt="" width="16" height="16" /><span>{#add_user#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=email_list"><img src="{$THEMES_DIR}/{$theme}/images/email_list.png" alt="" width="16" height="16" /><span>{#email_list#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=clear_userdata"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="" width="16" height="16" /><span>{#clear_userdata#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=register"><span>{#add_user#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=email_list"><span>{#email_list#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=clear_userdata"><span>{#clear_userdata#}</span></a></li>
 </ul>
 {elseif $action=='edit_user'}
 {config_load file=$language_file section="user_edit"}
@@ -740,10 +744,10 @@
    <td data-header="{#smiley_codes#}">{$smilies[row].codes}</td>
    <td data-header="{#smiley_title#}">{$smilies[row].title}</td>
    <td>
-    <a href="index.php?mode=admin&amp;edit_smiley={$smilies[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" alt="{#edit#}" width="16" height="16" /><span>{#edit#}</span></a> &nbsp;
-    <a href="index.php?mode=admin&amp;delete_smiley={$smilies[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="{#delete#}" width="16" height="16"/><span>{#delete#}</span></a> &nbsp;
-    <a href="index.php?mode=admin&amp;move_up_smiley={$smilies[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#move_up#}" width="16" height="16" /><span>{#move_up#}</span></a>
-    <a href="index.php?mode=admin&amp;move_down_smiley={$smilies[row].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#move_down#}" width="16" height="16" /><span>{#move_down#}</span></a>
+    <a href="index.php?mode=admin&amp;edit_smiley={$smilies[row].id}" class="editor"><span>{#edit#}</span></a> &nbsp;
+    <a href="index.php?mode=admin&amp;delete_smiley={$smilies[row].id}" class="terminator"><span>{#delete#}</span></a> &nbsp;
+    <a href="index.php?mode=admin&amp;move_up_smiley={$smilies[row].id}" class="move-item-up"><span>{#move_up#}</span></a>
+    <a href="index.php?mode=admin&amp;move_down_smiley={$smilies[row].id}" class="move-item-down"><span>{#move_down#}</span></a>
    </td>
   </tr>
 {/section}
@@ -948,7 +952,7 @@
 <!--<p><em>No backup files available.</em></p>-->
 {/if}
 <ul class="adminmenu">
-<li><a href="index.php?mode=admin&amp;create_backup=0"><img src="{$THEMES_DIR}/{$theme}/images/backup.png" alt="" width="16" height="16" /><span>{#create_backup_complete#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;create_backup=0"><span>{#create_backup_complete#}</span></a></li>
 <li><span class="small">{#only_create_backup_of#}</span>
  <ul>
   <li><a href="index.php?mode=admin&amp;create_backup=1"><span>{#backup_entries#}</span></a></li>
@@ -1138,10 +1142,10 @@
    <td data-header="{#page_menu_linkname#}"><span class="small">{if $pages[page].menu_linkname!=''}{$pages[page].menu_linkname}{else}&nbsp;{/if}</span></td>
    <td data-header="{#page_access#}"><span class="small">{if $pages[page].access==1}{#page_access_reg_users#}{elseif $pages[page].access==0}{#page_access_public#}{/if}</span></td>
    <td>
-    <a href="index.php?mode=admin&amp;edit_page={$pages[page].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" alt="{#edit#}" width="16" height="16" /><span>{#edit#}</span></a> &#160;
-    <a href="index.php?mode=admin&amp;delete_page={$pages[page].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="{#delete#}" width="16" height="16"/><span>{#delete#}</span></a> &nbsp;
-    <a href="index.php?mode=admin&amp;move_up_page={$pages[page].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#move_up#}" width="16" height="16" /><span>{#move_up#}</span></a> &nbsp;
-    <a href="index.php?mode=admin&amp;move_down_page={$pages[page].id}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#move_down#}" width="16" height="16" /><span>{#move_down#}</span></a>
+    <a href="index.php?mode=admin&amp;edit_page={$pages[page].id}" class="editor"><span>{#edit#}</span></a> &#160;
+    <a href="index.php?mode=admin&amp;delete_page={$pages[page].id}" class="terminator"><span>{#delete#}</span></a> &nbsp;
+    <a href="index.php?mode=admin&amp;move_up_page={$pages[page].id}" class="move-item-up"><span>{#move_up#}</span></a> &nbsp;
+    <a href="index.php?mode=admin&amp;move_down_page={$pages[page].id}" class="move-item-down"><span>{#move_down#}</span></a>
    </td>
   </tr>
 {/section}
