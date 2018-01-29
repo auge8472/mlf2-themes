@@ -786,7 +786,7 @@ article footer li {
 	padding: 0;
 }
 
-article footer li a {
+article footer li a, article footer li span {
 	display: block;
 	margin: 0;
 	padding: 0 0.25em 0 1.2em;
@@ -794,6 +794,10 @@ article footer li a {
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
 	background-position: 0.1em center;
+}
+article footer li span {
+	border-color: #f82420;
+	color: #444;
 }
 article footer li a:link, article footer li a:visited {
 	background-color: #f9f9f9;
