@@ -793,7 +793,7 @@ article footer li a {
 	border: 1px solid #bacbdf;
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
-	background-position: 0 center;
+	background-position: 0.1em center;
 }
 article footer li a:link, article footer li a:visited {
 	background-color: #f9f9f9;
