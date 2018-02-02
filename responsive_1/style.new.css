@@ -652,6 +652,9 @@ ul.reply li {
 }
 /* end: thread tree: */
 
+.following-entry.new {
+	background-image: url(images/clasp-change-yes.svg);
+}
 
 /* postings of a thread in the nested view */
 .reply-wrapper {
