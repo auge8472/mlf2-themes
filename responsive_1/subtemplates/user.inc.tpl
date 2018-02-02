@@ -37,8 +37,7 @@
  </thead>
  <tbody>
 {foreach from=$userdata item=row}
-{cycle values="a,b" assign=c}
-  <tr class="{$c}">
+  <tr>
    <td><a href="index.php?mode=user&amp;show_user={$row.user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$row.user_name}"><strong>{$row.user_name}</strong></a></td>
    <td data-header="{#user_type#}"><span class="value">{if $row.user_type==2}{#admin#}{elseif $row.user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
    <td data-header="{#user_hp#}"><span class="value">{if $row.user_hp!=''}<a href="{$row.user_hp}" title="{$row.user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/homepage.png" alt="{#homepage#}" width="13" height="13" /></a>{else}&nbsp;{/if}</span></td>
