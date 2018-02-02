@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <def>
+  <linearGradient id="out" x1="0%" y1="0%" x2="100%" y2="0%">
+   <stop offset="0%" stop-color="#f80800" />
+   <stop offset="40%" stop-color="#f80800" />
+   <stop offset="80%" stop-color="#c80000" />
+   <stop offset="100%" stop-color="#c80000" />
+  </linearGradient>
+ </def>
+ <style type="text/css">
+  <![CDATA[
+  #arrow {
+   fill: url(#out); stroke: none;
+  }
+  #door {
+   fill: none;
+   stroke: #222;
+   stroke-width: 6px;
+  }
+  ]]>
+ </style>
+ <polygon points="88,64 56,99 56,84 18,96 18,32 56,44 56,29" id="arrow" />
+ <polyline points="30,24 30,8 98,8 98,120 30,120 30,104" id="door" />
+</svg>
+
