@@ -857,6 +857,14 @@ article footer a.unlock, article footer a.unlock-thread {
 .move-item-down {
 	background-image: url(images/arrow-b-down.svg);
 }
+.ok {
+	padding: 0.25em 0.25em 0.25em 1.25em;
+	font-weight: bold;
+	border: 1px solid #0c4;
+	color: #062;
+	background: url(images/check-mark.svg) no-repeat 0.2em center #afd;
+	background-size: 1em 1em;
+}
 /* end: elements of the main block */
 
 /* elements of the footer */

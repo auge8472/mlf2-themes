@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #check-mark {
+   fill: none;
+   stroke: #0c4;
+   stroke-width: 20px;
+  }
+  ]]>
+ </style>
+ <polyline points="12,72 48,114 116,26" id="check-mark" />
+</svg>
+
