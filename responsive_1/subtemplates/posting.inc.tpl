@@ -7,7 +7,7 @@
 <textarea onfocus="this.select()" onclick="this.select()" readonly="readonly" cols="80" rows="21" name="text">{$text}</textarea>
 {/if}
 {else}
-<h1>{if $posting_mode==0 && $id==0}{#new_topic_hl#}{elseif $posting_mode==0 && $id>0}{#reply_hl#}{elseif $posting_mode==1}{#edit_hl#}{/if}</h1>
+<h2>{if $posting_mode==0 && $id==0}{#new_topic_hl#}{elseif $posting_mode==0 && $id>0}{#reply_hl#}{elseif $posting_mode==1}{#edit_hl#}{/if}</h2>
 {if $posting_mode==0 && $id>0 && $name_repl_subnav}
 <p id="reply-to">{#reply_to_posting_marking#|replace:"[name]":$name_repl_subnav}</p>
 {/if}
