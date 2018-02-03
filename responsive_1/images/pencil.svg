@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #light { fill: #eea; stroke: none; }
+  #shaft { fill: #cc6; stroke: none; }
+  #dark { fill: #990; stroke: none; }
+  #kegel { fill: #e8e8c0; stroke: none; }
+  #tip { fill: #111; stroke: none; }
+  ]]>
+ </style>
+ <polygon points="40,70 105,5 110,10 45,75" id="light" />
+ <polygon points="45,75 110,10 118,18 53,83" id="shaft" />
+ <polygon points="53,83 118,18 123,23 58,88" id="dark" />
+ <polygon points="20,108 40,70 58,88" id="kegel" />
+ <polygon points="20,108 28,93 35,100" id="tip" />
+</svg>
+

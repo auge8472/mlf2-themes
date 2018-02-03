@@ -846,7 +846,7 @@ article footer a.unlock, article footer a.unlock-thread {
 	background-position: 0 center;
 }
 .editor {
-	background-image: url(images/file.svg);
+	background-image: url(images/pencil.svg), url(images/file.svg);
 }
 .terminator {
 	background-image: url(images/marker-cross.svg);
