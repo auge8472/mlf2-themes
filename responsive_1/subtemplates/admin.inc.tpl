@@ -795,7 +795,7 @@
 </div>
 </form>
 {else}
-<p style="margin-top:20px;"><em>{#no_other_smilies_in_folder#}</em></p>
+<p><em>{#no_other_smilies_in_folder#}</em></p>
 {/if}
 {else}
 <p><em>{#smilies_disabled#}</em></p>

@@ -13,9 +13,9 @@
 {/if}
 
 {if $errors}
-<ul style="margin-bottom:25px;">
 <section class="errormessage">
 <h2>{#error_headline#}</h2>
+<ul>
 {section name=mysec loop=$errors}
 <li>{assign var="error" value=$errors[mysec]}{$smarty.config.$error|replace:"[text_length]":$text_length|replace:"[text_maxlength]":$settings.text_maxlength|replace:"[word]":$word|replace:"[minutes]":$minutes|replace:"[not_accepted_word]":$not_accepted_word|replace:"[not_accepted_words]":$not_accepted_words}</li>
 {/section}
