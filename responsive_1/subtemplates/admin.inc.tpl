@@ -323,13 +323,15 @@
 </form>
 {/if}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 {if $categories_count>0}
 <table id="sortable">
@@ -376,13 +378,15 @@
 </form>
 {elseif $action=='edit_category'}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <form action="index.php" method="post" class="normalform" accept-charset="{#charset#}">
 <div>
@@ -399,13 +403,15 @@
 </form>
 {elseif $action=='delete_category'}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <h2>{#delete_category_hl#|replace:"[category]":$category_name}</h2>
 <p class="caution">{#caution#}</p>
@@ -527,13 +533,15 @@
 {elseif $action=='edit_user'}
 {config_load file=$language_file section="user_edit"}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error|replace:"[profile_length]":$profil_length|replace:"[profile_maxlength]":$settings.profile_maxlength|replace:"[signature_length]":$signature_length|replace:"[signature_maxlength]":$settings.signature_maxlength|replace:"[word]":$word}</li>
 {/section}
 </ul>
+</section>
 {/if}
 {if $inactive}<p class="caution">{#caution#}</p><p>{#activate_note#} <a href="index.php?mode=admin&amp;activate={$edit_user_id}">{#activate_link#}</a></p>{/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
@@ -692,13 +700,15 @@
 </form>
 {elseif $action=='register'}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
@@ -719,13 +729,15 @@
 <p class="small">{#register_exp#}</p>
 {elseif $action=='smilies'}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 {if $settings.smilies==1}
 <table id="sortable">
@@ -793,13 +805,15 @@
 </ul>
 {elseif $action=='spam_protection'}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 {if $saved}<p class="ok">{#spam_protection_saved#}</p>{/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
@@ -992,13 +1006,15 @@
 {if $safe_mode_warning}<p class="caution">{#restore_safe_mode_warning#}</p>
 <p class="caution">{#restore_safe_mode_note#}</p>{/if}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=error loop=$errors}
 {assign var="error" value=$errors[error]}
 <li>{$smarty.config.$error|replace:"[mysql_error]":$mysql_error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
@@ -1046,13 +1062,15 @@
 </form>
 {elseif $action=='update_done'}
 {if $update_errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$update_errors}
 {assign var="error" value=$update_errors[mysec]}
 <li>{$error}</li>
 {/section}
 </ul>
+</section>
 {else}
 <p class="ok">{#update_successful#}</p>
 {/if}
@@ -1081,13 +1099,15 @@
 <p class="small">{#clear_userdata_note#}</p>
 {elseif $action == 'edit_smiley'}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
@@ -1161,13 +1181,15 @@
 </ul>
 {elseif $action=='edit_page'}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>

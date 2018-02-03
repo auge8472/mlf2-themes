@@ -52,12 +52,14 @@
 	
 {elseif $action=='edit_bookmark'}
 	{if $errors}
-		<p class="caution">{#error_headline#}</p>
-		<ul class="error-list">
-		{section name=mysec loop=$errors}
-			<li>{assign var="error" value=$errors[mysec]}{$smarty.config.$error|replace:"[word]":$word}</li>
-		{/section}
-		</ul>
+		<section class="errormessage">
+			<h2>{#error_headline#}</h2>
+			<ul class="error-list">
+			{section name=mysec loop=$errors}
+				<li>{assign var="error" value=$errors[mysec]}{$smarty.config.$error|replace:"[word]":$word}</li>
+			{/section}
+			</ul>
+		</section>
 	{/if}
 
 	{if $bookmark}

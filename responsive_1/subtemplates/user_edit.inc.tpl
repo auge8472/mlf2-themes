@@ -1,12 +1,14 @@
 {config_load file=$language_file section="user_edit"}
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error|replace:"[profile_length]":$profil_length|replace:"[profile_maxlength]":$settings.profile_maxlength|replace:"[signature_length]":$signature_length|replace:"[signature_maxlength]":$settings.signature_maxlength|replace:"[word]":$word|replace:"[not_accepted_word]":$not_accepted_word|replace:"[not_accepted_words]":$not_accepted_words}</li>
 {/section}
 </ul>
+</section>
 {/if}
 {if $msg}<p class="ok">{$smarty.config.$msg}</p>{/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">

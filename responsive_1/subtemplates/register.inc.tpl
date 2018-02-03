@@ -2,13 +2,15 @@
 {if $captcha}{config_load file=$language_file section="captcha"}{/if}
 <p class="normal">{#register_exp#}</p>
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error|replace:"[characters]":$settings.min_pw_length}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>

@@ -7,13 +7,15 @@
 {else}
 <h1>{if $recipient_name}{$smarty.config.contact_user_hl|replace:"[recipient_name]":"$recipient_name"}{else}{#contact_hl#}{/if}</h1>
 {if $errors}
-<p class="caution">{#error_headline#}</p>
+<section class="errormessage">
+<h2>{#error_headline#}</h2>
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
 <li>{$smarty.config.$error|replace:"[text_length]":$text_length|replace:"[text_maxlength]":$settings.email_text_maxlength|replace:"[not_accepted_word]":$not_accepted_word|replace:"[not_accepted_words]":$not_accepted_words}</li>
 {/section}
 </ul>
+</section>
 {/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
