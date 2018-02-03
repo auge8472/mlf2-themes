@@ -378,12 +378,17 @@ aside section h3 {
 	border: 1px solid #bacbdf;
 	margin: 0.75em 0;
 	margin: 0.75rem 0;
+	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 }
 #usersonline h2 {
 	padding:0 5px;
 	border-top: none;
 	border-right: none;
 	border-left: none;
+	box-shadow: none;
+}
+#usersonline ul {
+	background-color: #fff;
 }
 #tagcloud a, #usersonline a {
 	display:inline-block;
