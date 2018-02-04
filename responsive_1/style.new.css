@@ -841,6 +841,23 @@ article footer a.lock, article footer a.lock-thread, article footer li .locked {
 article footer a.unlock, article footer a.unlock-thread {
 	background-image: url(images/lock-open.svg);
 }
+#ajax-preview {
+	position: absolute;
+	width: 30em;
+	max-width: calc(100% - 2px);
+	border: 1px solid #ec4;
+}
+#ajax-preview-header {
+	background-color: #118;
+	text-align: right;
+	padding: 0 0.2em;
+}
+#ajax-preview-content {
+	max-height: 18em;
+	overflow: auto;
+	padding: 0 0.5em 0.5em 0.5em;
+	background-color: #fff8aa;
+}
 /* end: elements of the posting views */
 
 /* elements of admin interface */
