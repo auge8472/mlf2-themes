@@ -1124,6 +1124,7 @@ div.warning              {
 	}
 	td[data-header] {
 		background-color: transparent;
+		font-size: 1em;
 	}
 	td[data-header]::before {
 		content: '';
