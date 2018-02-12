@@ -535,6 +535,9 @@ tr:last-child {
 th, td {
 	vertical-align: top;
 }
+.normaltab .subject, table.normaltab td.c, .settings th {
+	border-bottom: 1px dotted #bacbdf;
+}
 td[data-header] {
 	background-color: #fff;
 	font-size:0.82em;
@@ -550,20 +553,6 @@ td[data-header]::before {
 	background-color: #dfefff;
 	border-bottom: 1px solid #bacbdf;
 }
-
-/* tables on narrow screens*/
-/*
-@media screen and (max-width: 38em) {
-	.normaltab .subject, table.normaltab td.c, .settings th {
-		border-bottom: 1px dotted #bacbdf;
-	}
-	table.normaltab td.c, .settings th, th, td {
-		width: auto;
-		max-width: 100%;
-	}
-}
-*/
-
 .settings {
 	margin: 0 0 0.25em 0;
 }
