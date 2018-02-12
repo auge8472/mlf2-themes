@@ -739,6 +739,9 @@
 </ul>
 </section>
 {/if}
+<ul class="adminmenu">
+<li>{if $settings.smilies==1}<a href="index.php?mode=admin&amp;disable_smilies=true"><span>{#disable_smilies#}</span></a>{else}<a href="index.php?mode=admin&amp;enable_smilies=true"><span>{#enable_smilies#}</span></a>{/if}</li>
+</ul>
 {if $settings.smilies==1}
 <table id="sortable">
  <thead>
@@ -800,9 +803,6 @@
 {else}
 <p><em>{#smilies_disabled#}</em></p>
 {/if}
-<ul class="adminmenu">
-<li>{if $settings.smilies==1}<a href="index.php?mode=admin&amp;disable_smilies=true"><img src="{$THEMES_DIR}/{$theme}/images/smilies_disable.png" alt="" width="16" height="16" /><span>{#disable_smilies#}</span></a>{else}<a href="index.php?mode=admin&amp;enable_smilies=true"><img src="{$THEMES_DIR}/{$theme}/images/smilies.png" alt="" width="16" height="16" /><span>{#enable_smilies#}</span></a>{/if}</li>
-</ul>
 {elseif $action=='spam_protection'}
 {if $errors}
 <section class="errormessage">

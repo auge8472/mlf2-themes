@@ -454,7 +454,7 @@ aside section h3 {
 .adminmenu a[href*='&action=categories'] {
 	background-image: url("images/categories.svg");
 }
-.adminmenu a[href*='&action=smilies'] {
+.adminmenu a[href*='&action=smilies'], .adminmenu a[href*='&enable_smilies=true'] {
 	background-image: url("images/smilies.svg");
 }
 .adminmenu a[href*='&action=pages'] {
@@ -477,6 +477,9 @@ aside section h3 {
 }
 .adminmenu a[href*='&action=email_list'] {
 	background-image: url("images/contact-email.svg");
+}
+.adminmenu a[href*='&disable_smilies=true'] {
+	background: url("images/marker-cross.svg") 0.4em center/1em 1em no-repeat, url("images/smilies.svg") 0.525em center/0.75em 0.75em no-repeat;
 }
 
 ul.pagination {
