@@ -473,7 +473,7 @@ aside section h3 {
 	background-image: url("images/marker-cross.svg");
 }
 .adminmenu a[href*='&action=register'] {
-	background-image: url("images/user.svg");
+	background: url("images/sign-add.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/user.svg") 0.4em center/1em 1em no-repeat;
 }
 .adminmenu a[href*='&action=email_list'] {
 	background-image: url("images/contact-email.svg");
