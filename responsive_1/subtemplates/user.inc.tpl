@@ -40,7 +40,7 @@
   <tr>
    <td><a href="index.php?mode=user&amp;show_user={$row.user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$row.user_name}"><strong>{$row.user_name}</strong></a></td>
    <td data-header="{#user_type#}"><span class="value">{if $row.user_type==2}{#admin#}{elseif $row.user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
-   <td data-header="{#user_hp#}"><span class="value">{if $row.user_hp!=''}<a href="{$row.user_hp}" title="{$row.user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/homepage.png" alt="{#homepage#}" width="15" height="15" class="icon" /></a>{else}&nbsp;{/if}</span></td>
+   <td data-header="{#user_hp#}"><span class="value">{if $row.user_hp!=''}<a href="{$row.user_hp}" title="{$row.user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/home.svg" alt="{#homepage#}" width="15" height="15" class="icon" /></a>{else}&nbsp;{/if}</span></td>
    <td data-header="{#user_email#}"><span class="value">{if $row.user_email}<a href="index.php?mode=contact&amp;user_id={$row.user_id}" title="{#mailto_user#|replace:"[user]":$row.user_name}"><img src="{$THEMES_DIR}/{$theme}/images/contact-email.svg" alt="{#email#}" width="15" height="15" class="icon" /></a>{else}&nbsp;{/if}</span></td>
 {*<td data-header="{#user_postings#}"><span class="value">{if $row.postings>0}<a href="index.php?mode=user&amp;action=show_posts&amp;id={$row.user_id}">{$row.postings}</a>{else}{$row.postings}{/if}</span></td>*}
 {*{if $settings.count_users_online>0}   <td data-header="{#user_online#}" class="{$c}"><span class="value">{if $row.online}<span style="color:red;">{#online#}</span>{else}&nbsp;{/if}</span></td>{/if}*}
