@@ -59,7 +59,7 @@
   </tr>
   <tr>
    <th><label for="user_birthday"><strong>{#edit_user_birthday#}</strong></label></th>
-   <td class="d"><input id="user_birthday" type="text" size="40" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
+   <td class="d"><input id="user_birthday" type="date" size="40" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
   </tr>
   <tr>
    <th><label for="user_location"><strong>{#edit_user_location#}</strong></label></th>
