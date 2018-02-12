@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #door { stroke-width: 4px; stroke: #222; fill: #752; }
+  #house { stroke-width: 4px; stroke: #222; fill: #efeff4; }
+  #roof { stroke-width: 10px; stroke: #f80800; fill: none; }
+  ]]>
+ </style>
+ <polygon id="house" points="64,10 114,60 114,122 14,122 14,60" />
+ <rect id="door" x="46" y="58" width="36" height="64" />
+ <polyline id="roof" points="3,69 64,8 125,69" />
+</svg>
+

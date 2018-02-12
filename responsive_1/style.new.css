@@ -138,6 +138,10 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	color:#00a;
 	text-decoration: underline;
 }
+.home a[href] {
+	padding: 0.1em 0.2em 0.1em 1.15em;
+	background: url("images/home.svg") 0.2em center/0.75em 0.75em no-repeat;
+}
 
 #topsearch div {
 	display: inline;
