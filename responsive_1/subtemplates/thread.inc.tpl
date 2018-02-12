@@ -8,11 +8,11 @@
 {assign var=email value=$data.$element.email}
 {assign var=email_id value=$data.$element.id}
 {if $hp && !$email}
-{assign var=email_hp value=" <a class=\"posting-hp\" href=\"$hp\"><img src=\"$THEMES_DIR/$theme/images/homepage.png\" title=\"$homepage_alt\" alt=\"⌂\" width=\"13\" height=\"13\" /></a>"}
+{assign var=email_hp value=" <a class=\"posting-hp\" href=\"$hp\"><img src=\"$THEMES_DIR/$theme/images/home.svg\" title=\"$homepage_alt\" alt=\"⌂\" width=\"15\" height=\"15\" /></a>"}
 {elseif !$hp && $email}
-{assign var=email_hp value=" <a class=\"posting-email\" href=\"index.php?mode=contact&amp;id=$email_id\" rel=\"nofollow\"><img src=\"$THEMES_DIR/$theme/images/email.png\" title=\"$email_alt\" alt=\"@\" width=\"13\" height=\"10\" /></a>"}
+{assign var=email_hp value=" <a class=\"posting-email\" href=\"index.php?mode=contact&amp;id=$email_id\" rel=\"nofollow\"><img src=\"$THEMES_DIR/$theme/images/contact-email.svg\" title=\"$email_alt\" alt=\"@\" width=\"15\" height=\"15\" /></a>"}
 {elseif $hp && $email}
-{assign var=email_hp value=" <a class=\"posting-hp\" href=\"$hp\"><img src=\"$THEMES_DIR/$theme/images/homepage.png\" title=\"$homepage_alt\" alt=\"⌂\" width=\"13\" height=\"13\" /></a> <a class=\"posting-email\" href=\"index.php?mode=contact&amp;id=$email_id\" rel=\"nofollow\"><img src=\"$THEMES_DIR/$theme/images/email.png\" title=\"$email_alt\" alt=\"@\" width=\"13\" height=\"10\" /></a>"}
+{assign var=email_hp value=" <a class=\"posting-hp\" href=\"$hp\"><img src=\"$THEMES_DIR/$theme/images/home.svg\" title=\"$homepage_alt\" alt=\"⌂\" width=\"15\" height=\"15\" /></a> <a class=\"posting-email\" href=\"index.php?mode=contact&amp;id=$email_id\" rel=\"nofollow\"><img src=\"$THEMES_DIR/$theme/images/contact-email.svg\" title=\"$email_alt\" alt=\"@\" width=\"15\" height=\"15\" /></a>"}
 {else}
 {assign var=email_hp value=""}
 {/if}
