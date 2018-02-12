@@ -889,6 +889,13 @@ article footer a.unlock, article footer a.unlock-thread {
 	background: url(images/check-mark.svg) no-repeat 0.2em center #afd;
 	background-size: 1em 1em;
 }
+
+/* elements in the user profile edit */
+.checkboxlist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 /* end: elements of the main block */
 
 /* elements of the footer */
