@@ -1043,6 +1043,15 @@ div.warning              {
 		margin: 0 0 0 0.75em;
 		margin: 0 0 0 0.75rem;
 	}
+	article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .op-link, article header .interpunction {
+		display: inline;
+	}
+	article header .posting-ago, .js-display-fold .author *, .js-display-fold .tags {
+		display: none;
+	}
+	.js-display-fold .author strong, .js-display-fold .author strong * {
+		display: inline;
+	}
 	#pbmlf {
 		text-align: center;
 		padding: 0 20px 1em 20px;
