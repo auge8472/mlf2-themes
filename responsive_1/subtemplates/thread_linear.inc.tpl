@@ -29,7 +29,7 @@
 {assign var=user_name value=$element.name}
 {assign var=name value="<span class=\"registered_user\">$user_name</span>"}
 {else}
-{assign var=name value=$element.name}
+{assign var=name value="<span class=\"unregistered\">{$element.name}</span>"}
 {/if}
 
 {if ($user || $settings.user_area_public==1) && $element.user_id>0}

@@ -19,7 +19,7 @@
 {elseif $posting_user_id>0}
 {assign var=name value="<span class=\"registered_user\">$name</span>"}
 {else}
-{assign var=name value="$name"}
+{assign var=name value="<span class=\"unregistered\">$name</span>"}
 {/if}
 {if $posting_user_id>0 && ($user || $settings.user_area_public==1)}{assign var=name value="<a href=\"index.php?mode=user&amp;show_user=$posting_user_id\">$name</a>"}{/if}
 <article class="posting{if $is_read} read{/if}">{if $spam}<p class="spam-note">{#spam_note#}</p>{/if}
