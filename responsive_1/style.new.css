@@ -669,11 +669,18 @@ ul.reply li {
 
 .thread-posting {
 	border: 1px solid #bacbdf;
+	border-left-width: 0.5em;
 	margin: 0 0 0.5em 0;
 	margin: 0 0 0.5rem 0;
 	padding: 0;
 	min-width: 16em;
 	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
+}
+.thread-posting.read {
+	border-left-color: #aab;
+}
+.thread-posting.new {
+	border-left-color: #fd4;
 }
 
 article header {
