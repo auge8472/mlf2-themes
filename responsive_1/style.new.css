@@ -822,8 +822,9 @@ article footer li a, article footer li span {
 	background-position: 0.1em center;
 }
 article footer li span {
-	border-color: #f82420;
-	color: #444;
+	border-color: #888;
+	color: #888;
+	background-color: #f0f0eb;
 }
 article footer li a:link, article footer li a:visited {
 	background-color: #f9f9f9;
