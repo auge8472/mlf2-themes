@@ -436,7 +436,7 @@ aside section h3 {
 	margin-top: 0.75em;
 }
 .adminmenu li {
-	margin: 0.25rem 0;
+	margin: 0.25rem 0 0 0;
 	padding: 0;
 }
 .adminmenu a {
@@ -1050,6 +1050,9 @@ div.warning              {
 	}
 	aside section {
 		margin: 0.5em 0 0 0;
+	}
+	.adminmenu li {
+		margin: 0.5rem 0 0 0;
 	}
 	.reply-wrapper {
 		margin: 0 0 0 0.75em;
