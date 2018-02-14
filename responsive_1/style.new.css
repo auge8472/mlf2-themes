@@ -489,6 +489,9 @@ aside section h3 {
 .adminmenu a[href*='&disable_smilies=true'] {
 	background: url("images/marker-cross.svg") 0.4em center/1em 1em no-repeat, url("images/smilies.svg") 0.525em center/0.75em 0.75em no-repeat;
 }
+.adminmenu a[href*='&action=edit_page'] {
+	background: url("images/sign-add.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/file.svg") 0.4em center/1em 1em no-repeat;
+}
 
 ul.pagination {
 	margin: 0.75rem 0;
