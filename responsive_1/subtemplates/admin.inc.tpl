@@ -462,10 +462,14 @@
 {/if}
 </div>
 </div>
-
+<ul class="adminmenu">
+<li><a href="index.php?mode=admin&amp;action=register"><span>{#add_user#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=email_list"><span>{#email_list#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=clear_userdata"><span>{#clear_userdata#}</span></a></li>
+</ul>
 {if $result_count > 0}
-{if $no_users_in_selection}<p class="caution">{#no_users_in_sel#}</p>{/if}
-<form action="index.php" method="post" accept-charset="{#charset#}">
+{if $no_users_in_selection}<p class="caution below-adminmenu">{#no_users_in_sel#}</p>{/if}
+<form action="index.php" method="post" accept-charset="{#charset#}" class="below-adminmenu">
 <div>
 <input type="hidden" name="mode" value="admin" />
 <table>
@@ -525,11 +529,6 @@
 {else}
 <p><em>{#no_users#}</em></p>
 {/if}
-<ul class="adminmenu">
-<li><a href="index.php?mode=admin&amp;action=register"><span>{#add_user#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=email_list"><span>{#email_list#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=clear_userdata"><span>{#clear_userdata#}</span></a></li>
-</ul>
 {elseif $action=='edit_user'}
 {config_load file=$language_file section="user_edit"}
 {if $errors}
@@ -743,7 +742,7 @@
 <li>{if $settings.smilies==1}<a href="index.php?mode=admin&amp;disable_smilies=true"><span>{#disable_smilies#}</span></a>{else}<a href="index.php?mode=admin&amp;enable_smilies=true"><span>{#enable_smilies#}</span></a>{/if}</li>
 </ul>
 {if $settings.smilies==1}
-<table id="sortable">
+<table id="sortable" class="below-adminmenu">
  <thead>
   <tr>
    <th>{#smiley_image#}</th>
@@ -769,7 +768,7 @@
  </tbody>
 </table>
 {if $smiley_files}
-<form action="index.php" method="post" class="normalform" accept-charset="{#charset#}">
+<form action="index.php" method="post" class="normalform below-adminmenu" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin">
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
@@ -1141,8 +1140,13 @@
 </div>
 </form>
 {elseif $action=='pages'}
+<ul class="adminmenu">
+ <li>
+  <a href="index.php?mode=admin&amp;action=edit_page"><span>{#add_page_link#}</span></a>
+ </li>
+</ul>
 {if $pages}
-<table id="sortable">
+<table id="sortable" class="below-adminmenu">
  <thead>
   <tr>
    <th>{#page_title#}</th>
@@ -1168,13 +1172,8 @@
  </tbody>
 </table>
 {else}
-<p>{#no_pages#}</p>
+<p class="below-adminmenu">{#no_pages#}</p>
 {/if}
-<ul class="adminmenu">
- <li>
-  <a href="index.php?mode=admin&amp;action=edit_page"><img src="{$THEMES_DIR}/{$theme}/images/add_page.png" alt="" width="16" height="16" /><span>{#add_page_link#}</span></a>
- </li>
-</ul>
 {elseif $action=='edit_page'}
 {if $errors}
 <section class="errormessage">

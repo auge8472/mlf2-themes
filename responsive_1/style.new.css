@@ -432,6 +432,9 @@ aside section h3 {
 	margin: 0.5rem 0;
 	list-style-type: none;
 }
+.adminmenu + .below-adminmenu {
+	margin-top: 0.75em;
+}
 .adminmenu li {
 	margin: 0.25rem 0;
 	padding: 0;
