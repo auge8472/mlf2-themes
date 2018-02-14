@@ -1055,7 +1055,7 @@ div.warning              {
 	article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .op-link, article header .interpunction {
 		display: inline;
 	}
-	.js-display-fold h2, .js-display-fold .author {
+	article.js-display-fold h2, article.js-display-fold .author {
 		display: inline;
 	}
 	article header .posting-ago, .js-display-fold .author *, .js-display-fold .tags {
