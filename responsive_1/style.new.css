@@ -575,7 +575,7 @@ td[data-header]::before {
 .settings .d {
 	background:#f5f5f5;
 }
-td.cell-bm-subject {
+td.cell-subject {
 	background-color: hsl(210, 100%, 92%);
 	font-size: 1em;
 }
