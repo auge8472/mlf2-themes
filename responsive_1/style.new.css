@@ -1016,10 +1016,11 @@ article footer a.unlock, article footer a.unlock-thread {
 .js-cursor-pointer       { cursor: pointer; }
 .js-cursor-move          { cursor: move; }
 .js-display-fold .wrapper,
-article.js-display-fold header
-                         { padding-bottom: 0; }
 .js-display-fold #sidebarcontent #latest-postings, .js-display-fold #sidebarcontent #tagcloud {
 	display: none;
+}
+article.js-display-fold header {
+	padding-bottom: 0;
 }
 .js-display-fold img.avatar
                          { width: 1.6em; height: 1.6em; }
