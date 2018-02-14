@@ -444,6 +444,7 @@ aside section h3 {
 	padding: 0.125em 0.25em 0.125em 1.65em;
 	text-decoration:none;
 	border: 1px solid #bacbdf;
+	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
 	background-position: 0.4em center;
@@ -1116,7 +1117,7 @@ div.warning              {
 	.adminmenu, #main-thread-list {
 		flex: 1 1 auto;
 	}
-	aside h2, aside section, .thread-posting {
+	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 	}
 	/* table definitions */
