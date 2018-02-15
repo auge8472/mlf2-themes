@@ -1166,6 +1166,7 @@ div.warning              {
 	}
 	td.cell-subject {
 		border-bottom: none;
+		background-color: transparent;
 	}
 	td[data-header] {
 		background-color: transparent;
