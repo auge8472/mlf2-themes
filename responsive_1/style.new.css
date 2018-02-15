@@ -587,7 +587,9 @@ td.cell-subject {
 	font-size: 1em;
 	border-bottom: 1px solid #bacbdf;
 }
-
+.cell-subject a.username {
+	font-weight: bold;
+}
 /* form elements */
 
 /* give all textareas and inputs (except radios and checkboxes)
