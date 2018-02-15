@@ -347,7 +347,7 @@
  <tbody id="items">
 {section name=row loop=$categories_list}
   <tr id="id_{$categories_list[row].id}">
-   <td data-header="{#category_name#}"><strong>{$categories_list[row].name}</strong></td>
+   <td data-header="{#category_name#}" class="cell-subject"><strong>{$categories_list[row].name}</strong></td>
    <td data-header="{#category_accession#}">{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
    <td data-header="{#category_topics#}">{$categories_list[row].threads_in_category}</td>
    <td data-header="{#category_entries#}">{$categories_list[row].postings_in_category}</td>
@@ -475,7 +475,6 @@
 <table>
  <thead>
   <tr>
-   <th>&nbsp;</th>
    <!--<th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_id&amp;descasc={if $descasc=="ASC" && $order=="user_id"}DESC{else}ASC{/if}&amp;ul={$ul}" title="{#order_linktitle#}">{#user_id#}</a>{if $order=="user_id" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9" />{elseif $order=="user_id" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9" />{/if}</th>-->
    <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_name&amp;descasc={if $descasc=="ASC" && $order=="user_name"}DESC{else}ASC{/if}&amp;ul={$ul}" title="{#order_linktitle#}">{#user_name#}</a>{if $order=="user_name" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9" />{elseif $order=="user_name" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9" />{/if}</th>
    <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_email&amp;descasc={if $descasc=="ASC" && $order=="user_email"}DESC{else}ASC{/if}&amp;ul={$ul}" title="{#order_linktitle#}">{#user_email#}</a>{if $order=="user_email" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9" />{elseif $order=="user_email" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9" />{/if}</th>
@@ -490,8 +489,7 @@
  <tbody>
 {section name=row loop=$userdata}
   <tr>
-   <td><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" class="small-input" /></td>
-   <td data-header="{#user_name#}">{if $userdata[row].inactive}<span title="{#user_inactive#}" class="username inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$userdata[row].user_name}" class="username">{$userdata[row].user_name}</a>{/if}</td>
+   <td class="cell-subject"><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" class="small-input" />&nbsp;{if $userdata[row].inactive}<span title="{#user_inactive#}" class="username inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" title="{#show_userdata_linktitle#|replace:"[user]":$userdata[row].user_name}" class="username">{$userdata[row].user_name}</a>{/if}</td>
    <td data-header="{#user_email#}"><span class="small"><a href="mailto:{$userdata[row].user_email}" title="{#mailto_user_lt#|replace:"[user]":$userdata[row].user_name}">{$userdata[row].user_email}</a></span></td>
    <td data-header="{#user_type#}"><span class="small">{if $userdata[row].user_type==2}{#admin#}{elseif $userdata[row].user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
    <td data-header="{#user_registered#}"><span class="small">{$userdata[row].registered_time|date_format:#time_format#}</span></td>
@@ -754,7 +752,7 @@
  <tbody id="items">
 {section name=row loop=$smilies}
   <tr id="id_{$smilies[row].id}">
-   <td><img src="images/smilies/{$smilies[row].file}" alt="{$smilies[row].code_1}" /></td>
+   <td class="cell-subject"><img src="images/smilies/{$smilies[row].file}" alt="{$smilies[row].code_1}" /></td>
    <td data-header="{#smiley_codes#}">{$smilies[row].codes}</td>
    <td data-header="{#smiley_title#}">{$smilies[row].title}</td>
    <td>
@@ -1158,7 +1156,7 @@
  <tbody id="items">
 {section name=page loop=$pages}
   <tr id="id_{$pages[page].id}">
-   <td><a href="index.php?mode=page&amp;id={$pages[page].id}" title="{$pages[page].title}"><strong class="control">{$pages[page].title}</strong></a></td>
+   <td class="cell-subject"><a href="index.php?mode=page&amp;id={$pages[page].id}" title="{$pages[page].title}"><strong class="control">{$pages[page].title}</strong></a></td>
    <td data-header="{#page_menu_linkname#}"><span class="small">{if $pages[page].menu_linkname!=''}{$pages[page].menu_linkname}{else}&nbsp;{/if}</span></td>
    <td data-header="{#page_access#}"><span class="small">{if $pages[page].access==1}{#page_access_reg_users#}{elseif $pages[page].access==0}{#page_access_public#}{/if}</span></td>
    <td>

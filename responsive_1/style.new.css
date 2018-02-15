@@ -585,6 +585,7 @@ td[data-header]::before {
 td.cell-subject {
 	background-color: hsl(210, 100%, 92%);
 	font-size: 1em;
+	border-bottom: 1px solid #bacbdf;
 }
 
 /* form elements */
@@ -1162,6 +1163,9 @@ div.warning              {
 	}
 	td.subject {
 		min-width:55%;
+	}
+	td.cell-subject {
+		border-bottom: none;
 	}
 	td[data-header] {
 		background-color: transparent;
