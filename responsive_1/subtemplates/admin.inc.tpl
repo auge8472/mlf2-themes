@@ -1248,9 +1248,9 @@
    <h3>{#releases_info_header#}</h3>
  {if $latest_release_version}
   {if $latest_release_uri}
-   <p><a href="{$latest_release_uri}">Download {$latest_release_version}</a></p>
+   <p><a href="{$latest_release_uri}">Download <strong>{$latest_release_version}</strong></a></p>
   {else}
-   <p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download {$latest_release_version}</a></p>
+   <p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">Download <strong>{$latest_release_version}</strong></a></p>
   {/if}
  {else}
    <p><a href="https://github.com/ilosuna/mylittleforum/releases/latest">{#releases_list_link#}</a></p>
