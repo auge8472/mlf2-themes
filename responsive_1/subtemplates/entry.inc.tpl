@@ -40,11 +40,16 @@
 {$signature}</p>
 {/if}
 </div>
-{if $tags}
-<p class="tags">{#tags_marking#}<br />
-{foreach name="tags" from=$tags item=tag}<a href="index.php?mode=search&amp;search={$tag.escaped}&amp;method=tags">{$tag.display}</a>{if !$smarty.foreach.tags.last}, {/if}{/foreach}</p>
-{/if}
 <footer class="posting-footer item-tools">
+{if $tags}
+<div class="tags">
+ <h3>{#tags_marking#}</h3>
+ <ul>
+{foreach name="tags" from=$tags item=tag}  <li><a href="index.php?mode=search&amp;search={$tag.escaped}&amp;method=tags">{$tag.display}</a></li>
+{/foreach}
+ </ul>
+</div>
+{/if}
 <ul class="options">
 <li>{if $locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$id}&amp;back=entry" title="{#reply_link_title#}">{#reply_link#}</a>{else}<span class="locked">{#posting_locked#}</span>{/if}</li>
 {if $options}
