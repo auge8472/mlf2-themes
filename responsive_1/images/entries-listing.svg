@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; }
+  .marker { stroke-width: 16px; stroke: #467; }
+  .entry { stroke-width: 16px; stroke: #8898aa; }
+  ]]>
+ </style>
+ <path class="marker" d="M0,12 H18" />
+ <path class="entry" d="M24,12 H128" />
+ <path class="marker" d="M0,38 H18" />
+ <path class="entry" d="M24,38 H128" />
+ <path class="marker" d="M0,64 H18" />
+ <path class="entry" d="M24,64 H128" />
+ <path class="marker" d="M0,90 H18" />
+ <path class="entry" d="M24,90 H128" />
+ <path class="marker" d="M0,116 H18" />
+ <path class="entry" d="M24,116 H128" />
+</svg>
+
