@@ -39,7 +39,6 @@
 {/if}
 </head>
 <body>
-<!--[if IE]><div id="ie"><![endif]-->
 
 <header id="top" role="banner">
 <h1><a href="./">{$settings.forum_name|escape:"html"}</a></h1>
@@ -87,7 +86,6 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1922497
  <li><a href="#top">zum Seitenanfang</a></li>
  <li><a href="./">zur Hauptseite</a></li>
 </ul>
-<!--[if IE]></div><![endif]-->
 
 </body>
 </html>
