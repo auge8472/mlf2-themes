@@ -1129,10 +1129,17 @@ div.warning              {
 		margin: 0;
 		display: grid;
 		grid-gap: 0.75em;
-		grid-template-columns: repeat(auto-fill, minmax(22em, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 	}
 	.adminmenu li {
 		margin: 0;
+	}
+	.adminmenu a {
+		height: 4em;
+		margin: 0;
+		background-size: 2.4em 2.4em;
+		background-position: 0.5em center;
+		padding: 0.125em 0.25em 0.125em 3.5em;
 	}
 	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
