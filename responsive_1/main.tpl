@@ -84,7 +84,7 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1922497
 </footer>
 <ul id="assistancemenu">
  <li><a href="#top">zum Seitenanfang</a></li>
- <li><a href="./">zur Hauptseite</a></li>
+ <li><a href="./">{#back_to_index_link#}</a></li>
 </ul>
 
 </body>
