@@ -1141,6 +1141,15 @@ div.warning              {
 		background-position: 0.5em center;
 		padding: 0.125em 0.25em 0.125em 3.5em;
 	}
+	.adminmenu a[href*="&action=register"] {
+		background: url("images/sign-add.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/user.svg") 0.5em center/2.4em 2.4em no-repeat;
+	}
+	.adminmenu a[href*='&disable_smilies=true'] {
+		background: url("images/marker-cross.svg") 0.5em center/2.4em 2.4em no-repeat, url("images/smilies.svg") 0.75em center/1.8em 1.8em no-repeat;
+	}
+	.adminmenu a[href*='&action=edit_page'] {
+		background: url("images/sign-add.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/file.svg") 0.5em center/2.4em 2.4em no-repeat;
+	}
 	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 	}
