@@ -1,6 +1,17 @@
 {config_load file=$language_file section="user_show"}
 {if $user_name}
-<table>
+{if $mod||$admin}
+<ul class="adminmenu">
+{if $p_user_type==0} <li>{if $user_is_locked}<a href="index.php?mode=user&amp;user_lock={$p_user_id}" class="unlock-user"><span>{#user_unlock_account#}</span></a>{else}<a href="index.php?mode=user&amp;user_lock={$p_user_id}" class="lock-user"><span>{#user_lock_account#}</span></a>{/if}</li>{/if}
+
+{if $admin} <li><a href="index.php?mode=admin&amp;edit_user={$p_user_id}"><span>{#user_edit_account#}</span></a></li>{/if}
+
+{if $admin}{if $postings} <li><a href="index.php?mode=admin&amp;user_delete_all_entries={$p_user_id}"><span>{#user_delete_all_entries#}</span></a></li>{/if}{/if}
+
+{if $admin} <li><a href="index.php?mode=admin&amp;delete_user={$p_user_id}"><span>{#user_delete_account#}</span></a></li>{/if}
+</ul>
+{/if}
+<table class="settings below-adminmenu">
  <tbody>
   <tr>
    <th><strong>{#user_name#}</strong></th>
@@ -76,16 +87,6 @@
 {/if}
  </tbody>
 </table>
-
-{if $mod||$admin}
-<ul class="adminmenu">
-{if $admin}{if $postings} <li><a href="index.php?mode=admin&amp;user_delete_all_entries={$p_user_id}"><img src="{$THEMES_DIR}/{$theme}/images/delete_entries.png" alt="" width="16" height="16" /><span>{#user_delete_all_entries#}</span></a></li>{/if}{/if}
-{if $p_user_type==0} <li><a href="index.php?mode=user&amp;user_lock={$p_user_id}">{if $user_is_locked}<img src="{$THEMES_DIR}/{$theme}/images/unlock_user.png" alt="" width="16" height="16" /><span>{#user_unlock_account#}</span></a>{else}<img src="{$THEMES_DIR}/{$theme}/images/lock_user.png" alt="" width="16" height="16" /><span>{#user_lock_account#}</span></a>{/if}</li>{/if}
-{if $admin} <li><a href="index.php?mode=admin&amp;edit_user={$p_user_id}"><img src="{$THEMES_DIR}/{$theme}/images/edit_user.png" alt="" width="16" height="16" /><span>{#user_edit_account#}</span></a></li>{/if}
-{if $admin} <li><a href="index.php?mode=admin&amp;delete_user={$p_user_id}"><img src="{$THEMES_DIR}/{$theme}/images/delete_user.png" alt="" width="16" height="16" /><span>{#user_delete_account#}</span></a></li>{/if}
-</ul>
-{/if}
-
 {else}
 <p class="caution">{#user_account_doesnt_exist#}</p>
 {/if}
