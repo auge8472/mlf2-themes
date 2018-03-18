@@ -860,6 +860,9 @@ article footer a.edit {
 article footer a.delete {
 	background-image: url(images/marker-cross.svg);
 }
+article footer a.move {
+	background-image: url(images/move-item.svg);
+}
 article footer a.lock, article footer a.lock-thread, article footer li .locked {
 	background-image: url(images/lock-closed.svg);
 }

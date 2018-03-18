@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; stroke-width: 16px; }
+  #old-version { stroke: #467; }
+  #new-version { stroke: #c8cfdd; }
+  polygon { stroke: none; fill: #f80800; }
+  ]]>
+ </style>
+ <path id="old-version" d="M10,16 V112" />
+ <path id="new-version" d="M118,16 V112" />
+ <polygon points="104,64 51,113 51,88 26,88 26,40 51,40 51,15" />
+</svg>
+
