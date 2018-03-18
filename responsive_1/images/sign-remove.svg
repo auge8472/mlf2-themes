@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  .shield { fill: #f80800; stroke: #efefef; stroke-width: 4px; }
+  path { stroke-width: 26px; stroke: #efefef; }
+  ]]>
+ </style>
+ <circle class="shield" cx="64" cy="64" r="60" />
+ <path d="M18,64 H110" />
+</svg>
+

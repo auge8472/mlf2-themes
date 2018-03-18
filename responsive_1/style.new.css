@@ -498,6 +498,21 @@ aside section h3 {
 .adminmenu a[href*='&action=edit_page'] {
 	background: url("images/sign-add.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/file.svg") 0.4em center/1em 1em no-repeat;
 }
+.adminmenu a[href*='?mode=admin&edit_user='] {
+	background: url("images/pencil.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/user.svg") 0.4em center/1em 1em no-repeat;
+}
+.adminmenu a[href*='?mode=admin&delete_user='] {
+	background: url("images/sign-remove.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/user.svg") 0.4em center/1em 1em no-repeat;
+}
+.adminmenu a[href*='?mode=admin&user_delete_all_entries='] {
+	background: url("images/sign-remove.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/preview-bubble.svg") 0.4em center/1em 1em no-repeat;
+}
+.adminmenu a.lock-user {
+	background-image: url(images/lock-closed.svg);
+}
+.adminmenu a.unlock-user {
+	background-image: url(images/lock-open.svg);
+}
 
 ul.pagination {
 	margin: 0.75rem 0;
@@ -1155,6 +1170,15 @@ div.warning              {
 	}
 	.adminmenu a[href*='&action=edit_page'] {
 		background: url("images/sign-add.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/file.svg") 0.5em center/2.4em 2.4em no-repeat;
+	}
+	.adminmenu a[href*='?mode=admin&edit_user='] {
+		background: url("images/pencil.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/user.svg") 0.5em center/2.4em 2.4em no-repeat;
+	}
+	.adminmenu a[href*='?mode=admin&delete_user='] {
+		background: url("images/sign-remove.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/user.svg") 0.5em center/2.4em 2.4em no-repeat;
+	}
+	.adminmenu a[href*='?mode=admin&user_delete_all_entries='] {
+		background: url("images/sign-remove.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/preview-bubble.svg") 0.5em center/2.4em 2.4em no-repeat;
 	}
 	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;

@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  polygon {
+   stroke-width: 8px;
+   stroke: #bfc1be;
+   fill: #efefef;
+  }
+  ]]>
+ </style>
+ <polygon points="24,116 24,88 18,86 13,83 10,78 8,72 8,24 10,18 13,13 18,10 24,8 104,8 112,10 115,13 118,18 120,24 120,72 118,78 115,83 112,86 104,88 56,88" />
+</svg>
+
