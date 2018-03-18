@@ -25,7 +25,7 @@
 								<a title="{#bookmark_filter_linktitle#}" href="index.php?mode=bookmarks&amp;filter={$tag.escaped}">{$tag.display}</a>{if !$smarty.foreach.tags.last}, {/if}
 							{/foreach}
 						</span></td>
-						<td><a href="index.php?mode=bookmarks&amp;edit_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/edit.png" title="{#edit#}" alt="{#edit#}" width="16" height="16" /></a> &nbsp; <a href="index.php?mode=bookmarks&amp;delete_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/delete.png" title="{#delete#}" alt="{#delete#}" width="16" height="16"/></a> &nbsp; <a href="index.php?mode=bookmarks&amp;move_up_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_up.png" alt="{#up#}" title="{#up#}" width="16" height="16" /></a>&nbsp;<a href="index.php?mode=bookmarks&amp;move_down_bookmark={$row.bid}"><img class="control" src="{$THEMES_DIR}/{$theme}/images/arrow_down.png" alt="{#down#}" title="{#down#}" width="16" height="16" /></a></td>
+						<td><a href="index.php?mode=bookmarks&amp;edit_bookmark={$row.bid}" class="editor"><span>{#edit#}</span></a> <a href="index.php?mode=bookmarks&amp;delete_bookmark={$row.bid}"  class="terminator"><span>{#delete#}</span></a> <a href="index.php?mode=bookmarks&amp;move_up_bookmark={$row.bid}" class="move-item-up"><span>{#move_up#}</span></a>&nbsp;<a href="index.php?mode=bookmarks&amp;move_down_bookmark={$row.bid}" class="move-item-down"><span>{#move_down#}</span></a></td>
 					</tr>
 				{/foreach}
 			</tbody>
