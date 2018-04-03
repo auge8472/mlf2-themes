@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #plate { fill: #ff0; stroke-width: 8px; stroke: #f80800; }
+  circle.mark { fill: #222; stroke: none; }
+  line.mark { fill: none; stroke: #222; stroke-width: 12px; }
+  ]]>
+ </style>
+ <path id="plate" d="M 64,14 121,110 7,110 z" />
+ <line class="mark" x1="64" y1="45" x2="64" y2="79" />
+ <circle class="mark" cx="64" cy="91" r="7" />
+</svg>
+

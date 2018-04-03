@@ -14,8 +14,9 @@ img           { border:none; }
 #wrapper      { margin:0; padding:20px; }
 h1            { font-family: verdana, arial, sans-serif; font-size: 18px; font-weight: bold; }
 p             { font-family: verdana, arial, sans-serif; font-size: 13px; line-height: 19px; }
-.caution      { padding: 0px 0px 0px 20px; color: red; font-weight: bold; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/caution.png); background-repeat:no-repeat; background-position: left; }
-.ok           { padding: 0px 0px 0px 20px; font-weight:bold; color:red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/tick.png); background-repeat:no-repeat; background-position: left; }
+.caution, .ok { padding: 0px 0px 0px 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
+.caution      { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
+.ok           { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
 img.delete    { max-width:300px; max-height:150px; }
 img.uploaded  { max-width:300px; max-height:110px; /*cursor:pointer;*/ }
 img.browse    { max-width:320px; cursor:pointer; }

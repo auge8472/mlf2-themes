@@ -429,7 +429,7 @@ aside section h3 {
 	color: red;
 }
 #install-script-exists h3::before  {
-	content: url("images/caution.png"); padding-right: 5px;
+	content: url("images/warning.svg"); padding-right: 5px;
 }
 /* end: elements of #sidebar, #bottombar, aside */
 

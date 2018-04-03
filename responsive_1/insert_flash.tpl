@@ -10,8 +10,9 @@ body          { color: #000000; background: #ffffff; margin: 20px; padding: 0px;
 h1            { font-family: verdana, arial, sans-serif; font-size: 18px; font-weight: bold; }
 p             { font-family: verdana, arial, sans-serif; font-size: 13px; line-height: 19px; }
 fieldset      { border:1px solid #c0c0c0; }
-.caution      { padding: 0px 0px 0px 20px; color: red; font-weight: bold; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/caution.png); background-repeat:no-repeat; background-position: left; }
-.ok           { padding: 0px 0px 0px 20px; font-weight:bold; color:red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/tick.png); background-repeat:no-repeat; background-position: left; }
+.caution, .ok { padding: 0px 0px 0px 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
+.caution      { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
+.ok           { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
 img.uploaded  { border: 1px solid #000; cursor:pointer; }
 .small        { font-size:11px; line-height:16px; }
 code          { font-family:"courier new", courier; color:#000080; }
