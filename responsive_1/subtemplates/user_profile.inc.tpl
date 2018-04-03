@@ -26,7 +26,7 @@
 {if $user_hp || $user_email}
   <tr>
    <th><strong>{#user_hp_email#}</strong></th>
-   <td class="d">{if $user_hp=='' && $user_email==''}-{/if}{if $user_hp!=''}<a href="{$user_hp}" title="{$user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/homepage.png" alt="{#homepage#}" width="13" height="13" /></a> &nbsp;{/if}{if $user_email}<a href="index.php?mode=contact&amp;user_id={$p_user_id}" title="{#mailto_user#|replace:"[user]":$user_name}" rel="nofollow"><img src="{$THEMES_DIR}/{$theme}/images/email.png" alt="{#email#}" width="13" height="10" /></a>{/if}</td>
+   <td class="d">{if $user_hp=='' && $user_email==''}-{/if}{if $user_hp!=''}<a href="{$user_hp}" title="{$user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/home.svg" alt="{#homepage#}" width="15" height="15" /></a> &nbsp;{/if}{if $user_email}<a href="index.php?mode=contact&amp;user_id={$p_user_id}" title="{#mailto_user#|replace:"[user]":$user_name}" rel="nofollow"><img src="{$THEMES_DIR}/{$theme}/images/contact-email.svg" alt="{#email#}" width="15" height="15" /></a>{/if}</td>
   </tr>
 {/if}
 {if $user_real_name}

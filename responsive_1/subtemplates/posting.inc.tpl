@@ -27,11 +27,11 @@
 
 {if $preview}
 {if $preview_hp && !$email}
-{assign var=email_hp value=" <a href=\"$preview_hp\"><img src=\"$THEMES_DIR/$theme/images/homepage.png\" alt=\"$homepage_alt\" width=\"13\" height=\"13\" /></a>"}
+{assign var=email_hp value=" <a href=\"$preview_hp\"><img src=\"$THEMES_DIR/$theme/images/home.svg\" alt=\"$homepage_alt\" width=\"15\" height=\"15\" /></a>"}
 {elseif !$preview_hp && $email}
-{assign var=email_hp value=" <a href=\"index.php?mode=contact&amp;id=$id\"><img src=\"$THEMES_DIR/$theme/images/email.png\" alt=\"$email_alt\" width=\"13\" height=\"10\" /></a>"}
+{assign var=email_hp value=" <a href=\"index.php?mode=contact&amp;id=$id\"><img src=\"$THEMES_DIR/$theme/images/contact-email.svg\" alt=\"$email_alt\" width=\"15\" height=\"15\" /></a>"}
 {elseif $preview_hp && $email}
-{assign var=email_hp value=" <a href=\"$preview_hp\"><img src=\"$THEMES_DIR/$theme/images/homepage.png\" alt=\"$homepage_alt\" width=\"13\" height=\"13\" /></a> <a href=\"index.php?mode=contact&amp;id=$id\"><img src=\"$THEMES_DIR/$theme/images/email.png\" alt=\"$email_alt\" width=\"13\" height=\"10\" /></a>"}
+{assign var=email_hp value=" <a href=\"$preview_hp\"><img src=\"$THEMES_DIR/$theme/images/home.svg\" alt=\"$homepage_alt\" width=\"15\" height=\"15\" /></a> <a href=\"index.php?mode=contact&amp;id=$id\"><img src=\"$THEMES_DIR/$theme/images/contact-email.svg\" alt=\"$email_alt\" width=\"15\" height=\"15\" /></a>"}
 {else}
 {assign var=email_hp value=""}
 {/if}

@@ -61,7 +61,7 @@ setPictureToProfil('');
 {if $avatar_uploaded}
 <script type="text/javascript">/* <![CDATA[ */ document.write('<p><button onclick=\"window.close()\">{#close_window#}</button><\/p>'); /* ]]> */</script>
 {else}
-<p class="delete"><a href="index.php?mode=avatar&amp;delete=true"><img src="{$THEMES_DIR}/{$settings.theme}/images/delete.png" alt="" width="16" height="16" /><span>{#delete_avatar#}</span></a></p>
+<p class="delete"><a href="index.php?mode=avatar&amp;delete=true"><img src="{$THEMES_DIR}/{$settings.theme}/images/marker_cross.svg" alt="" width="15" height="15" /><span>{#delete_avatar#}</span></a></p>
 {/if}
 {elseif $upload}
 <h1>{#upload_avatar_hl#}</h1>
