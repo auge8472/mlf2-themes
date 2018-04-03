@@ -945,10 +945,10 @@
    <td>{$file.file}</td>
    <td data-header="{#backup_date#}">{$file.date|date_format:#time_format#}</td>
    <td data-header="{#backup_size#}">{$file.size}</td>
-   <td>
-    <a href="index.php?mode=admin&amp;download_backup_file={$file.file}"><img src="{$THEMES_DIR}/{$theme}/images/disk.png" alt="{#download_backup_file#}" width="16" height="16" /><span>{#download_backup_file#}</span></a> &#160;
-    <a href="index.php?mode=admin&amp;restore={$file.file}"><img src="{$THEMES_DIR}/{$theme}/images/restore.png" alt="{#restore#}" width="16" height="16" /><span>{#restore#}</span></a> &#160;
-    <a href="index.php?mode=admin&amp;delete_backup_files[]={$file.file}" onclick="return delete_backup_confirm(this, '{$smarty.config.delete_backup_file_confirm|escape:"url"}')"><img src="{$THEMES_DIR}/{$theme}/images/delete.png" alt="{#delete_backup_file#}" width="16" height="16" /><span>{#delete_backup_file#}</span></a></td>
+   <td class="item-tools">
+    <a href="index.php?mode=admin&amp;download_backup_file={$file.file}" class="download-backup"><span>{#download_backup_file#}</span></a>
+    <a href="index.php?mode=admin&amp;restore={$file.file}" class="restore-backup"><span>{#restore#}</span></a>
+    <a href="index.php?mode=admin&amp;delete_backup_files[]={$file.file}" onclick="return delete_backup_confirm(this, '{$smarty.config.delete_backup_file_confirm|escape:"url"}')" class="backup-terminator"><span>{#delete_backup_file#}</span></a></td>
   </tr>
 {/foreach}
  </tbody>

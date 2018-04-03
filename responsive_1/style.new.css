@@ -904,7 +904,7 @@ article footer a.unlock, article footer a.unlock-thread {
 /* end: elements of the posting views */
 
 /* elements of admin interface */
-.editor, .terminator, .move-item-up, .move-item-down {
+.editor, .terminator, .move-item-up, .move-item-down, .download-backup, .restore-backup, .backup-terminator {
 	padding-left: 1.2em;
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
@@ -913,7 +913,7 @@ article footer a.unlock, article footer a.unlock-thread {
 .editor {
 	background-image: url(images/pencil.svg), url(images/file.svg);
 }
-.terminator {
+.terminator, .backup-terminator {
 	background-image: url(images/marker-cross.svg);
 }
 .move-item-up {
@@ -921,6 +921,12 @@ article footer a.unlock, article footer a.unlock-thread {
 }
 .move-item-down {
 	background-image: url(images/arrow-b-down.svg);
+}
+.download-backup {
+	background-image: url(images/floppy-disc.svg);
+}
+.restore-backup {
+	background-image: url(images/floppy-disc.svg);
 }
 .ok {
 	padding: 0.25em 0.25em 0.25em 1.25em;
