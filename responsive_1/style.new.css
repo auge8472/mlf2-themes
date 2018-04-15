@@ -942,29 +942,36 @@ article footer a.unlock, article footer a.unlock-thread {
 /* end: elements of the posting views */
 
 /* elements of admin interface */
-.editor, .terminator, .move-item-up, .move-item-down, .download-backup, .restore-backup, .backup-terminator {
-	padding-left: 1.2em;
+.item-tools a {
+	display: flex;
+	align-items: center;
+}
+.item-tools .icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 0.125em;
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
-	background-position: 0 center;
+	background-position: center center;
 }
-.editor {
+.editor .icon {
 	background-image: url(images/pencil.svg), url(images/file.svg);
 }
-.terminator, .backup-terminator {
+.terminator .icon, .backup-terminator .icon {
 	background-image: url(images/marker-cross.svg);
 }
-.move-item-up {
+.move-item-up .icon {
 	background-image: url(images/arrow-b-up.svg);
 }
-.move-item-down {
+.move-item-down .icon {
 	background-image: url(images/arrow-b-down.svg);
 }
-.download-backup {
-	background-image: url(images/floppy-disc.svg);
+.download-backup .icon {
+	background: url("images/arrow-b-down.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
-.restore-backup {
-	background-image: url(images/floppy-disc.svg);
+.restore-backup .icon {
+	background: url("images/arrow-b-up.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
 .ok {
 	padding: 0.25em 0.25em 0.25em 1.25em;
