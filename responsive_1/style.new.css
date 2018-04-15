@@ -446,71 +446,109 @@ aside section h3 {
 	padding: 0;
 }
 .adminmenu a {
-	display: block;
-	padding: 0.125em 0.25em 0.125em 1.65em;
+	display: flex;
+	align-items: center;
+	padding: 0.125em;
 	text-decoration:none;
 	border: 1px solid #bacbdf;
 	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
+}
+.adminmenu a .icon {
+	display: inline-block;
+	padding:0;
+	height: 1.25em;
+	width: 1.25em;
+	margin: 0.25em;
 	background-repeat: no-repeat;
-	background-size: 1em 1em;
-	background-position: 0.4em center;
+	background-size: 100%;
+	background-position: center center;
 }
 .adminmenu a img {
 	margin:0 5px -3px 0;
 	padding:0;
 }
-.adminmenu a[href*='&action=settings'] {
+.adminmenu a[href*='&action=settings'] .icon {
 	background-image: url("images/settings-sliders.svg");
 }
-.adminmenu a[href*='&action=user'] {
+.adminmenu a[href*='&action=user'] .icon {
 	background-image: url("images/users.svg");
 }
-.adminmenu a[href*='&action=categories'] {
+.adminmenu a[href*='&action=categories'] .icon {
 	background-image: url("images/categories.svg");
 }
-.adminmenu a[href*='&action=smilies'], .adminmenu a[href*='&enable_smilies=true'] {
+.adminmenu a[href*='&action=smilies'] .icon, .adminmenu a[href*='&enable_smilies=true'] .icon {
 	background-image: url("images/smilies.svg");
 }
-.adminmenu a[href*='&action=pages'] {
+.adminmenu a[href*='&action=pages'] .icon {
 	background-image: url("images/files.svg");
 }
-.adminmenu a[href*='&action=spam_protection'] {
+.adminmenu a[href*='&action=spam_protection'] .icon {
 	background-image: url("images/shield.svg");
 }
-.adminmenu a[href*='&action=backup'], .adminmenu a[href*='create_backup=0'] {
+.adminmenu a[href*='&action=backup'] .icon, .adminmenu a[href*='create_backup=0'] .icon {
 	background-image: url("images/floppy-disc.svg");
 }
-.adminmenu a[href*='&action=update'] {
+.adminmenu a[href*='create_backup=1'] .icon {
+	background: url("images/entries-listing.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=2'] .icon {
+	background: url("images/users.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=3'] .icon {
+	background: url("images/settings-sliders.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=4'] .icon {
+	background: url("images/categories.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=5'] .icon {
+	background: url("images/files.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=6'] .icon {
+	background: url("images/smilies.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=7'] .icon {
+	background: url("images/warning.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=8'] .icon {
+	background: url("images/notepad.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=9'] .icon {
+	background: url("images/warning.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=10'] .icon {
+	background: url("images/clock.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='&action=update'] .icon {
 	background-image: url("images/software-update.svg");
 }
-.adminmenu a[href*='&action=reset_uninstall'], .adminmenu a[href*='&action=clear_userdata'] {
+.adminmenu a[href*='&action=reset_uninstall'] .icon, .adminmenu a[href*='&action=clear_userdata'] .icon {
 	background-image: url("images/marker-cross.svg");
 }
-.adminmenu a[href*='&action=register'] {
-	background: url("images/sign-add.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/user.svg") 0.4em center/1em 1em no-repeat;
+.adminmenu a[href*='&action=register'] .icon {
+	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
-.adminmenu a[href*='&action=email_list'] {
+.adminmenu a[href*='&action=email_list'] .icon {
 	background-image: url("images/contact-email.svg");
 }
-.adminmenu a[href*='&disable_smilies=true'] {
-	background: url("images/marker-cross.svg") 0.4em center/1em 1em no-repeat, url("images/smilies.svg") 0.525em center/0.75em 0.75em no-repeat;
+.adminmenu a[href*='&disable_smilies=true'] .icon {
+	background: url("images/marker-cross.svg") center center / 100% no-repeat, url("images/smilies.svg") center center / 75% no-repeat;
 }
-.adminmenu a[href*='&action=edit_page'] {
-	background: url("images/sign-add.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/file.svg") 0.4em center/1em 1em no-repeat;
+.adminmenu a[href*='&action=edit_page'] .icon {
+	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/file.svg") center / 100% no-repeat;
 }
-.adminmenu a[href*='?mode=admin&edit_user='] {
-	background: url("images/pencil.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/user.svg") 0.4em center/1em 1em no-repeat;
+.adminmenu a[href*='?mode=admin&edit_user='] .icon {
+	background: url("images/pencil.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
-.adminmenu a[href*='?mode=admin&delete_user='] {
-	background: url("images/sign-remove.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/user.svg") 0.4em center/1em 1em no-repeat;
+.adminmenu a[href*='?mode=admin&delete_user='] .icon {
+	background: url("images/sign-remove.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
-.adminmenu a[href*='?mode=admin&user_delete_all_entries='] {
-	background: url("images/sign-remove.svg") 0.8em 0.75em/0.75em 0.75em no-repeat, url("images/preview-bubble.svg") 0.4em center/1em 1em no-repeat;
+.adminmenu a[href*='?mode=admin&user_delete_all_entries='] .icon {
+	background: url("images/sign-remove.svg") 102% 102% / 60% no-repeat, url("images/preview-bubble.svg") center / 100% no-repeat;
 }
-.adminmenu a.lock-user {
+.adminmenu a.lock-user  .icon {
 	background-image: url(images/lock-closed.svg);
 }
-.adminmenu a.unlock-user {
+.adminmenu a.unlock-user .icon {
 	background-image: url(images/lock-open.svg);
 }
 
@@ -1159,32 +1197,13 @@ div.warning              {
 		margin: 0;
 	}
 	.adminmenu a {
-		height: 4em;
 		margin: 0;
-		background-size: 2.4em 2.4em;
-		background-position: 0.5em center;
-		padding: 0 0 0 3.5em;
+		padding: 0;
 		font-size: 1.25em;
-		display: flex;
-		align-items: center;
 	}
-	.adminmenu a[href*="&action=register"] {
-		background: url("images/sign-add.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/user.svg") 0.5em center/2.4em 2.4em no-repeat;
-	}
-	.adminmenu a[href*='&disable_smilies=true'] {
-		background: url("images/marker-cross.svg") 0.5em center/2.4em 2.4em no-repeat, url("images/smilies.svg") 0.75em center/1.8em 1.8em no-repeat;
-	}
-	.adminmenu a[href*='&action=edit_page'] {
-		background: url("images/sign-add.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/file.svg") 0.5em center/2.4em 2.4em no-repeat;
-	}
-	.adminmenu a[href*='?mode=admin&edit_user='] {
-		background: url("images/pencil.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/user.svg") 0.5em center/2.4em 2.4em no-repeat;
-	}
-	.adminmenu a[href*='?mode=admin&delete_user='] {
-		background: url("images/sign-remove.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/user.svg") 0.5em center/2.4em 2.4em no-repeat;
-	}
-	.adminmenu a[href*='?mode=admin&user_delete_all_entries='] {
-		background: url("images/sign-remove.svg") 1.6em 1.8em/1.8em 1.8em no-repeat, url("images/preview-bubble.svg") 0.5em center/2.4em 2.4em no-repeat;
+	.adminmenu a .icon {
+		width: 2.4em;
+		height: 2.4em;
 	}
 	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;

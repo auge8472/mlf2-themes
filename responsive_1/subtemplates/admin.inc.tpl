@@ -463,9 +463,9 @@
 </div>
 </div>
 <ul class="adminmenu">
-<li><a href="index.php?mode=admin&amp;action=register"><span>{#add_user#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=email_list"><span>{#email_list#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=clear_userdata"><span>{#clear_userdata#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=register"><span class="icon"></span><span>{#add_user#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=email_list"><span class="icon"></span><span>{#email_list#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=clear_userdata"><span class="icon"></span><span>{#clear_userdata#}</span></a></li>
 </ul>
 {if $result_count > 0}
 {if $no_users_in_selection}<p class="caution below-adminmenu">{#no_users_in_sel#}</p>{/if}
@@ -737,7 +737,7 @@
 </section>
 {/if}
 <ul class="adminmenu">
-<li>{if $settings.smilies==1}<a href="index.php?mode=admin&amp;disable_smilies=true"><span>{#disable_smilies#}</span></a>{else}<a href="index.php?mode=admin&amp;enable_smilies=true"><span>{#enable_smilies#}</span></a>{/if}</li>
+<li>{if $settings.smilies==1}<a href="index.php?mode=admin&amp;disable_smilies=true"><span class="icon"></span><span>{#disable_smilies#}</span></a>{else}<a href="index.php?mode=admin&amp;enable_smilies=true"><span class="icon"></span><span>{#enable_smilies#}</span></a>{/if}</li>
 </ul>
 {if $settings.smilies==1}
 <table id="sortable" class="below-adminmenu">
@@ -963,17 +963,17 @@
 <!--<p><em>No backup files available.</em></p>-->
 {/if}
 <ul class="adminmenu">
- <li><a href="index.php?mode=admin&amp;create_backup=0" class="backup complete"><span>{#create_backup_complete#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=1" class="backup entries"><span>{#only_create_backup_of#} {#backup_entries#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=2" class="backup userdata"><span>{#only_create_backup_of#} {#backup_userdata#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=3" class="backup settings"><span>{#only_create_backup_of#} {#backup_settings#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=4" class="backup categories"><span>{#only_create_backup_of#} {#backup_categories#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=5" class="backup pages"><span>{#only_create_backup_of#} {#backup_pages#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=6" class="backup smilies"><span>{#only_create_backup_of#} {#backup_smilies#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=7" class="backup banlists"><span>{#only_create_backup_of#} {#backup_banlists#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=8" class="backup bookmarks"><span>{#only_create_backup_of#} {#backup_bookmarks#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=9" class="backup read-status"><span>{#only_create_backup_of#} {#backup_read_status#}</span></a></li>
- <li><a href="index.php?mode=admin&amp;create_backup=10" class="backup temp-infos"><span>{#only_create_backup_of#} {#backup_temp_infos#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=0" class="backup complete"><span class="icon"></span><span>{#create_backup_complete#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=1" class="backup entries"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_entries#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=2" class="backup userdata"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_userdata#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=3" class="backup settings"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_settings#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=4" class="backup categories"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_categories#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=5" class="backup pages"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_pages#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=6" class="backup smilies"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_smilies#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=7" class="backup banlists"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_banlists#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=8" class="backup bookmarks"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_bookmarks#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=9" class="backup read-status"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_read_status#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=10" class="backup temp-infos"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_temp_infos#}</span></a></li>
 </ul>
 {elseif $action=='delete_backup_files_confirm'}
 <p class="caution">{#caution#}</p>
@@ -1140,7 +1140,7 @@
 {elseif $action=='pages'}
 <ul class="adminmenu">
  <li>
-  <a href="index.php?mode=admin&amp;action=edit_page"><span>{#add_page_link#}</span></a>
+  <a href="index.php?mode=admin&amp;action=edit_page"><span class="icon"></span><span>{#add_page_link#}</span></a>
  </li>
 </ul>
 {if $pages}
@@ -1258,15 +1258,15 @@
   </section>
  </aside>
  <ul class="adminmenu">
-  <li><a href="index.php?mode=admin&amp;action=settings"><span>{#forum_settings_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=user"><span>{#user_administr_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=categories"><span>{#category_administr_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=smilies"><span>{#smilies_administr_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=pages"><span>{#pages_administr_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=spam_protection"><span>{#spam_protection_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=backup"><span>{#backup_restore_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=update"><span>{#update_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=reset_uninstall"><span>{#reset_uninstall_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=settings"><span class="icon"></span><span>{#forum_settings_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=user"><span class="icon"></span><span>{#user_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=categories"><span class="icon"></span><span>{#category_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=smilies"><span class="icon"></span><span>{#smilies_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=pages"><span class="icon"></span><span>{#pages_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=spam_protection"><span class="icon"></span><span>{#spam_protection_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=backup"><span class="icon"></span><span>{#backup_restore_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=update"><span class="icon"></span><span>{#update_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=reset_uninstall"><span class="icon"></span><span>{#reset_uninstall_link#}</span></a></li>
  </ul>
 </div>
 {/if}
