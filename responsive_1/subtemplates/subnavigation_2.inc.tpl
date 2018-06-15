@@ -1,17 +1,17 @@
 {if $mode=='index'}
 <ul id="subnav-2">
- <li><a class="refresh" href="index.php?refresh=1&amp;category={$category}" rel="nofollow">{#refresh_link#}</a></li>
- <li>{if $thread_order==0}<a class="order-1" href="index.php?mode=index&amp;thread_order=1" rel="nofollow">{#order_link#}</a>{else}<a class="order-2" href="index.php?mode=index&amp;thread_order=0" rel="nofollow">{#order_link#}</a>{/if}</li>
- <li>{if $usersettings.fold_threads==0}<a class="fold-1" href="index.php?fold_threads=1">{#fold_threads#}</a>{else}<a class="fold-2" href="index.php?fold_threads=0">{#expand_threads#}</a>{/if}</li>
- <li>{if $usersettings.user_view==0}<a class="tableview" href="index.php?toggle_view=1">{#table_view#}</a>{else}<a class="threadview" href="index.php?toggle_view=0">{#thread_view#}</a>{/if}</li>
+ <li><a class="refresh" href="index.php?refresh=1&amp;category={$category}" rel="nofollow"><span class="icon"></span>{#refresh_link#}</a></li>
+ <li>{if $thread_order==0}<a class="order-1" href="index.php?mode=index&amp;thread_order=1" rel="nofollow"><span class="icon"></span>{#order_link#}</a>{else}<a class="order-2" href="index.php?mode=index&amp;thread_order=0" rel="nofollow"><span class="icon"></span>{#order_link#}</a>{/if}</li>
+ <li>{if $usersettings.fold_threads==0}<a class="fold-1" href="index.php?fold_threads=1"><span class="icon"></span>{#fold_threads#}</a>{else}<a class="fold-2" href="index.php?fold_threads=0">{#expand_threads#}</a>{/if}</li>
+ <li>{if $usersettings.user_view==0}<a class="tableview" href="index.php?toggle_view=1"><span class="icon"></span>{#table_view#}</a>{else}<a class="threadview" href="index.php?toggle_view=0"><span class="icon"></span>{#thread_view#}</a>{/if}</li>
 </ul>
 {elseif $mode=='entry'}
 <ul id="subnav-2">
- <li><a class="openthread" href="index.php?mode=thread&amp;id={$tid}#p{$id}">{#open_in_thread_link#}</a></li>
+ <li><a class="openthread" href="index.php?mode=thread&amp;id={$tid}#p{$id}"><span class="icon"></span>{#open_in_thread_link#}</a></li>
 </ul>
 {elseif $mode=='thread'}
 <ul id="subnav-2">
- <li>{if $usersettings.thread_display==0}<a class="linear" href="index.php?mode=thread&amp;id={$id}&amp;toggle_thread_display=1">{#thread_linear#}</a>{else}<a class="hierarchic" href="index.php?mode=thread&amp;id={$id}&amp;toggle_thread_display=0">{#thread_hierarchical#}</a>{/if}</li>
+ <li>{if $usersettings.thread_display==0}<a class="linear" href="index.php?mode=thread&amp;id={$id}&amp;toggle_thread_display=1"><span class="icon"></span>{#thread_linear#}</a>{else}<a class="hierarchic" href="index.php?mode=thread&amp;id={$id}&amp;toggle_thread_display=0"><span class="icon"></span>{#thread_hierarchical#}</a>{/if}</li>
 </ul>
 {/if}
 {if $categories && $mode=='index'}

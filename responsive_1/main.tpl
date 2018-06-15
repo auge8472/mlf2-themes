@@ -51,10 +51,10 @@
 </header>
 <nav id="subnav">
 <ul id="usermenu">
-{if $user}<li><a href="index.php?mode=user&amp;action=edit_profile"><strong>{$user}</strong></a></li><li><a href="index.php?mode=user&amp;action=show_posts&amp;id={$user_id}">{#show_all_postings_link#}</a></li><li><a href="index.php?mode=bookmarks">{#show_bookmarks_link#}</a></li><li><a href="index.php?mode=user">{#user_area_link#}</a></li>{if $admin}<li><a href="index.php?mode=admin">{#admin_area_link#}</a></li>{/if}<li><a href="index.php?mode=login" class="ic-log-out">{#log_out_link#}</a></li>{else}<li><a href="index.php?mode=login" class="ic-log-in">{#log_in_link#}</a></li>{if $settings.register_mode!=2}<li><a href="index.php?mode=register">{#register_link#}</a></li>{/if}{if $settings.user_area_public}<li><a href="index.php?mode=user">{#user_area_link#}</a></li>
+{if $user}<li><a href="index.php?mode=user&amp;action=edit_profile"><span class="icon"></span><strong>{$user}</strong></a></li><li><a href="index.php?mode=user&amp;action=show_posts&amp;id={$user_id}"><span class="icon"></span>{#show_all_postings_link#}</a></li><li><a href="index.php?mode=bookmarks"><span class="icon"></span>{#show_bookmarks_link#}</a></li><li><a href="index.php?mode=user"><span class="icon"></span>{#user_area_link#}</a></li>{if $admin}<li><a href="index.php?mode=admin"><span class="icon"></span>{#admin_area_link#}</a></li>{/if}<li><a href="index.php?mode=login" class="ic-log-out"><span class="icon"></span>{#log_out_link#}</a></li>{else}<li><a href="index.php?mode=login" class="ic-log-in"><span class="icon"></span>{#log_in_link#}</a></li>{if $settings.register_mode!=2}<li><a href="index.php?mode=register"><span class="icon"></span>{#register_link#}</a></li>{/if}{if $settings.user_area_public}<li><a href="index.php?mode=user"><span class="icon"></span>{#user_area_link#}</a></li>
 {/if}{/if}
 {if $menu}
-{foreach $menu as $item}<li><a href="index.php?mode=page&amp;id={$item.id}">{$item.linkname}</a></li>{/foreach}
+{foreach $menu as $item}<li><a href="index.php?mode=page&amp;id={$item.id}"><span class="icon"></span>{$item.linkname}</a></li>{/foreach}
 {/if}
 </ul>
 {include file="$theme/subtemplates/subnavigation_1.inc.tpl"}

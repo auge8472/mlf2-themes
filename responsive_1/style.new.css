@@ -167,12 +167,20 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav form, #subnav form div {
 	display:inline;
 }
-#subnav a, #subnav form {
+#subnav form {
 	padding-left: 1em;
+}
+#subnav a .icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin-right: 0.125em;
+	background-repeat: no-repeat;
+	background-size: 0.8em 0.8em;
+	background-position: center bottom;
 }
 
 #subnav-2 a {
-	background-image: url(images/bg_sprite_1.png);
 	background-repeat: no-repeat;
 }
 #subnav .fold-postings {
@@ -180,59 +188,57 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 
 #subnav a {
-	padding: 0 0.25em 0 1.2em;
-	background-repeat: no-repeat;
-	background-size: 0.75em 0.75em;
-	background-position: 0.2em center;
-#subnav a[href*='mode=user&action=show_posts'] {
+	padding: 0 0.25em;
+}
+#subnav a[href*='mode=user&action=show_posts'] .icon {
 	background-image: url(images/entries-listing.svg);
 }
-#subnav a[href*='mode=bookmarks'] {
+#subnav a[href*='mode=bookmarks'] .icon {
 	background-image: url(images/notepad.svg);
 }
-#subnav a[href*='mode=admin'] {
+#subnav a[href*='mode=admin'] .icon {
 	background-image: url(images/wrench.svg);
 }
-#subnav a[href$='?mode=user'] {
+#subnav a[href$='?mode=user'] .icon {
 	background-image: url("images/users.svg");
 }
-#subnav .ic-log-in {
+#subnav .ic-log-in .icon {
 	background-image: url("images/log-in.svg");
 }
-#subnav .ic-log-out {
+#subnav .ic-log-out .icon {
 	background-image: url("images/log-out.svg");
 }
-#subnav a[href$='?mode=register'] {
+#subnav a[href$='?mode=register'] .icon {
 	background: url("images/sign-add.svg") 0.5em 0.5em/0.6em 0.6em no-repeat, url("images/user.svg") 0.2em center/0.75em 0.75em no-repeat;
 }
-#subnav a[href*='mode=page'] {
+#subnav a[href*='mode=page'] .icon {
 	background-image: url("images/file.svg");
 }
-#subnav .refresh {
+#subnav .refresh .icon {
 	background-image: url(images/reload.svg);
 }
-#subnav .fold-1 {
+#subnav .fold-1 .icon {
 	background-image: url(images/fold.svg);
 }
-#subnav .fold-2 {
+#subnav .fold-2 .icon {
 	background-image: url(images/unfold.svg);
 }
-#subnav .threadview {
+#subnav .threadview .icon {
 	background-image: url(images/threads-nested.svg);
 }
-#subnav .tableview {
+#subnav .tableview .icon {
 	background-image: url(images/threads-table.svg);
 }
-#subnav .order-1 {
+#subnav .order-1 .icon {
 	background-image: url(images/order-to-top.svg);
 }
-#subnav .order-2 {
+#subnav .order-2 .icon {
 	background-image: url(images/order-to-bottom.svg);
 }
-#subnav .openthread, #subnav .hierarchic {
+#subnav .openthread .icon, #subnav .hierarchic .icon {
 	background-image: url(images/thread-entries-nested.svg);
 }
-#subnav .linear {
+#subnav .linear .icon {
 	background-image: url(images/thread-entries-linear.svg);
 }
 /* end: elements of the navigation bar below the page header */
