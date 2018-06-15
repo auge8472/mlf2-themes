@@ -147,7 +147,6 @@
 <fieldset id="message">
 <label for="text" class="textarea">{#message_marking#}</label><br />
 
-<textarea id="text" cols="80" rows="21" name="text" tabindex="7">{if $text}{$text}{/if}</textarea>
 
 <div id="format-bar">
 {if $settings.bbcode}
@@ -233,6 +232,7 @@ JavaScript isn't available.
 {/if}
 
 </div>
+<textarea id="text" cols="80" rows="21" name="text" tabindex="7">{if $text}{$text}{/if}</textarea>
 </fieldset>
 
 {if $signature || $provide_email_notification || $provide_sticky || $terms_of_use_agreement}
