@@ -94,7 +94,7 @@
    <th><strong>{#data_privacy_statement#}</strong>
     <span class="description">{#data_privacy_statement_desc#}</span></th>
    <td class="d">
-    <p><input id="data_privacy_agreement" type="checkbox" name="data_privacy_agreement" value="1"{if $settings.data_privacy_agreement==1} checked="checked"{/if} /><label id="data_privacy_agreement_label" for="data_privacy_agreement" class="{if $settings.data_privacy_agreement==1}active{else}inactive{/if}">{#data_privacy_settings_enabled#}</label>
+    <p><input id="data_privacy_agreement" type="checkbox" name="data_privacy_agreement" value="1"{if $settings.data_privacy_agreement==1} checked="checked"{/if} class="small-input" /><label id="data_privacy_agreement_label" for="data_privacy_agreement" class="{if $settings.data_privacy_agreement==1}active{else}inactive{/if}">{#data_privacy_settings_enabled#}</label>
     </p>
     <p><label id="data_privacy_url_label" for="data_privacy_statement_url" class="{if $settings.data_privacy_agreement==1}active{else}inactive{/if}">{#data_privacy_url#}</label><br /><input id="data_privacy_statement_url" type="text" name="data_privacy_statement_url" value="{$settings.data_privacy_statement_url|escape}" size="40" />
     </p>
