@@ -87,6 +87,9 @@ p {
 img {
 	border: none;
 }
+label {
+	cursor:pointer;
+}
 /* end: commonly used elements */
 
 /* default links */
