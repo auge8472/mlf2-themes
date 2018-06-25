@@ -40,7 +40,7 @@
 {$signature}</p>
 {/if}
 </div>
-<footer class="posting-footer item-tools">
+<footer class="posting-footer">
 {if $tags}
 <div class="tags">
  <h3>{#tags_marking#}</h3>
