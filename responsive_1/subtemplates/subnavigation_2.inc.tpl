@@ -32,12 +32,12 @@
 {if $pagination_top}
 <!-- subnavigation_2.inc.tpl, $pagination_top -->
 <div id="subnav-2">
-{if $pagination_top.previous}<a href="index.php?mode={$mode}&amp;page={$pagination_top.previous}{if $category}&amp;category={$category}{/if}"><img class="previous" src="{$THEMES_DIR}/{$theme}/images/plain.png" alt="[&laquo;]" title="{#previous_page_link_title#}" width="6" height="11" /></a>{/if}
+{if $pagination_top.previous}<a href="index.php?mode={$mode}&amp;page={$pagination_top.previous}{if $category}&amp;category={$category}{/if}"><img class="previous" src="{$THEMES_DIR}/{$theme}/images/plain.png" alt="[&laquo;]" width="6" height="11" /></a>{/if}
 <form action="index.php" method="get"><div class="inline">
 <input type="hidden" name="mode" value="{$mode}" />
 {if $order}<input type="hidden" name="order" value="{$order}" />{/if}
 {if $category}<input type="hidden" name="category" value="{$category}" />{/if}
-<select class="small" size="1" name="page" title="{#browse_page_title#}">
+<select class="small" size="1" name="page">
 {foreach from=$pagination_top.items item=item}
 {if $item!=0} <option value="{$item}"{if $item==$page} selected="selected"{/if}>{$item}</option>{/if}
 {/foreach}
@@ -48,6 +48,6 @@
 {if $pagination_top.next}
 <!-- subnavigation_2.inc.tpl, $pagination_top.next -->
 <ul id="subnav-2">
- <li><a href="index.php?mode={$mode}&amp;page={$pagination_top.next}{if $category}&amp;category={$category}{/if}"><img class="next" src="{$THEMES_DIR}/{$theme}/images/plain.png" alt="[&raquo;]" title="{#next_page_link_title#}" width="6" height="11" /></a></li>
+ <li><a href="index.php?mode={$mode}&amp;page={$pagination_top.next}{if $category}&amp;category={$category}{/if}"><img class="next" src="{$THEMES_DIR}/{$theme}/images/plain.png" alt="[&raquo;]" width="6" height="11" /></a></li>
 </ul>{/if}
 {/if}

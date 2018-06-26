@@ -157,14 +157,14 @@
 {*<!--
 Here you can insert custom BBCode buttons. If you leave this div empty
 the default buttons will be inserted. Example button:
-<button title="Foo bar!" name="foo">Foo</button>
+<button name="foo">Foo</button>
 -->*}
 </div>
 {if $settings.smilies && $smilies}
 <div id="smiley-bar">
 {*<!--
 Like custom BBCode buttons, example: 
-<button title="Insert smiley" name=":-)"><img src="..." /></button>
+<button name=":-)"><img src="…" /></button>
 -->*}
 </div>
 {/if}
@@ -174,51 +174,51 @@ This list is read out to generte the default BBCode buttons or displayed if
 JavaScript isn't available. 
 -->*}
 <dl id="bbcode-instructions">
-<dt id="b" title="{#bbcode_bold_label#}">{#bbcode_bold_title#}</dt>
+<dt id="b">{#bbcode_bold_title#}</dt>
 <dd>{#bbcode_bold_instruction#}</dd>
-<dt id="i" title="{#bbcode_italic_label#}">{#bbcode_italic_title#}</dt>
+<dt id="i">{#bbcode_italic_title#}</dt>
 <dd>{#bbcode_italic_instruction#}</dd>
-<dt id="link" title="{#bbcode_link_label#}">{#bbcode_link_title#}</dt>
+<dt id="link">{#bbcode_link_title#}</dt>
 <dd>{#bbcode_link_instruction#}</dd>
 {if $settings.bbcode_color}
-<dt id="color" title="{#bbcode_color_label#}">{#bbcode_color_title#}</dt>
+<dt id="color">{#bbcode_color_title#}</dt>
 <dd>{#bbcode_color_instruction#}</dd>
 {/if}
 {if $settings.bbcode_size}
-<dt id="size" title="{#bbcode_size_label#}">{#bbcode_size_title#}</dt>
-<dd id="small" title="{#bbcode_size_label_small#}">{#bbcode_size_instruction_small#}</dd>
-<dd id="large" title="{#bbcode_size_label_large#}">{#bbcode_size_instruction_large#}</dd>
+<dt id="size">{#bbcode_size_title#}</dt>
+<dd id="small">{#bbcode_size_instruction_small#}</dd>
+<dd id="large">{#bbcode_size_instruction_large#}</dd>
 {/if}
-<dt id="list" title="{#bbcode_list_label#}">{#bbcode_list_title#}</dt>
+<dt id="list">{#bbcode_list_title#}</dt>
 <dd>{#bbcode_list_instruction#}</dd>
 {if $settings.bbcode_img}
-<dt id="img" title="{#bbcode_image_label#}">{#bbcode_image_title#}</dt>
-<dd title="{#bbcode_image_label_default#}">{#bbcode_image_instr_default#}</dd>
-<dd id="left" title="{#bbcode_image_label_left#}">{#bbcode_image_instr_left#}</dd>
-<dd id="right" title="{#bbcode_image_label_right#}">{#bbcode_image_instr_right#}</dd>
-<dd id="thumbnail" title="{#bbcode_image_label_thumb#}">{#bbcode_image_instr_thumb#}</dd>
-<dd id="thumbnail-left" title="{#bbcode_image_label_thumb_left#}">{#bbcode_image_instr_thumb_left#}</dd>
-<dd id="thumbnail-right" title="{#bbcode_image_label_thumb_right#}">{#bbcode_image_instr_thumb_right#}</dd>
+<dt id="img">{#bbcode_image_title#}</dt>
+<dd>{#bbcode_image_instr_default#}</dd>
+<dd id="left">{#bbcode_image_instr_left#}</dd>
+<dd id="right">{#bbcode_image_instr_right#}</dd>
+<dd id="thumbnail">{#bbcode_image_instr_thumb#}</dd>
+<dd id="thumbnail-left">{#bbcode_image_instr_thumb_left#}</dd>
+<dd id="thumbnail-right">{#bbcode_image_instr_thumb_right#}</dd>
 {/if}
 {if $upload_images}
-<dt id="upload" title="{#bbcode_upload_label#}">{#bbcode_upload_title#}</dt>
+<dt id="upload">{#bbcode_upload_title#}</dt>
 <dd><a href="index.php?mode=upload_image">{#bbcode_upload_instruction#}</a></dd>
 {/if}
 {if $settings.bbcode_flash}
-<dt id="flash" title="{#bbcode_flash_label#}">{#bbcode_flash_title#}</dt>
+<dt id="flash">{#bbcode_flash_title#}</dt>
 <dd>{#bbcode_flash_instruction#}</dd>
 {/if}
 {if $settings.bbcode_tex}
-<dt id="tex" title="{#bbcode_tex_label#}">{#bbcode_tex_title#}</dt>
+<dt id="tex">{#bbcode_tex_title#}</dt>
 <dd>{#bbcode_tex_instruction#}</dd>
 {/if}
 {if $settings.bbcode_code}
-<dt id="code" title="{#bbcode_code_label#}">{#bbcode_code_title#}</dt>
-<dd id="inlinecode" title="{#bbcode_code_label_inline#}">{#bbcode_code_instruction_inline#}</dd>
-<dd title="{#bbcode_code_label_general#}">{#bbcode_code_instruction_general#}</dd>
+<dt id="code">{#bbcode_code_title#}</dt>
+<dd id="inlinecode">{#bbcode_code_instruction_inline#}</dd>
+<dd>{#bbcode_code_instruction_general#}</dd>
 {if $code_languages}
 {foreach from=$code_languages item=code_language}
-<dd id="{$code_language}" title="{#bbcode_code_label_specific#|replace:"[language]":$code_language}">{#bbcode_code_instruction_spec#|replace:"[language]":$code_language}</dd>
+<dd id="{$code_language}">{#bbcode_code_instruction_spec#|replace:"[language]":$code_language}</dd>
 {/foreach}
 {/if}
 {/if}
@@ -228,7 +228,7 @@ JavaScript isn't available.
 {if $settings.smilies && $smilies}
 <dl id="smiley-instructions">
 {foreach name="smilies" from=$smilies item=smiley}
-<dt class="{if $smarty.foreach.smilies.index<6}default{else}additional{/if}" title="{#insert_smiley_title#}">{$smiley.code}</dt>
+<dt class="{if $smarty.foreach.smilies.index<6}default{else}additional{/if}">{$smiley.code}</dt>
 <dd><img src="images/smilies/{$smiley.file}" alt="{$smiley.code}" /></dd>
 {/foreach}
 </dl>
