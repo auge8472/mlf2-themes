@@ -51,18 +51,26 @@
 </div>
 {/if}
 <ul class="options">
-<li>{if $locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$id}&amp;back=entry">{#reply_link#}</a>{else}<span class="locked">{#posting_locked#}</span>{/if}</li>
+ <li>{if $locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$id}&amp;back=entry">{#reply_link#}</a>{else}<span class="locked">{#posting_locked#}</span>{/if}</li>
 {if $options}
-{if $options.add_bookmark}<li><a href="index.php?mode=posting&amp;bookmark={$id}&amp;back=entry" class="add-bookmark">{#add_bookmark_message_linkname#}</a></li>{/if}
-{if $options.delete_bookmark}<li><a href="index.php?mode=posting&amp;bookmark={$id}&amp;back=entry" class="delete-bookmark">{#delete_bookmark_message_linkname#}</a></li>{/if}
-{if $options.edit}<li><a href="index.php?mode=posting&amp;edit={$id}&amp;back=entry" class="edit">{#edit_message_linkname#}</a></li>{/if}
-{if $options.delete}<li><a href="index.php?mode=posting&amp;delete_posting={$id}&amp;back=entry" class="delete">{#delete_message_linkname#}</a></li>{/if}
-{if $options.move}<li><a href="index.php?mode=posting&amp;move_posting={$id}&amp;back=entry" class="move">{#move_posting_linkname#}</a></li>{/if}
-{if $options.report_spam}<li><a href="index.php?mode=posting&amp;report_spam={$id}&amp;back=entry" class="report">{#report_spam_linkname#}</a></li>{/if}
-{if $options.flag_ham}<li><a href="index.php?mode=posting&amp;flag_ham={$id}&amp;back=entry" class="report">{#flag_ham_linkname#}</a></li>{/if}
-{if $options.lock}<li><a href="index.php?mode=posting&amp;lock={$id}&amp;back=entry" class="{if $locked==0}lock{else}unlock{/if}">{if $locked==0}{#lock_linkname#}{else}{#unlock_linkname#}{/if}</a></li>
-<li><a href="index.php?mode=posting&amp;lock_thread={$id}&amp;back=entry" class="lock-thread">{#lock_thread_linkname#}</a></li>
-<li><a href="index.php?mode=posting&amp;unlock_thread={$id}&amp;back=entry" class="unlock-thread">{#unlock_thread_linkname#}</a></li>{/if}
+{if $options.add_bookmark} <li><a href="index.php?mode=posting&amp;bookmark={$id}&amp;back=entry" class="add-bookmark">{#add_bookmark_message_linkname#}</a></li>
+{/if}
+{if $options.delete_bookmark} <li><a href="index.php?mode=posting&amp;bookmark={$id}&amp;back=entry" class="delete-bookmark">{#delete_bookmark_message_linkname#}</a></li>
+{/if}
+{if $options.edit} <li><a href="index.php?mode=posting&amp;edit={$id}&amp;back=entry" class="edit">{#edit_message_linkname#}</a></li>
+{/if}
+{if $options.delete} <li><a href="index.php?mode=posting&amp;delete_posting={$id}&amp;back=entry" class="delete">{#delete_message_linkname#}</a></li>
+{/if}
+{if $options.move} <li><a href="index.php?mode=posting&amp;move_posting={$id}&amp;back=entry" class="move">{#move_posting_linkname#}</a></li>
+{/if}
+{if $options.report_spam} <li><a href="index.php?mode=posting&amp;report_spam={$id}&amp;back=entry" class="report">{#report_spam_linkname#}</a></li>
+{/if}
+{if $options.flag_ham} <li><a href="index.php?mode=posting&amp;flag_ham={$id}&amp;back=entry" class="report">{#flag_ham_linkname#}</a></li>
+{/if}
+{if $options.lock} <li><a href="index.php?mode=posting&amp;lock={$id}&amp;back=entry" class="{if $locked==0}lock{else}unlock{/if}">{if $locked==0}{#lock_linkname#}{else}{#unlock_linkname#}{/if}</a></li>
+ <li><a href="index.php?mode=posting&amp;lock_thread={$id}&amp;back=entry" class="lock-thread">{#lock_thread_linkname#}</a></li>
+ <li><a href="index.php?mode=posting&amp;unlock_thread={$id}&amp;back=entry" class="unlock-thread">{#unlock_thread_linkname#}</a></li>
+{/if}
 {/if}
 </ul>
 </footer>
