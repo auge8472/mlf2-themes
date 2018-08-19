@@ -353,34 +353,37 @@ aside section h3 {
 	color: #666;
 	font-size: 0.9em;
 }
-
-#mod-options a.report, #mod-options a.delete-spam, #mod-options a.non-activated-users {
-	padding-left: 14px;
-	background-image: url(images/bg_sprite_4.png);
-	background-repeat: no-repeat;
-}
-#mod-options a.report {
-	background-position: 2px -39px;
-}
-#mod-options a.delete-spam {
-	background-image: url(images/bg_sprite_3.png);
-	background-position: 2px -38px;
-}
-#mod-options a.non-activated-users {
-	background-position: 1px -387px;
-}
-
 #mod-options a {
-	padding-left: 1em;
-	background-repeat: no-repeat;
-	background-size: 0.75em 0.75em;
-	background-position: 0.1em center;
+	display: flex;
+	align-items: center;
 }
-#mod-options a.delete-marked {
+#mod-options a .icon {
+	display: inline-block;
+	padding:0;
+	height: 0.85em;
+	width: 0.85em;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+#mod-options a span:not(.icon) {
+	padding-left: 0.2em;
+}
+#mod-options a.delete-marked .icon {
 	background-image: url(images/marker-cross.svg), url(images/marker-circle.svg);
 }
-#mod-options a.manage {
+#mod-options a.manage .icon {
 	background-image: url(images/thread-change-no.svg);
+}
+#mod-options a.list-spam .icon {
+	background-image: url(images/warning.svg);
+}
+#mod-options a.delete-spam .icon {
+	background-image: url(images/warning.svg);
+}
+#mod-options a.non-activated-users .icon {
+	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
 
 #tagcloud ul, #usersonline ul {
