@@ -1,8 +1,8 @@
-{config_load file=$language_file section="general"}{config_load file=$language_file section="upload_image"}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{#language#}">
+{config_load file=$language_file section="general"}{config_load file=$language_file section="upload_image"}<!DOCTYPE html>
+<html lang="{#language#}" dir="{#dir#}">
 <head>
+<meta charset="{#charset#}" />
 <title>{$settings.forum_name}{if $page_title} - {$page_title}{elseif $subnav_location} - {$subnav_location}{/if}</title>
-<meta http-equiv="content-type" content="text/html; charset={#charset#}" />
 <style type="text/css">
 {literal}
 <!--
