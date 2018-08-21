@@ -14,13 +14,13 @@ img           { border:none; }
 #wrapper      { margin:0; padding:20px; }
 h1            { font-family: verdana, arial, sans-serif; font-size: 18px; font-weight: bold; }
 p             { font-family: verdana, arial, sans-serif; font-size: 13px; line-height: 19px; }
-.caution, .ok { padding: 0px 0px 0px 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
+.caution, .ok, .deletelink { padding: 0px 0px 0px 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
 .caution      { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
 .ok           { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
+.deletelink   { background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/marker-cross.svg); }
 img.delete    { max-width:300px; max-height:150px; }
 img.uploaded  { max-width:300px; max-height:110px; /*cursor:pointer;*/ }
 img.browse    { max-width:320px; cursor:pointer; }
-.deletelink   { font-size:11px; padding-left:13px; background:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/bg_sprite_3.png) no-repeat 0 -47px; }
 .small        { font-size:11px; line-height:16px; }
 code          { font-family:"courier new", courier; color:#000080; }
 a:link        { color:#0000cc; text-decoration: none; }
