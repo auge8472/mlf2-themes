@@ -6,12 +6,6 @@
 <style type="text/css">
 {literal}
 <!--
-img           { border:none; }
-#wrapper      { margin:0; padding:20px; }
-.caution, .ok, .deletelink { padding: 0px 0px 0px 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
-.caution      { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
-.ok           { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
-.deletelink   { background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/marker-cross.svg); }
 img.delete    { max-width:300px; max-height:150px; }
 img.uploaded  { max-width:300px; max-height:110px; /*cursor:pointer;*/ }
 img.browse    { max-width:320px; cursor:pointer; }
@@ -32,6 +26,12 @@ header { padding: 0 0.5em; background: hsl(210, 100%, 90%); border-bottom: 1px s
 #nav-1 a, #nav-2 a { border: 1px solid; }
 #nav-1 a, #nav-2 a, h1 { padding: 0.25em; }
 h1 { font-size: 1em; font-weight: bold; text-align: center; }
+img { border: none; }
+#wrapper { padding: 0.5em; }
+.caution, .ok, .deletelink { padding: 0 0 0 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
+.caution { color: red; background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
+.ok { color: red; background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
+.deletelink { background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/marker-cross.svg); }
 {/literal}
 </style>
 <script type="text/javascript">{literal}/* <![CDATA[ */
