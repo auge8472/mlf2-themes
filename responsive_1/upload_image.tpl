@@ -6,14 +6,8 @@
 <style type="text/css">
 {literal}
 <!--
-body          { color: #000000; background: #ffffff; margin:0; padding:0; font-family: verdana, arial, sans-serif; font-size: 13px; }
 img           { border:none; }
-#header       { margin:0; padding:0; background:#f9f9f9; border-bottom: 1px solid #bacbdf; height:24px; font-size:13px; line-height:22px; }
-#nav-1        { margin:0; padding:0 0 0 5px; float:left; }
-#nav-2        { margin:0; padding:0 5px 0 0; float:right; }
 #wrapper      { margin:0; padding:20px; }
-h1            { font-family: verdana, arial, sans-serif; font-size: 18px; font-weight: bold; }
-p             { font-family: verdana, arial, sans-serif; font-size: 13px; line-height: 19px; }
 .caution, .ok, .deletelink { padding: 0px 0px 0px 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
 .caution      { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
 .ok           { color: red; background-image:url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
@@ -30,6 +24,14 @@ a:active      { color:#ff0000; text-decoration: none; }
 table         { width:100%; margin:5px 0 0 0; padding:0; }
 td            { text-align:center; }
 -->
+body, header, #wrapper { margin: 0; }
+#nav-1, #nav-2, h1 { margin: 0.25em 0; }
+body, #nav-1, #nav-2 { padding: 0; }
+body { color: #000; background: #fff; font-family: verdana, arial, sans-serif; font-size: 1em; font-size: 1rem; }
+header { padding: 0 0.5em; background: hsl(210, 100%, 90%); border-bottom: 1px solid #bacbdf; display: flex; justify-content: space-between; }
+#nav-1 a, #nav-2 a { border: 1px solid; }
+#nav-1 a, #nav-2 a, h1 { padding: 0.25em; }
+h1 { font-size: 1em; font-weight: bold; text-align: center; }
 {/literal}
 </style>
 <script type="text/javascript">{literal}/* <![CDATA[ */
@@ -66,8 +68,10 @@ window.onresize = getMaxWidth;
 </head>
 <body>
 {if $form}
+ <header>
+  <h1>{#upload_image_hl#}</h1>
+ </header>
 <div id="wrapper">
-<h1>{#upload_image_hl#}</h1>
 {if $errors}
 <p class="caution">{#error_headline#}</p>
 <ul>
@@ -86,8 +90,10 @@ window.onresize = getMaxWidth;
 <p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
 </div>
 {elseif $uploaded_file}
+ <header>
+  <h1>{#upload_image_hl#}</h1>
+ </header>
 <div id="wrapper">
-<h1>{#upload_image_hl#}</h1>
 <p class="ok">{#upload_successful#}</p>
 {*<script type="text/javascript">/* <![CDATA[ */document.write('<p>{#insert_image_exp#|escape:quotes}<\/p>'); /* ]]> */</script>*}
 <noscript><p>{#insert_image_exp_no_js#}</p>
@@ -98,10 +104,10 @@ window.onresize = getMaxWidth;
 </div>
 <script type="text/javascript">/* <![CDATA[ */ insertCode('images/uploaded/{$uploaded_file}'); /* ]]> */</script>
 {elseif $browse_images}
-<div id="header">
-<div id="nav-1"><a href="index.php?mode=upload_image">{#back#}</a></div>
-<div id="nav-2">{if $previous}[ <a href="index.php?mode=upload_image&amp;browse_images={$previous}" title="{#previous_page_link_title#}">&laquo;</a> ]{/if}{if $previous && next} {/if}{if $next}[ <a href="index.php?mode=upload_image&amp;browse_images={$next}" title="{#next_page_link_title#}">&raquo;</a> ]{/if}</div>
-</div>
+ <header>
+  <p id="nav-1"><a href="index.php?mode=upload_image">{#back#}</a></p>
+  <p id="nav-2">{if $previous}<a href="index.php?mode=upload_image&amp;browse_images={$previous}" title="{#previous_page_link_title#}">&laquo;</a>{/if}{if $previous && next} {/if}{if $next}<a href="index.php?mode=upload_image&amp;browse_images={$next}" title="{#next_page_link_title#}">&raquo;</a>{/if}</p>
+ </header>
 {if $images}
 <table id="imgtab" border="0" cellpadding="5" cellspacing="1">
 {section name=nr loop=$images start=$start max=$images_per_page}
@@ -117,9 +123,9 @@ window.onresize = getMaxWidth;
 </div>
 {/if}
 {elseif $delete_confirm}
-<div id="header">
-<div id="nav-1"><a href="index.php?mode=upload_image&amp;browse_images={$current|default:'1'}">{#back#}</a></div>
-</div>
+ <header>
+  <p id="nav-1"><a href="index.php?mode=upload_image&amp;browse_images={$current|default:'1'}">{#back#}</a></p>
+ </header>
 <div id="wrapper">
 <p class="caution">{#delete_image_confirm#}</p>
 <p><img class="delete" src="images/uploaded/{$delete}" alt="{$delete}" /></p>
@@ -133,6 +139,9 @@ window.onresize = getMaxWidth;
 </form>
 </div>
 {else}
+ <header>
+  <h1>{#upload_image_hl#}</h1>
+ </header>
 <div id="wrapper">
 <p class="caution">{#image_upload_not_enabled#}</p>
 </div>
