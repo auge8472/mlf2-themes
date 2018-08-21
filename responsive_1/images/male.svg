@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  line { fill: none; stroke-width: 12px; stroke: #467; }
+  circle { fill: none; stroke-width: 12px; stroke: #467; }
+  polygon { fill:#467; stroke: none; }
+  ]]>
+ </style>
+ <line x1="84" y1="44" x2="108" y2="20" />
+ <polygon points="88,10 118,10 118,40" />
+ <circle cx="64" cy="64" r="28" />
+</svg>
+
