@@ -15,8 +15,6 @@ a:link        { color:#0000cc; text-decoration: none; }
 a:visited     { color:#0000cc; text-decoration: none; }
 a:hover       { color:#0000ff; text-decoration: underline; }
 a:active      { color:#ff0000; text-decoration: none; }
-table         { width:100%; margin:5px 0 0 0; padding:0; }
-td            { text-align:center; }
 -->
 body, header, #wrapper { margin: 0; }
 #nav-1, #nav-2, h1 { margin: 0.25em 0; }
@@ -109,14 +107,11 @@ window.onresize = getMaxWidth;
   <p id="nav-2">{if $previous}<a href="index.php?mode=upload_image&amp;browse_images={$previous}" title="{#previous_page_link_title#}">&laquo;</a>{/if}{if $previous && next} {/if}{if $next}<a href="index.php?mode=upload_image&amp;browse_images={$next}" title="{#next_page_link_title#}">&raquo;</a>{/if}</p>
  </header>
 {if $images}
-<table id="imgtab" border="0" cellpadding="5" cellspacing="1">
+<ul id="imgtab">
 {section name=nr loop=$images start=$start max=$images_per_page}
-{cycle values="odd,even" assign=c}
-<tr class="{$c}">
-<td><img class="browse" src="images/uploaded/{$images[nr]}" title="{#insert_image#}" onclick="insertCode('images/uploaded/{$images[nr]}'); self.close();" alt="{#insert_image#}" />{if $admin || $mod}<br /><a class="deletelink" href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a>{/if}</td>
-</tr>
+<li><img class="browse" src="images/uploaded/{$images[nr]}" title="{#insert_image#}" onclick="insertCode('images/uploaded/{$images[nr]}'); self.close();" alt="{#insert_image#}" />{if $admin || $mod}<br /><a class="deletelink" href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a>{/if}</li>
 {/section}
-</table>
+</ul>
 {else}
 <div id="wrapper">
 <p>{#no_images#}</p>
