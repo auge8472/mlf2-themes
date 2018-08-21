@@ -34,11 +34,11 @@ td            { text-align:center; }
 </style>
 <script type="text/javascript">{literal}/* <![CDATA[ */
 function insertCode(image_url) {
- 	if (opener && opener.mlfBBCodeButton) {
+	if (opener && opener.mlfBBCodeButton) {
 		var bbcodeButton = opener.mlfBBCodeButton;
 		if (!bbcodeButton.canInsert()) 
 			return;
-		var buttonGroup = bbcodeButton.getButtonGroup();	
+		var buttonGroup = bbcodeButton.getButtonGroup();
 		var txtarea = buttonGroup.getTextArea();
 		txtarea.insertTextRange( txtarea.getSelection() + "[img]" + image_url + "[/img]" );
 	}
