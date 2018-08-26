@@ -736,11 +736,10 @@ ul.reply li {
 .following-entry {
 	background-image: url(images/clasp-change-no.svg);
 }
-/* end: thread tree: */
-
 .following-entry.new {
 	background-image: url(images/clasp-change-yes.svg);
 }
+/* end: thread three */
 
 /* postings of a thread in the nested view */
 .reply-wrapper {
