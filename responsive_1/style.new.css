@@ -192,6 +192,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 
 #subnav a {
 	padding: 0 0.25em;
+	white-space: nowrap;
 }
 #subnav a[href*='mode=user&action=show_posts'] .icon {
 	background-image: url(images/entries-listing.svg);
@@ -1135,6 +1136,8 @@ div.warning              {
 	}
 	#subnav ul {
 		display: flex;
+		align-content: flex-start;
+		flex-wrap: wrap;
 	}
 	#subnav li:not(:first-child), #subnav-2 li:not(:first-child) {
 		margin-left: 0.25em;
