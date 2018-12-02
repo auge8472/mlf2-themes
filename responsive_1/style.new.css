@@ -992,12 +992,15 @@ article footer a.unlock, article footer a.unlock-thread {
 	background: url("images/arrow-b-up.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
 .ok {
-	padding: 0.25em 0.25em 0.25em 1.25em;
-	font-weight: bold;
+	padding: 0.25em 0.25em 0.25em 1.5em;
 	border: 1px solid #0c4;
 	color: #062;
 	background: url(images/check-mark.svg) no-repeat 0.2em center #afd;
 	background-size: 1em 1em;
+}
+.ok h2, .ok h3, .ok p, .ok ul {
+	margin: 0.25em 0;
+	margin: 0.25rem 0;
 }
 
 /* elements in the user profile edit */
