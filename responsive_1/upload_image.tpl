@@ -107,7 +107,7 @@ window.onresize = getMaxWidth;
 {if $images}
 <ul id="imgtab">
 {section name=nr loop=$images start=$start max=$images_per_page}
-<li><img class="browse" src="images/uploaded/{$images[nr]}" title="{#insert_image#}" onclick="insertCode('images/uploaded/{$images[nr]}'); self.close();" alt="{#insert_image#}" />{if $admin || $mod}<br /><a class="deletelink" href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a>{/if}</li>
+<li><button type="button" onclick="insertCode('images/uploaded/{$images[nr]}');"><img class="browse" src="images/uploaded/{$images[nr]}" alt="{#insert_image#}" /><br />{#insert_image#}</button>{if $admin || $mod}<br /><a class="deletelink" href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a>{/if}</li>
 {/section}
 </ul>
 {else}
