@@ -44,25 +44,23 @@ function insertCode(image_url) {
 	}
 	//self.close();
 }
-/* ]]> */{/literal}</script>
+/* ]]> */{/literal}
 {if $browse_images}
-<script type="text/javascript">{literal}/* <![CDATA[ */
-function getMaxWidth()
- {
-  if(document.getElementById('imgtab'))
-   {
-    var maxWidth = document.getElementById('imgtab').offsetWidth-20;
-    var obj=getElementsByClassName('browse');
-    for(i=0;i<obj.length;i++)
-     {
-      obj[i].style.maxWidth=maxWidth+'px';
-     }
-   }
- }
+{literal}/* <![CDATA[ */
+function getMaxWidth() {
+	if (document.getElementById('imgtab')) {
+		var maxWidth = document.getElementById('imgtab').offsetWidth-20;
+		var obj=getElementsByClassName('browse');
+		for (i=0; i<obj.length; i++) {
+			obj[i].style.maxWidth=maxWidth+'px';
+		}
+	}
+}
 window.onload = getMaxWidth;
 window.onresize = getMaxWidth;
-/* ]]> */{/literal}</script>
+/* ]]> */{/literal}
 {/if}
+</script>
 </head>
 <body>
 {if $form}
