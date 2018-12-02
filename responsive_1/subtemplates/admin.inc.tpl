@@ -4,6 +4,7 @@
 <form id="settings" action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <table class="settings">
  <tbody>
   <tr>
@@ -301,6 +302,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="return_to" value="advanced_settings" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <table class="settings">
  <tbody>
 {section name=nr loop=$settings_sorted}
@@ -378,6 +380,7 @@
 <form action="index.php" method="post" class="normalform" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <p><label for="new_category" class="main">{#new_category#}</label><br />
 <input id="new_category" type="text" name="new_category" size="25" value="{if $new_category}{$new_category}{/if}" /></p>
 <p><strong>{#category_accessible_by#}</strong><br />
@@ -403,6 +406,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="id" value="{$category_id}" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <p><strong>{#edit_category#}</strong><br />
 <input type="text" name="category" value="{$edit_category}" size="25" /></p>
 <p><strong>{#category_accessible_by#}</strong><br />
@@ -429,6 +433,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <input type="hidden" name="category_id" value="{$category_id}" />
 <p><input type="radio" name="delete_mode" value="complete" checked="checked" class="small-input" /> {#delete_category_compl#}</p></td>
 <p><input type="radio" name="delete_mode" value="keep_entries" class="small-input" /> {if $categories_count <= 1}{#del_cat_keep_entries#}
@@ -693,6 +698,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 {section name=nr loop=$selected_users}
 <input type="hidden" name="selected_confirmed[]" value="{$selected_users[nr].id}" />
 {/section}
@@ -705,6 +711,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <input type="hidden" name="user_delete_entries" value="{$user_delete_entries.id}" />
 <p><button name="delete_confirmed" value="{#delete_submit#}">{#delete_submit#}</button></p>
 </div>
@@ -830,6 +837,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <table class="settings">
  <tbody>
   <tr>
@@ -916,6 +924,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <p><input id="delete_postings" type="checkbox" name="delete_postings" value="true" class="small-input" /><label for="delete_postings"> {#delete_postings#}</label></p>
 <p><input id="delete_userdata" type="checkbox" name="delete_userdata" value="true" class="small-input" /><label for="delete_userdata"> {#delete_userdata#}</label></p>
 <p>{#admin_confirm_password#}<br />
@@ -930,6 +939,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <p>{#reset_uninstall_conf_pw#}<br />
 <input type="password" size="20" name="confirm_pw" /> <button name="uninstall_forum_confirmed" value="{#uninstall_forum_submit#}">{#uninstall_forum_submit#}</button></p>
 </div>
@@ -1064,6 +1074,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="update_file_submit" value="{$update_file}" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <p>{#admin_confirm_password#}<br /><input type="password" name="update_password" size="25"/></p>
 <p><button name="update_submit" value="{#update_submit#}" onclick="document.getElementById('throbber-submit').style.visibility = 'visible';">{#update_submit#}</button> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber_submit.gif" alt="" width="16" height="16" /></p>
 </div>
@@ -1101,6 +1112,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <p>{$smarty.config.clear_userdata_condition|replace:"[logins]":$input_logins|replace:"[days]":$input_days} <button name="clear_userdata" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
 </form>
@@ -1121,6 +1133,7 @@
 <div>
 <input type="hidden" name="mode" value="admin" />
 <input type="hidden" name="id" value="{$id}" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <table class="settings">
  <tbody>
   <tr>
@@ -1202,6 +1215,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 {if $id}<input type="hidden" name="id" value="{$id}" />{/if}
 <table class="settings">
  <tbody>
@@ -1239,6 +1253,7 @@
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <input type="hidden" name="id" value="{$page.id}" />
 <p><button name="delete_page_submit" value="{#delete_page_submit#}">{#delete_page_submit#}</button></p>
 </div>
