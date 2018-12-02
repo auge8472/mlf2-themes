@@ -20,7 +20,7 @@
 <li>{assign var="error" value=$errors[mysec]}{$smarty.config.$error|replace:"[text_length]":$text_length|replace:"[text_maxlength]":$settings.text_maxlength|replace:"[word]":$word|replace:"[minutes]":$minutes|replace:"[not_accepted_word]":$not_accepted_word|replace:"[not_accepted_words]":$not_accepted_words}</li>
 {/section}
 </ul>
-<section>
+</section>
 {elseif isset($minutes_left_to_edit)}
 <p class="caution">{if $settings.user_edit_if_no_replies==1}{#minutes_left_to_edit_reply#|replace:"[minutes]":$minutes_left_to_edit}{else}{#minutes_left_to_edit#|replace:"[minutes]":$minutes_left_to_edit}{/if}</p>
 {/if}
