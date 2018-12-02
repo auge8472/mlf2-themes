@@ -5,17 +5,6 @@
 <title>{$settings.forum_name}{if $page_title} - {$page_title}{elseif $subnav_location} - {$subnav_location}{/if}</title>
 <style type="text/css">
 {literal}
-<!--
-img.delete    { max-width:300px; max-height:150px; }
-img.uploaded  { max-width:300px; max-height:110px; /*cursor:pointer;*/ }
-img.browse    { max-width:320px; cursor:pointer; }
-.small        { font-size:11px; line-height:16px; }
-code          { font-family:"courier new", courier; color:#000080; }
-a:link        { color:#0000cc; text-decoration: none; }
-a:visited     { color:#0000cc; text-decoration: none; }
-a:hover       { color:#0000ff; text-decoration: underline; }
-a:active      { color:#ff0000; text-decoration: none; }
--->
 body, header, #wrapper { margin: 0; }
 #nav-1, #nav-2, h1 { margin: 0.25em 0; }
 body, #nav-1, #nav-2 { padding: 0; }
@@ -24,12 +13,29 @@ header { padding: 0 0.5em; background: hsl(210, 100%, 90%); border-bottom: 1px s
 #nav-1 a, #nav-2 a { border: 1px solid; }
 #nav-1 a, #nav-2 a, h1 { padding: 0.25em; }
 h1 { font-size: 1em; font-weight: bold; text-align: center; }
+#imgtab { margin: 1em 0; padding: 0 0.5em; list-style: none; display: flex; flex-wrap: wrap; }
+#imgtab li { text-align: center; margin: 0 0.25em 0.25em 0; padding: 0.15em; background: #e4eff8; }
+#imgtab button { padding: 0 0 0.2em 0; font-size: 1em; font-weight: bold; border: none; border-bottom: 1px dotted #aaa; background: transparent; cursor: pointer; }
+#imgtab img { height: 9em; }
+#imgtab a.deletelink { margin: 0.2em 0 0 0; display: inline-block; }
+
 img { border: none; }
 #wrapper { padding: 0.5em; }
+
 .caution, .ok, .deletelink { padding: 0 0 0 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
 .caution { color: red; background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
 .ok { color: red; background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
 .deletelink { background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/marker-cross.svg); }
+
+img.delete { max-width: 300px; max-height: 150px; }
+img.uploaded { max-width: 300px; max-height: 110px; }
+.small { font-size: 0.82em; }
+code { font-family: "courier new", courier, monospace; color:#008; }
+a:link { color: #00c; text-decoration: none; }
+a:visited { color: #00c; text-decoration: none; }
+a:focus,
+a:hover { color: #35f; text-decoration: underline; }
+a:active { color: #f00; text-decoration: none; }
 {/literal}
 </style>
 <script type="text/javascript">{literal}/* <![CDATA[ */
