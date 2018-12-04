@@ -20,11 +20,14 @@
     <td data-header="{#bookmark_user_name#}">{if $row.user_id > 0}<a href="index.php?mode=user&amp;show_user={$row.user_id}">{/if}<strong>{$row.user_name}</strong>{if $row.user_id > 0}</a>{/if}</td>
     <td data-header="{#bookmark_creation_time#}"><span class="small">{$row.bookmark_time}</span></td>
     <td data-header="{#bookmark_posting_time#}"><span class="small">{$row.posting_time}</span></td>
-    <td><span class="small">
-    {foreach name="tags" from=$row.tags item=tag}
-     <a title="{#bookmark_filter_linktitle#}" href="index.php?mode=bookmarks&amp;filter={$tag.escaped}">{$tag.display}</a>{if !$smarty.foreach.tags.last}, {/if}
-    {/foreach}
-    </span></td>
+    <td class="taglist">
+    {if count($row.tags) > 0}
+     <ul>
+     {foreach name="tags" from=$row.tags item=tag}
+      <li><a href="index.php?mode=bookmarks&amp;filter={$tag.escaped}">{$tag.display}</a></li>
+     {/foreach}
+     </ul>
+    {/if}</td>
     <td class="item-tools">
      <a href="index.php?mode=bookmarks&amp;edit_bookmark={$row.bid}" class="editor"><span class="icon"></span><span>{#edit#}</span></a>
      <a href="index.php?mode=bookmarks&amp;delete_bookmark={$row.bid}"  class="terminator"><span class="icon"></span><span>{#delete#}</span></a>

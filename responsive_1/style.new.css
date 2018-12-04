@@ -662,6 +662,14 @@ td.cell-subject {
 .cell-subject a.username {
 	font-weight: bold;
 }
+.taglist ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.taglist li {
+	display: inline;
+}
 /* form elements */
 
 /* give all textareas and inputs (except radios and checkboxes)
