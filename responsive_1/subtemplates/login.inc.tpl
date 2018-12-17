@@ -3,6 +3,7 @@
 {#login_message#}
 <p class="caution">{#login_ip_temp_blocked#}</p>
 {else}
+<section class="hover-layer">
 {if $login_message && $smarty.config.$login_message}
 <p class="{if $login_message=='account_activated' || $login_message=='mail_sent' || $login_message=='pw_sent'}ok{else}caution{/if}">{$smarty.config.$login_message}</p>
 {/if}
@@ -19,6 +20,7 @@
 <p><button type="submit" value="{#login_submit#}">{#login_submit#}</button></p>
 </div>
 </form>
-<p class="small">{#login_advice#}</p>
-<p class="small"><a href="index.php?mode=login&amp;action=pw_forgotten">{#pw_forgotten_link#}</a></p>
+<p>{#login_advice#}</p>
+<p><a href="index.php?mode=login&amp;action=pw_forgotten">{#pw_forgotten_link#}</a></p>
+</section>
 {/if}

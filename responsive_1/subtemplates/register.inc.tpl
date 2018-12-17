@@ -12,6 +12,7 @@
 </ul>
 </section>
 {/if}
+<section class="hover-layer">
 <form action="index.php" method="post" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="register" />
@@ -49,3 +50,4 @@
 <p><button name="register_submit" value="{#submit_button_ok#}" tabindex="8">{#submit_button_ok#}</button></p>
 </div>
 </form>
+</section>

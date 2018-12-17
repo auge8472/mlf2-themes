@@ -967,6 +967,13 @@ article footer a.unlock, article footer a.unlock-thread {
 }
 /* end: elements of the posting views */
 
+/* login and registration forms */
+.hover-layer {
+	margin: 1em 0;
+	padding: 1em;
+}
+/* end: login and registration forms */
+
 /* elements of admin interface */
 .item-tools a {
 	display: flex;
@@ -1183,6 +1190,9 @@ div.warning              {
 	.js-display-fold .author strong, .js-display-fold .author strong * {
 		display: inline;
 	}
+	.hover-layer {
+		width: 28em;
+	}
 	#pbmlf {
 		text-align: center;
 		padding: 0 20px 1em 20px;
@@ -1302,6 +1312,10 @@ div.warning              {
 	}
 	#main-thread-list tbody tr:nth-child(even) td.cell-subject {
 		background-color: #e8f8ff;
+	}
+	.hover-layer {
+		min-width: 28em;
+		width: 64vw;
 	}
 	.settings th {
 		width: 40%;
