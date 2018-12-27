@@ -471,10 +471,14 @@ aside section h3 {
 	padding:0;
 	height: 1.25em;
 	width: 1.25em;
+	flex: 0 0 1.25em;
 	margin: 0.25em;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center center;
+}
+.adminmenu a span:not([class]) {
+	flex: 1 1 auto;
 }
 .adminmenu a img {
 	margin:0 5px -3px 0;
@@ -1253,6 +1257,7 @@ div.warning              {
 	.adminmenu a .icon {
 		width: 2.25em;
 		height: 2.25em;
+		flex: 0 0 2.25em;
 	}
 	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
