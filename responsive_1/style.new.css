@@ -1248,11 +1248,11 @@ div.warning              {
 	.adminmenu a {
 		margin: 0;
 		padding: 0;
-		font-size: 1.25em;
+		font-size: 1em;
 	}
 	.adminmenu a .icon {
-		width: 2.4em;
-		height: 2.4em;
+		width: 2.25em;
+		height: 2.25em;
 	}
 	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
