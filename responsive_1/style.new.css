@@ -987,6 +987,9 @@ article footer a.unlock, article footer a.unlock-thread {
 	margin: 1em 0;
 	padding: 1em;
 }
+.hover-layer > :last-child {
+	margin-bottom: 0;
+}
 /* end: login and registration forms */
 
 /* elements of admin interface */
