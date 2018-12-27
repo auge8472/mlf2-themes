@@ -990,6 +990,12 @@ article footer a.unlock, article footer a.unlock-thread {
 .hover-layer > :last-child {
 	margin-bottom: 0;
 }
+.hover-layer input[type="text"], .hover-layer input[type="password"], .hover-layer input[type="email"] {
+	width: 18em;
+}
+.hover-layer input[type="checkbox"] {
+	width: 1em;
+}
 /* end: login and registration forms */
 
 /* elements of admin interface */
