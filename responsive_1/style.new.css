@@ -593,6 +593,17 @@ ul.pagination a:not([href]) {
 	font-weight: bold;
 }
 
+/* page internal search fields */
+#searchbox {
+	margin: 0 0 0.75em 0;
+	margin: 0 0 0.75rem 0;
+}
+#searchbox label {
+	display: block;
+}
+#searchfield {
+	width: 18em;
+}
 
 /* table definitions */
 table {

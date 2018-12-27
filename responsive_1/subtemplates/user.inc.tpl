@@ -1,11 +1,11 @@
 {config_load file=$language_file section="user"}
 <div id="usernav">
-<div id="usersearch">
+<div id="searchbox">
 <form action="index.php" method="get" accept-charset="{#charset#}">
 <div>
 <input type="hidden" name="mode" value="user" />
-<label for="search-user">{#search_user#}</label>
-<input id="search-user" type="search" name="search_user" value="{if $search_user}{$search_user}{/if}" placeholder="{#search_user_default_value#}" size="25" />
+<label for="searchfield">{#search_user#}</label>
+<input id="searchfield" type="search" name="search_user" value="{if $search_user}{$search_user}{/if}" size="25" />
 <button>{#go#}</button>
 </div>
 </form>
