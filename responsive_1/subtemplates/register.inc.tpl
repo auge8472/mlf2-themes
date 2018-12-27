@@ -44,7 +44,8 @@
 <input id="captcha_code" type="text" name="captcha_code" value="" size="10" tabindex="6" /></p>
 {else}
 <p><strong>{#captcha_marking#}</strong><br />
-<label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><input id="captcha_code" type="text" name="captcha_code" value="" size="5" tabindex="7" /></p>
+<label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><br />
+<input id="captcha_code" type="text" name="captcha_code" value="" size="5" tabindex="7" /></p>
 {/if}
 {/if}
 <p><button name="register_submit" value="{#submit_button_ok#}" tabindex="8">{#submit_button_ok#}</button></p>
