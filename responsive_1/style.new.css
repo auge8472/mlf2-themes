@@ -43,7 +43,6 @@ body > header {
 
 main {
 	display: block;
-	padding: 0.75em 10px;
 	padding: 0.75rem 0.25rem;
 }
 
@@ -74,7 +73,6 @@ h1 {
 	font-size: 1.25em;
 }
 h2 {
-	margin-top: 1em;
 	margin-top: 1rem;
 	font-size: 1.15em;
 }
@@ -150,7 +148,6 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	display: inline;
 }
 #topsearch #search-input {
-	width: 10em;
 	width: 10rem;
 }
 /* end: elements of the page header */
@@ -278,7 +275,6 @@ aside h2 {
 aside h2 a {
 	display: block;
 	height: 100%;
-	padding: 0 0.25em;
 	padding: 0 0.25rem;
 	width: calc(100% - 0.5em);
 	width: calc(100% - 0.5rem);
@@ -307,7 +303,6 @@ aside section {
 aside section h3 {
 	font-size: 1em;
 	font-size: 1rem;
-	padding: 0 0.25em;
 	padding: 0 0.25rem;
 	width: calc(100% - 0.5em);
 	width: calc(100% - 0.5rem);
@@ -418,7 +413,6 @@ aside section h3 {
 }
 #tagcloud a, #usersonline a {
 	display:inline-block;
-	margin-right:0.25em;
 	margin-right:0.25rem;
 }
 #tagcloud a:not(:last-child):after, #usersonline a:not(:last-child):after {
@@ -426,7 +420,6 @@ aside section h3 {
 }
 #additional-admin-info p {
 	line-height: 1.5em;
-	padding: 0.125em 0.25em;
 	padding: 0.125rem 0.25rem;
 }
 #releases p {
@@ -435,7 +428,6 @@ aside section h3 {
 #releases p a {
 	display: block;
 	margin: 0;
-	padding: 0.125em 0.25em;
 	padding: 0.125rem 0.25rem;
 }
 #install-script-exists h3 {
@@ -623,7 +615,6 @@ tbody, tr, th, td {
 }
 tr {
 	border: 1px solid #bacbdf;
-	margin-bottom: 0.25em;
 	margin-bottom: 0.25rem;
 	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 }
@@ -718,7 +709,6 @@ ul.reply li a {
 
 ul.reply, ul.deep-reply, ul.very-deep-reply {
 	margin:0;
-	padding: 0 0 0 0.75em;
 	padding: 0 0 0 0.75rem;
 	list-style-type:none;
 	max-width:100%;
@@ -772,7 +762,6 @@ ul.reply li {
 
 /* postings of a thread in the nested view */
 .reply-wrapper {
-	margin: 0 0 0 0.5em;
 	margin: 0 0 0 0.5rem;
 	padding:0;
 }
@@ -871,7 +860,6 @@ article blockquote {
 	color: #777;
 	font-style: italic;
 	border-left: 5px solid hsl(0, 0%, 75%);
-	padding: 0 0 0 1.25em;
 	padding: 0 0 0 1.25rem;
 }
 
@@ -984,8 +972,8 @@ article footer a.unlock, article footer a.unlock-thread {
 
 /* login and registration forms */
 .hover-layer {
-	margin: 1em 0;
-	padding: 1em;
+	margin: 1rem 0;
+	padding: 1rem;
 }
 .hover-layer > :last-child {
 	margin-bottom: 0;
@@ -1056,7 +1044,6 @@ article footer a.unlock, article footer a.unlock-thread {
 	padding: 0;
 }
 #footermenu {
-	margin-bottom: 1em;
 	margin-bottom: 1rem;
 	list-style-type: none;
 }
@@ -1199,7 +1186,6 @@ div.warning              {
 		margin: 0.5rem 0 0 0;
 	}
 	.reply-wrapper {
-		margin: 0 0 0 0.75em;
 		margin: 0 0 0 0.75rem;
 	}
 	article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .op-link, article header .interpunction {
@@ -1310,12 +1296,10 @@ div.warning              {
 	th {
 		font-weight: bold;
 		text-align: left;
-		padding: 0.1em 0.25em;
 		padding: 0.1rem 0.25rem;
 	}
 	td {
 		font-weight: normal;
-		padding: 0.25em;
 		padding: 0.25rem;
 	}
 	td.subject {
