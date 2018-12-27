@@ -38,7 +38,7 @@
  <tbody>
 {foreach from=$userdata item=row}
   <tr>
-   <td data-header="{#user_name#}" class="cell-subject"><a href="index.php?mode=user&amp;show_user={$row.user_id}"><strong>{$row.user_name}</strong></a></td>
+   <td data-header="{#user_name#}" class="cell-subject"><a href="index.php?mode=user&amp;show_user={$row.user_id}" class="item">{$row.user_name}</a></td>
    <td data-header="{#user_type#}"><span class="value">{if $row.user_type==2}{#admin#}{elseif $row.user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
    <td data-header="{#user_hp#}"><span class="value">{if $row.user_hp!=''}<a href="{$row.user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/home.svg" alt="{#homepage#}" width="15" height="15" class="icon" /></a>{else}&nbsp;{/if}</span></td>
    <td data-header="{#user_email#}"><span class="value">{if $row.user_email}<a href="index.php?mode=contact&amp;user_id={$row.user_id}"><img src="{$THEMES_DIR}/{$theme}/images/contact-email.svg" alt="{#email#}" width="15" height="15" class="icon" /></a>{else}&nbsp;{/if}</span></td>

@@ -670,7 +670,7 @@ td.cell-subject {
 	font-size: 1em;
 	border-bottom: 1px solid #bacbdf;
 }
-.cell-subject a.username {
+.cell-subject a.item {
 	font-weight: bold;
 }
 .taglist ul {

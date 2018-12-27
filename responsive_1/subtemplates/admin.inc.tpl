@@ -359,7 +359,7 @@
  <tbody id="items">
 {section name=row loop=$categories_list}
   <tr id="id_{$categories_list[row].id}">
-   <td data-header="{#category_name#}" class="cell-subject"><strong>{$categories_list[row].name}</strong></td>
+   <td data-header="{#category_name#}" class="cell-subject" class="item">{$categories_list[row].name}</td>
    <td data-header="{#category_accession#}">{if $categories_list[row].accession==2}{#cat_accessible_admin_mod#}{elseif $categories_list[row].accession==1}{#cat_accessible_reg_users#}{else}{#cat_accessible_all#}{/if}</td>
    <td data-header="{#category_topics#}">{$categories_list[row].threads_in_category}</td>
    <td data-header="{#category_entries#}">{$categories_list[row].postings_in_category}</td>
@@ -503,7 +503,7 @@
  <tbody>
 {section name=row loop=$userdata}
   <tr>
-   <td class="cell-subject"><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" class="small-input" />&nbsp;{if $userdata[row].inactive}<span title="{#user_inactive#}" class="username inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" class="username">{$userdata[row].user_name}</a>{/if}</td>
+   <td class="cell-subject"><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" class="small-input" />&nbsp;{if $userdata[row].inactive}<span title="{#user_inactive#}" class="item inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" class="item">{$userdata[row].user_name}</a>{/if}</td>
    <td data-header="{#user_email#}"><span class="small"><a href="mailto:{$userdata[row].user_email}">{$userdata[row].user_email}</a></span></td>
    <td data-header="{#user_type#}"><span class="small">{if $userdata[row].user_type==2}{#admin#}{elseif $userdata[row].user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
    <td data-header="{#user_registered#}"><span class="small">{$userdata[row].registered_time|date_format:#time_format#}</span></td>
@@ -1182,7 +1182,7 @@
  <tbody id="items">
 {section name=page loop=$pages}
   <tr id="id_{$pages[page].id}">
-   <td class="cell-subject"><a href="index.php?mode=page&amp;id={$pages[page].id}"><strong class="control">{$pages[page].title}</strong></a></td>
+   <td class="cell-subject"><a href="index.php?mode=page&amp;id={$pages[page].id}" class="item">{$pages[page].title}</a></td>
    <td data-header="{#page_menu_linkname#}"><span class="small">{if $pages[page].menu_linkname!=''}{$pages[page].menu_linkname}{else}&nbsp;{/if}</span></td>
    <td data-header="{#page_access#}"><span class="small">{if $pages[page].access==1}{#page_access_reg_users#}{elseif $pages[page].access==0}{#page_access_public#}{/if}</span></td>
    <td class="item-tools">
