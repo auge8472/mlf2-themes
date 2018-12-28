@@ -19,12 +19,12 @@
  <tbody>
   <tr>
    <th><strong>{#edit_user_name#}</strong></th>
-   <td class="d"><strong>{$user_name}</strong></td>
+   <td><strong>{$user_name}</strong></td>
   </tr>
 {if $settings.avatars>0}
   <tr>
    <th><strong>{#edit_avatar#}</strong></th>
-   <td class="d">
+   <td>
     <div id="avatar_wrapper">{if $avatar}<img src="{$avatar.image}" alt="{#edit_avatar_link_title#}" width="{$avatar.width}" height="{$avatar.height}" />{/if}</div>
     <span class="small">[ <a id="edit_avatar" href="index.php?mode=avatar">{#edit_avatar_link#}</a> ]</span>
    </td>
@@ -32,11 +32,11 @@
 {/if}
   <tr>
    <th><strong>{#edit_user_pw#}</strong></th>
-   <td class="d"><span class="small">[ <a href="index.php?mode=user&amp;action=edit_pw">{#edit_pw#}</a> ]</span></td>
+   <td><span class="small">[ <a href="index.php?mode=user&amp;action=edit_pw">{#edit_pw#}</a> ]</span></td>
   </tr>
   <tr>
    <th><strong>{#edit_user_email#}</strong></th>
-   <td class="d">
+   <td>
     <span>{$user_email}</span>&nbsp;
     <span class="small">[ <a href="index.php?mode=user&amp;action=edit_email">{#edit_email#}</a> ]</span><br />
     <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if} class="small-input" /><label for="email_contact">{#edit_user_email_contact#}</label></span>
@@ -44,15 +44,15 @@
   </tr>
   <tr>
    <th><label for="user_hp"><strong>{#edit_user_hp#}</strong></label></th>
-   <td class="d"><input id="user_hp" type="text" size="40" name="user_hp" value="{$user_hp}" maxlength="{$settings.hp_maxlength}" /></td>
+   <td><input id="user_hp" type="text" size="40" name="user_hp" value="{$user_hp}" maxlength="{$settings.hp_maxlength}" /></td>
   </tr>
   <tr>
    <th><label for="user_real_name"><strong>{#edit_user_real_name#}</strong></label></th>
-   <td class="d"><input id="user_real_name" type="text" size="40" name="user_real_name" value="{$user_real_name}" maxlength="{$settings.name_maxlength}" /></td>
+   <td><input id="user_real_name" type="text" size="40" name="user_real_name" value="{$user_real_name}" maxlength="{$settings.name_maxlength}" /></td>
   </tr>
   <tr>
    <th><strong>{#edit_user_gender#}</strong></th>
-   <td class="d">
+   <td>
     <input id="no-gender" type="radio" name="user_gender" value="0"{if $user_gender=="0"} checked="checked"{/if} class="small-input" /><label for="no-gender">{#gender_not_specified#}</label><br />
     <input id="male" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} class="small-input" /><label for="male">{#male#}</label><br />
     <input id="female" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} class="small-input" /><label for="female">{#female#}</label>
@@ -60,24 +60,24 @@
   </tr>
   <tr>
    <th><label for="user_birthday"><strong>{#edit_user_birthday#}</strong></label></th>
-   <td class="d"><input id="user_birthday" type="date" size="40" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
+   <td><input id="user_birthday" type="date" size="40" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
   </tr>
   <tr>
    <th><label for="user_location"><strong>{#edit_user_location#}</strong></label></th>
-   <td class="d"><input id="user_location" type="text" size="40" name="user_location" value="{$user_location}" maxlength="{$settings.location_maxlength}" /></td>
+   <td><input id="user_location" type="text" size="40" name="user_location" value="{$user_location}" maxlength="{$settings.location_maxlength}" /></td>
   </tr>
   <tr>
    <th><label for="profile"><strong>{#edit_user_profile#}</strong></label></th>
-   <td class="d"><textarea id="profile" cols="65" rows="12" name="profile">{$profile}</textarea></td>
+   <td><textarea id="profile" cols="65" rows="12" name="profile">{$profile}</textarea></td>
   </tr>
   <tr>
    <th><label for="signature"><strong>{#edit_user_signature#}</strong></label></th>
-   <td class="d"><textarea id="signature" cols="65" rows="4" name="signature">{$signature}</textarea></td>
+   <td><textarea id="signature" cols="65" rows="4" name="signature">{$signature}</textarea></td>
   </tr>
 {if $categories}
   <tr>
    <th><strong>{#edit_user_cat_selection#}</strong></th>
-   <td class="d">
+   <td>
     <ul class="checkboxlist">
 {foreach key=key item=val from=$categories}
 {if $key!=0}     <li><input id="category_{$key}" type="checkbox" name="category_selection[]" value="{$key}"{if isset($category_selection) && in_array($key,$category_selection)} checked="checked"{/if} class="small-input" /><label for="category_{$key}">{$val}</label></li>{/if}
@@ -89,7 +89,7 @@
 {if $languages}
   <tr>
    <th><strong><label for="user_language">{#edit_user_language#}</label></strong></th>
-   <td class="d">
+   <td>
     <select id="user_language" name="user_language" size="1">
      <option value=""{if $user_language==''} selected="selected"{/if}>{#edit_user_default_language#|replace:"[default_language]":$default_language}</option>
 {foreach from=$languages item=l}
@@ -101,7 +101,7 @@
 {/if}
   <tr>
    <th><strong>{if $time_zones}<label for="user_time_zone">{#edit_user_time_zone#}</label>{else}{#edit_user_time_zone#}{/if}</strong></th>
-   <td class="d">
+   <td>
 {if $time_zones}
     <p>
      <select id="user_time_zone" name="user_time_zone" size="1">
@@ -121,7 +121,7 @@
 {if $themes}
   <tr>
    <th><strong><label for="user_theme">{#edit_user_theme#}</label></strong></th>
-   <td class="d">
+   <td>
     <select id="user_theme" name="user_theme" size="1">
      <option value=""{if $user_theme==''} selected="selected"{/if}>{#edit_user_default_theme#|replace:"[default_theme]":$default_theme}</option>
 {foreach from=$themes item=t}
@@ -134,13 +134,13 @@
 {if $settings.autologin==1}
   <tr>
    <th><strong>{#edit_user_auto_login#}</strong></th>
-   <td class="d"><input id="auto_login" type="checkbox" name="auto_login" value="1"{if $auto_login==1} checked="checked"{/if} class="small-input" /><label for="auto_login">{#enable_auto_login#}</label></td>
+   <td><input id="auto_login" type="checkbox" name="auto_login" value="1"{if $auto_login==1} checked="checked"{/if} class="small-input" /><label for="auto_login">{#enable_auto_login#}</label></td>
   </tr>
 {/if}
 {if $mod||$admin}
   <tr>
    <th><strong>{#edit_user_notification#}</strong></th>
-   <td class="d">
+   <td>
     <input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if} class="small-input" /><label for="new_posting_notification">{#admin_mod_notif_posting#}</label><br />
     <input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if} class="small-input" /><label for="new_user_notification">{#admin_mod_notif_register#}</label>
    </td>
