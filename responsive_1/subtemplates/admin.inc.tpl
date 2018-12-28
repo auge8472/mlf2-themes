@@ -583,9 +583,13 @@
   <tr>
    <th><strong>{#edit_user_type#}</strong></th>
    <td>
-    <input id="edit_user_type_0" type="radio" name="edit_user_type" value="0"{if $edit_user_type==0} checked="checked"{/if} class="small-input" /><label for="edit_user_type_0">{#user#}</label><br />
-    <input id="edit_user_type_1" type="radio" name="edit_user_type" value="1"{if $edit_user_type==1} checked="checked"{/if} class="small-input" /><label for="edit_user_type_1">{#mod#}</label><br />
-    <input id="edit_user_type_2" type="radio" name="edit_user_type" value="2"{if $edit_user_type==2} checked="checked"{/if} class="small-input" /><label for="edit_user_type_2">{#admin#}</label>
+    <div class="rc-select">
+     <ul>
+      <li><input id="edit_user_type_0" type="radio" name="edit_user_type" value="0"{if $edit_user_type==0} checked="checked"{/if} class="small-input" /><label for="edit_user_type_0">{#user#}</label></li>
+      <li><input id="edit_user_type_1" type="radio" name="edit_user_type" value="1"{if $edit_user_type==1} checked="checked"{/if} class="small-input" /><label for="edit_user_type_1">{#mod#}</label></li>
+      <li><input id="edit_user_type_2" type="radio" name="edit_user_type" value="2"{if $edit_user_type==2} checked="checked"{/if} class="small-input" /><label for="edit_user_type_2">{#admin#}</label></li>
+     </ul>
+    </div>
    </td>
   </tr>
   <tr>
@@ -606,9 +610,13 @@
   <tr>
    <th><strong>{#edit_user_gender#}</strong></th>
    <td>
-    <input id="no-gender" type="radio" name="user_gender" value="0"{if $user_gender=="0"} checked="checked"{/if} class="small-input" /><label for="no-gender">{#gender_not_specified#}</label><br />
-    <input id="user_gender_1" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} class="small-input" /><label for="user_gender_1">{#male#}</label><br />
-    <input id="user_gender_2" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} class="small-input" /><label for="user_gender_2">{#female#}</label>
+    <div class="rc-select">
+     <ul>
+      <li><input id="no-gender" type="radio" name="user_gender" value="0"{if $user_gender=="0"} checked="checked"{/if} class="small-input" /><label for="no-gender">{#gender_not_specified#}</label></li>
+      <li><input id="male" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} class="small-input" /><label for="male">{#male#}</label></li>
+      <li><input id="female" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} class="small-input" /><label for="female">{#female#}</label></li>
+     </ul>
+    </div>
    </td>
   </tr>
   <tr>
@@ -842,28 +850,30 @@
    <th><strong>{#captcha#}</strong>
     <span class="description">{#captcha_desc#}{if !$graphical_captcha_available || !$font_available}<br />{#captcha_graphical_desc#}{/if}</span></th>
    <td>
-    <table border="0" cellpadding="0" cellspacing="3">
-     <tbody>
-      <tr>
-       <td><strong>{#captcha_posting#}</strong></td>
-       <td><input id="captcha_posting_0" type="radio" name="captcha_posting" value="0"{if $captcha_posting==0} checked="checked"{/if} class="small-input" /><label for="captcha_posting_0">{#captcha_disabled#}</label></td>
-       <td><input id="captcha_posting_1" type="radio" name="captcha_posting" value="1"{if $captcha_posting==1} checked="checked"{/if} class="small-input" /><label for="captcha_posting_1">{#captcha_mathematical#}</label></td>
-       <td><input id="captcha_posting_2" type="radio" name="captcha_posting" value="2"{if $captcha_posting==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_posting_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
-      </tr>
-      <tr>
-       <td><strong>{#captcha_email#}</strong></td>
-       <td><input id="captcha_email_0" type="radio" name="captcha_email" value="0"{if $captcha_email==0} checked="checked"{/if} class="small-input" /><label for="captcha_email_0">{#captcha_disabled#}</label></td>
-       <td><input id="captcha_email_1" type="radio" name="captcha_email" value="1"{if $captcha_email==1} checked="checked"{/if} class="small-input" /><label for="captcha_email_1">{#captcha_mathematical#}</label></td>
-       <td><input id="captcha_email_2" type="radio" name="captcha_email" value="2"{if $captcha_email==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_email_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
-      </tr>
-      <tr>
-       <td><strong>{#captcha_register#}</strong></td>
-       <td><input id="captcha_register_0" type="radio" name="captcha_register" value="0"{if $captcha_register==0} checked="checked"{/if} class="small-input" /><label for="captcha_register_0">{#captcha_disabled#}</label></td>
-       <td><input id="captcha_register_1" type="radio" name="captcha_register" value="1"{if $captcha_register==1} checked="checked"{/if} class="small-input" /><label for="captcha_register_1">{#captcha_mathematical#}</label></td>
-       <td><input id="captcha_register_2" type="radio" name="captcha_register" value="2"{if $captcha_register==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_register_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></td>
-      </tr>
-     </tbody>
-    </table>
+    <div class="rc-select">
+     <h3>{#captcha_posting#}</h3>
+     <ul>
+      <li><input id="captcha_posting_0" type="radio" name="captcha_posting" value="0"{if $captcha_posting==0} checked="checked"{/if} class="small-input" /><label for="captcha_posting_0">{#captcha_disabled#}</label></li>
+      <li><input id="captcha_posting_1" type="radio" name="captcha_posting" value="1"{if $captcha_posting==1} checked="checked"{/if} class="small-input" /><label for="captcha_posting_1">{#captcha_mathematical#}</label></li>
+      <li><input id="captcha_posting_2" type="radio" name="captcha_posting" value="2"{if $captcha_posting==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_posting_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
+     </ul>
+    </div>
+    <div class="rc-select">
+     <h3>{#captcha_email#}</h3>
+     <ul>
+      <li><input id="captcha_email_0" type="radio" name="captcha_email" value="0"{if $captcha_email==0} checked="checked"{/if} class="small-input" /><label for="captcha_email_0">{#captcha_disabled#}</label></li>
+      <li><input id="captcha_email_1" type="radio" name="captcha_email" value="1"{if $captcha_email==1} checked="checked"{/if} class="small-input" /><label for="captcha_email_1">{#captcha_mathematical#}</label></li>
+      <li><input id="captcha_email_2" type="radio" name="captcha_email" value="2"{if $captcha_email==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_email_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
+     </ul>
+    </div>
+    <div class="rc-select">
+     <h3>{#captcha_register#}</h3>
+     <ul>
+      <li><input id="captcha_register_0" type="radio" name="captcha_register" value="0"{if $captcha_register==0} checked="checked"{/if} class="small-input" /><label for="captcha_register_0">{#captcha_disabled#}</label></li>
+      <li><input id="captcha_register_1" type="radio" name="captcha_register" value="1"{if $captcha_register==1} checked="checked"{/if} class="small-input" /><label for="captcha_register_1">{#captcha_mathematical#}</label></li>
+      <li><input id="captcha_register_2" type="radio" name="captcha_register" value="2"{if $captcha_register==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if} class="small-input" /><label for="captcha_register_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
+     </ul>
+    </div>
  {if !$graphical_captcha_available || !$font_available}
     <p class="xsmall"><sup>*</sup> {if !$graphical_captcha_available}{#gr_captcha_not_available#}{elseif !$font_available}{#gr_captcha_no_font#}{/if}</p>
  {/if}
@@ -1234,8 +1244,12 @@
   <tr>
    <th><strong>{#page_access#}</strong></th>
    <td>
-    <input type="radio" name="access" value="0"{if $access==0} checked="checked"{/if} class="small-input" /><span class="small">{#page_access_public#}</span>
-    <input type="radio" name="access" value="1"{if $access==1} checked="checked"{/if} class="small-input" /><span class="small">{#page_access_reg_users#}</span>
+    <div class="rc-select">
+     <ul>
+      <li><input type="radio" name="access" id="access-public" value="0"{if $access==0} checked="checked"{/if} class="small-input" /><label for="access-public">{#page_access_public#}</label></li>
+      <li><input type="radio" name="access" id="access-registered" value="1"{if $access==1} checked="checked"{/if} class="small-input" /><label for="access-registered">{#page_access_reg_users#}</label></li>
+     </ul>
+    </div>
    </td>
   </tr>
  </tbody>

@@ -659,6 +659,53 @@ td[data-header]::before {
 .settings td {
 	background:#f5f5f5;
 }
+.rc-select:not(:last-of-type) {
+	border-bottom: 1px dotted #bacbdf;
+}
+.rc-select h3 {
+	margin: 0 0 0.5rem 0;
+}
+.rc-select ul {
+	margin:  0 0.25rem 0.5rem 0.25rem;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+.rc-select:last-of-type ul {
+	margin:  0 0.25rem 0 0.25rem;
+}
+.rc-select li {
+	flex: auto;
+}
+.rc-select li label {
+	border-top: 1px solid #bacbdf;
+	border-bottom: 1px solid #bacbdf;
+}
+.rc-select li:first-child label {
+	border: 1px solid #bacbdf;
+	border-top-left-radius: 0.25rem;
+	border-bottom-left-radius: 0.25rem;
+}
+.rc-select li:last-child label {
+	border: 1px solid #bacbdf;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
+}
+.rc-select label {
+	display: inline-block;
+	padding: 0.25rem;
+	width: calc(100% - 0.5rem);
+	text-align: center;
+	background-color: #fff;
+}
+.rc-select input[type="radio"]:checked ~ label {
+	background: #aac8ff;
+	color: #000;
+}
+.rc-select input[type="radio"] {
+	display: none;
+}
+
 td.cell-subject {
 	background-color: hsl(210, 100%, 92%);
 	font-size: 1em;
