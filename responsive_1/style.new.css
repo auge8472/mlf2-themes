@@ -7,6 +7,10 @@
 * <http://developer.yahoo.com/yui/compressor/>.                        *
 ***********************************************************************/
 
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
 /* definitions for the main blocks of the pages */
 html, body, body > header, #subnav, main, body > footer, #assistancemenu {
 	margin: 0;
@@ -275,8 +279,7 @@ aside h2 a {
 	display: block;
 	height: 100%;
 	padding: 0 0.25rem;
-	width: calc(100% - 0.5em);
-	width: calc(100% - 0.5rem);
+	width: 100%;
 	text-decoration: none;
 }
 aside h2 a:link, aside h2 a:visited {
@@ -303,8 +306,7 @@ aside section h3 {
 	font-size: 1em;
 	font-size: 1rem;
 	padding: 0 0.25rem;
-	width: calc(100% - 0.5em);
-	width: calc(100% - 0.5rem);
+	width: 100%;
 	line-height: 160%;
 	font-weight: normal;
 	background: #d2ddea;
@@ -694,7 +696,7 @@ td[data-header]::before {
 .rc-select label {
 	display: inline-block;
 	padding: 0.25rem;
-	width: calc(100% - 0.5rem);
+	width: 100%;
 	text-align: center;
 	background-color: #fff;
 }
@@ -727,7 +729,7 @@ td.cell-subject {
 /* give all textareas and inputs (except radios and checkboxes)
   a proper width for narrow vieworts */
 textarea, input:not(.small-input) {
-	width: calc(100% - 10px);
+	width: 100%;
 }
 .hp {
 	display: none;
@@ -1137,7 +1139,6 @@ article footer a.unlock, article footer a.unlock-thread {
 
 #bbcode-options {
 	border: 1px solid #bacbdf;
-	max-width: calc(100% - 2em);
 	max-width: calc(100% - 2rem);
 	background: #efefef;
 }
