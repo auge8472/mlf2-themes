@@ -1,12 +1,12 @@
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
- <def>
+ <defs>
   <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="0%">
    <stop offset="0%" stop-color="#dd6" />
    <stop offset="55%" stop-color="#eeb" />
    <stop offset="100%" stop-color="#dd8" />
   </linearGradient>
- </def>
+ </defs>
  <style type="text/css">
   <![CDATA[
   path { fill: url(#shield); stroke-width: 4px; stroke: #cc4; }

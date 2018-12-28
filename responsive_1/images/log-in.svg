@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
- <def>
+ <defs>
   <linearGradient id="in" x1="0%" y1="0%" x2="100%" y2="0%">
    <stop offset="0%" stop-color="#c80000" />
    <stop offset="20%" stop-color="#c80000" />
    <stop offset="60%" stop-color="#f80800" />
    <stop offset="100%" stop-color="#f80800" />
   </linearGradient>
- </def>
+ </defs>
  <style type="text/css">
   <![CDATA[
   #arrow {
