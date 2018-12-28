@@ -7,9 +7,9 @@ The aim is to have a modern HTML5 template, that is responsive and mobile aware.
 
 The project and testing forum resides under [www.projekt-mlf.de/forum](https://www.projekt-mlf.de/forum/).
 
-## Response One
+## Responsive1
 
-First try to adapt the default theme and to modernise it.
+First attempt to adapt the default theme and to modernise it.
 
 ## Installation
 
