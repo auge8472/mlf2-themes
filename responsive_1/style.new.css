@@ -1202,6 +1202,9 @@ div.warning              {
 	}
 	.hover-layer {
 		width: 28em;
+		margin: 1rem auto;
+		border: 1px solid #bacbdf;
+		border-radius: 0.375rem;
 	}
 	#pbmlf {
 		text-align: center;
