@@ -522,6 +522,8 @@
 </div>
 <ul class="adminmenu">
 <li><a href="index.php?mode=admin&amp;action=register"><span class="icon"></span><span>{#add_user#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=reset_tou"><span class="icon"></span><span>{#reset_terms_of_use#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=reset_dps"><span class="icon"></span><span>{#reset_data_privacy_statement#}</span></a></li>
 <li><a href="index.php?mode=admin&amp;action=email_list"><span class="icon"></span><span>{#email_list#}</span></a></li>
 <li><a href="index.php?mode=admin&amp;action=clear_userdata"><span class="icon"></span><span>{#clear_userdata#}</span></a></li>
 </ul>
