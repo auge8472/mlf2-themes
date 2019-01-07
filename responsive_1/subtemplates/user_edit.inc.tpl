@@ -141,6 +141,10 @@
    <td><input id="auto_login" type="checkbox" name="auto_login" value="1"{if $auto_login==1} checked="checked"{/if} class="small-input" /><label for="auto_login">{#enable_auto_login#}</label></td>
   </tr>
 {/if}
+  <tr>
+   <th><strong class="caution">{#remove_user_account#}</strong></th>
+   <td><span class="small">[ <a href="index.php?mode=user&amp;action=remove_account">{#remove_user_account_link#}</a> ]</span></td>
+  </tr>
 {if $mod||$admin}
   <tr>
    <th><strong>{#edit_user_notification#}</strong></th>
