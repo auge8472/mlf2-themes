@@ -565,6 +565,18 @@ aside section h3 {
 .r-select:not(:last-of-type) {
 	border-bottom: 1px dotted #bacbdf;
 }
+form > div:not(:last-child) {
+	margin: 0 0 1rem 0;
+	padding: 0 0 0.5rem 0;
+	border-bottom: 1px dotted #bacbdf;
+}
+p.label {
+	font-weight: bold;
+}
+form > div p, form > div ul, form > div div {
+	margin: 0 0 0.25rem 0;
+}
+
 .r-select h3 {
 	margin: 0 0 0.5rem 0;
 }
@@ -610,6 +622,10 @@ aside section h3 {
 .r-select input[type="radio"] {
 	display: none;
 }
+input, select option {
+	font-size: 1em;
+}
+/* end: settings forms without table */
 
 ul.pagination {
 	margin: 0.75rem 0;
@@ -730,8 +746,14 @@ td.cell-subject {
 
 /* give all textareas and inputs (except radios and checkboxes)
   a proper width for narrow vieworts */
-textarea, input:not(.small-input) {
+textarea, input[size="40"] {
 	width: 100%;
+}
+input[size="5"] {
+	width: 3.5em;
+}
+input[size="3"] {
+	width: 2.5em;
 }
 .hp {
 	display: none;
@@ -1234,6 +1256,10 @@ div.warning              {
 	.adminmenu li {
 		margin: 0.5rem 0 0 0;
 	}
+	#settings {
+		border: 1px solid #bacbdf;
+		padding: 1em;
+	}
 	.reply-wrapper {
 		margin: 0 0 0 0.75rem;
 	}
@@ -1259,6 +1285,10 @@ div.warning              {
 		text-align: center;
 		padding: 0 20px 1em 20px;
 		padding-bottom: 1rem;
+	}
+	input[size="40"] {
+		width: 26em;
+		max-width: 100%;
 	}
 }
 
