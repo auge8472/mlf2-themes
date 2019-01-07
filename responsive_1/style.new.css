@@ -555,7 +555,7 @@ aside section h3 {
 .adminmenu a[href*='?mode=admin&user_delete_all_entries='] .icon {
 	background: url("images/sign-remove.svg") 102% 102% / 60% no-repeat, url("images/preview-bubble.svg") center / 100% no-repeat;
 }
-.adminmenu a.lock-user  .icon {
+.adminmenu a.lock-user .icon {
 	background-image: url(images/lock-closed.svg);
 }
 .adminmenu a.unlock-user .icon {
