@@ -537,6 +537,9 @@ aside section h3 {
 .adminmenu a[href*='&action=register'] .icon {
 	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
+.adminmenu a[href*='&action=reset_tou'] .icon, .adminmenu a[href*='&action=reset_dps'] .icon {
+	background: url("images/pencil.svg") 102% 102% / 60% no-repeat, url("images/file.svg") center / 100% no-repeat;
+}
 .adminmenu a[href*='&action=email_list'] .icon {
 	background-image: url("images/contact-email.svg");
 }
