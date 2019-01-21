@@ -938,6 +938,27 @@ article blockquote {
 .body img {
 	max-width: 100%;
 }
+.thumbnail {
+	width: 9em;
+	height: auto;
+}
+#image-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: url(images/canvas_bg.png);
+}
+#image-canvas img {
+	display: block;
+	margin: auto;
+	max-width: 90vw;
+	max-height: 90vw;
+	height: auto;
+	z-index: 3;
+}
 
 .body .signature {
 	margin: 0.5em 0 0 0;
