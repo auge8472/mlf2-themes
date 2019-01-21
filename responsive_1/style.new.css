@@ -654,7 +654,7 @@ ul.pagination a:focus, ul.pagination a:hover, ul.pagination a:active {
 }
 ul.pagination a:not([href]) {
 	border: 1px solid #bacbdf;
-	color: red;
+	color: #989898;
 	font-weight: bold;
 }
 
