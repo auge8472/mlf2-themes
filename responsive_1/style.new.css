@@ -775,6 +775,9 @@ input[size="3"] {
 td .thread  {
 	margin: 0;
 }
+.fold-expand {
+	display: none;
+}
 .thread li > a {
 	font-weight: bold;
 }
