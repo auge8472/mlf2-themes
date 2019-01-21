@@ -937,6 +937,7 @@ article blockquote {
 
 .body img {
 	max-width: 100%;
+	height: auto;
 }
 .thumbnail {
 	width: 9em;
