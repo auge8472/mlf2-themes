@@ -1079,7 +1079,7 @@ article footer a.unlock, article footer a.unlock-thread {
 	margin-bottom: 0;
 }
 .hover-layer input[type="text"], .hover-layer input[type="password"], .hover-layer input[type="email"] {
-	width: 18em;
+	width: 15.5em;
 }
 .hover-layer input[type="checkbox"] {
 	width: 1em;
@@ -1304,7 +1304,7 @@ div.warning              {
 		display: inline;
 	}
 	.hover-layer {
-		width: 28em;
+		width: 25em;
 		margin: 1rem auto;
 		border: 1px solid #bacbdf;
 		border-radius: 0.375rem;
@@ -1431,10 +1431,6 @@ div.warning              {
 	}
 	#main-thread-list tbody tr:nth-child(even) td.cell-subject {
 		background-color: #e8f8ff;
-	}
-	.hover-layer {
-		min-width: 28em;
-		width: 50vw;
 	}
 	.settings th {
 		width: 40%;
