@@ -1124,14 +1124,21 @@ article footer a.unlock, article footer a.unlock-thread {
 .restore-backup .icon {
 	background: url("images/arrow-b-up.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
-.ok {
+.ok, .errormessage {
 	padding: 0.25em 0.25em 0.25em 1.5em;
+	background-size: 1em 1em;
+}
+.ok {
 	border: 1px solid #0c4;
 	color: #062;
 	background: url(images/check-mark.svg) no-repeat 0.2em center #afd;
-	background-size: 1em 1em;
 }
-.ok h2, .ok h3, .ok p, .ok ul {
+.errormessage {
+	border: 1px solid f80800;
+	color: #620;
+	background: url(images/marker-cross.svg) no-repeat 0.2em center #fda;
+}
+.ok h2, .ok h3, .ok p, .ok ul, .errormessage h2, .errormessage h3, .errormessage p, .errormessage ul {
 	margin: 0.25em 0;
 	margin: 0.25rem 0;
 }
