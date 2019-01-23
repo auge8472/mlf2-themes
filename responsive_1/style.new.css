@@ -373,6 +373,12 @@ aside section h3 {
 #mod-options a.manage .icon {
 	background-image: url(images/thread-change-no.svg);
 }
+#mod-options a.include-spam .icon {
+	background: url("images/warning.svg") 102% 102% / 66% no-repeat, url("images/check-mark.svg") center / 100% no-repeat, url("images/marker-circle.svg") center / 100% no-repeat;
+}
+#mod-options a.exclude-spam .icon {
+	background: url("images/warning.svg") 102% 102% / 66% no-repeat, url("images/marker-cross.svg") center / 100% no-repeat, url("images/marker-circle.svg") center / 100% no-repeat;
+}
 #mod-options a.list-spam .icon {
 	background-image: url(images/warning.svg);
 }

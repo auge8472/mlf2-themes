@@ -31,8 +31,8 @@
 {if $number_of_non_activated_users}<li><a href="index.php?mode=user" class="non-activated-users"><span class="icon"></span><span>{#non_activated_users_link#|replace:'[counter]':$number_of_non_activated_users}</span></a></li>{/if}
 <li><a href="index.php?mode=posting&amp;delete_marked=true" class="delete-marked"><span class="icon"></span><span>{#delete_marked_link#}</span></a></li>
 <li><a href="index.php?mode=posting&amp;manage_postings=true" class="manage"><span class="icon"></span><span>{#manage_postings_link#}</span></a></li>
-{if $show_spam_link}<li><a href="index.php?show_spam=true" class="report"><span class="icon"></span><span>{$smarty.config.show_spam_link|replace:"[number]":$total_spam}</span></a></li>{/if}
-{if $hide_spam_link}<li><a href="index.php?show_spam=true" class="report"><span class="icon"></span><span>{$smarty.config.hide_spam_link|replace:"[number]":$total_spam}</span></a></li>{/if}
+{if $show_spam_link}<li><a href="index.php?show_spam=true" class="include-spam"><span class="icon"></span><span>{$smarty.config.show_spam_link|replace:"[number]":$total_spam}</span></a></li>{/if}
+{if $hide_spam_link}<li><a href="index.php?show_spam=true" class="exclude-spam"><span class="icon"></span><span>{$smarty.config.hide_spam_link|replace:"[number]":$total_spam}</span></a></li>{/if}
 {if $show_spam_link||$hide_spam_link}<li><a href="index.php?mode=search&amp;list_spam=1" class="list-spam"><span class="icon"></span><span>{#list_spam_link#}</span></a></li>{/if}
 {if $delete_spam_link}<li><a href="index.php?mode=posting&amp;delete_spam=true" class="delete-spam"><span class="icon"></span><span>{#delete_spam_link#}</span></a></li>{/if}
 </ul>
