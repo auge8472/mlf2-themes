@@ -768,7 +768,13 @@ input[size="3"] {
 	display: none;
 }
 
-
+/* entry form */
+#postingform fieldset {
+	margin: 0 0 1em 0;
+}
+#postingform label, #postingform input[type="text"], #postingform select {
+	display: block;
+}
 
 /* thread tree: */
 .thread  {
