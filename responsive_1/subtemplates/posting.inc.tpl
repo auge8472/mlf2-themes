@@ -287,13 +287,10 @@ JavaScript isn't available.
 </fieldset>
 {/if}
 
-<fieldset>
 <p>
  <button name="save_entry" value="{#message_submit_button#}" tabindex="12">{#message_submit_button#}</button>
  <button name="preview" value="{#message_preview_button#}" tabindex="11">{#message_preview_button#}</button>
 </p>
-</fieldset>
-
 </div>
 </form>
 {/if}
