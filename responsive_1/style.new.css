@@ -1207,8 +1207,9 @@ article footer a.unlock, article footer a.unlock-thread {
 	margin: 0;
 	padding: 0;
 }
-
-#bbcode-options {
+#bbcode-options:not(.js-display-none) {
+	display: block;
+	position: absolute;
 	border: 1px solid #bacbdf;
 	max-width: calc(100% - 2rem);
 	background: #efefef;
