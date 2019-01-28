@@ -148,8 +148,9 @@
 </fieldset>
 
 <fieldset id="message">
-<label for="text" class="textarea">{#message_marking#}</label><br />
-
+<p>
+<label for="text">{#message_marking#}</label>
+</p>
 
 <div id="format-bar">
 {if $settings.bbcode}
