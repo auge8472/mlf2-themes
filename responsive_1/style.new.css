@@ -374,16 +374,16 @@ aside section h3 {
 	background-image: url(images/thread-change-no.svg);
 }
 #mod-options a.include-spam .icon {
-	background: url("images/warning.svg") 102% 102% / 66% no-repeat, url("images/check-mark.svg") center / 100% no-repeat, url("images/marker-circle.svg") center / 100% no-repeat;
+	background: url("images/check-mark.svg") 85% 85% / 52% no-repeat, url("images/marker-circle.svg") 102% 102% / 70% no-repeat, url("images/warning.svg") center / 100% no-repeat;
 }
 #mod-options a.exclude-spam .icon {
-	background: url("images/warning.svg") 102% 102% / 66% no-repeat, url("images/marker-cross.svg") center / 100% no-repeat, url("images/marker-circle.svg") center / 100% no-repeat;
+	background: url("images/marker-cross.svg") 85% 85% / 52% no-repeat, url("images/marker-circle.svg") 102% 102% / 70% no-repeat, url("images/warning.svg") center / 100% no-repeat;
 }
 #mod-options a.list-spam .icon {
 	background-image: url(images/warning.svg);
 }
 #mod-options a.delete-spam .icon {
-	background-image: url(images/warning.svg);
+	background-image: url(images/marker-cross.svg);
 }
 #mod-options a.non-activated-users .icon {
 	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
