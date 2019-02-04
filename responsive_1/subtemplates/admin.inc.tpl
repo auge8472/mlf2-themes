@@ -8,22 +8,22 @@
 <div>
  <p class="label"><label for="id_forum_name">{#forum_name#}</label></p>
  <p class="description">{#forum_name_desc#}</p>
- <input type="text" name="forum_name" id="id_forum_name" value="{$settings.forum_name|escape}" size="40">
+ <input type="text" name="forum_name" id="id_forum_name" value="{$edSet.forum_name|escape}" size="40">
 </div>
 <div>
  <p class="label"><label for="id_forum_description">{#forum_description#}</label></p>
  <p class="description">{#forum_description_desc#}</p>
- <input type="text" name="forum_description" id="id_forum_description" value="{$settings.forum_description|escape}" size="40">
+ <input type="text" name="forum_description" id="id_forum_description" value="{$edSet.forum_description|escape}" size="40">
 </div>
 <div>
  <p class="label"><label for="id_forum_address">{#forum_address#}</label></p>
  <p class="description">{#forum_address_desc#}</p>
- <input type="text" name="forum_address" id="id_forum_address" value="{$settings.forum_address|escape}" size="40">
+ <input type="text" name="forum_address" id="id_forum_address" value="{$edSet.forum_address|escape}" size="40">
 </div>
 <div>
  <p class="label"><label for="id_forum_email">{#forum_email#}</label>
  <p class="description">{#forum_email_desc#}</p>
- <input type="text" name="forum_email" id="id_forum_email" value="{$settings.forum_email|escape}" size="40">
+ <input type="text" name="forum_email" id="id_forum_email" value="{$edSet.forum_email|escape}" size="40">
 </div>
 {if $languages}
 <div>
@@ -32,7 +32,7 @@
  <div class="r-select sl">
   <ul>
 {foreach from=$languages item=l}
-   <li><input type="radio" name="language_file" id="id_{$l.title}" value="{$l.identifier}"{if $l.identifier==$settings.language_file} checked="checked"{/if}><label for="id_{$l.title}">{$l.title}</label></li>
+   <li><input type="radio" name="language_file" id="id_{$l.title}" value="{$l.identifier}"{if $l.identifier==$edSet.language_file} checked="checked"{/if}><label for="id_{$l.title}">{$l.title}</label></li>
 {/foreach}
   </ul>
  </div>
@@ -43,16 +43,16 @@
  <p class="label"><label for="id_time_zone">{#default_time_zone#}</label></p>
  <p class="description">{#default_time_zone_desc#}</p>
  <select id="id_time_zone" name="time_zone" size="1">
-  <option value=""{if $settings.time_zone==''} selected="selected"{/if}></option>
+  <option value=""{if $edSet.time_zone==''} selected="selected"{/if}></option>
 {foreach from=$time_zones item=tz}
-  <option value="{$tz}"{if $tz==$settings.time_zone} selected="selected"{/if}>{$tz}</option>
+  <option value="{$tz}"{if $tz==$edSet.time_zone} selected="selected"{/if}>{$tz}</option>
 {/foreach}
  </select>
 </div>
 {else}
 <div>
  <p class="label"><label for="id_time_difference">{#default_time_difference#}</label></p>
- <input id="id_time_difference" type="text" name="time_difference" value="{$settings.time_difference}" size="5">
+ <input id="id_time_difference" type="text" name="time_difference" value="{$edSet.time_difference}" size="5">
 </div>
 {/if}
 {if $themes}
@@ -62,7 +62,7 @@
  <div class="r-select sl">
   <ul>
 {foreach from=$themes item=t}
-   <li><input type="radio" name="theme" id="id_{$t.title}" value="{$t.identifier}"{if $t.identifier==$settings.theme} checked="checked"{/if}><label for="id_{$t.title}">{$t.title}</label></li>
+   <li><input type="radio" name="theme" id="id_{$t.title}" value="{$t.identifier}"{if $t.identifier==$edSet.theme} checked="checked"{/if}><label for="id_{$t.title}">{$t.title}</label></li>
 {/foreach}
   </ul>
  </div>
@@ -71,44 +71,44 @@
 <div>
  <p class="label"><label for="id_home_url">{#home_link#}</label></p>
  <p class="description">{#home_link_desc#}</p>
- <input type="text" name="home_linkaddress" id="id_home_url" value="{$settings.home_linkaddress|escape}" size="40">
+ <input type="text" name="home_linkaddress" id="id_home_url" value="{$edSet.home_linkaddress|escape}" size="40">
 </div>
 <div>
  <p class="label"><label for="id_home_text">{#home_link_name#}</label></p>
  <p class="description">{#home_link_name_desc#}</p>
- <input type="text" name="home_linkname" id="id_home_text" value="{$settings.home_linkname|escape}" size="40">
+ <input type="text" name="home_linkname" id="id_home_text" value="{$edSet.home_linkname|escape}" size="40">
 </div>
 <div>
  <p class="label">{#terms_of_use_settings#}</p>
  <p class="description">{#terms_of_use_settings_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_terms_of_use_agreement-1" type="radio" name="terms_of_use_agreement" value="1"{if $settings.terms_of_use_agreement==1} checked="checked"{/if}><label for="id_terms_of_use_agreement-1">{#yes#}</label></li>
-   <li><input id="id_terms_of_use_agreement-0" type="radio" name="terms_of_use_agreement" value="0"{if $settings.terms_of_use_agreement==0} checked="checked"{/if}><label for="id_terms_of_use_agreement-0">{#no#}</label></li>
+   <li><input id="id_terms_of_use_agreement-1" type="radio" name="terms_of_use_agreement" value="1"{if $edSet.terms_of_use_agreement==1} checked="checked"{/if}><label for="id_terms_of_use_agreement-1">{#yes#}</label></li>
+   <li><input id="id_terms_of_use_agreement-0" type="radio" name="terms_of_use_agreement" value="0"{if $edSet.terms_of_use_agreement==0} checked="checked"{/if}><label for="id_terms_of_use_agreement-0">{#no#}</label></li>
   </ul>
  </div>
  <p class="label"><label for="id_terms_of_use_url">{#terms_of_use_url#}</label></p>
- <input id="id_terms_of_use_url" type="text" name="terms_of_use_url" value="{$settings.terms_of_use_url|escape}" size="40">
+ <input id="id_terms_of_use_url" type="text" name="terms_of_use_url" value="{$edSet.terms_of_use_url|escape}" size="40">
 </div>
 <div>
  <p class="label">{#data_privacy_statement#}</p>
  <p class="description">{#data_privacy_statement_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_data_privacy_agreement-1" type="radio" name="data_privacy_agreement" value="1"{if $settings.data_privacy_agreement==1} checked="checked"{/if}><label for="id_data_privacy_agreement-1">{#yes#}</label></li>
-   <li><input id="id_data_privacy_agreement-0" type="radio" name="data_privacy_agreement" value="0"{if $settings.data_privacy_agreement==0} checked="checked"{/if}><label for="id_data_privacy_agreement-0">{#no#}</label></li>
+   <li><input id="id_data_privacy_agreement-1" type="radio" name="data_privacy_agreement" value="1"{if $edSet.data_privacy_agreement==1} checked="checked"{/if}><label for="id_data_privacy_agreement-1">{#yes#}</label></li>
+   <li><input id="id_data_privacy_agreement-0" type="radio" name="data_privacy_agreement" value="0"{if $edSet.data_privacy_agreement==0} checked="checked"{/if}><label for="id_data_privacy_agreement-0">{#no#}</label></li>
   </ul>
  </div>
  <p class="label"><label for="id_data_privacy_url">{#data_privacy_url#}</label></p>
- <input id="id_data_privacy_url" type="text" name="data_privacy_statement_url" value="{$settings.data_privacy_statement_url|escape}" size="40">
+ <input id="id_data_privacy_url" type="text" name="data_privacy_statement_url" value="{$edSet.data_privacy_statement_url|escape}" size="40">
 </div>
 <div>
  <p class="label">{#accession#}</p>
  <p class="description">{#accession_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="access_for_all" type="radio" name="access_for_users_only" value="0"{if $settings.access_for_users_only==0} checked="checked"{/if}><label for="access_for_all">{#all_users#}</label></li>
-   <li><input id="access_for_users_only" type="radio" name="access_for_users_only" value="1"{if $settings.access_for_users_only==1} checked="checked"{/if}><label for="access_for_users_only">{#only_registered_users#}</label></li>
+   <li><input id="access_for_all" type="radio" name="access_for_users_only" value="0"{if $edSet.access_for_users_only==0} checked="checked"{/if}><label for="access_for_all">{#all_users#}</label></li>
+   <li><input id="access_for_users_only" type="radio" name="access_for_users_only" value="1"{if $edSet.access_for_users_only==1} checked="checked"{/if}><label for="access_for_users_only">{#only_registered_users#}</label></li>
   </ul>
  </div>
 </div>
@@ -117,8 +117,8 @@
  <p class="description">{#post_permission_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="entries_by_all" type="radio" name="entries_by_users_only" value="0"{if $settings.entries_by_users_only==0} checked="checked"{/if}><label for="entries_by_all">{#all_users#}</label></li>
-   <li><input id="entries_by_users" type="radio" name="entries_by_users_only" value="1"{if $settings.entries_by_users_only==1} checked="checked"{/if}><label for="entries_by_users">{#only_registered_users#}</label></li>
+   <li><input id="entries_by_all" type="radio" name="entries_by_users_only" value="0"{if $edSet.entries_by_users_only==0} checked="checked"{/if}><label for="entries_by_all">{#all_users#}</label></li>
+   <li><input id="entries_by_users" type="radio" name="entries_by_users_only" value="1"{if $edSet.entries_by_users_only==1} checked="checked"{/if}><label for="entries_by_users">{#only_registered_users#}</label></li>
   </ul>
  </div>
 </div>
@@ -127,9 +127,9 @@
  <p class="description">{#register_permission_desc#}</p>
  <div class="r-select ml">
   <ul>
-   <li><input id="register_mode_0" type="radio" name="register_mode" value="0"{if $settings.register_mode==0} checked="checked"{/if}><label for="register_mode_0">{#register_self#}</label></li>
-   <li><input id="register_mode_1" type="radio" name="register_mode" value="1"{if $settings.register_mode==1} checked="checked"{/if}><label for="register_mode_1">{#register_self_locked#}</label></li>
-   <li><input id="register_mode_2" type="radio" name="register_mode" value="2"{if $settings.register_mode==2} checked="checked"{/if}><label for="register_mode_2">{#register_only_admin#}</label></li>
+   <li><input id="register_mode_0" type="radio" name="register_mode" value="0"{if $edSet.register_mode==0} checked="checked"{/if}><label for="register_mode_0">{#register_self#}</label></li>
+   <li><input id="register_mode_1" type="radio" name="register_mode" value="1"{if $edSet.register_mode==1} checked="checked"{/if}><label for="register_mode_1">{#register_self_locked#}</label></li>
+   <li><input id="register_mode_2" type="radio" name="register_mode" value="2"{if $edSet.register_mode==2} checked="checked"{/if}><label for="register_mode_2">{#register_only_admin#}</label></li>
   </ul>
  </div>
 </div>
@@ -138,59 +138,59 @@
  <p class="description">{#user_area_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="public" type="radio" name="user_area_public" value="1"{if $settings.user_area_public==1} checked="checked"{/if}><label for="public">{#public_accessible#}</label></li>
-   <li><input id="not_public" type="radio" name="user_area_public" value="0"{if $settings.user_area_public==0} checked="checked"{/if}><label for="not_public">{#accessible_reg_users_only#}</label></li>
+   <li><input id="public" type="radio" name="user_area_public" value="1"{if $edSet.user_area_public==1} checked="checked"{/if}><label for="public">{#public_accessible#}</label></li>
+   <li><input id="not_public" type="radio" name="user_area_public" value="0"{if $edSet.user_area_public==0} checked="checked"{/if}><label for="not_public">{#accessible_reg_users_only#}</label></li>
   </ul>
  </div>
 </div>
 <div>
  <p class="label"><label for="id_latest_postings">{#latest_postings#}</label></p>
  <p class="description">{#latest_postings_desc#}</p>
- <input type="text" name="latest_postings" id="id_latest_postings" value="{$settings.latest_postings|escape}" size="5">
+ <input type="text" name="latest_postings" id="id_latest_postings" value="{$edSet.latest_postings|escape}" size="5">
 </div>
 <div>
  <p class="label">{#tag_cloud#}</p>
  <p class="description">{#tag_cloud_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_tag_cloud-1" type="radio" name="tag_cloud" value="1"{if $settings.tag_cloud==1} checked="checked"{/if}><label for="id_tag_cloud-1">{#yes#}</label></li>
-   <li><input id="id_tag_cloud-0" type="radio" name="tag_cloud" value="0"{if $settings.tag_cloud==0} checked="checked"{/if}><label for="id_tag_cloud-0">{#no#}</label></li>
+   <li><input id="id_tag_cloud-1" type="radio" name="tag_cloud" value="1"{if $edSet.tag_cloud==1} checked="checked"{/if}><label for="id_tag_cloud-1">{#yes#}</label></li>
+   <li><input id="id_tag_cloud-0" type="radio" name="tag_cloud" value="0"{if $edSet.tag_cloud==0} checked="checked"{/if}><label for="id_tag_cloud-0">{#no#}</label></li>
   </ul>
  </div>
 </div>
 <div>
-{assign var="settings_edit_delay" value=$settings.edit_delay}
+{assign var="settings_edit_delay" value=$edSet.edit_delay}
 {assign var="input_edit_delay" value="<input type=\"text\" name=\"edit_delay\" value=\"$settings_edit_delay\" size=\"3\">"}
  <p class="label">{#edit_postings#}</p>
  <p class="description">{#edit_postings_desc#}</p>
  <div>
   <ul>
-   <li><input id="id_show_if_edited" type="checkbox" name="show_if_edited" value="1"{if $settings.show_if_edited==1} checked="checked"{/if}><label for="id_show_if_edited">{#show_if_edited#|replace:"[minutes]":$input_edit_delay}</label></li>
-   <li><input id="id_dont_reg_edit_by_admin" type="checkbox" name="dont_reg_edit_by_admin" value="1"{if $settings.dont_reg_edit_by_admin==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_admin">{#dont_show_edit_by_admin#}</label></li>
-   <li><input id="id_dont_reg_edit_by_mod" type="checkbox" name="dont_reg_edit_by_mod" value="1"{if $settings.dont_reg_edit_by_mod==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_mod">{#dont_show_edit_by_mod#}</label></li>
+   <li><input id="id_show_if_edited" type="checkbox" name="show_if_edited" value="1"{if $edSet.show_if_edited==1} checked="checked"{/if}><label for="id_show_if_edited">{#show_if_edited#|replace:"[minutes]":$input_edit_delay}</label></li>
+   <li><input id="id_dont_reg_edit_by_admin" type="checkbox" name="dont_reg_edit_by_admin" value="1"{if $edSet.dont_reg_edit_by_admin==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_admin">{#dont_show_edit_by_admin#}</label></li>
+   <li><input id="id_dont_reg_edit_by_mod" type="checkbox" name="dont_reg_edit_by_mod" value="1"{if $edSet.dont_reg_edit_by_mod==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_mod">{#dont_show_edit_by_mod#}</label></li>
   </ul>
  </div>
 </div>
 <div>
-{assign var="settings_edit_delay" value=$settings.edit_delay}
+{assign var="settings_edit_delay" value=$edSet.edit_delay}
 {assign var="input_edit_delay" value="<input type=\"text\" name=\"edit_delay\" value=\"$settings_edit_delay\" size=\"3\">"}
  <p class="label">{#edit_own_postings#}</p>
  <div class="r-select ml">
   <ul>
-   <li><input id="id_edit_own_postings_all" type="radio" name="user_edit" value="2"{if $settings.user_edit==2} checked="checked"{/if}><label for="id_edit_own_postings_all">{#edit_own_postings_all#}</label></li>
-   <li><input id="id_edit_own_postings_users" type="radio" name="user_edit" value="1"{if $settings.user_edit==1} checked="checked"{/if}><label for="id_edit_own_postings_users">{#edit_own_postings_users#}</label></li>
-   <li><input id="id_edit_own_postings_disabled" type="radio" name="user_edit" value="0"{if $settings.user_edit==0} checked="checked"{/if}><label for="id_edit_own_postings_disabled">{#edit_own_postings_disabled#}</label></li>
+   <li><input id="id_edit_own_postings_all" type="radio" name="user_edit" value="2"{if $edSet.user_edit==2} checked="checked"{/if}><label for="id_edit_own_postings_all">{#edit_own_postings_all#}</label></li>
+   <li><input id="id_edit_own_postings_users" type="radio" name="user_edit" value="1"{if $edSet.user_edit==1} checked="checked"{/if}><label for="id_edit_own_postings_users">{#edit_own_postings_users#}</label></li>
+   <li><input id="id_edit_own_postings_disabled" type="radio" name="user_edit" value="0"{if $edSet.user_edit==0} checked="checked"{/if}><label for="id_edit_own_postings_disabled">{#edit_own_postings_disabled#}</label></li>
   </ul>
  </div>
  <div>
-{assign var="settings_edit_max_time_period" value=$settings.edit_max_time_period}
+{assign var="settings_edit_max_time_period" value=$edSet.edit_max_time_period}
 {assign var="input_edit_max_time_period" value="<input type=\"text\" id=\"id_edit_max_time_period\" name=\"edit_max_time_period\" value=\"$settings_edit_max_time_period\" size=\"3\">"}
   <p>
    <label for="id_edit_max_time_period">{#edit_max_time_period#|replace:"[minutes]":$input_edit_max_time_period}</label></p>
-{assign var="settings_edit_min_time_period" value=$settings.edit_min_time_period}
+{assign var="settings_edit_min_time_period" value=$edSet.edit_min_time_period}
 {assign var="input_edit_min_time_period" value="<input type=\"text\" name=\"edit_min_time_period\" value=\"$settings_edit_min_time_period\" size=\"3\">"}
   <p>
-   <input id="id_user_edit_if_no_replies" type="checkbox" name="user_edit_if_no_replies" value="1"{if $settings.user_edit_if_no_replies==1} checked="checked"{/if}><label for="id_user_edit_if_no_replies">{#user_edit_if_no_replies#|replace:"[minutes]":$input_edit_min_time_period}</label>
+   <input id="id_user_edit_if_no_replies" type="checkbox" name="user_edit_if_no_replies" value="1"{if $edSet.user_edit_if_no_replies==1} checked="checked"{/if}><label for="id_user_edit_if_no_replies">{#user_edit_if_no_replies#|replace:"[minutes]":$input_edit_min_time_period}</label>
   </p>
  </div>
 </div>
@@ -199,8 +199,8 @@
  <p class="description">{#bbcode_desc#}</p>
  <div>
   <ul>
-   <li><input id="id_bbcode" type="checkbox" name="bbcode" value="1"{if $settings.bbcode==1} checked="checked"{/if}><label for="id_bbcode">{#bbcodes_enabled#}</label></li>
-   <li><input id="id_bbcode_img" type="checkbox" name="bbcode_img" value="1"{if $settings.bbcode_img==1} checked="checked"{/if}><label for="id_bbcode_img">{#bbcodes_img_enabled#}</label></li>
+   <li><input id="id_bbcode" type="checkbox" name="bbcode" value="1"{if $edSet.bbcode==1} checked="checked"{/if}><label for="id_bbcode">{#bbcodes_enabled#}</label></li>
+   <li><input id="id_bbcode_img" type="checkbox" name="bbcode_img" value="1"{if $edSet.bbcode_img==1} checked="checked"{/if}><label for="id_bbcode_img">{#bbcodes_img_enabled#}</label></li>
   </ul>
  </div>
 </div>
@@ -209,8 +209,8 @@
  <p class="description">{#smilies_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_smilies-1" type="radio" name="smilies" value="1"{if $settings.smilies==1} checked="checked"{/if}><label for="id_smilies-1">{#yes#}</label></li>
-   <li><input id="id_smilies-0" type="radio" name="smilies" value="0"{if $settings.smilies==0} checked="checked"{/if}><label for="id_smilies-0">{#no#}</label></li>
+   <li><input id="id_smilies-1" type="radio" name="smilies" value="1"{if $edSet.smilies==1} checked="checked"{/if}><label for="id_smilies-1">{#yes#}</label></li>
+   <li><input id="id_smilies-0" type="radio" name="smilies" value="0"{if $edSet.smilies==0} checked="checked"{/if}><label for="id_smilies-0">{#no#}</label></li>
   </ul>
  </div>
 </div>
@@ -219,16 +219,16 @@
  <p class="description">{#enamble_avatars_desc#}</p>
  <div class="r-select ml">
   <ul>
-   <li><input id="id_avatars_profiles_postings" type="radio" name="avatars" value="2"{if $settings.avatars==2} checked="checked"{/if}><label for="id_avatars_profiles_postings">{#avatars_profiles_postings#}</label></li>
-   <li><input id="id_avatars_profiles" type="radio" name="avatars" value="1"{if $settings.avatars==1} checked="checked"{/if}><label for="id_avatars_profiles">{#avatars_profiles#}</label></li>
-   <li><input id="id_avatars_disabled" type="radio" name="avatars" value="0"{if $settings.avatars==0} checked="checked"{/if}><label for="id_avatars_disabled">{#disabled#}</label></li>
+   <li><input id="id_avatars_profiles_postings" type="radio" name="avatars" value="2"{if $edSet.avatars==2} checked="checked"{/if}><label for="id_avatars_profiles_postings">{#avatars_profiles_postings#}</label></li>
+   <li><input id="id_avatars_profiles" type="radio" name="avatars" value="1"{if $edSet.avatars==1} checked="checked"{/if}><label for="id_avatars_profiles">{#avatars_profiles#}</label></li>
+   <li><input id="id_avatars_disabled" type="radio" name="avatars" value="0"{if $edSet.avatars==0} checked="checked"{/if}><label for="id_avatars_disabled">{#disabled#}</label></li>
   </ul>
  </div>
-{assign var="settings_avatar_max_width" value=$settings.avatar_max_width}
+{assign var="settings_avatar_max_width" value=$edSet.avatar_max_width}
 {assign var="input_avatar_max_width" value="<input id=\"avatar_max_width\" type=\"text\" name=\"avatar_max_width\" value=\"$settings_avatar_max_width\" size=\"5\">"}
-{assign var="settings_avatar_max_height" value=$settings.avatar_max_height}
+{assign var="settings_avatar_max_height" value=$edSet.avatar_max_height}
 {assign var="input_avatar_max_height" value="<input type=\"text\" name=\"avatar_max_height\" value=\"$settings_avatar_max_height\" size=\"5\">"}
-{assign var="settings_avatar_max_filesize" value=$settings.avatar_max_filesize}
+{assign var="settings_avatar_max_filesize" value=$edSet.avatar_max_filesize}
 {assign var="input_avatar_max_filesize" value="<input type=\"text\" name=\"avatar_max_filesize\" value=\"$settings_avatar_max_filesize\" size=\"5\">"}
  <p>{#max_avatar_size#|replace:"[width]":$input_avatar_max_width|replace:"[height]":$input_avatar_max_height|replace:"[filesize]":$input_avatar_max_filesize}</p>
 </div>
@@ -237,17 +237,17 @@
  <p class="description">{#upload_images_desc#}</p>
  <div class="r-select ml">
   <ul>
-   <li><input id="id_upload_images_all" type="radio" name="upload_images" value="3"{if $settings.upload_images==3} checked="checked"{/if}><label for="id_upload_images_all">{#upload_enabled_all#}</label></li>
-   <li><input id="id_upload_images_users" type="radio" name="upload_images" value="2"{if $settings.upload_images==2} checked="checked"{/if}><label for="id_upload_images_users">{#upload_enabled_users#}</label></li>
-   <li><input id="id_upload_images_admins_mods" type="radio" name="upload_images" value="1"{if $settings.upload_images==1} checked="checked"{/if}><label for="id_upload_images_admins_mods">{#upload_enabled_admins_mods#}</label></li>
-   <li><input id="id_upload_images_disabled" type="radio" name="upload_images" value="0"{if $settings.upload_images==0} checked="checked"{/if}><label for="id_upload_images_disabled">{#disabled#}</label></li>
+   <li><input id="id_upload_images_all" type="radio" name="upload_images" value="3"{if $edSet.upload_images==3} checked="checked"{/if}><label for="id_upload_images_all">{#upload_enabled_all#}</label></li>
+   <li><input id="id_upload_images_users" type="radio" name="upload_images" value="2"{if $edSet.upload_images==2} checked="checked"{/if}><label for="id_upload_images_users">{#upload_enabled_users#}</label></li>
+   <li><input id="id_upload_images_admins_mods" type="radio" name="upload_images" value="1"{if $edSet.upload_images==1} checked="checked"{/if}><label for="id_upload_images_admins_mods">{#upload_enabled_admins_mods#}</label></li>
+   <li><input id="id_upload_images_disabled" type="radio" name="upload_images" value="0"{if $edSet.upload_images==0} checked="checked"{/if}><label for="id_upload_images_disabled">{#disabled#}</label></li>
   </ul>
  </div>
-{assign var="settings_upload_max_width" value=$settings.upload_max_img_width}
+{assign var="settings_upload_max_width" value=$edSet.upload_max_img_width}
 {assign var="input_upload_max_width" value="<input id=\"upload_max_img_width\" type=\"text\" name=\"upload_max_img_width\" value=\"$settings_upload_max_width\" size=\"5\">"}
-{assign var="settings_upload_max_height" value=$settings.upload_max_img_height}
+{assign var="settings_upload_max_height" value=$edSet.upload_max_img_height}
 {assign var="input_upload_max_height" value="<input type=\"text\" name=\"upload_max_img_height\" value=\"$settings_upload_max_height\" size=\"5\">"}
-{assign var="settings_upload_max_img_size" value=$settings.upload_max_img_size}
+{assign var="settings_upload_max_img_size" value=$edSet.upload_max_img_size}
 {assign var="input_upload_max_filesize" value="<input type=\"text\" name=\"upload_max_img_size\" value=\"$settings_upload_max_img_size\" size=\"5\">"}
  <p>{#max_upload_size#|replace:"[width]":$input_upload_max_width|replace:"[height]":$input_upload_max_height|replace:"[filesize]":$input_upload_max_filesize}</p>
 </div>
@@ -256,8 +256,8 @@
  <p class="description">{#autolink_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_autolink-1" type="radio" name="autolink" value="1"{if $settings.autolink==1} checked="checked"{/if}><label for="id_autolink-1">{#yes#}</label></li>
-   <li><input id="id_autolink-0" type="radio" name="autolink" value="0"{if $settings.autolink==0} checked="checked"{/if}><label for="id_autolink-0">{#no#}</label></li>
+   <li><input id="id_autolink-1" type="radio" name="autolink" value="1"{if $edSet.autolink==1} checked="checked"{/if}><label for="id_autolink-1">{#yes#}</label></li>
+   <li><input id="id_autolink-0" type="radio" name="autolink" value="0"{if $edSet.autolink==0} checked="checked"{/if}><label for="id_autolink-0">{#no#}</label></li>
   </ul>
  </div>
 </div>
@@ -266,8 +266,8 @@
  <p class="description">{#count_views_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_count_views-1" type="radio" name="count_views" value="1"{if $settings.count_views==1} checked="checked"{/if}><label for="id_count_views-1">{#yes#}</label></li>
-   <li><input id="id_count_views-0" type="radio" name="count_views" value="0"{if $settings.count_views==0} checked="checked"{/if}><label for="id_count_views-0">{#no#}</label></li>
+   <li><input id="id_count_views-1" type="radio" name="count_views" value="1"{if $edSet.count_views==1} checked="checked"{/if}><label for="id_count_views-1">{#yes#}</label></li>
+   <li><input id="id_count_views-0" type="radio" name="count_views" value="0"{if $edSet.count_views==0} checked="checked"{/if}><label for="id_count_views-0">{#no#}</label></li>
   </ul>
  </div>
 </div>
@@ -276,28 +276,28 @@
  <p class="description">{#rss_feed_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_rss_feed-1" type="radio" name="rss_feed" value="1"{if $settings.rss_feed==1} checked="checked"{/if}><label for="id_rss_feed-1">{#yes#}</label></li>
-   <li><input id="id_rss_feed-0" type="radio" name="rss_feed" value="0"{if $settings.rss_feed==0} checked="checked"{/if}><label for="id_rss_feed-0">{#no#}</label></li>
+   <li><input id="id_rss_feed-1" type="radio" name="rss_feed" value="1"{if $edSet.rss_feed==1} checked="checked"{/if}><label for="id_rss_feed-1">{#yes#}</label></li>
+   <li><input id="id_rss_feed-0" type="radio" name="rss_feed" value="0"{if $edSet.rss_feed==0} checked="checked"{/if}><label for="id_rss_feed-0">{#no#}</label></li>
   </ul>
  </div>
 </div>
 <div>
  <p class="label"><label for="id_threads_per_page">{#threads_per_page#}</label></p>
  <p class="description">{#threads_per_page_desc#}</p>
- <input type="text" name="threads_per_page" id="id_threads_per_page" value="{$settings.threads_per_page|escape}" size="5">
+ <input type="text" name="threads_per_page" id="id_threads_per_page" value="{$edSet.threads_per_page|escape}" size="5">
 </div>
 <div>
  <p class="label">{#reset_read_state#}</p>
  <p class="description">{#reset_read_state_desc#}</p>
  <div class="r-select ml">
  <ul>
-   <li><input name="read_state_expiration_method" id="id_rs_no_reset" value="0" type="radio"{if not isset($settings.read_state_expiration_method) or $settings.read_state_expiration_method==0} checked="checked"{/if}>
+   <li><input name="read_state_expiration_method" id="id_rs_no_reset" value="0" type="radio"{if not isset($edSet.read_state_expiration_method) or $edSet.read_state_expiration_method==0} checked="checked"{/if}>
    <label for="id_rs_no_reset">{#read_state_no_reset#}</label></li>
-   <li><input name="read_state_expiration_method" id="id_rs_number_reset" value="1" type="radio"{if $settings.read_state_expiration_method==1} checked="checked"{/if}>
+   <li><input name="read_state_expiration_method" id="id_rs_number_reset" value="1" type="radio"{if $edSet.read_state_expiration_method==1} checked="checked"{/if}>
    <label for="id_rs_number_reset">{#read_state_numbered_reset#}</label></li>
-   <li><input name="read_state_expiration_method" id="id_rs_age_reset" value="2" type="radio"{if $settings.read_state_expiration_method==2} checked="checked"{/if}>
+   <li><input name="read_state_expiration_method" id="id_rs_age_reset" value="2" type="radio"{if $edSet.read_state_expiration_method==2} checked="checked"{/if}>
    <label for="id_rs_age_reset">{#read_state_timeout_reset#}</label></li>
-   <li><input name="read_state_expiration_method" id="id_rs_lock_reset" value="3" type="radio"{if $settings.read_state_expiration_method==3} checked="checked"{/if}>
+   <li><input name="read_state_expiration_method" id="id_rs_lock_reset" value="3" type="radio"{if $edSet.read_state_expiration_method==3} checked="checked"{/if}>
    <label for="id_rs_lock_reset">{#read_state_locktime_reset#}</label></li>
   </ul>
  </div>
@@ -305,31 +305,31 @@
 <div>
  <p class="label"><label for="id_read_state_expiration_value">{#read_state_value#}</label></p>
  <p class="description">{#read_state_value_desc#}</p>
- <input name="read_state_expiration_value" id="id_read_state_expiration_value" value="{$settings.read_state_expiration_value|escape}" size="5" type="text">
+ <input name="read_state_expiration_value" id="id_read_state_expiration_value" value="{$edSet.read_state_expiration_value|escape}" size="5" type="text">
 </div>
 <div>
  <p class="label"><label for="id_auto_lock_old_threads">{#auto_lock_old_threads#}</label></p>
  <p class="description">{#auto_lock_old_threads_desc#}</p>
- <input name="auto_lock_old_threads" id="id_auto_lock_old_threads" value="{$settings.auto_lock_old_threads|escape}" type="text" size="5">
+ <input name="auto_lock_old_threads" id="id_auto_lock_old_threads" value="{$edSet.auto_lock_old_threads|escape}" type="text" size="5">
 </div>
 <div>
  <p class="label"><label for="id_count_users_online">{#count_users_online#}</label></p>
  <p class="description">{#count_users_online_desc#}</p>
- <input name="count_users_online" id="id_count_users_online" value="{$settings.count_users_online|escape}" type="text" size="5">
+ <input name="count_users_online" id="id_count_users_online" value="{$edSet.count_users_online|escape}" type="text" size="5">
 </div>
 <div>
  <p class="label">{#forum_enabled_marking#}</p>
  <p class="description">{#forum_enabled_desc#}</p>
  <div class="r-select sl">
   <ul>
-   <li><input id="id_forum_enabled-1" type="radio" name="forum_enabled" value="1"{if $settings.forum_enabled==1} checked="checked"{/if}><label for="id_forum_enabled-1">{#yes#}</label></li>
-   <li><input id="id_forum_enabled-0" type="radio" name="forum_enabled" value="0"{if $settings.forum_enabled==0} checked="checked"{/if}><label for="id_forum_enabled-0">{#no#}</label></li>
+   <li><input id="id_forum_enabled-1" type="radio" name="forum_enabled" value="1"{if $edSet.forum_enabled==1} checked="checked"{/if}><label for="id_forum_enabled-1">{#yes#}</label></li>
+   <li><input id="id_forum_enabled-0" type="radio" name="forum_enabled" value="0"{if $edSet.forum_enabled==0} checked="checked"{/if}><label for="id_forum_enabled-0">{#no#}</label></li>
   </ul>
  </div>
 </div>
 <div>
  <p class="label"><label for="id_forum_disabled_message">{#forum_disabled_message#}</label></p>
- <input id="id_forum_disabled_message" type="text" name="forum_disabled_message" value="{$settings.forum_disabled_message|escape}" size="40">
+ <input id="id_forum_disabled_message" type="text" name="forum_disabled_message" value="{$edSet.forum_disabled_message|escape}" size="40">
 </div>
 <div>
  <p>
