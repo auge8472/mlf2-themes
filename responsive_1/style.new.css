@@ -122,9 +122,6 @@ a.stronglink {
 a.stronglink:visited {
 	color: #00c;
 }
-a.stronglink:focus, a.stronglink:hover {
-	/*background-position: 0 -41px;*/
-}
 /* end: strong links */
 
 
