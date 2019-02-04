@@ -191,6 +191,9 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	padding: 0 0.25em;
 	white-space: nowrap;
 }
+#subnav a.create-thread .icon {
+	background-image: url(images/arrow-b-right.svg);
+}
 #subnav a[href*='mode=user&action=show_posts'] .icon {
 	background-image: url(images/entries-listing.svg);
 }
