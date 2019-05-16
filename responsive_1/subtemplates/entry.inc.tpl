@@ -59,7 +59,7 @@
 {/if}
 {if $options.edit} <li><a href="index.php?mode=posting&amp;edit={$id}&amp;back=entry" class="edit">{#edit_message_linkname#}</a></li>
 {/if}
-{if $options.delete} <li><a href="index.php?mode=posting&amp;delete_posting={$id}&amp;back=entry" class="delete">{#delete_message_linkname#}</a></li>
+{if $options.delete} <li><a href="index.php?mode=posting&amp;delete_posting={$id}&amp;csrf_token={$CSRF_TOKEN}&amp;back=entry" class="delete">{#delete_message_linkname#}</a></li>
 {/if}
 {if $options.move} <li><a href="index.php?mode=posting&amp;move_posting={$id}&amp;back=entry" class="move">{#move_posting_linkname#}</a></li>
 {/if}
