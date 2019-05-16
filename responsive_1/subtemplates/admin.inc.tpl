@@ -535,14 +535,97 @@
 <table>
  <thead>
   <tr>
-   <!--<th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_id&amp;descasc={if $descasc=="ASC" && $order=="user_id"}DESC{else}ASC{/if}&amp;ul={$ul}">{#user_id#}</a>{if $order=="user_id" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="user_id" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>-->
-   <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_name&amp;descasc={if $descasc=="ASC" && $order=="user_name"}DESC{else}ASC{/if}&amp;ul={$ul}">{#user_name#}</a>{if $order=="user_name" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="user_name" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>
-   <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_email&amp;descasc={if $descasc=="ASC" && $order=="user_email"}DESC{else}ASC{/if}&amp;ul={$ul}">{#user_email#}</a>{if $order=="user_email" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="user_email" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>
-   <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_type&amp;descasc={if $descasc=="ASC" && $order=="user_type"}DESC{else}ASC{/if}&amp;ul={$ul}">{#user_type#}</a>{if $order=="user_type" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="user_type" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>
-   <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=registered&amp;descasc={if $descasc=="ASC" && $order=="registered"}DESC{else}ASC{/if}&amp;ul={$ul}">{#user_registered#}</a>{if $order=="registered" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="registered" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>
-   <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=logins&amp;descasc={if $descasc=="ASC" && $order=="logins"}DESC{else}ASC{/if}&amp;ul={$ul}">{#user_logins#}</a>{if $order=="logins" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="logins" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>
-   <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=last_login&amp;descasc={if $descasc=="ASC" && $order=="last_login"}DESC{else}ASC{/if}&amp;ul={$ul}">{#last_login#}</a>{if $order=="last_login" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="last_login" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>
-   <th><a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_lock&amp;descasc={if $descasc=="ASC" && $order=="user_lock"}DESC{else}ASC{/if}&amp;ul={$ul}">{#lock#}</a>{if $order=="user_lock" && $descasc=="ASC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/asc.png" alt="[asc]" width="5" height="9">{elseif $order=="user_lock" && $descasc=="DESC"}&nbsp;<img src="{$THEMES_DIR}/{$theme}/images/desc.png" alt="[desc]" width="5" height="9">{/if}</th>
+   <th>
+    <span class="header-cell">
+     <span class="tc-title">{#user_name#}</span>
+     <span class="sorting-ui">
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_name&amp;descasc=DESC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_name" && $descasc=="DESC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
+      </a>
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_name&amp;descasc=ASC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_name" && $descasc=="ASC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
+      </a>
+     </span>
+    </span>
+   </th>
+   <th>
+    <span class="header-cell">
+     <span class="tc-title">{#user_email#}</span>
+     <span class="sorting-ui">
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_email&amp;descasc=DESC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_email" && $descasc=="DESC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
+      </a>
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_email&amp;descasc=ASC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_email" && $descasc=="ASC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
+      </a>
+     </span>
+    </span>
+   </th>
+   <th>
+    <span class="header-cell">
+     <span class="tc-title">{#user_type#}</span>
+     <span class="sorting-ui">
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_type&amp;descasc=ASC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_type" && $descasc=="ASC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
+      </a>
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_type&amp;descasc=DESC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_type" && $descasc=="DESC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
+      </a>
+     </span>
+    </span>
+   </th>
+   <th>
+    <span class="header-cell">
+     <span class="tc-title">{#user_registered#}</span>
+     <span class="sorting-ui">
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=registered&amp;descasc=DESC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="registered" && $descasc=="DESC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
+      </a>
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=registered&amp;descasc=ASC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="registered" && $descasc=="ASC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
+      </a>
+     </span>
+    </span>
+   </th>
+   <th>
+    <span class="header-cell">
+     <span class="tc-title">{#user_logins#}</span>
+     <span class="sorting-ui">
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=logins&amp;descasc=DESC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="logins" && $descasc=="DESC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
+      </a>
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=logins&amp;descasc=ASC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="logins" && $descasc=="ASC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
+      </a>
+     </span>
+    </span>
+   </th>
+   <th>
+    <span class="header-cell">
+     <span class="tc-title">{#last_login#}</span>
+     <span class="sorting-ui">
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=last_login&amp;descasc=DESC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="last_login" && $descasc=="DESC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
+      </a>
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=last_login&amp;descasc=ASC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="last_login" && $descasc=="ASC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
+      </a>
+     </span>
+    </span>
+   </th>
+   <th>
+    <span class="header-cell">
+     <span class="tc-title">{#lock#}</span>
+     <span class="sorting-ui">
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_lock&amp;descasc=DESC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_lock" && $descasc=="DESC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
+      </a>
+      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_lock&amp;descasc=ASC&amp;ul={$ul}">
+       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_lock" && $descasc=="ASC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
+      </a>
+     </span>
+    </span>
+   </th>
    <th>&nbsp;</th>
   </tr>
  </thead>

@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="128">
+ <style type="text/css">
+  <![CDATA[
+  polygon { stroke: none; }
+  #active { fill: #f80800; }
+  ]]>
+ </style>
+ <polygon id="active" points="8,128 8,0 34,0 34,78 52,78" />
+</svg>
+

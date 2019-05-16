@@ -1428,6 +1428,41 @@ div.warning              {
 		text-align: left;
 		padding: 0.1rem 0.25rem;
 	}
+	th span.header-cell {
+		display: flex;
+		align-content: start;
+		align-items: center;
+	}
+	th .sorting-ui {
+		margin-left: 0.25em;
+		display: flex;
+		align-content: start;
+		align-items: center;
+	}
+	th .sorting-ui a {
+		display: inline-block;
+		width: 0.9em;
+		height: 1.35em;
+		border: 1px solid #bacbdf;
+		background: #f4f4f4;
+	}
+	th .sorting-ui a:focus, th .sorting-ui a:hover {
+		background: #fafac0;
+	}
+	th .sorting-ui a:first-of-type {
+		text-align: right;
+		border-top-left-radius: 0.25em;
+		border-bottom-left-radius: 0.25em;
+	}
+	th .sorting-ui a:last-of-type {
+		text-align: left;
+		border-top-right-radius: 0.25em;
+		border-bottom-right-radius: 0.25em;
+	}
+	th .sorting-ui a img {
+		height: 80%;
+		width: auto;
+	}
 	td {
 		font-weight: normal;
 		padding: 0.25rem;
