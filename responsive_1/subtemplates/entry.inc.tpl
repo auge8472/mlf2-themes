@@ -75,15 +75,15 @@
 </ul>
 </footer>
 </article>
-
 <hr class="entryline" />
-<div class="complete-thread">
-<p class="left"><strong>{#complete_thread_marking#}</strong></p><p class="right">&nbsp;{if $settings.rss_feed==1}<a class="rss" href="index.php?mode=rss&amp;thread={$tid}">{#rss_feed_thread#}</a>{/if}</p>
-</div>
-
-<ul class="thread openthread">
+<section class="thread-tree">
+ <header>
+  <h2>{#complete_thread_marking#}</h2>
+{if $settings.rss_feed==1}<p><a class="rss" href="index.php?mode=rss&amp;thread={$tid}">{#rss_feed_thread#}</a></p>{/if}
+ </header>
+ <ul class="thread openthread">
 {function name=tree level=0}
-<li>{if $data.$element.id!=$id}<a class="{if $data.$element.pid==0&&$data.$element.new}threadnew{elseif $data.$element.pid==0}thread{elseif $data.$element.pid!=0&&$data.$element.new}replynew{else}reply{/if}{if $data.$element.is_read} read{/if}" href="index.php?id={$data.$element.id}">{$data.$element.subject}</a>{else}<span class="{if $data.$element.pid==0}{if $data.$element.new}currentthreadnew{else}currentthread{/if}{else}{if $data.$element.new}currentreplynew{else}currentreply{/if}{/if}">{$data.$element.subject}</span>{/if}{if $data.$element.no_text} <img class="no-text" src="{$THEMES_DIR}/{$theme}/images/no_text.png" alt="[ {#no_text_alt#} ]" width="11" height="9" />{/if} - 
+  <li>{if $data.$element.id!=$id}<a class="{if $data.$element.pid==0&&$data.$element.new}threadnew{elseif $data.$element.pid==0}thread{elseif $data.$element.pid!=0&&$data.$element.new}replynew{else}reply{/if}{if $data.$element.is_read} read{/if}" href="index.php?id={$data.$element.id}">{$data.$element.subject}</a>{else}<span class="{if $data.$element.pid==0}{if $data.$element.new}currentthreadnew{else}currentthread{/if}{else}{if $data.$element.new}currentreplynew{else}currentreply{/if}{/if}">{$data.$element.subject}</span>{/if}{if $data.$element.no_text} <img class="no-text" src="{$THEMES_DIR}/{$theme}/images/no_text.png" alt="[ {#no_text_alt#} ]" width="11" height="9" />{/if} - 
 
 {if $data.$element.user_id>0}
 <strong class="registered_user">{$data.$element.name}</strong>, 
@@ -96,4 +96,5 @@
 <ul class="{if $level<$settings.deep_reply}reply{elseif $level>=$settings.deep_reply&&$level<$settings.very_deep_reply}deep-reply{else}very-deep-reply{/if}{if $fold_threads==1} js-display-none{/if}">{foreach from=$child_array[$element] item=child}{tree element=$child level=$level+1}{/foreach}</ul>{/if}</li>
 {/function}
 {tree element=$tid}
-</ul>
+ </ul>
+</section>

@@ -1066,6 +1066,13 @@ article footer a.lock, article footer a.lock-thread, article footer li .locked {
 article footer a.unlock, article footer a.unlock-thread {
 	background-image: url(images/lock-open.svg);
 }
+/* special rules for thread tree below singe posting view*/
+section.thread-tree header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* ajax preview element */
 #ajax-preview {
 	position: absolute;
 	width: 30em;
