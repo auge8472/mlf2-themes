@@ -84,12 +84,12 @@
 <fieldset>
 
 <p>
-<label for="name" class="input">{#name_marking#}</label>
+<label for="name">{#name_marking#}</label>
 <input id="name" type="text" size="40" name="{$fld_user_name}" value="{if $name}{$name}{/if}" maxlength="{$settings.username_maxlength}"  tabindex="1" />
 </p>
 
 <p>
-<label for="email" class="input">{#email_marking#} <span class="xsmall">{#optional_email#}</span></label>
+<label for="email">{#email_marking#} <span class="xsmall">{#optional_email#}</span></label>
 <input id="email" type="text" size="40" name="{$fld_user_email}" value="{if $email}{$email}{/if}" maxlength="{$settings.email_maxlength}" tabindex="2" />
 </p>
 
@@ -99,7 +99,7 @@
 </p>
 
 <p>
-<label for="hp" class="input">{#hp_marking#} <span class="xsmall">{#optional#}</span></label>
+<label for="hp">{#hp_marking#} <span class="xsmall">{#optional#}</span></label>
 <input id="hp" type="text" size="40" name="{$fld_hp}" value="{if $hp}{$hp}{/if}" maxlength="{$settings.hp_maxlength}" tabindex="3" />
 </p>
 
@@ -109,7 +109,7 @@
 </p>
 
 <p>
-<label for="location" class="input">{#location_marking#} <span class="xsmall">{#optional#}</span></label>
+<label for="location">{#location_marking#} <span class="xsmall">{#optional#}</span></label>
 <input id="location" type="text" size="40" name="{$fld_location}" value="{if $location}{$location}{/if}" maxlength="{$settings.location_maxlength}" tabindex="4" />
 </p>
 
@@ -124,7 +124,7 @@
 
 <fieldset>
 {if $categories}
-<p><label for="p_category" class="input">{#category_marking#}</label>
+<p><label for="p_category">{#category_marking#}</label>
 <select id="p_category" size="1" name="p_category" tabindex="5"{if $posting_mode==0 && $id>0 || $posting_mode==1 && $pid>0} disabled="disabled"{/if}>
 {foreach key=key item=val from=$categories}
 {if $key!=0}<option value="{$key}"{if $key==$p_category} selected="selected"{/if}>{$val}</option>{/if}
@@ -135,21 +135,22 @@
 {/if}
 {/if}
 
-<p><label for="subject" class="input">{#subject_marking#}</label>
+<p><label for="subject">{#subject_marking#}</label>
 <input id="subject" type="text" size="50" name="{$fld_subject}" value="{if $subject}{$subject}{/if}" maxlength="{$settings.subject_maxlength}" tabindex="6" />
 </p>
 
 {if ($admin ||$mod) && $settings.tags}
 <p>
-<label for="tags" class="input">{#tags_marking#} <span class="xsmall">{#tags_note#}</span></label>
+<label for="tags">{#tags_marking#} <span class="xsmall">{#tags_note#}</span></label>
 <input id="tags" type="text" size="50" name="tags" value="{$tags|default:""}" maxlength="253" tabindex="-1" />
 </p>
 {/if}
 </fieldset>
 
 <fieldset id="message">
-<label for="text" class="textarea">{#message_marking#}</label><br />
-
+<p>
+<label for="text">{#message_marking#}</label>
+</p>
 
 <div id="format-bar">
 {if $settings.bbcode}
@@ -286,13 +287,10 @@ JavaScript isn't available.
 </fieldset>
 {/if}
 
-<fieldset>
 <p>
  <button name="save_entry" value="{#message_submit_button#}" tabindex="12">{#message_submit_button#}</button>
  <button name="preview" value="{#message_preview_button#}" tabindex="11">{#message_preview_button#}</button>
 </p>
-</fieldset>
-
 </div>
 </form>
 {/if}

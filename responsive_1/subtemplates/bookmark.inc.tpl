@@ -16,7 +16,7 @@
   <tbody>
   {foreach from=$bookmarkdata item=row}
    <tr id="id_{$row.bid}">
-    <td data-header="{#bookmark_title#}" class="cell-subject"><a href="index.php?id={$row.id}"><strong>{$row.subject}</strong></a></td>
+    <td data-header="{#bookmark_title#}" class="cell-subject"><a href="index.php?id={$row.id}" class="item">{$row.subject}</a></td>
     <td data-header="{#bookmark_user_name#}">{if $row.user_id > 0}<a href="index.php?mode=user&amp;show_user={$row.user_id}">{/if}<strong>{$row.user_name}</strong>{if $row.user_id > 0}</a>{/if}</td>
     <td data-header="{#bookmark_creation_time#}"><span class="small">{$row.bookmark_time}</span></td>
     <td data-header="{#bookmark_posting_time#}"><span class="small">{$row.posting_time}</span></td>

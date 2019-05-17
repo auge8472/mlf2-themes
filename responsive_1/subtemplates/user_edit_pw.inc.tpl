@@ -5,7 +5,7 @@
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
-<li>{$smarty.config.$error|replace:"[characters]":$settings.min_pw_length}</li>
+<li>{$smarty.config.$error|replace:"[characters]":$settings.min_pw_length|replace:"[digits]":$settings.min_pw_digits|replace:"[lowercase_letters]":$settings.min_pw_lowercase_letters|replace:"[uppercase_letters]":$settings.min_pw_uppercase_letters|replace:"[special_characters]":$settings.min_pw_special_characters}</li>
 {/section}
 </ul>
 </section>
@@ -18,8 +18,6 @@
 <input type="password" size="25" name="old_pw" /></p>
 <p><strong>{#edit_pw_new#}</strong><br />
 <input type="password" size="25" name="new_pw" maxlength="255" /></p>
-<p><strong>{#edit_pw_conf#}</strong><br />
-<input type="password" size="25" name="new_pw_conf" maxlength="255" /></p>
 <p><button name="edit_pw_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
 </form>

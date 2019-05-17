@@ -4,7 +4,7 @@
   <![CDATA[
   #check-mark {
    fill: none;
-   stroke: #0c4;
+   stroke: #0b2;
    stroke-width: 20px;
   }
   ]]>

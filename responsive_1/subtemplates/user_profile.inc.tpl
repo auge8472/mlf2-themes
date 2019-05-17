@@ -15,74 +15,74 @@
  <tbody>
   <tr>
    <th><strong>{#user_name#}</strong></th>
-   <td class="d"><strong>{$user_name}</strong>{if $gender==1} <img src="{$THEMES_DIR}/{$theme}/images/male.svg" alt="{#male#}" width="18" height="18" />{elseif $gender==2} <img src="{$THEMES_DIR}/{$theme}/images/female.svg" alt="{#female#}" width="18" height="18" />{/if} <span class="xsmall">{if $p_user_type==2}({#admin#}){elseif $p_user_type==1}({#mod#}){else}<!--({#user#})-->{/if}</span>{if $user_is_locked} <span class="small user-locked">({#user_locked#})</span>{/if}</td>
+   <td><strong>{$user_name}</strong>{if $gender==1} <img src="{$THEMES_DIR}/{$theme}/images/male.svg" alt="{#male#}" width="18" height="18" />{elseif $gender==2} <img src="{$THEMES_DIR}/{$theme}/images/female.svg" alt="{#female#}" width="18" height="18" />{/if} <span class="xsmall">{if $p_user_type==2}({#admin#}){elseif $p_user_type==1}({#mod#}){else}<!--({#user#})-->{/if}</span>{if $user_is_locked} <span class="small user-locked">({#user_locked#})</span>{/if}</td>
   </tr>
 {if $avatar}
   <tr>
    <th><strong>{#user_avatar#}</strong></th>
-   <td class="d"><img src="{$avatar.image}" alt="{#avatar_img_alt#}" width="{$avatar.width}" height="{$avatar.height}" /></td>
+   <td><img src="{$avatar.image}" alt="{#avatar_img_alt#}" width="{$avatar.width}" height="{$avatar.height}" /></td>
   </tr>
 {/if}
 {if $user_hp || $user_email}
   <tr>
    <th><strong>{#user_hp_email#}</strong></th>
-   <td class="d">{if $user_hp=='' && $user_email==''}-{/if}{if $user_hp!=''}<a href="{$user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/home.svg" alt="{#homepage#}" width="15" height="15" /></a> &nbsp;{/if}{if $user_email}<a href="index.php?mode=contact&amp;user_id={$p_user_id}" rel="nofollow"><img src="{$THEMES_DIR}/{$theme}/images/contact-email.svg" alt="{#email#}" width="15" height="15" /></a>{/if}</td>
+   <td>{if $user_hp=='' && $user_email==''}-{/if}{if $user_hp!=''}<a href="{$user_hp}"><img src="{$THEMES_DIR}/{$theme}/images/home.svg" alt="{#homepage#}" width="15" height="15" /></a> &nbsp;{/if}{if $user_email}<a href="index.php?mode=contact&amp;user_id={$p_user_id}" rel="nofollow"><img src="{$THEMES_DIR}/{$theme}/images/contact-email.svg" alt="{#email#}" width="15" height="15" /></a>{/if}</td>
   </tr>
 {/if}
 {if $user_real_name}
   <tr>
    <th><strong>{#user_real_name#}</strong></th>
-   <td class="d">{$user_real_name|default:'-'}</td>
+   <td>{$user_real_name|default:'-'}</td>
   </tr>
 {/if}
 {if $birthdate}
   <tr>
    <th><strong>{#age_birthday#}</strong></th>
-   <td class="d">{$years} / {$birthdate.year}-{$birthdate.month}-{$birthdate.day}</td>
+   <td>{$years} / {$birthdate.year}-{$birthdate.month}-{$birthdate.day}</td>
   </tr>
 {/if}
 {if $user_location}
   <tr>
    <th><strong>{#user_location#}</strong></th>
-   <td class="d">{$user_location|default:'-'}</td>
+   <td>{$user_location|default:'-'}</td>
   </tr>
 {/if}
   <tr>
    <th><strong>{#user_registered#}</strong></th>
-   <td class="d">{$user_registered}</td>
+   <td>{$user_registered}</td>
   </tr>
 {if $user_last_login}
   <tr>
    <th><strong>{#user_last_login#}</strong></th>
-   <td class="d">{$user_last_login|default:'-'}</td>
+   <td>{$user_last_login|default:'-'}</td>
   </tr>
 {/if}
   <tr>
    <th><strong>{#user_logins#}</strong></th>
-   <td class="d">{$logins}</td>
+   <td>{$logins}</td>
   </tr>
   <tr>
    <th><strong>{#logins_per_day#}</strong></th>
-   <td class="d">{$logins_per_day}</td>
+   <td>{$logins_per_day}</td>
   </tr>
   <tr>
    <th><strong>{#user_postings#}</strong></th>
-   <td class="d">{$postings} ({$postings_percent}%){if $postings>0} <span class="small">[ <a href="index.php?mode=user&amp;action=show_posts&amp;id={$p_user_id}">{#show_postings_link#}</a> ]</span>{/if}</td>
+   <td>{$postings} ({$postings_percent}%){if $postings>0} <span class="small">[ <a href="index.php?mode=user&amp;action=show_posts&amp;id={$p_user_id}">{#show_postings_link#}</a> ]</span>{/if}</td>
   </tr>
   <tr>
    <th><strong>{#postings_per_day#}</strong></th>
-   <td class="d">{$postings_per_day}</td>
+   <td>{$postings_per_day}</td>
   </tr>
 {if $last_posting_subject}
   <tr>
    <th><strong>{#last_posting#}</strong></th>
-   <td class="d">{if $last_posting_subject}{$last_posting_time|date_format:#time_format#}: <a id="user-last-posting" href="index.php?mode=entry&amp;id={$last_posting_id}">{$last_posting_subject}</a>{else}-{/if}</td>
+   <td>{if $last_posting_subject}{$last_posting_time|date_format:#time_format#}: <a id="user-last-posting" href="index.php?mode=entry&amp;id={$last_posting_id}">{$last_posting_subject}</a>{else}-{/if}</td>
   </tr>
 {/if}
 {if $profile}
   <tr>
    <th><strong>{#user_profile#}</strong></th>
-   <td class="d">{$profile|default:'-'}</td>
+   <td>{$profile|default:'-'}</td>
   </tr>
 {/if}
  </tbody>

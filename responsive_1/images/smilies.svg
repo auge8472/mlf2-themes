@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
- <def>
+ <defs>
   <linearGradient id="head" x1="100%" y1="0%" x2="50%" y2="100%">
    <stop offset="0%" stop-color="#f8e8b0" />
    <stop offset="100%" stop-color="#ffcc00" />
   </linearGradient>
- </def>
+ </defs>
  <style type="text/css">
   <![CDATA[
   #face { fill: url(#head); stroke: none; }

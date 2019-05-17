@@ -7,7 +7,7 @@
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
-<li>{$smarty.config.$error|replace:"[characters]":$settings.min_pw_length}</li>
+<li>{$smarty.config.$error|replace:"[characters]":$settings.min_pw_length|replace:"[digits]":$settings.min_pw_digits|replace:"[lowercase_letters]":$settings.min_pw_lowercase_letters|replace:"[uppercase_letters]":$settings.min_pw_uppercase_letters|replace:"[special_characters]":$settings.min_pw_special_characters}</li>
 {/section}
 </ul>
 </section>
@@ -25,7 +25,7 @@
 <p class="hp"><label for="phone" class="main">{#register_honeypot_field#}</label><br />
 <input id="phone" class="login" type="text" size="30" name="{$fld_phone}" value="{$honey_pot_phone|default:''}" maxlength="35" tabindex="-1" /></p>
 <p><label for="new_user_email" class="main">{#register_user_email#}</label><br />
-<input id="new_user_email" class="login" type="text" size="30" name="{$fld_user_email}" value="{$new_user_email|default:''}" maxlength="{$settings.email_maxlength}" tabindex="2" /></p>
+<input id="new_user_email" class="login" type="email" size="30" name="{$fld_user_email}" value="{$new_user_email|default:''}" maxlength="{$settings.email_maxlength}" tabindex="2" /></p>
 <p class="hp"><label for="repeat_email" class="main">{#register_honeypot_field#}</label><br />
 <input id="repeat_email" class="login" type="text" size="30" name="{$fld_repeat_email}" value="{$honey_pot_email|default:''}" maxlength="{$settings.email_maxlength}" tabindex="-1" /></p>
 {if $terms_of_use_agreement}
@@ -44,7 +44,8 @@
 <input id="captcha_code" type="text" name="captcha_code" value="" size="10" tabindex="6" /></p>
 {else}
 <p><strong>{#captcha_marking#}</strong><br />
-<label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><input id="captcha_code" type="text" name="captcha_code" value="" size="5" tabindex="7" /></p>
+<label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><br />
+<input id="captcha_code" type="text" name="captcha_code" value="" size="5" tabindex="7" /></p>
 {/if}
 {/if}
 <p><button name="register_submit" value="{#submit_button_ok#}" tabindex="8">{#submit_button_ok#}</button></p>

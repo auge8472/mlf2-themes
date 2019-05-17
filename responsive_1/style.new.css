@@ -7,6 +7,10 @@
 * <http://developer.yahoo.com/yui/compressor/>.                        *
 ***********************************************************************/
 
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
 /* definitions for the main blocks of the pages */
 html, body, body > header, #subnav, main, body > footer, #assistancemenu {
 	margin: 0;
@@ -22,7 +26,6 @@ body {
 	color: #000;
 	background: #fff;
 	font-family: "Calibri Light", "DejaVu Sans", Caliban, sans-serif;
-	font-size: 1em;
 	font-size: 1rem;
 	line-height: 150%;
 }
@@ -43,7 +46,6 @@ body > header {
 
 main {
 	display: block;
-	padding: 0.75em 10px;
 	padding: 0.75rem 0.25rem;
 }
 
@@ -74,7 +76,6 @@ h1 {
 	font-size: 1.25em;
 }
 h2 {
-	margin-top: 1em;
 	margin-top: 1rem;
 	font-size: 1.15em;
 }
@@ -121,9 +122,6 @@ a.stronglink {
 a.stronglink:visited {
 	color: #00c;
 }
-a.stronglink:focus, a.stronglink:hover {
-	/*background-position: 0 -41px;*/
-}
 /* end: strong links */
 
 
@@ -150,7 +148,6 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	display: inline;
 }
 #topsearch #search-input {
-	width: 10em;
 	width: 10rem;
 }
 /* end: elements of the page header */
@@ -193,6 +190,9 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav a {
 	padding: 0 0.25em;
 	white-space: nowrap;
+}
+#subnav a.create-thread .icon {
+	background-image: url(images/arrow-b-right.svg);
 }
 #subnav a[href*='mode=user&action=show_posts'] .icon {
 	background-image: url(images/entries-listing.svg);
@@ -278,10 +278,8 @@ aside h2 {
 aside h2 a {
 	display: block;
 	height: 100%;
-	padding: 0 0.25em;
 	padding: 0 0.25rem;
-	width: calc(100% - 0.5em);
-	width: calc(100% - 0.5rem);
+	width: 100%;
 	text-decoration: none;
 }
 aside h2 a:link, aside h2 a:visited {
@@ -307,10 +305,8 @@ aside section {
 aside section h3 {
 	font-size: 1em;
 	font-size: 1rem;
-	padding: 0 0.25em;
 	padding: 0 0.25rem;
-	width: calc(100% - 0.5em);
-	width: calc(100% - 0.5rem);
+	width: 100%;
 	line-height: 160%;
 	font-weight: normal;
 	background: #d2ddea;
@@ -377,11 +373,17 @@ aside section h3 {
 #mod-options a.manage .icon {
 	background-image: url(images/thread-change-no.svg);
 }
+#mod-options a.include-spam .icon {
+	background: url("images/check-mark.svg") 85% 85% / 52% no-repeat, url("images/marker-circle.svg") 102% 102% / 70% no-repeat, url("images/warning.svg") center / 100% no-repeat;
+}
+#mod-options a.exclude-spam .icon {
+	background: url("images/marker-cross.svg") 85% 85% / 52% no-repeat, url("images/marker-circle.svg") 102% 102% / 70% no-repeat, url("images/warning.svg") center / 100% no-repeat;
+}
 #mod-options a.list-spam .icon {
 	background-image: url(images/warning.svg);
 }
 #mod-options a.delete-spam .icon {
-	background-image: url(images/warning.svg);
+	background-image: url(images/marker-cross.svg);
 }
 #mod-options a.non-activated-users .icon {
 	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
@@ -418,7 +420,6 @@ aside section h3 {
 }
 #tagcloud a, #usersonline a {
 	display:inline-block;
-	margin-right:0.25em;
 	margin-right:0.25rem;
 }
 #tagcloud a:not(:last-child):after, #usersonline a:not(:last-child):after {
@@ -426,7 +427,6 @@ aside section h3 {
 }
 #additional-admin-info p {
 	line-height: 1.5em;
-	padding: 0.125em 0.25em;
 	padding: 0.125rem 0.25rem;
 }
 #releases p {
@@ -435,7 +435,6 @@ aside section h3 {
 #releases p a {
 	display: block;
 	margin: 0;
-	padding: 0.125em 0.25em;
 	padding: 0.125rem 0.25rem;
 }
 #install-script-exists h3 {
@@ -471,10 +470,14 @@ aside section h3 {
 	padding:0;
 	height: 1.25em;
 	width: 1.25em;
+	flex: 0 0 1.25em;
 	margin: 0.25em;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center center;
+}
+.adminmenu a span:not([class]) {
+	flex: 1 1 auto;
 }
 .adminmenu a img {
 	margin:0 5px -3px 0;
@@ -540,6 +543,9 @@ aside section h3 {
 .adminmenu a[href*='&action=register'] .icon {
 	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
+.adminmenu a[href*='&action=reset_tou'] .icon, .adminmenu a[href*='&action=reset_dps'] .icon {
+	background: url("images/pencil.svg") 102% 102% / 60% no-repeat, url("images/file.svg") center / 100% no-repeat;
+}
 .adminmenu a[href*='&action=email_list'] .icon {
 	background-image: url("images/contact-email.svg");
 }
@@ -558,12 +564,77 @@ aside section h3 {
 .adminmenu a[href*='?mode=admin&user_delete_all_entries='] .icon {
 	background: url("images/sign-remove.svg") 102% 102% / 60% no-repeat, url("images/preview-bubble.svg") center / 100% no-repeat;
 }
-.adminmenu a.lock-user  .icon {
+.adminmenu a.lock-user .icon {
 	background-image: url(images/lock-closed.svg);
 }
 .adminmenu a.unlock-user .icon {
 	background-image: url(images/lock-open.svg);
 }
+/* settings forms without table */
+.r-select:not(:last-of-type) {
+	border-bottom: 1px dotted #bacbdf;
+}
+form > div:not(:last-child) {
+	margin: 0 0 1rem 0;
+	padding: 0 0 0.5rem 0;
+	border-bottom: 1px dotted #bacbdf;
+}
+p.label {
+	font-weight: bold;
+}
+form > div p, form > div ul, form > div div {
+	margin: 0 0 0.25rem 0;
+}
+
+.r-select h3 {
+	margin: 0 0 0.5rem 0;
+}
+.r-select ul {
+	margin: 0 0 0.5rem 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+.r-select.sl ul {
+	flex-wrap: wrap;
+}
+.r-select.ml ul {
+	flex-direction: column;
+}
+.r-select:last-of-type ul {
+	margin-bottom: 0;
+}
+.r-select li {
+	flex: auto;
+}
+.r-select label {
+	display: inline-block;
+	padding: 0.25rem;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #bacbdf;
+}
+.r-select.ml label {
+	text-align: left;
+}
+.r-select input[type="radio"]:not(:checked) ~ label {
+	background-color: #fff;
+	background-image: linear-gradient(#fff, #f0f0f8);
+	color: #555;
+	font-style: italic;
+}
+.r-select input[type="radio"]:checked ~ label {
+	background-color: #aac8ff;
+	background-image: linear-gradient(#aac8ff, #a0b8f0);
+	color: #000;
+}
+.r-select input[type="radio"] {
+	display: none;
+}
+input, select option {
+	font-size: 1em;
+}
+/* end: settings forms without table */
 
 ul.pagination {
 	margin: 0.75rem 0;
@@ -589,10 +660,21 @@ ul.pagination a:focus, ul.pagination a:hover, ul.pagination a:active {
 }
 ul.pagination a:not([href]) {
 	border: 1px solid #bacbdf;
-	color: red;
+	color: #989898;
 	font-weight: bold;
 }
 
+/* page internal search fields */
+#searchbox {
+	margin: 0 0 0.75em 0;
+	margin: 0 0 0.75rem 0;
+}
+#searchbox label {
+	display: block;
+}
+#searchfield {
+	width: 18em;
+}
 
 /* table definitions */
 table {
@@ -608,7 +690,6 @@ tbody, tr, th, td {
 }
 tr {
 	border: 1px solid #bacbdf;
-	margin-bottom: 0.25em;
 	margin-bottom: 0.25rem;
 	box-shadow: 0.1em 0.1em 0.25em 0.1em #ced;
 }
@@ -651,7 +732,7 @@ td[data-header]::before {
 	display: block;
 	font-size: 0.92em;
 }
-.settings .d {
+.settings td {
 	background:#f5f5f5;
 }
 td.cell-subject {
@@ -659,7 +740,7 @@ td.cell-subject {
 	font-size: 1em;
 	border-bottom: 1px solid #bacbdf;
 }
-.cell-subject a.username {
+.cell-subject a.item {
 	font-weight: bold;
 }
 .taglist ul {
@@ -674,14 +755,26 @@ td.cell-subject {
 
 /* give all textareas and inputs (except radios and checkboxes)
   a proper width for narrow vieworts */
-textarea, input:not(.small-input) {
-	width: calc(100% - 10px);
+textarea, input[size="40"] {
+	width: 100%;
+}
+input[size="5"] {
+	width: 3.5em;
+}
+input[size="3"] {
+	width: 2.5em;
 }
 .hp {
 	display: none;
 }
 
-
+/* entry form */
+#postingform fieldset {
+	margin: 0 0 1em 0;
+}
+#postingform label, #postingform input[type="text"], #postingform select {
+	display: block;
+}
 
 /* thread tree: */
 .thread  {
@@ -694,6 +787,9 @@ textarea, input:not(.small-input) {
 td .thread  {
 	margin: 0;
 }
+.fold-expand {
+	display: none;
+}
 .thread li > a {
 	font-weight: bold;
 }
@@ -703,7 +799,6 @@ ul.reply li a {
 
 ul.reply, ul.deep-reply, ul.very-deep-reply {
 	margin:0;
-	padding: 0 0 0 0.75em;
 	padding: 0 0 0 0.75rem;
 	list-style-type:none;
 	max-width:100%;
@@ -757,7 +852,6 @@ ul.reply li {
 
 /* postings of a thread in the nested view */
 .reply-wrapper {
-	margin: 0 0 0 0.5em;
 	margin: 0 0 0 0.5rem;
 	padding:0;
 }
@@ -856,12 +950,33 @@ article blockquote {
 	color: #777;
 	font-style: italic;
 	border-left: 5px solid hsl(0, 0%, 75%);
-	padding: 0 0 0 1.25em;
 	padding: 0 0 0 1.25rem;
 }
 
 .body img {
 	max-width: 100%;
+	height: auto;
+}
+.thumbnail {
+	width: 9em;
+	height: auto;
+}
+#image-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background: url(images/canvas_bg.png);
+}
+#image-canvas img {
+	display: block;
+	margin: auto;
+	max-width: 90vw;
+	max-height: 90vw;
+	height: auto;
+	z-index: 3;
 }
 
 .body .signature {
@@ -972,6 +1087,15 @@ article footer a.unlock, article footer a.unlock-thread {
 	margin: 1em 0;
 	padding: 1em;
 }
+.hover-layer > :last-child {
+	margin-bottom: 0;
+}
+.hover-layer input[type="text"], .hover-layer input[type="password"], .hover-layer input[type="email"] {
+	width: 15.5em;
+}
+.hover-layer input[type="checkbox"] {
+	width: 1em;
+}
 /* end: login and registration forms */
 
 /* elements of admin interface */
@@ -1006,14 +1130,21 @@ article footer a.unlock, article footer a.unlock-thread {
 .restore-backup .icon {
 	background: url("images/arrow-b-up.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
-.ok {
+.ok, .errormessage {
 	padding: 0.25em 0.25em 0.25em 1.5em;
+	background-size: 1em 1em;
+}
+.ok {
 	border: 1px solid #0c4;
 	color: #062;
 	background: url(images/check-mark.svg) no-repeat 0.2em center #afd;
-	background-size: 1em 1em;
 }
-.ok h2, .ok h3, .ok p, .ok ul {
+.errormessage {
+	border: 1px solid f80800;
+	color: #620;
+	background: url(images/marker-cross.svg) no-repeat 0.2em center #fda;
+}
+.ok h2, .ok h3, .ok p, .ok ul, .errormessage h2, .errormessage h3, .errormessage p, .errormessage ul {
 	margin: 0.25em 0;
 	margin: 0.25rem 0;
 }
@@ -1032,7 +1163,6 @@ article footer a.unlock, article footer a.unlock-thread {
 	padding: 0;
 }
 #footermenu {
-	margin-bottom: 1em;
 	margin-bottom: 1rem;
 	list-style-type: none;
 }
@@ -1077,10 +1207,10 @@ article footer a.unlock, article footer a.unlock-thread {
 	margin: 0;
 	padding: 0;
 }
-
-#bbcode-options {
+#bbcode-options:not(.js-display-none) {
+	display: block;
+	position: absolute;
 	border: 1px solid #bacbdf;
-	max-width: calc(100% - 2em);
 	max-width: calc(100% - 2rem);
 	background: #efefef;
 }
@@ -1174,8 +1304,11 @@ div.warning              {
 	.adminmenu li {
 		margin: 0.5rem 0 0 0;
 	}
+	#settings {
+		border: 1px solid #bacbdf;
+		padding: 1em;
+	}
 	.reply-wrapper {
-		margin: 0 0 0 0.75em;
 		margin: 0 0 0 0.75rem;
 	}
 	article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .op-link, article header .interpunction {
@@ -1191,12 +1324,23 @@ div.warning              {
 		display: inline;
 	}
 	.hover-layer {
+<<<<<<< HEAD
 		width: 28em;
+=======
+		width: 25em;
+		margin: 1rem auto;
+		border: 1px solid #bacbdf;
+		border-radius: 0.375rem;
+>>>>>>> 3c02aa8d20c20d62883142d570d191f847325b40
 	}
 	#pbmlf {
 		text-align: center;
 		padding: 0 20px 1em 20px;
 		padding-bottom: 1rem;
+	}
+	input[size="40"] {
+		width: 26em;
+		max-width: 100%;
 	}
 }
 
@@ -1247,11 +1391,12 @@ div.warning              {
 	.adminmenu a {
 		margin: 0;
 		padding: 0;
-		font-size: 1.25em;
+		font-size: 1em;
 	}
 	.adminmenu a .icon {
-		width: 2.4em;
-		height: 2.4em;
+		width: 2.25em;
+		height: 2.25em;
+		flex: 0 0 2.25em;
 	}
 	aside h2, aside section, .thread-posting, .adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
@@ -1285,12 +1430,45 @@ div.warning              {
 	th {
 		font-weight: bold;
 		text-align: left;
-		padding: 0.1em 0.25em;
 		padding: 0.1rem 0.25rem;
+	}
+	th span.header-cell {
+		display: flex;
+		align-content: start;
+		align-items: center;
+	}
+	th .sorting-ui {
+		margin-left: 0.25em;
+		display: flex;
+		align-content: start;
+		align-items: center;
+	}
+	th .sorting-ui a {
+		display: inline-block;
+		width: 0.9em;
+		height: 1.35em;
+		border: 1px solid #bacbdf;
+		background: #f4f4f4;
+	}
+	th .sorting-ui a:focus, th .sorting-ui a:hover {
+		background: #fafac0;
+	}
+	th .sorting-ui a:first-of-type {
+		text-align: right;
+		border-top-left-radius: 0.25em;
+		border-bottom-left-radius: 0.25em;
+	}
+	th .sorting-ui a:last-of-type {
+		text-align: left;
+		border-top-right-radius: 0.25em;
+		border-bottom-right-radius: 0.25em;
+	}
+	th .sorting-ui a img {
+		height: 80%;
+		width: auto;
 	}
 	td {
 		font-weight: normal;
-		padding: 0.25em;
 		padding: 0.25rem;
 	}
 	td.subject {
