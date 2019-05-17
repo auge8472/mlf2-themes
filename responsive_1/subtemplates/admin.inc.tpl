@@ -633,12 +633,12 @@
 {section name=row loop=$userdata}
   <tr>
    <td class="cell-subject"><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}">&nbsp;{if $userdata[row].inactive}<span title="{#user_inactive#}" class="item inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" class="item">{$userdata[row].user_name}</a>{/if}</td>
-   <td data-header="{#user_email#}"><span class="small"><a href="mailto:{$userdata[row].user_email}">{$userdata[row].user_email}</a></span></td>
-   <td data-header="{#user_type#}"><span class="small">{if $userdata[row].user_type==2}{#admin#}{elseif $userdata[row].user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
-   <td data-header="{#user_registered#}"><span class="small">{$userdata[row].registered_time|date_format:#time_format#}</span></td>
-   <td data-header="{#user_logins#}"><span class="small">{$userdata[row].logins}</span></td>
-   <td data-header="{#last_login#}"><span class="small">{if $userdata[row].logins > 0}{$userdata[row].last_login_time|date_format:#time_format#}{else}&nbsp;{/if}</span></td>
-   <td data-header="{#lock#}"><span class="small">{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}{#unlocked#}{else}{#locked#}{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" title="{#lock_title#}">{#unlocked#}</a>{else}<a class="user-locked" href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" title="{#unlock_title#}">{#locked#}</a>{/if}</span></td>
+   <td data-header="{#user_email#}"><span class="value"><a href="mailto:{$userdata[row].user_email}">{$userdata[row].user_email}</a></span></td>
+   <td data-header="{#user_type#}"><span class="value">{if $userdata[row].user_type==2}{#admin#}{elseif $userdata[row].user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
+   <td data-header="{#user_registered#}"><span class="value">{$userdata[row].registered_time|date_format:#time_format#}</span></td>
+   <td data-header="{#user_logins#}"><span class="value">{$userdata[row].logins}</span></td>
+   <td data-header="{#last_login#}"><span class="value">{if $userdata[row].logins > 0}{$userdata[row].last_login_time|date_format:#time_format#}{else}&nbsp;{/if}</span></td>
+   <td data-header="{#lock#}"><span class="value">{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}{#unlocked#}{else}{#locked#}{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}">{#unlocked#}</a>{else}<a class="user-locked" href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}">{#locked#}</a>{/if}</span></td>
    <td class="item-tools">
     <a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}" class="editor"><span class="icon"></span>{#edit#}</a>
     <a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}" class="terminator"><span class="icon"></span>{#delete#}</a>
