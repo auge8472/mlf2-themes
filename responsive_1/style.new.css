@@ -743,7 +743,7 @@ td.cell-subject {
 .cell-subject a.item {
 	font-weight: bold;
 }
-td .user-locked {
+td a.user-locked {
 	color: #e10;
 }
 .taglist ul {
