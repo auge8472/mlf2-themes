@@ -1158,7 +1158,7 @@ section.thread-tree header h2, section.thread-tree header p {
 	background: url(images/check-mark.svg) no-repeat 0.2em center #afd;
 }
 .errormessage {
-	border: 1px solid f80800;
+	border: 1px solid #f80800;
 	color: #620;
 	background: url(images/marker-cross.svg) no-repeat 0.2em center #fda;
 }
