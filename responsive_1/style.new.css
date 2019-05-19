@@ -1150,17 +1150,16 @@ section.thread-tree header h2, section.thread-tree header p {
 }
 .ok, .errormessage {
 	padding: 0.25em 0.25em 0.25em 1.5em;
-	background-size: 1em 1em;
 }
 .ok {
 	border: 1px solid #0c4;
 	color: #062;
-	background: url(images/check-mark.svg) no-repeat 0.2em center #afd;
+	background: url(images/check-mark.svg) no-repeat 0.2em center / 1em 1em #afd;
 }
 .errormessage {
 	border: 1px solid #f80800;
 	color: #620;
-	background: url(images/marker-cross.svg) no-repeat 0.2em center #fda;
+	background: url(images/marker-cross.svg) no-repeat 0.2em center / 1em 1em #fda;
 }
 .ok h2, .ok h3, .ok p, .ok ul, .errormessage h2, .errormessage h3, .errormessage p, .errormessage ul {
 	margin: 0.25em 0;
