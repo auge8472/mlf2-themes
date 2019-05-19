@@ -80,7 +80,7 @@
 Please donate if you want to remove this link:
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1922497
 *}
-<div id="pbmlf"><a href="http://mylittleforum.net/">powered by my little forum</a></div>
+<div id="pbmlf"><a href="https://mylittleforum.net/">powered by my little forum</a></div>
 </footer>
 <ul id="assistancemenu">
  <li><a href="#top">zum Seitenanfang</a></li>
