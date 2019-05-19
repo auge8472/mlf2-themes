@@ -1072,6 +1072,9 @@ section.thread-tree header {
   justify-content: space-between;
   align-items: flex-start;
 }
+section.thread-tree header h2, section.thread-tree header p {
+	margin: 0 0 0.5em 0;
+}
 /* ajax preview element */
 #ajax-preview {
 	position: absolute;
