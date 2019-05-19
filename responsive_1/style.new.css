@@ -823,6 +823,11 @@ ul.reply li {
 	color: #00f;
 	text-decoration: underline;
 }
+.thread li > a:not([href]) {
+	color: #d00;
+	text-decoration: none;
+	font-weight: bold;
+}
 
 .opening-entry, .following-entry {
 	padding-left: 1.2em;
