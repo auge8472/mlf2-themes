@@ -835,25 +835,25 @@ ul.reply li {
 	background-size: 1em 1em;
 	background-position: 0 center;
 }
-.opening-entry, .thread {
+.opening-entry {
 	background-image: url(images/thread-change-no.svg);
 }
-.opening-entry.sticky, .thread-sticky {
+.opening-entry.sticky {
 	background-image: url(images/thread-pinned.svg), url(images/thread-change-no.svg);
 }
-.opening-entry.locked, .thread-locked {
+.opening-entry.locked {
 	background-image: url(images/thread-locked.svg), url(images/thread-change-no.svg);
 }
-.opening-entry.sticky.locked, .thread-sticky-locked {
+.opening-entry.sticky.locked {
 	background-image: url(images/thread-locked.svg), url(images/thread-pinned.svg), url(images/thread-change-no.svg);
 }
-.opening-entry.new, .thread.new {
+.opening-entry.new {
 	background-image: url(images/thread-change-yes.svg);
 }
-.following-entry, .reply {
+.following-entry {
 	background-image: url(images/clasp-change-no.svg);
 }
-.following-entry.new, .reply.new {
+.following-entry.new {
 	background-image: url(images/clasp-change-yes.svg);
 }
 /* end: thread three */
