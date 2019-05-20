@@ -828,6 +828,12 @@ ul.reply li {
 	text-decoration: none;
 	font-weight: bold;
 }
+.admin {
+	color: #c10;
+}
+.mod {
+	color: #091;
+}
 
 .opening-entry, .following-entry {
 	padding-left: 1.2em;
