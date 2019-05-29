@@ -791,7 +791,20 @@ td .thread  {
 	margin: 0;
 }
 .fold-expand {
-	display: none;
+	display: inline;
+}
+.fold-expand img {
+	width: 14px;
+	height: 14px;
+}
+.fold-expand img.expand-thread {
+	background: url("images/order-to-bottom.svg") left 5% / 90% no-repeat;
+}
+.fold-expand img.fold-thread {
+	background: url("images/order-to-top.svg") left 5% / 90% no-repeat;
+}
+.fold-expand img.expand-thread-inactive {
+	background: url("images/order-inactive.svg") left 5% / 90% no-repeat;
 }
 .thread li > a {
 	font-weight: bold;
