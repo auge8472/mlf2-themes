@@ -1,5 +1,5 @@
 <?xml version="1.0" standalone="yes"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
  <defs>
   <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="0%">
    <stop offset="0%" stop-color="#dd6" />
@@ -12,6 +12,6 @@
   path { fill: url(#shield); stroke-width: 4px; stroke: #cc4; }
   ]]>
  </style>
- <path d="M64,126 106,87 106,2 22,2 22,87 z" />
+ <path d="M64,126 106,87 106,2 22,2 22,87 z" fill="url(#shield)" />
 </svg>
 
