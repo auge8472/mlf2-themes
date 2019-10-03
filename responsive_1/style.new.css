@@ -798,13 +798,13 @@ td .thread  {
 	height: 14px;
 }
 .fold-expand img.expand-thread {
-	background: url("images/order-to-bottom.svg") left 5% / 90% no-repeat;
+	background: url("images/unfold.svg") left 5% / 90% no-repeat;
 }
 .fold-expand img.fold-thread {
-	background: url("images/order-to-top.svg") left 5% / 90% no-repeat;
+	background: url("images/fold.svg") left 5% / 90% no-repeat;
 }
 .fold-expand img.expand-thread-inactive {
-	background: url("images/order-inactive.svg") left 5% / 90% no-repeat;
+	background: url("images/no-fold.svg") left 5% / 90% no-repeat;
 }
 .thread li > a {
 	font-weight: bold;
