@@ -447,6 +447,23 @@ aside section h3 {
 }
 /* end: elements of #sidebar, #bottombar, aside */
 
+/* search results list */
+.searchresults {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0;
+}
+.searchresults li > a {
+	padding: 0 0 0 1.6em;
+}
+.searchresults .thread-search {
+	background: url(images/thread-change-no.svg) no-repeat left center;
+}
+.searchresults .reply-search {
+	background: url(images/clasp-change-no.svg) no-repeat 0.05em center;
+}
+
+/* main menu in admin page */
 .adminmenu {
 	padding: 0;
 	margin: 0.5rem 0;
