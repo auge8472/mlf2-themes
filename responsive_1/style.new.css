@@ -717,6 +717,8 @@ tr:last-child {
 }
 th, td {
 	vertical-align: top;
+	padding: 0.125em 0.25em;
+	padding: 0.125rem 0.25rem;
 }
 .normaltab .subject, table.normaltab td.c, .settings th {
 	border-bottom: 1px dotted #bacbdf;
