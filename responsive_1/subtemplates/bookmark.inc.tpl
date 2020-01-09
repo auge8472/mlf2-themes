@@ -29,10 +29,12 @@
      </ul>
     {/if}</td>
     <td class="item-tools">
-     <a href="index.php?mode=bookmarks&amp;edit_bookmark={$row.bid}" class="editor"><span class="icon"></span><span>{#edit#}</span></a>
-     <a href="index.php?mode=bookmarks&amp;delete_bookmark={$row.bid}"  class="terminator"><span class="icon"></span><span>{#delete#}</span></a>
-     <a href="index.php?mode=bookmarks&amp;move_up_bookmark={$row.bid}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a>
-     <a href="index.php?mode=bookmarks&amp;move_down_bookmark={$row.bid}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a>
+     <ul>
+      <li><a href="index.php?mode=bookmarks&amp;edit_bookmark={$row.bid}" class="editor"><span class="icon"></span><span>{#edit#}</span></a></li>
+      <li><a href="index.php?mode=bookmarks&amp;delete_bookmark={$row.bid}"  class="terminator"><span class="icon"></span><span>{#delete#}</span></a></li>
+      <li><a href="index.php?mode=bookmarks&amp;move_up_bookmark={$row.bid}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a></li>
+      <li><a href="index.php?mode=bookmarks&amp;move_down_bookmark={$row.bid}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a></li>
+     </ul>
     </td>
    </tr>
   {/foreach}

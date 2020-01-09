@@ -408,10 +408,12 @@
    <td data-header="{#category_topics#}">{$categories_list[row].threads_in_category}</td>
    <td data-header="{#category_entries#}">{$categories_list[row].postings_in_category}</td>
    <td class="item-tools">
-    <a href="index.php?mode=admin&amp;edit_category={$categories_list[row].id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a>
-    <a href="index.php?mode=admin&amp;delete_category={$categories_list[row].id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a>
-    <a href="index.php?mode=admin&amp;move_up_category={$categories_list[row].id}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a>
-    <a href="index.php?mode=admin&amp;move_down_category={$categories_list[row].id}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a>
+    <ul>
+     <li><a href="index.php?mode=admin&amp;edit_category={$categories_list[row].id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;delete_category={$categories_list[row].id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;move_up_category={$categories_list[row].id}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;move_down_category={$categories_list[row].id}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a></li>
+    </ul>
    </td>
   </tr>
 {/section}
@@ -640,8 +642,10 @@
    <td data-header="{#last_login#}"><span class="value">{if $userdata[row].logins > 0}{$userdata[row].last_login_time|date_format:#time_format#}{else}&nbsp;{/if}</span></td>
    <td data-header="{#lock#}"><span class="value">{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}{#unlocked#}{else}{#locked#}{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}">{#unlocked#}</a>{else}<a class="user-locked" href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}">{#locked#}</a>{/if}</span></td>
    <td class="item-tools">
-    <a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}" class="editor"><span class="icon"></span>{#edit#}</a>
-    <a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}" class="terminator"><span class="icon"></span>{#delete#}</a>
+    <ul>
+     <li><a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a></li>
+    </ul>
    </td>
   </tr>
 {/section}
@@ -912,10 +916,12 @@
    <td data-header="{#smiley_codes#}">{$smilies[row].codes}</td>
    <td data-header="{#smiley_title#}">{$smilies[row].title}</td>
    <td class="item-tools">
-    <a href="index.php?mode=admin&amp;edit_smiley={$smilies[row].id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a>
-    <a href="index.php?mode=admin&amp;delete_smiley={$smilies[row].id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a>
-    <a href="index.php?mode=admin&amp;move_up_smiley={$smilies[row].id}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a>
-    <a href="index.php?mode=admin&amp;move_down_smiley={$smilies[row].id}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a>
+    <ul>
+     <li><a href="index.php?mode=admin&amp;edit_smiley={$smilies[row].id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;delete_smiley={$smilies[row].id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;move_up_smiley={$smilies[row].id}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;move_down_smiley={$smilies[row].id}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a></li>
+    </ul>
    </td>
   </tr>
 {/section}
@@ -1107,9 +1113,11 @@
    <td data-header="{#backup_date#}">{$file.date|date_format:#time_format#}</td>
    <td data-header="{#backup_size#}">{$file.size}</td>
    <td class="item-tools">
-    <a href="index.php?mode=admin&amp;download_backup_file={$file.file}" class="download-backup"><span class="icon"></span><span>{#download_backup_file#}</span></a>
-    <a href="index.php?mode=admin&amp;restore={$file.file}" class="restore-backup"><span class="icon"></span><span>{#restore#}</span></a>
-    <a href="index.php?mode=admin&amp;delete_backup_files[]={$file.file}" onclick="return delete_backup_confirm(this, '{$smarty.config.delete_backup_file_confirm|escape:"url"}')" class="backup-terminator"><span class="icon"></span><span>{#delete_backup_file#}</span></a>
+    <ul>
+     <li><a href="index.php?mode=admin&amp;download_backup_file={$file.file}" class="download-backup"><span class="icon"></span><span>{#download_backup_file#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;restore={$file.file}" class="restore-backup"><span class="icon"></span><span>{#restore#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;delete_backup_files[]={$file.file}" onclick="return delete_backup_confirm(this, '{$smarty.config.delete_backup_file_confirm|escape:"url"}')" class="backup-terminator"><span class="icon"></span><span>{#delete_backup_file#}</span></a></li>
+    </ul>
    </td>
   </tr>
 {/foreach}
@@ -1325,10 +1333,12 @@
    <td data-header="{#page_menu_linkname#}"><span class="small">{if $pages[page].menu_linkname!=''}{$pages[page].menu_linkname}{else}&nbsp;{/if}</span></td>
    <td data-header="{#page_access#}"><span class="small">{if $pages[page].access==1}{#page_access_reg_users#}{elseif $pages[page].access==0}{#page_access_public#}{/if}</span></td>
    <td class="item-tools">
-    <a href="index.php?mode=admin&amp;edit_page={$pages[page].id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a>
-    <a href="index.php?mode=admin&amp;delete_page={$pages[page].id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a>
-    <a href="index.php?mode=admin&amp;move_up_page={$pages[page].id}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a>
-    <a href="index.php?mode=admin&amp;move_down_page={$pages[page].id}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a>
+    <ul>
+     <li><a href="index.php?mode=admin&amp;edit_page={$pages[page].id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;delete_page={$pages[page].id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;move_up_page={$pages[page].id}" class="move-item-up"><span class="icon"></span><span>{#move_up#}</span></a></li>
+     <li><a href="index.php?mode=admin&amp;move_down_page={$pages[page].id}" class="move-item-down"><span class="icon"></span><span>{#move_down#}</span></a></li>
+    </ul>
    </td>
   </tr>
 {/section}
