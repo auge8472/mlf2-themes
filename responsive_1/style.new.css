@@ -454,13 +454,13 @@ aside section h3 {
 	padding: 0;
 }
 .searchresults li > a {
-	padding: 0 0 0 1.6em;
+	padding: 0 0 0 1.2em;
 }
 .searchresults .thread-search {
-	background: url(images/thread-change-no.svg) no-repeat left center;
+	background: url(images/thread-change-no.svg) no-repeat left center/0.95em;
 }
 .searchresults .reply-search {
-	background: url(images/clasp-change-no.svg) no-repeat 0.05em center;
+	background: url(images/clasp-change-no.svg) no-repeat left 0.05em bottom 0.1em/0.95em;
 }
 
 /* main menu in admin page */
