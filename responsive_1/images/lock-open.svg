@@ -1,18 +1,22 @@
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <defs>
+  <linearGradient id="lockbody" x1="0%" y1="0%" x2="100%" y2="0%">
+   <stop offset="0%" stop-color="#970" />
+   <stop offset="18%" stop-color="#cb2" />
+   <stop offset="82%" stop-color="#cb2" />
+   <stop offset="100%" stop-color="#ed5" />
+  </linearGradient>
+ </defs>
  <style type="text/css">
   <![CDATA[
-  #body { stroke-width: 0px; stroke: none; fill: #cb2; }
-  #light { stroke-width: 0px; stroke: none; fill: #dd2; }
-  #shadow { stroke-width: 0px; stroke: none; fill: #ba1; }
+  #body { fill: url(#lockbody); stroke: none; }
   circle.keyhole { fill: #000; stroke-width: 0px; stroke: none; }
   path.keyhole { fill: none; stroke-width: 6px; stroke: #000; }
   path.shackle { fill: none; stroke-width: 11px; stroke: #467; }
   ]]>
  </style>
- <rect id="shadow" x="19" y="64" width="15" height="60" />
- <rect id="body" x="34" y="64" width="60" height="60" />
- <rect id="light" x="94" y="64" width="15" height="60" />
+ <rect id="body" x="19" y="64" width="90" height="60" />
  <circle class="keyhole" cx="64" cy="92" r="6" />
  <path class="keyhole" d="M64,94 V107" />
  <path class="shackle" d="M92,64 v-30 A 28 28, 0, 0, 0, 36,34 v16" />
