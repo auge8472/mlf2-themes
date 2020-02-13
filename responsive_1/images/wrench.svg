@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <defs>
+  <linearGradient id="plate" x1="100%" y1="0%" x2="50%" y2="100%">
+   <stop offset="0%" stop-color="#383f3f" />
+   <stop offset="100%" stop-color="#202020" />
+  </linearGradient>
+ </defs>
   <style type="text/css"><![CDATA[
-  path { fill: #222; stroke: none; }
+  path { fill: url(#plate); stroke: none; }
   ]]></style>
  <g transform="translate(0,-924.36216)">
   <path

@@ -8,13 +8,11 @@
  </defs>
  <style type="text/css">
   <![CDATA[
-  polygon {
-   stroke-width: 12px;
-   stroke: #bfc1be;
-   fill: url(#plate);
-  }
+  path { fill: url(#plate); stroke-width: 6px; stroke: #222; }
+  circle { fill #222; stroke: none; }
   ]]>
  </style>
- <polygon points="24,116 24,88 18,86 13,83 10,78 8,72 8,24 10,18 13,13 18,10 24,8 104,8 112,10 115,13 118,18 120,24 120,72 118,78 115,83 112,86 104,88 56,88" />
+ <path d="M8,8 48,8 120,80 80,120 8,48 z" />
+ <circle cx="34" cy="34" r="10" />
 </svg>
 

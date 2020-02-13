@@ -1,8 +1,14 @@
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <defs>
+  <linearGradient id="plate" x1="100%" y1="0%" x2="50%" y2="100%">
+   <stop offset="0%" stop-color="#e8ba0f" />
+   <stop offset="100%" stop-color="#e0ab00" />
+  </linearGradient>
+ </defs>
  <style type="text/css">
   <![CDATA[
-  rect { stroke: none; fill: #ea0; }
+  rect { stroke: none; fill: url(#plate); }
   circle { stroke: none; fill: #fff; }
   path { fill: none; stroke-width: 11px; stroke: #fff; }
   ]]>

@@ -8,13 +8,9 @@
  </defs>
  <style type="text/css">
   <![CDATA[
-  polygon {
-   stroke-width: 12px;
-   stroke: #bfc1be;
-   fill: url(#plate);
-  }
+  rect { fill: url(#plate); stroke-width: 12px; stroke: #bbb; }
   ]]>
  </style>
- <polygon points="24,116 24,88 18,86 13,83 10,78 8,72 8,24 10,18 13,13 18,10 24,8 104,8 112,10 115,13 118,18 120,24 120,72 118,78 115,83 112,86 104,88 56,88" />
+ <rect x="16" y="16" width="96" height="96" rx="18" ry="18" />
 </svg>
 
