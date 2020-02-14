@@ -31,9 +31,13 @@
 </div></form>{/if}
 {if $pagination_top}
 <!-- subnavigation_2.inc.tpl, $pagination_top -->
-{if $pagination_top.previous}<a href="index.php?mode={$mode}&amp;page={$pagination_top.previous}{if $category}&amp;category={$category}{/if}"><img class="previous" src="{$THEMES_DIR}/{$theme}/images/plain.png" alt="[&laquo;]" width="6" height="11" /></a>{/if}
 <form action="index.php" method="get"><div class="inline">
 <div id="subnav-4">
+<div>
+{if $pagination_top.previous}<a href="index.php?mode={$mode}&amp;page={$pagination_top.previous}{if $category}&amp;category={$category}{/if}"><img class="previous" src="{$THEMES_DIR}/{$theme}/images/arrow-left-active.svg" alt="[&laquo;]" width="15" height="15" /></a>
+{else}<a><img class="previous" src="{$THEMES_DIR}/{$theme}/images/arrow-left-inactive.svg" alt="[&laquo;]" width="15" height="15" /></a>
+{/if}
+</div>
 <input type="hidden" name="mode" value="{$mode}" />
 {if $order}<input type="hidden" name="order" value="{$order}" />{/if}
 {if $category}<input type="hidden" name="category" value="{$category}" />{/if}
@@ -44,10 +48,10 @@
 </select>
 <noscript><div class="inline"><button class="small" value="&raquo;">{#go#}</button></div></noscript>
 </div></form>
+<div>
+{if $pagination_top.next}<a href="index.php?mode={$mode}&amp;page={$pagination_top.next}{if $category}&amp;category={$category}{/if}"><img class="next" src="{$THEMES_DIR}/{$theme}/images/arrow-right-active.svg" alt="[&raquo;]" width="15" height="15" /></a>
+{else}<a><img class="next" src="{$THEMES_DIR}/{$theme}/images/arrow-right-inactive.svg" alt="[&raquo;]" width="15" height="15" /></a>
+{/if}
 </div>
-{if $pagination_top.next}
-<!-- subnavigation_2.inc.tpl, $pagination_top.next -->
-<ul id="subnav-2">
- <li><a href="index.php?mode={$mode}&amp;page={$pagination_top.next}{if $category}&amp;category={$category}{/if}"><img class="next" src="{$THEMES_DIR}/{$theme}/images/plain.png" alt="[&raquo;]" width="6" height="11" /></a></li>
-</ul>{/if}
+</div>
 {/if}
