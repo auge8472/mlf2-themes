@@ -191,6 +191,22 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav a {
 	padding: 0 0.25em;
 	white-space: nowrap;
+	display: flex;
+	align-items: center;
+}
+#subnav a .icon {
+	display: inline-block;
+	padding:0;
+	height: 0.9em;
+	width: 0.9em;
+	flex: 0 0 1em;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+}
+#subnav a span:not([class]) {
+	flex: 1 1 auto;
+	padding: 0 0 0 0.125em;
 }
 #subnav a.create-thread .icon {
 	background-image: url(images/arrow-b-right.svg);
