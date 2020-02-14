@@ -162,14 +162,8 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav ul {
 	list-style: none;
 }
-#subnav ul:not(:last-child) {
+#subnav > *:not(:last-child) {
 	border-bottom: 1px solid #bacbdf;
-}
-#subnav form, #subnav form div {
-	display:inline;
-}
-#subnav form {
-	padding-left: 1em;
 }
 #subnav a .icon {
 	display: inline-block;
