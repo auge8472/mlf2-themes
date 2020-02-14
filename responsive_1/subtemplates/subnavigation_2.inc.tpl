@@ -16,7 +16,7 @@
 {/if}
 {if $categories && $mode=='index'}
 <!-- subnavigation_2.inc.tpl, $categories && $mode=='index' -->
-<form action="index.php" method="get" accept-charset="{#charset#}" id="subnav-2"><div>
+<form action="index.php" method="get" accept-charset="{#charset#}" id="subnav-3"><div>
 <input type="hidden" name="mode" value="{$mode}" />
 <select size="1" name="category">
  <option value="0"{if $category==0} selected="selected"{/if}>{#all_categories#}</option>
@@ -31,9 +31,9 @@
 </div></form>{/if}
 {if $pagination_top}
 <!-- subnavigation_2.inc.tpl, $pagination_top -->
-<div id="subnav-2">
 {if $pagination_top.previous}<a href="index.php?mode={$mode}&amp;page={$pagination_top.previous}{if $category}&amp;category={$category}{/if}"><img class="previous" src="{$THEMES_DIR}/{$theme}/images/plain.png" alt="[&laquo;]" width="6" height="11" /></a>{/if}
 <form action="index.php" method="get"><div class="inline">
+<div id="subnav-4">
 <input type="hidden" name="mode" value="{$mode}" />
 {if $order}<input type="hidden" name="order" value="{$order}" />{/if}
 {if $category}<input type="hidden" name="category" value="{$category}" />{/if}
