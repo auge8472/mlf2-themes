@@ -165,15 +165,6 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav > *:not(:last-child) {
 	border-bottom: 1px solid #bacbdf;
 }
-#subnav a .icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	margin-right: 0.125em;
-	background-repeat: no-repeat;
-	background-size: 0.8em 0.8em;
-	background-position: center bottom;
-}
 
 #subnav-2 a {
 	background-repeat: no-repeat;
@@ -191,11 +182,12 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #subnav a .icon {
 	display: inline-block;
 	padding:0;
-	height: 0.9em;
-	width: 0.9em;
+	width: 1em;
+	height: 1em;
+	margin-right: 0.125em;
 	flex: 0 0 1em;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 0.85em 0.85em;
 	background-position: center center;
 }
 #subnav a span:not([class]) {
