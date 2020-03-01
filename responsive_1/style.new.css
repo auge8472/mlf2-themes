@@ -190,7 +190,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	background-size: 0.85em 0.85em;
 	background-position: center center;
 }
-#subnav a span:not([class]) {
+#subnav a span:not([class]), #subnav a strong {
 	flex: 1 1 auto;
 	padding: 0 0 0 0.125em;
 }
