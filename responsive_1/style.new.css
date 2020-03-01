@@ -155,9 +155,9 @@ h1 a:focus, h1 a:hover, h1 a:active {
 
 /* elements of the navigation bar below the page header */
 
-#submenu, #submenu > * {
-	margin:0;
-	padding:0;
+#submenu, #subnav > * {
+	margin: 0;
+	padding: 0;
 }
 #subnav > *:not(:last-child) {
 	border-bottom: 1px solid #bacbdf;
