@@ -1,7 +1,7 @@
 {if $mode=='index'}
 <ul id="subnav-2">
  <li><a class="refresh" href="index.php?refresh=1&amp;category={$category}" rel="nofollow"><span class="icon"></span><span>{#refresh_link#}</span></a></li>
- <li>{if $thread_order==0}<a class="order-1" href="index.php?mode=index&amp;thread_order=1" rel="nofollow"><span class="icon"></span><span>{#order_link#}</span></a>{else}<a class="order-2" href="index.php?mode=index&amp;thread_order=0" rel="nofollow"><span class="icon"></span></span>{#order_link#}</span></a>{/if}</li>
+ <li>{if $thread_order==0}<a class="order-1" href="index.php?mode=index&amp;thread_order=1" rel="nofollow"><span class="icon"></span><span>{#order_link#}</span></a>{else}<a class="order-2" href="index.php?mode=index&amp;thread_order=0" rel="nofollow"><span class="icon"></span><span>{#order_link#}</span></a>{/if}</li>
  <li>{if $usersettings.fold_threads==0}<a class="fold-1" href="index.php?fold_threads=1"><span class="icon"></span><span>{#fold_threads#}</span></a>{else}<a class="fold-2" href="index.php?fold_threads=0"><span class="icon"></span><span>{#expand_threads#}</span></a>{/if}</li>
  <li>{if $usersettings.user_view==0}<a class="tableview" href="index.php?toggle_view=1"><span class="icon"></span><span>{#table_view#}</span></a>{else}<a class="threadview" href="index.php?toggle_view=0"><span class="icon"></span><span>{#thread_view#}</span></a>{/if}</li>
 </ul>
