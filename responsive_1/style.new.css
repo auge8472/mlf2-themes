@@ -275,6 +275,20 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 
 /* elements in forms */
+#edit_avatar, #edit_avatar > * {
+	display: block;
+}
+#edit_avatar {
+	max-width: 8em;
+	height: auto;
+}
+#edit_avatar > * {
+	width: 100%;
+	height: auto;
+}
+#edit_avatar > span {
+	text-align: center;
+}
 [type="checkbox"] {
 	position: absolute;
 	left: -9999px;

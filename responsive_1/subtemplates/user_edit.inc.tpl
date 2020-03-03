@@ -25,8 +25,9 @@
   <tr>
    <th><strong>{#edit_avatar#}</strong></th>
    <td>
-    <div id="avatar_wrapper">{if $avatar}<img src="{$avatar.image}" alt="{#edit_avatar_link_title#}" width="{$avatar.width}" height="{$avatar.height}" />{/if}</div>
-    <span class="small">[ <a id="edit_avatar" href="index.php?mode=avatar">{#edit_avatar_link#}</a> ]</span>
+    <a id="edit_avatar" href="index.php?mode=avatar">{if $avatar}<img class="avatar" src="{$avatar.image}" alt="{#edit_avatar_link_title#}" width="{$avatar.width}" height="{$avatar.height}" />{else}<img class="avatar" src="themes/responsive_1/images/user.svg" alt="{#edit_avatar_link_title#}" width="128" height="128" />{/if}
+    <span class="small">{#edit_avatar_link#}</span>
+    </a>
    </td>
   </tr>
 {/if}
