@@ -164,7 +164,7 @@
  <p class="label">{#edit_postings#}</p>
  <p class="description">{#edit_postings_desc#}</p>
  <div>
-  <ul>
+  <ul class="checkboxlist">
    <li><input id="id_show_if_edited" type="checkbox" name="show_if_edited" value="1"{if $edSet.show_if_edited==1} checked="checked"{/if}><label for="id_show_if_edited"><span class="icon"></span><span>{#show_if_edited#|replace:"[minutes]":$input_edit_delay}</span></label></li>
    <li><input id="id_dont_reg_edit_by_admin" type="checkbox" name="dont_reg_edit_by_admin" value="1"{if $edSet.dont_reg_edit_by_admin==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_admin"><span class="icon"></span><span>{#dont_show_edit_by_admin#}</span></label></li>
    <li><input id="id_dont_reg_edit_by_mod" type="checkbox" name="dont_reg_edit_by_mod" value="1"{if $edSet.dont_reg_edit_by_mod==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_mod"><span class="icon"></span><span>{#dont_show_edit_by_mod#}</span></label></li>
@@ -198,7 +198,7 @@
  <p class="label">{#bbcode#}</p>
  <p class="description">{#bbcode_desc#}</p>
  <div>
-  <ul>
+  <ul class="checkboxlist">
    <li><input id="id_bbcode" type="checkbox" name="bbcode" value="1"{if $edSet.bbcode==1} checked="checked"{/if}><label for="id_bbcode"><span class="icon"></span><span>{#bbcodes_enabled#}</span></label></li>
    <li><input id="id_bbcode_img" type="checkbox" name="bbcode_img" value="1"{if $edSet.bbcode_img==1} checked="checked"{/if}><label for="id_bbcode_img"><span class="icon"></span><span>{#bbcodes_img_enabled#}</span></label></li>
   </ul>
