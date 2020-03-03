@@ -204,7 +204,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	background-image: url(images/entries-listing.svg);
 }
 #subnav a[href*='mode=bookmarks'] .icon {
-	background-image: url(images/notepad.svg);
+	background-image: url(images/bookmark.svg);
 }
 #subnav a[href*='mode=admin'] .icon {
 	background-image: url(images/wrench.svg);
