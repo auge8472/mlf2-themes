@@ -92,6 +92,12 @@ img {
 label {
 	cursor:pointer;
 }
+.avatar {
+	display: block;
+	border: 0;
+	border-radius: 5px;
+	padding: 0;
+}
 /* end: commonly used elements */
 
 /* default links */
@@ -942,12 +948,8 @@ article.thread-posting header {
 }
 
 header .avatar {
-	display: block;
-	border: 0;
-	border-radius: 5px;
 	float: left;
 	margin: 0 5px 5px 0;
-	padding: 0;
 	width: auto;
 	height: 3.5em;
 }
