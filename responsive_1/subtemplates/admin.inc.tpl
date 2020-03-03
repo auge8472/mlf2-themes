@@ -165,9 +165,9 @@
  <p class="description">{#edit_postings_desc#}</p>
  <div>
   <ul>
-   <li><input id="id_show_if_edited" type="checkbox" name="show_if_edited" value="1"{if $edSet.show_if_edited==1} checked="checked"{/if}><label for="id_show_if_edited">{#show_if_edited#|replace:"[minutes]":$input_edit_delay}</label></li>
-   <li><input id="id_dont_reg_edit_by_admin" type="checkbox" name="dont_reg_edit_by_admin" value="1"{if $edSet.dont_reg_edit_by_admin==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_admin">{#dont_show_edit_by_admin#}</label></li>
-   <li><input id="id_dont_reg_edit_by_mod" type="checkbox" name="dont_reg_edit_by_mod" value="1"{if $edSet.dont_reg_edit_by_mod==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_mod">{#dont_show_edit_by_mod#}</label></li>
+   <li><input id="id_show_if_edited" type="checkbox" name="show_if_edited" value="1"{if $edSet.show_if_edited==1} checked="checked"{/if}><label for="id_show_if_edited"><span class="icon"></span><span>{#show_if_edited#|replace:"[minutes]":$input_edit_delay}</span></label></li>
+   <li><input id="id_dont_reg_edit_by_admin" type="checkbox" name="dont_reg_edit_by_admin" value="1"{if $edSet.dont_reg_edit_by_admin==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_admin"><span class="icon"></span><span>{#dont_show_edit_by_admin#}</span></label></li>
+   <li><input id="id_dont_reg_edit_by_mod" type="checkbox" name="dont_reg_edit_by_mod" value="1"{if $edSet.dont_reg_edit_by_mod==1} checked="checked"{/if}><label for="id_dont_reg_edit_by_mod"><span class="icon"></span><span>{#dont_show_edit_by_mod#}</span></label></li>
   </ul>
  </div>
 </div>
@@ -190,7 +190,7 @@
 {assign var="settings_edit_min_time_period" value=$edSet.edit_min_time_period}
 {assign var="input_edit_min_time_period" value="<input type=\"text\" name=\"edit_min_time_period\" value=\"$settings_edit_min_time_period\" size=\"3\">"}
   <p>
-   <input id="id_user_edit_if_no_replies" type="checkbox" name="user_edit_if_no_replies" value="1"{if $edSet.user_edit_if_no_replies==1} checked="checked"{/if}><label for="id_user_edit_if_no_replies">{#user_edit_if_no_replies#|replace:"[minutes]":$input_edit_min_time_period}</label>
+   <input id="id_user_edit_if_no_replies" type="checkbox" name="user_edit_if_no_replies" value="1"{if $edSet.user_edit_if_no_replies==1} checked="checked"{/if}><label for="id_user_edit_if_no_replies"><span class="icon"></span><span>{#user_edit_if_no_replies#|replace:"[minutes]":$input_edit_min_time_period}</span></label>
   </p>
  </div>
 </div>
@@ -199,8 +199,8 @@
  <p class="description">{#bbcode_desc#}</p>
  <div>
   <ul>
-   <li><input id="id_bbcode" type="checkbox" name="bbcode" value="1"{if $edSet.bbcode==1} checked="checked"{/if}><label for="id_bbcode">{#bbcodes_enabled#}</label></li>
-   <li><input id="id_bbcode_img" type="checkbox" name="bbcode_img" value="1"{if $edSet.bbcode_img==1} checked="checked"{/if}><label for="id_bbcode_img">{#bbcodes_img_enabled#}</label></li>
+   <li><input id="id_bbcode" type="checkbox" name="bbcode" value="1"{if $edSet.bbcode==1} checked="checked"{/if}><label for="id_bbcode"><span class="icon"></span><span>{#bbcodes_enabled#}</span></label></li>
+   <li><input id="id_bbcode_img" type="checkbox" name="bbcode_img" value="1"{if $edSet.bbcode_img==1} checked="checked"{/if}><label for="id_bbcode_img"><span class="icon"></span><span>{#bbcodes_img_enabled#}</span></label></li>
   </ul>
  </div>
 </div>
@@ -334,7 +334,7 @@
 <div>
  <p>
   <input id="clear_chache" type="checkbox" name="clear_cache" value="1">
-  <label for="clear_chache">{#clear_chache#}</label>
+  <label for="clear_chache"><span class="icon"></span><span>{#clear_chache#}</span></label>
  </p>
 </div>
 <p><button name="settings_submit" value="{#settings_submit_button#}">{#settings_submit_button#}</button></p>
@@ -708,7 +708,7 @@
    <td>
     <p class="userdata">
      <img src="{$avatar.image}" alt="{#avatar_img_alt#}" width="{$avatar.width}" height="{$avatar.height}"><br>
-     <input id="delete_avatar" type="checkbox" name="delete_avatar" value="1"{if $delete_avatar=="1"} checked="checked"{/if}><label for="delete_avatar">{#delete_avatar#}</label>
+     <input id="delete_avatar" type="checkbox" name="delete_avatar" value="1"{if $delete_avatar=="1"} checked="checked"{/if}><label for="delete_avatar"><span class="icon"></span><span>{#delete_avatar#}</span></label>
     </p>
    </td>
   </tr>
@@ -729,7 +729,7 @@
    <th><strong>{#edit_user_email#}</strong></th>
    <td>
     <input type="text" size="40" name="user_email" value="{$user_email}"><br>
-    <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if}><label for="email_contact">{#edit_user_email_contact#}</label></span>
+    <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if}><label for="email_contact"><span class="icon"></span><span>{#edit_user_email_contact#}</span></label></span>
    </td>
   </tr>
   <tr>
@@ -815,8 +815,8 @@
   <tr>
    <th><strong>{#edit_user_notification#}</strong></th>
    <td>
-    <input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if}><label for="new_posting_notification">{#admin_mod_notif_posting#}</label><br>
-    <input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if}><label for="new_user_notification">{#admin_mod_notif_register#}</label>
+    <input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if}><label for="new_posting_notification"><span class="icon"></span><span>{#admin_mod_notif_posting#}</span></label><br>
+    <input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if}><label for="new_user_notification"><span class="icon"></span><span>{#admin_mod_notif_register#}</span></label>
    </td>
   </tr>
 {/if}
@@ -879,7 +879,7 @@
 <input id="ar_pw" type="password" size="25" name="ar_pw" maxlength="50"></p>
 <p><label for="ar_pw_conf" class="main">{#register_pw_conf#}</label><br>
 <input id="ar_pw_conf" type="password" size="25" name="ar_pw_conf" maxlength="50"></p>
-<p><input id="ar_send_userdata" type="checkbox" name="ar_send_userdata" value="true"{if $ar_send_userdata} checked="checked"{/if}> <label for="ar_send_userdata">{#register_send_userdata#}</label></p>
+<p><input id="ar_send_userdata" type="checkbox" name="ar_send_userdata" value="true"{if $ar_send_userdata} checked="checked"{/if}> <label for="ar_send_userdata"><span class="icon"></span><span>{#register_send_userdata#}</span></label></p>
 <p><button name="register_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
 </form>
@@ -1017,12 +1017,12 @@
   <tr>
    <th><strong>{#stop_forum_spam#}</strong>
     <span class="description">{#stop_forum_spam_desc#}</span></th>
-   <td><input id="stop_forum_spam" type="checkbox" name="stop_forum_spam" value="1"{if $stop_forum_spam==1} checked="checked"{/if}><label for="stop_forum_spam">{#stop_forum_spam_enable#}</label></td>
+   <td><input id="stop_forum_spam" type="checkbox" name="stop_forum_spam" value="1"{if $stop_forum_spam==1} checked="checked"{/if}><label for="stop_forum_spam"><span class="icon"></span><span>{#stop_forum_spam_enable#}</span></label></td>
   </tr>
   <tr>
    <th><strong>{#bad_behavior#}</strong>
     <span class="description">{#bad_behavior_desc#}</span></th>
-   <td><input id="bad_behavior" type="checkbox" name="bad_behavior" value="1"{if $bad_behavior==1} checked="checked"{/if}><label for="bad_behavior">{#bad_behavior_enable#}</label></td>
+   <td><input id="bad_behavior" type="checkbox" name="bad_behavior" value="1"{if $bad_behavior==1} checked="checked"{/if}><label for="bad_behavior"><span class="icon"></span><span>{#bad_behavior_enable#}</span></label></td>
   </tr>
   <tr>
    <th><strong>{#akismet#}</strong>
@@ -1030,12 +1030,12 @@
    <td>
     <p>{#akismet_key#}<br><input type="text" name="akismet_key" value="{$akismet_key}" size="25"></p>
     <p>
-     <input id="akismet_entry_check" type="checkbox" name="akismet_entry_check" value="1"{if $akismet_entry_check==1} checked="checked"{/if}><label for="akismet_entry_check">{#akismet_entry#}</label><br>
-     <input id="akismet_mail_check" type="checkbox" name="akismet_mail_check" value="1"{if $akismet_mail_check==1} checked="checked"{/if}><label for="akismet_mail_check">{#akismet_mail#}</label><br>
-     <input id="akismet_check_registered" type="checkbox" name="akismet_check_registered" value="1"{if $akismet_check_registered==1} checked="checked"{/if}><label for="akismet_check_registered">{#akismet_registered#}</label>
+     <input id="akismet_entry_check" type="checkbox" name="akismet_entry_check" value="1"{if $akismet_entry_check==1} checked="checked"{/if}><label for="akismet_entry_check"><span class="icon"></span><span>{#akismet_entry#}</span></label><br>
+     <input id="akismet_mail_check" type="checkbox" name="akismet_mail_check" value="1"{if $akismet_mail_check==1} checked="checked"{/if}><label for="akismet_mail_check"><span class="icon"></span><span>{#akismet_mail#}</span></label><br>
+     <input id="akismet_check_registered" type="checkbox" name="akismet_check_registered" value="1"{if $akismet_check_registered==1} checked="checked"{/if}><label for="akismet_check_registered"><span class="icon"></span><span>{#akismet_registered#}</span></label>
     </p>
     <p>
-     <input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if}><label for="save_spam">{#akismet_save_spam#}</label><br>{#akismet_auto_delete_spam#}<br>
+     <input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if}><label for="save_spam"><span class="icon"></span><span>{#akismet_save_spam#}</span></label><br>{#akismet_auto_delete_spam#}<br>
      <input type="text" name="auto_delete_spam" value="{$auto_delete_spam}" size="5">
     </p>
    </td>
@@ -1068,8 +1068,8 @@
 <div>
 <input type="hidden" name="mode" value="admin">
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
-<p><input id="delete_postings" type="checkbox" name="delete_postings" value="true"><label for="delete_postings"> {#delete_postings#}</label></p>
-<p><input id="delete_userdata" type="checkbox" name="delete_userdata" value="true"><label for="delete_userdata"> {#delete_userdata#}</label></p>
+<p><input id="delete_postings" type="checkbox" name="delete_postings" value="true"><label for="delete_postings"> <span class="icon"></span><span>{#delete_postings#}</span></label></p>
+<p><input id="delete_userdata" type="checkbox" name="delete_userdata" value="true"><label for="delete_userdata"> <span class="icon"></span><span>{#delete_userdata#}</span></label></p>
 <p>{#admin_confirm_password#}<br>
 <input type="password" size="20" name="confirm_pw"> <button name="reset_forum_confirmed" value="{#reset_forum_submit#}">{#reset_forum_submit#}</button></p>
 </div>

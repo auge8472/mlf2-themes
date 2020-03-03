@@ -274,6 +274,38 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	line-height: 130%;
 }
 
+/* elements in forms */
+[type="checkbox"] {
+	position: absolute;
+	left: -9999px;
+}
+[type="checkbox"] + label {
+	padding: 0.125em 0.25em;
+	color: #444;
+	display: flex;
+}
+[type="checkbox"] + label .icon {
+	display: inline-block;
+	padding:0;
+	height: 1.15em;
+	width: 1.15em;
+	flex: 0 0 1.25em;
+	margin: 0.125em 0.375em 0.125em 0;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center center;
+}
+[type="checkbox"] + label .icon {
+	background: url("images/marker-square.svg") center center / 100% no-repeat;
+}
+[type="checkbox"]:checked + label {
+	color: #031;
+}
+[type="checkbox"]:checked + label .icon {
+	background: url("images/check-mark.svg") center center / 70% no-repeat, url("images/marker-square.svg") center center / 100% no-repeat;
+}
+/* end: elements in forms */
+
 /* elements of #sidebar, #bottombar, aside */
 aside h2, #sidebarcontent, aside section h3, aside section p, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li, #latest-postings a, #modmenu a {
 	margin:0;
