@@ -20,7 +20,7 @@
 {if $avatar}
   <tr>
    <th><strong>{#user_avatar#}</strong></th>
-   <td><img src="{$avatar.image}" alt="{#avatar_img_alt#}" width="{$avatar.width}" height="{$avatar.height}" /></td>
+   <td><img class="avatar" src="{$avatar.image}" alt="{#avatar_img_alt#}" width="{$avatar.width}" height="{$avatar.height}" /></td>
   </tr>
 {/if}
 {if $user_hp || $user_email}
