@@ -164,6 +164,9 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 #subnav ul {
 	list-style: none;
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
 }
 
 #subnav-2 a {
@@ -1375,11 +1378,6 @@ div.warning              {
 	body > header, nav#subnav, main, body > footer {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
-	}
-	#subnav ul {
-		display: flex;
-		align-content: flex-start;
-		flex-wrap: wrap;
 	}
 	#subnav li:not(:first-child), #subnav-2 li:not(:first-child) {
 		margin-left: 0.25em;
