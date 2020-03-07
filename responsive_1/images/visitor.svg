@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <style type="text/css">
+  <![CDATA[
+  ellipse, path { fill: #fff; stroke: #8898aa; stroke-width: 4px; }
+  ]]>
+ </style>
+ <ellipse cx="64" cy="48" rx="32" ry="42" />
+ <path d="M 10,126 A 2, 1.25, 0, 0, 1, 118,126 z" />
+</svg>
+
