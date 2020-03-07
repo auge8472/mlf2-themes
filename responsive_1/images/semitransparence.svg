@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
+ <style type="text/css">
+  <![CDATA[
+  #front { stroke: none; fill: hsla(210, 100%, 98%, .5); }
+  ]]>
+ </style>
+ <rect id="front" x="0" y="0" width="128" height="128" rx="2" ry="2" />
+</svg>
+

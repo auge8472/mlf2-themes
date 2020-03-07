@@ -16,9 +16,9 @@
   path.shackle { fill: none; stroke-width: 11px; stroke: #467; }
   ]]>
  </style>
- <rect id="body" x="19" y="64" width="90" height="60" />
+ <rect id="body" x="19" y="66" width="90" height="60" />
  <circle class="keyhole" cx="64" cy="92" r="6" />
  <path class="keyhole" d="M64,94 V107" />
- <path class="shackle" d="M92,64 v-14 A 28 28, 0, 0, 0, 36,50 v14" />
+ <path class="shackle" d="M92,66 v-14 A 28 28, 0, 0, 0, 36,50 v16" />
 </svg>
 

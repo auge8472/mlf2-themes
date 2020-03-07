@@ -615,19 +615,6 @@
      </span>
     </span>
    </th>
-   <th>
-    <span class="header-cell">
-     <span class="tc-title">{#lock#}</span>
-     <span class="sorting-ui">
-      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_lock&amp;descasc=DESC&amp;ul={$ul}">
-       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_lock" && $descasc=="DESC"}order-to-top-active.svg{else}order-to-top-inactive.svg{/if}" alt="[desc]" width="8" height="16" />
-      </a>
-      <a href="index.php?mode=admin&amp;action=user{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;order=user_lock&amp;descasc=ASC&amp;ul={$ul}">
-       <img src="{$THEMES_DIR}/{$theme}/images/{if $order=="user_lock" && $descasc=="ASC"}order-to-bottom-active.svg{else}order-to-bottom-inactive.svg{/if}" alt="[asc]" width="8" height="16" />
-      </a>
-     </span>
-    </span>
-   </th>
    <th>&nbsp;</th>
   </tr>
  </thead>
@@ -640,9 +627,9 @@
    <td data-header="{#user_registered#}"><span class="value">{$userdata[row].registered_time|date_format:#time_format#}</span></td>
    <td data-header="{#user_logins#}"><span class="value">{$userdata[row].logins}</span></td>
    <td data-header="{#last_login#}"><span class="value">{if $userdata[row].logins > 0}{$userdata[row].last_login_time|date_format:#time_format#}{else}&nbsp;{/if}</span></td>
-   <td data-header="{#lock#}"><span class="value">{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}{#unlocked#}{else}{#locked#}{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}">{#unlocked#}</a>{else}<a class="user-locked" href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}">{#locked#}</a>{/if}</span></td>
    <td class="item-tools">
     <ul>
+     <li>{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}<span class="replace-tool user-not-locked"><span class="icon"></span><span>{#unlocked#}</span>{else}<span class="user-locked"><span class="icon"></span><span>{#locked#}</span>{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" class="user-not-locked"><span class="icon"></span><span>{#unlocked#}</span></a>{else}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" class="user-locked"><span class="icon"></span><span>{#locked#}</span></a>{/if}</li>
      <li><a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a></li>
      <li><a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a></li>
     </ul>

@@ -1232,7 +1232,7 @@ section.thread-tree header h2, section.thread-tree header p {
 	margin: 0 0.125em 0 0;
 	margin: 0 0.125rem 0 0;
 }
-.item-tools a {
+.item-tools a, .item-tools span.replace-tool {
 	display: flex;
 	align-items: center;
 }
@@ -1245,13 +1245,25 @@ section.thread-tree header h2, section.thread-tree header p {
 	background-size: 1em 1em;
 	background-position: center center;
 }
-.item-tools span:not([class="icon"]) {
+.item-tools a span:not([class="icon"]), .item-tools span.replace-tool span:not([class="icon"]) {
 	position: absolute !important;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
 	white-space: nowrap;
+}
+span.user-not-locked .icon {
+	background: url("images/semitransparence.svg"), url("images/lock-open.svg") 100% 100% / 80% no-repeat, url("images/user.svg") left top / 57.5% no-repeat;
+}
+span.user-locked .icon {
+	background: url("images/semitransparence.svg"), url("images/lock-closed.svg") 100% 100% / 80% no-repeat, url("images/semitransparence.svg") left top / 57.5% no-repeat, url("images/user.svg") left top / 57.5% no-repeat;
+}
+a.user-not-locked .icon {
+	background: url("images/lock-open.svg") 100% 100% / 80% no-repeat, url("images/user.svg") left top / 57.5% no-repeat;
+}
+a.user-locked .icon {
+	background: url("images/lock-closed.svg") 100% 100% / 80% no-repeat, url("images/semitransparence.svg") left top / 57.5% no-repeat, url("images/user.svg") left top / 57.5% no-repeat;
 }
 .editor .icon {
 	background-image: url(images/pencil.svg), url(images/file.svg);
