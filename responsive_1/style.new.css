@@ -609,7 +609,7 @@ aside section h3 {
 	background: url("images/warning.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
 .adminmenu a[href*='create_backup=8'] .icon {
-	background: url("images/notepad.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+	background: url("images/bookmark.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
 .adminmenu a[href*='create_backup=9'] .icon {
 	background: url("images/warning.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
