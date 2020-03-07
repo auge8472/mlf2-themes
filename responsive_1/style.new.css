@@ -831,7 +831,7 @@ td.cell-subject {
 	font-size: 1em;
 	border-bottom: 1px solid #bacbdf;
 }
-.cell-subject a.item {
+.cell-subject a.item, .cell-subject label {
 	font-weight: bold;
 }
 td a.user-locked {
