@@ -63,20 +63,29 @@
 {$element.signature}</p>
 {/if}
 </div>
-<footer class="posting-footer item-tools">
+<footer class="posting-footer">
 <ul class="options">
-<li>{if $element.locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$element.id}&amp;back=thread">{#reply_link#}</a>{else}<span class="locked">{#posting_locked#}</span>{/if}</li>
+ <li>{if $element.locked==0}<a class="stronglink" href="index.php?mode=posting&amp;id={$element.id}&amp;back=thread"><span class="icon"></span><span>{#reply_link#}</span></a>{else}<span class="locked"><span class="icon"></span><span>{#posting_locked#}</span></span>{/if}</li>
 {if $element.options}
-{if $element.options.add_bookmark}<li><a href="index.php?mode=posting&amp;bookmark={$element.id}&amp;back=thread" class="add-bookmark">{#add_bookmark_message_linkname#}</a></li>{/if}
-{if $element.options.delete_bookmark}<li><a href="index.php?mode=posting&amp;bookmark={$element.id}&amp;back=thread" class="delete-bookmark">{#delete_bookmark_message_linkname#}</a></li>{/if}
-{if $element.options.edit}<li><a href="index.php?mode=posting&amp;edit={$element.id}&amp;back=thread" class="edit">{#edit_message_linkname#}</a></li>{/if}
-{if $element.options.delete}<li><a href="index.php?mode=posting&amp;delete_posting={$element.id}&amp;csrf_token={$CSRF_TOKEN}&amp;back=thread" class="delete">{#delete_message_linkname#}</a></li>{/if}
-{if $element.options.move}<li><a href="index.php?mode=posting&amp;move_posting={$element.id}&amp;back=thread" class="move">{#move_posting_linkname#}</a></li>{/if}
-{if $element.options.report_spam}<li><a href="index.php?mode=posting&amp;report_spam={$element.id}&amp;back=thread" class="report">{#report_spam_linkname#}</a></li>{/if}
-{if $element.options.flag_ham}<li><a href="index.php?mode=posting&amp;flag_ham={$element.id}&amp;back=thread" class="report">{#flag_ham_linkname#}</a></li>{/if}
-{if $element.options.lock}<li><a href="index.php?mode=posting&amp;lock={$element.id}&amp;back=thread" class="{if $element.locked==0}lock{else}unlock{/if}">{if $element.locked==0}{#lock_linkname#}{else}{#unlock_linkname#}{/if}</a></li>
-{if $element.pid==0}<li><a href="index.php?mode=posting&amp;lock_thread={$element.id}&amp;back=thread" class="lock-thread">{#lock_thread_linkname#}</a></li>
-<li><a href="index.php?mode=posting&amp;unlock_thread={$element.id}&amp;back=thread" class="unlock-thread">{#unlock_thread_linkname#}</a></li>{/if}{/if}
+{if $element.options.add_bookmark} <li><a href="index.php?mode=posting&amp;bookmark={$element.id}&amp;back=thread" class="add-bookmark"><span class="icon"></span><span>{#add_bookmark_message_linkname#}</span></a></li>
+{/if}
+{if $element.options.delete_bookmark} <li><a href="index.php?mode=posting&amp;bookmark={$element.id}&amp;back=thread" class="delete-bookmark"><span class="icon"></span><span>{#delete_bookmark_message_linkname#}</span></a></li>
+{/if}
+{if $element.options.edit} <li><a href="index.php?mode=posting&amp;edit={$element.id}&amp;back=thread" class="edit"><span class="icon"></span><span>{#edit_message_linkname#}</span></a></li>
+{/if}
+{if $element.options.delete} <li><a href="index.php?mode=posting&amp;delete_posting={$element.id}&amp;csrf_token={$CSRF_TOKEN}&amp;back=thread" class="delete"><span class="icon"></span><span>{#delete_message_linkname#}</span></a></li>
+{/if}
+{if $element.options.move} <li><a href="index.php?mode=posting&amp;move_posting={$element.id}&amp;back=thread" class="move"><span class="icon"></span><span>{#move_posting_linkname#}</span></a></li>
+{/if}
+{if $element.options.report_spam} <li><a href="index.php?mode=posting&amp;report_spam={$element.id}&amp;back=thread" class="report"><span class="icon"></span><span>{#report_spam_linkname#}</span></a></li>
+{/if}
+{if $element.options.flag_ham} <li><a href="index.php?mode=posting&amp;flag_ham={$element.id}&amp;back=thread" class="report"><span class="icon"></span><span>{#flag_ham_linkname#}</span></a></li>
+{/if}
+{if $element.options.lock} <li><a href="index.php?mode=posting&amp;lock={$element.id}&amp;back=thread" class="{if $element.locked==0}lock{else}unlock{/if}"><span class="icon"></span><span>{if $element.locked==0}{#lock_linkname#}{else}{#unlock_linkname#}{/if}</span></a></li>
+{if $element.pid==0} <li><a href="index.php?mode=posting&amp;lock_thread={$element.id}&amp;back=thread" class="lock-thread"><span class="icon"></span><span>{#lock_thread_linkname#}</span></a></li>
+ <li><a href="index.php?mode=posting&amp;unlock_thread={$element.id}&amp;back=thread" class="unlock-thread"><span class="icon"></span><span>{#unlock_thread_linkname#}</span></a></li>
+{/if}
+{/if}
 {/if}
 </ul>
 </footer>

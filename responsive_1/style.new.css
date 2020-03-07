@@ -1130,19 +1130,29 @@ article footer .options li {
 	padding: 0;
 }
 
-article footer .options li a, article footer .options li span {
-	display: block;
+article footer .options li a, article footer .options li > span {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
 	margin: 0;
-	padding: 0 0.25em 0 1.2em;
+	padding: 0 0.25em 0 0.125em;
 	border: 1px solid #bacbdf;
-	background-repeat: no-repeat;
-	background-size: 1em 1em;
-	background-position: 0.1em center;
 }
-article footer .options li span {
+article footer .options li > span {
 	border-color: #888;
 	color: #888;
 	background-color: #f0f0eb;
+}
+article .options li a .icon, article .options li > span .icon {
+	display: inline-block;
+	padding: 0;
+	width: 1em;
+	height: 1em;
+	margin-right: 0.125em;
+	flex: 0 0 1em;
+	background-repeat: no-repeat;
+	background-size: 1em 1em;
+	background-position: center center;
 }
 article footer .options li a:link, article footer .options li a:visited {
 	background-color: #f9f9f9;
@@ -1153,25 +1163,28 @@ article footer .options li a:focus, article footer .options li a:hover {
 article footer .options li a:active {
 	background-color: #e9f8ff;
 }
-article footer a.add-bookmark, article footer a.delete-bookmark {
-	background-image: url(images/notepad.svg);
+article footer a.add-bookmark .icon {
+	background: url("images/sign-add.svg") 100% 100% / 57.5% no-repeat, url("images/bookmark.svg") center / 100% no-repeat;
 }
-article footer a.edit {
+article footer a.delete-bookmark .icon {
+	background: url("images/sign-remove.svg") 100% 100% / 57.5% no-repeat, url("images/bookmark.svg") center / 100% no-repeat;
+}
+article footer a.edit .icon {
 	background-image: url(images/pencil.svg), url(images/file.svg);
 }
-article footer a.delete {
+article footer a.delete .icon {
 	background-image: url(images/marker-cross.svg);
 }
-article footer a.move {
+article footer a.move .icon {
 	background-image: url(images/move-item.svg);
 }
-article footer a.report {
+article footer a.report .icon {
 	background-image: url(images/warning.svg);
 }
-article footer a.lock, article footer a.lock-thread, article footer li .locked {
+article footer a.lock .icon, article footer a.lock-thread .icon, article footer li .locked .icon {
 	background-image: url(images/lock-closed.svg);
 }
-article footer a.unlock, article footer a.unlock-thread {
+article footer a.unlock .icon, article footer a.unlock-thread .icon {
 	background-image: url(images/lock-open.svg);
 }
 /* special rules for thread tree below singe posting view*/
