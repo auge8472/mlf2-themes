@@ -183,7 +183,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 
 #subnav a {
-	padding: 0 0.25em;
+	padding: 0.275em;
 	white-space: nowrap;
 	display: flex;
 	align-items: center;
@@ -196,12 +196,17 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	margin-right: 0.125em;
 	flex: 0 0 1em;
 	background-repeat: no-repeat;
-	background-size: 0.85em 0.85em;
+	background-size: 1em 1em;
 	background-position: center center;
 }
 #subnav a span:not([class]), #subnav a strong {
-	flex: 1 1 auto;
 	padding: 0 0 0 0.125em;
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap; /* added line */
 }
 #subnav a.create-thread .icon {
 	background-image: url(images/arrow-b-right.svg);
@@ -1468,6 +1473,19 @@ div.warning {
 	}
 	#subnav li:not(:first-child), #subnav-2 li:not(:first-child) {
 		margin-left: 0.25em;
+	}
+	#subnav a {
+		padding: 0 0.25em;
+	}
+	#subnav a .icon {
+		background-size: 0.85em 0.85em;
+	}
+	#subnav a span:not([class]), #subnav a strong {
+		flex: 1 1 auto;
+		position: static;
+		width: auto;
+		height: auto;
+		clip: auto;
 	}
 	#subnav ul li:not(:first-child) a {
 		border-left: 1px solid #bacbdf;
