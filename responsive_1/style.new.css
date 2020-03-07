@@ -1107,7 +1107,11 @@ article blockquote {
 code {
 	color: #224;
 }
-
+article .tags h3 {
+	display: inline-block;
+	background: url(images/tags.svg) left center / 0.85em no-repeat;
+	padding-left: 1em;
+}
 article footer {
 	margin: 0;
 	padding: 5px 5px 0 5px;
