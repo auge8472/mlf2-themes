@@ -932,6 +932,9 @@ ul.reply li {
 	text-decoration: none;
 	font-weight: bold;
 }
+.registered_user {
+	color: #048;
+}
 .admin {
 	color: #c10;
 }
