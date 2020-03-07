@@ -1314,6 +1314,7 @@ a.user-profile .icon {
 }
 .ok, .errormessage {
 	padding: 0.25em 0.25em 0.25em 1.5em;
+	margin: 1em 0;
 }
 .ok {
 	border: 1px solid #0c4;
