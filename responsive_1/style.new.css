@@ -1265,6 +1265,12 @@ a.user-not-locked .icon {
 a.user-locked .icon {
 	background: url("images/lock-closed.svg") 100% 100% / 80% no-repeat, url("images/semitransparence.svg") left top / 57.5% no-repeat, url("images/user.svg") left top / 57.5% no-repeat;
 }
+span.user-inactive .icon {
+	background: url("images/semitransparence.svg"), url("images/file.svg") 100% 100% / 80% no-repeat, url("images/user.svg") left top / 57.5% no-repeat;
+}
+a.user-profile .icon {
+	background: url("images/file.svg") 100% 100% / 80% no-repeat, url("images/user.svg") left top / 57.5% no-repeat;
+}
 .editor .icon {
 	background-image: url(images/pencil.svg), url(images/file.svg);
 }

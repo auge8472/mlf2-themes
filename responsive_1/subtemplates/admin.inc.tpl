@@ -630,6 +630,7 @@
    <td class="item-tools">
     <ul>
      <li>{if $userdata[row].user_type>0}{if $userdata[row].user_lock==0}<span class="replace-tool user-not-locked"><span class="icon"></span><span>{#unlocked#}</span>{else}<span class="user-locked"><span class="icon"></span><span>{#locked#}</span>{/if}{elseif $userdata[row].user_lock==0}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" class="user-not-locked"><span class="icon"></span><span>{#unlocked#}</span></a>{else}<a href="index.php?mode=admin&amp;user_lock={$userdata[row].user_id}{if $search_user_encoded}&amp;search_user={$search_user_encoded}{/if}&amp;page={$page}&amp;order={$order}&amp;descasc={$descasc}" class="user-locked"><span class="icon"></span><span>{#locked#}</span></a>{/if}</li>
+     <li>{if $userdata[row].inactive}<span class="replace-tool user-inactive"><span class="icon"></span>{#user_inactive#}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" class="user-profile"><span class="icon"></span><span>{#user_profile#}</span></a>{/if}</li>
      <li><a href="index.php?mode=admin&amp;edit_user={$userdata[row].user_id}" class="editor"><span class="icon"></span><span>{#edit#}</span></a></li>
      <li><a href="index.php?mode=admin&amp;delete_user={$userdata[row].user_id}" class="terminator"><span class="icon"></span><span>{#delete#}</span></a></li>
     </ul>
