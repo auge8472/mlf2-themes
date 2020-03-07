@@ -4,11 +4,11 @@
   <![CDATA[
   #check-mark {
    fill: none;
-   stroke: #0b2;
+   stroke: #00b018;
    stroke-width: 20px;
   }
   ]]>
  </style>
- <polyline points="12,72 48,114 116,26" id="check-mark" />
+ <polyline points="12,70 48,112 116,20" id="check-mark" />
 </svg>
 
