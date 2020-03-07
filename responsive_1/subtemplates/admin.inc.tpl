@@ -621,7 +621,7 @@
  <tbody>
 {section name=row loop=$userdata}
   <tr>
-   <td class="cell-subject"><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}">&nbsp;{if $userdata[row].inactive}<span title="{#user_inactive#}" class="item inactive">{$userdata[row].user_name}</span>{else}<a href="index.php?mode=user&amp;show_user={$userdata[row].user_id}" class="item">{$userdata[row].user_name}</a>{/if}</td>
+   <td class="cell-subject"><input type="checkbox" name="selected[]" value="{$userdata[row].user_id}" id="cb_{$userdata[row].user_id}"><label for="cb_{$userdata[row].user_id}"><span class="icon"></span>{$userdata[row].user_name}</label></td>
    <td data-header="{#user_email#}"><span class="value"><a href="mailto:{$userdata[row].user_email}">{$userdata[row].user_email}</a></span></td>
    <td data-header="{#user_type#}"><span class="value">{if $userdata[row].user_type==2}{#admin#}{elseif $userdata[row].user_type==1}{#mod#}{else}{#user#}{/if}</span></td>
    <td data-header="{#user_registered#}"><span class="value">{$userdata[row].registered_time|date_format:#time_format#}</span></td>
