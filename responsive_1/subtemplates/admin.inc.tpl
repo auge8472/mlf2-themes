@@ -1132,6 +1132,8 @@
  <li><a href="index.php?mode=admin&amp;create_backup=8" class="backup bookmarks"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_bookmarks#}</span></a></li>
  <li><a href="index.php?mode=admin&amp;create_backup=9" class="backup read-status"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_read_status#}</span></a></li>
  <li><a href="index.php?mode=admin&amp;create_backup=10" class="backup temp-infos"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_temp_infos#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=11" class="backup subscriptions"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_subscriptions#}</span></a></li>
+ <li><a href="index.php?mode=admin&amp;create_backup=12" class="backup tags"><span class="icon"></span><span>{#only_create_backup_of#} {#backup_tags#}</span></a></li>
 </ul>
 {elseif $action=='delete_backup_files_confirm'}
 <p class="caution">{#caution#}</p>
