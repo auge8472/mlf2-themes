@@ -739,18 +739,20 @@ ul.pagination li:first-child {
 }
 ul.pagination a {
 	border: 1px solid #bacbdf;
-	background: #f9f9f9;
+	background: #e8eff8;
+	font-weight: bold;
 	padding: 0.1em 0.4em;
 }
-ul.pagination a:focus, ul.pagination a:hover, ul.pagination a:active {
+ul.pagination a[href]:focus, ul.pagination a[href]:hover, ul.pagination a[href]:active {
 	border:1px solid #00c;
-	background:#efefef;
+	color: #a42424;
+	background:#fffcdf;
 	text-decoration:none;
 }
 ul.pagination a:not([href]) {
-	border: 1px solid #bacbdf;
-	color: #989898;
-	font-weight: bold;
+	color: #949494;
+	background: #f8fbff;
+	text-decoration:none;
 }
 
 /* page internal search fields */
