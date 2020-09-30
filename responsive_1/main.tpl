@@ -83,7 +83,7 @@ https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1922497
 <div id="pbmlf"><a href="https://mylittleforum.net/">powered by my little forum</a></div>
 </footer>
 <ul id="assistancemenu">
- <li><a href="#top">zum Seitenanfang</a></li>
+ <li><a href="#top">{#back_to_top_link#}</a></li>
  <li><a href="./">{#back_to_index_link#}</a></li>
 </ul>
 
