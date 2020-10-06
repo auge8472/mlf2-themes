@@ -1444,9 +1444,28 @@ a.user-profile .icon {
 
 /* assistance menu*/
 #assistancemenu a {
-	display: block;
 	padding: 0 0.25em 0 13px;
 	padding: 0 0.25rem 0 13px;
+	display: flex;
+	align-items: center;
+}
+
+#assistancemenu a .icon {
+	display: inline-block;
+	padding: 0;
+	height: 1.05em;
+	width: 1.05em;
+	flex: 0 0 1.15em;
+	margin: 0.125em;
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: center center;
+}
+#assistancemenu a[href="#top"] .icon {
+	background-image: url("images/arrow-b-up.svg");
+}
+#assistancemenu a[href="./"] .icon {
+	background-image: url("images/threads-nested.svg");
 }
 
 /* JS classes */
