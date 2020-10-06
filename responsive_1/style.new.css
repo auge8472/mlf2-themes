@@ -1445,6 +1445,7 @@ a.user-profile .icon {
 #assistancemenu a {
 	display: flex;
 	align-items: center;
+	white-space: nowrap;
 	padding: 0.125em  0.2em;
 }
 
