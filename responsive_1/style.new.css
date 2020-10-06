@@ -623,6 +623,12 @@ aside section h3 {
 .adminmenu a[href*='create_backup=10'] .icon {
 	background: url("images/clock.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
 }
+.adminmenu a[href*='create_backup=11'] .icon {
+	background: url("images/contact-email.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
+.adminmenu a[href*='create_backup=12'] .icon {
+	background: url("images/tags.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
+}
 .adminmenu a[href*='&action=update'] .icon {
 	background-image: url("images/software-update.svg");
 }
