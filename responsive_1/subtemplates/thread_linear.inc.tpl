@@ -96,4 +96,4 @@
 </article>
 {/foreach}
 </div>
-{if $settings.rss_feed==1}<p><a class="rss" href="index.php?mode=rss&amp;thread={$tid}">{#rss_feed_thread#}</a></p>{/if}
+{if $settings.rss_feed==1}<p class="thread-feed"><a class="rss" href="index.php?mode=rss&amp;thread={$tid}">{#rss_feed_thread#}</a></p>{/if}
