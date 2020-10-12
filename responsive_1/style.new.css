@@ -1209,12 +1209,16 @@ article footer a.unlock .icon, article footer a.unlock-thread .icon {
 }
 /* special rules for thread tree below singe posting view*/
 section.thread-tree header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column-reverse;
 }
-section.thread-tree header h2, section.thread-tree header p {
+section.thread-tree header h2 {
 	margin: 0 0 0.5em 0;
+}
+section.thread-tree header p {
+	margin: 0 0 0.25em 0;
 }
 /* ajax preview element */
 #ajax-preview {
@@ -1560,6 +1564,17 @@ div.warning {
 	input[size="40"] {
 		width: 26em;
 		max-width: 100%;
+	}
+}
+
+
+@media screen and (min-width: 36em) {
+	/* special rules for thread tree below singe posting view*/
+	section.thread-tree header {
+		flex-direction: row;
+	}
+	section.thread-tree header p {
+		margin: 0 0 0.5em 0;
 	}
 }
 
