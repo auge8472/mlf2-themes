@@ -16,3 +16,5 @@ First attempt to adapt the default theme and to modernise it.
 Download the ZIP file [from releases page](https://github.com/auge8472/mlf2-themes/releases), unzip it and load the directory `responsive_1` to your installation of My Little Forum into directory `themes` *beside* the default theme. You can activate it, even it is actually not recommended because being under development, afterwards in the forum settings as the standard theme of your forum. There is *no warranty*, that every single function that is provided by the default theme is actually working in this theme.
 
 Thatswhy it is recommended during the development phase to activate the theme only for yourself in your user profile form. Any user of your forum will be able to activate the theme too on her/his own risk.
+Currently then main features of the forum are working in this theme. There are a few minor features that are not working, several unfinished formattings and inconsistencies.
+
