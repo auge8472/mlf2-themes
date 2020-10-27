@@ -408,7 +408,7 @@ aside section h3 {
 	background-color: #fff;
 }
 #latest-postings li a:visited .entry-title, #latest-postings a.read .entry-title {
-	color:#808;
+	color: #236;
 }
 #latest-postings a:focus, #latest-postings a:hover, #modmenu a:focus, #modmenu a:hover {
 	background-color: #ffffcf;
@@ -927,8 +927,11 @@ ul.reply li {
 	line-height: 135%;
 }
 
-.thread li > a:link, .thread li > a:visited {
+.thread li > a:link {
 	color: #00c;
+}
+.thread li > a:visited, .thread li > a.read {
+	color: #236;
 }
 .thread li > a:focus, .thread li > a:hover {
 	color: #00f;
