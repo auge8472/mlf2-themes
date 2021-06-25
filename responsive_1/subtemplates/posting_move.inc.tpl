@@ -12,11 +12,11 @@
 <input type="hidden" name="move_posting" value="{$move_posting}" />
 <input type="hidden" name="back" value="{$back}" />
 {if $posting_type==0}
-{assign var="input_move_to" value="<input type=\"text\" name=\"move_to\" value=\"\" size=\"5\" />"}
+{assign var="input_move_to" value="<input type=\"number\" name=\"move_to\" value=\"\" size=\"5\" />"}
 <input type="hidden" name="move_mode" value="1" />
 <p>{#move_posting#|replace:"[number]":$input_move_to}</p>
 {else}
-{assign var="input_move_to" value="<input type=\"text\" name=\"move_to\" value=\"\" size=\"5\" onclick=\"document.getElementById('move_mode_1').checked=false; document.getElementById('move_mode_1').checked='checked'; \" />"}
+{assign var="input_move_to" value="<input type=\"number\" name=\"move_to\" value=\"\" size=\"5\" onclick=\"document.getElementById('move_mode_1').checked=false; document.getElementById('move_mode_1').checked='checked'; \" />"}
 <p><input id="move_mode_0" type="radio" name="move_mode" value="0" checked="checked" class="small-input" /> <!--<label for="move_mode_0">-->{#move_posting_new_thread#}<!--</label>--><br />
 <input id="move_mode_1" type="radio" name="move_mode" value="1" class="small-input" /> <!--<label for="move_mode_1">-->{#move_posting#|replace:"[number]":$input_move_to}<!--</label>--></p>
 {/if}
