@@ -1068,7 +1068,7 @@ article .body {
 	background: #fff;
 }
 
-article .body * {
+article .body > *:not(:last-child) {
 	margin: 0 0 0.5em 0;
 	margin: 0 0 0.5rem 0;
 }
