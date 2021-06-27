@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; stroke-width: 14px; stroke: #467; }
+  line { stroke-width: 20px; stroke: #f80800; }
+  ]]>
+ </style>
+ <path d="M2,12 H126" />
+ <path d="M2,38 H126" />
+ <path d="M2,64 H126" />
+ <path d="M2,90 H126" />
+ <path d="M2,116 H126" />
+ <line x1="12" y1="12" x2="116" y2="116" />
+ <line x1="116" y1="12" x2="12" y2="116" />
+</svg>
+
