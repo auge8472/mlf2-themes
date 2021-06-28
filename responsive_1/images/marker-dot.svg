@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <defs>
+  <linearGradient id="dot" x1="100%" y1="0%" x2="50%" y2="100%">
+   <stop offset="0%" stop-color="#383f44" />
+   <stop offset="100%" stop-color="#101216" />
+  </linearGradient>
+ </defs>
+ <style type="text/css">
+  <![CDATA[
+  .dot { fill: url(#dot); stroke: #efefef; stroke-width: 4px; }
+  ]]>
+ </style>
+ <circle class="dot" cx="64" cy="64" r="30" />
+</svg>
+
