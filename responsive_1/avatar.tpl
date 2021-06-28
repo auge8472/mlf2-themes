@@ -78,7 +78,7 @@ setPictureToProfil('');
 <div>
 <input type="hidden" name="mode" value="avatar" />
 <p><input type="file" name="probe" size="17" /></p>
-<p><input type="submit" name="" value="{#upload_image_button#}" onclick="document.getElementById('throbber-submit').style.visibility='visible'" /> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$settings.template}/images/throbber_submit.gif" alt="" width="16" height="16" /></p>
+<p><input type="submit" name="" value="{#upload_image_button#}" onclick="document.getElementById('throbber-submit').style.visibility='visible'" /> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$settings.template}/images/throbber.svg" alt="" width="16" height="16" /></p>
 </div>
 </form>
 {else}

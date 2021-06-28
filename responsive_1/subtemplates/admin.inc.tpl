@@ -1174,7 +1174,7 @@
 <input type="hidden" name="mode" value="admin">
 <input type="hidden" name="backup_file" value="{$backup_file}">
 <p>{#admin_confirm_password#}<br><input type="password" name="restore_password" size="25"></p>
-<p><button name="restore_submit" value="{#restore_submit#}" onclick="document.getElementById('throbber-submit').style.visibility = 'visible';">{#restore_submit#}</button> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber_submit.gif" alt="" width="16" height="16"></p>
+<p><button name="restore_submit" value="{#restore_submit#}" onclick="document.getElementById('throbber-submit').style.visibility = 'visible';">{#restore_submit#}</button> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber.svg" alt="" width="16" height="16"></p>
 </div>
 </form>
 {elseif $action=='update'}
@@ -1211,7 +1211,7 @@
 <input type="hidden" name="update_file_submit" value="{$update_file}">
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
 <p>{#admin_confirm_password#}<br><input type="password" name="update_password" size="25"></p>
-<p><button name="update_submit" value="{#update_submit#}" onclick="document.getElementById('throbber-submit').style.visibility = 'visible';">{#update_submit#}</button> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber_submit.gif" alt="" width="16" height="16"></p>
+<p><button name="update_submit" value="{#update_submit#}" onclick="document.getElementById('throbber-submit').style.visibility = 'visible';">{#update_submit#}</button> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber.svg" alt="" width="16" height="16"></p>
 </div>
 </form>
 {elseif $action=='update_done'}
