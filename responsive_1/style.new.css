@@ -353,15 +353,15 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	border: 1px solid #bacbdf;
 }
 .radio-select input[type="radio"]:not(:checked) ~ label {
-	background-color: #fff;
-	background-image: linear-gradient(#fff, #f0f0f8);
-	color: #555;
+	background-color: #c8cfdd;
+	background-image: linear-gradient(#c8cfdd, #c2cedb);
+	color: #333;
 	font-style: italic;
 }
 .radio-select input[type="radio"]:checked ~ label {
-	background-color: #aac8ff;
-	background-image: linear-gradient(#aac8ff, #a0b8f0);
-	color: #000;
+	background-color: #467;
+	background-image: linear-gradient(#467, #456a79);
+	color: #fff;
 }
 .radio-select input[type="radio"] {
 	display: none;
