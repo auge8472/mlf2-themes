@@ -293,17 +293,17 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #edit_avatar > span {
 	text-align: center;
 }
-[type="checkbox"] {
+[type="checkbox"], .radio-button-native [type="radio"] {
 	position: absolute;
 	left: -9999px;
 }
-[type="checkbox"] + label, #postingform [type="checkbox"] + label {
+[type="checkbox"] + label, #postingform [type="checkbox"] + label, .radio-button-native [type="radio"] + label {
 	padding: 0.125em 0.25em;
 	color: #444;
 	display: flex;
 	align-items: center;
 }
-[type="checkbox"] + label .icon {
+[type="checkbox"] + label .icon, .radio-button-native [type="radio"] + label .icon {
 	display: inline-block;
 	padding:0;
 	height: 1.15em;
@@ -317,11 +317,17 @@ h1 a:focus, h1 a:hover, h1 a:active {
 [type="checkbox"] + label .icon {
 	background: url("images/marker-square.svg") center center / 100% no-repeat;
 }
-[type="checkbox"]:checked + label {
-	color: #031;
-}
 [type="checkbox"]:checked + label .icon {
 	background: url("images/check-mark.svg") center center / 66% no-repeat, url("images/marker-square.svg") center center / 100% no-repeat;
+}
+.radio-button-native [type="radio"] + label .icon {
+	background: url("images/marker-circle.svg") center center / 100% no-repeat;
+}
+.radio-button-native [type="radio"]:checked + label .icon {
+	background: url("images/marker-dot.svg") center center / 100% no-repeat, url("images/marker-circle.svg") center center / 100% no-repeat;
+}
+[type="checkbox"]:checked + label, .radio-button-native [type="radio"]:checked + label {
+	color: #031;
 }
 .radio-select h3 {
 	margin: 0 0 0.5rem 0;
@@ -1339,7 +1345,7 @@ a.user-profile .icon {
 }
 
 /* elements in the user profile edit */
-.checkboxlist {
+.checkboxlist, .radio-button-native ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;

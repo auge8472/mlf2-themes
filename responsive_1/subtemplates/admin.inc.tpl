@@ -125,11 +125,14 @@
 <div>
  <p class="label">{#register_permission#}</p>
  <p class="description">{#register_permission_desc#}</p>
- <div class="r-select ml">
+ <div class="radio-button-native">
   <ul>
-   <li><input id="register_mode_0" type="radio" name="register_mode" value="0"{if $edSet.register_mode==0} checked="checked"{/if}><label for="register_mode_0">{#register_self#}</label></li>
-   <li><input id="register_mode_1" type="radio" name="register_mode" value="1"{if $edSet.register_mode==1} checked="checked"{/if}><label for="register_mode_1">{#register_self_locked#}</label></li>
-   <li><input id="register_mode_2" type="radio" name="register_mode" value="2"{if $edSet.register_mode==2} checked="checked"{/if}><label for="register_mode_2">{#register_only_admin#}</label></li>
+   <li><input id="register_mode_0" type="radio" name="register_mode" value="0"{if $edSet.register_mode==0} checked="checked"{/if}>
+   <label for="register_mode_0"><span class="icon"></span><span>{#register_self#}</span></label></li>
+   <li><input id="register_mode_1" type="radio" name="register_mode" value="1"{if $edSet.register_mode==1} checked="checked"{/if}>
+   <label for="register_mode_1"><span class="icon"></span><span>{#register_self_locked#}</span></label></li>
+   <li><input id="register_mode_2" type="radio" name="register_mode" value="2"{if $edSet.register_mode==2} checked="checked"{/if}>
+   <label for="register_mode_2"><span class="icon"></span><span>{#register_only_admin#}</span></label></li>
   </ul>
  </div>
 </div>
@@ -175,11 +178,14 @@
 {assign var="settings_edit_delay" value=$edSet.edit_delay}
 {assign var="input_edit_delay" value="<input type=\"text\" name=\"edit_delay\" value=\"$settings_edit_delay\" size=\"3\">"}
  <p class="label">{#edit_own_postings#}</p>
- <div class="r-select ml">
+ <div class="radio-button-native">
   <ul>
-   <li><input id="id_edit_own_postings_all" type="radio" name="user_edit" value="2"{if $edSet.user_edit==2} checked="checked"{/if}><label for="id_edit_own_postings_all">{#edit_own_postings_all#}</label></li>
-   <li><input id="id_edit_own_postings_users" type="radio" name="user_edit" value="1"{if $edSet.user_edit==1} checked="checked"{/if}><label for="id_edit_own_postings_users">{#edit_own_postings_users#}</label></li>
-   <li><input id="id_edit_own_postings_disabled" type="radio" name="user_edit" value="0"{if $edSet.user_edit==0} checked="checked"{/if}><label for="id_edit_own_postings_disabled">{#edit_own_postings_disabled#}</label></li>
+   <li><input id="id_edit_own_postings_all" type="radio" name="user_edit" value="2"{if $edSet.user_edit==2} checked="checked"{/if}>
+   <label for="id_edit_own_postings_all"><span class="icon"></span><span>{#edit_own_postings_all#}</span></label></li>
+   <li><input id="id_edit_own_postings_users" type="radio" name="user_edit" value="1"{if $edSet.user_edit==1} checked="checked"{/if}>
+   <label for="id_edit_own_postings_users"><span class="icon"></span><span>{#edit_own_postings_users#}</span></label></li>
+   <li><input id="id_edit_own_postings_disabled" type="radio" name="user_edit" value="0"{if $edSet.user_edit==0} checked="checked"{/if}>
+   <label for="id_edit_own_postings_disabled"><span class="icon"></span><span>{#edit_own_postings_disabled#}</span></label></li>
   </ul>
  </div>
  <div>
@@ -217,11 +223,14 @@
 <div>
  <p class="label">{#enamble_avatars#}</p>
  <p class="description">{#enamble_avatars_desc#}</p>
- <div class="r-select ml">
+ <div class="radio-button-native">
   <ul>
-   <li><input id="id_avatars_profiles_postings" type="radio" name="avatars" value="2"{if $edSet.avatars==2} checked="checked"{/if}><label for="id_avatars_profiles_postings">{#avatars_profiles_postings#}</label></li>
-   <li><input id="id_avatars_profiles" type="radio" name="avatars" value="1"{if $edSet.avatars==1} checked="checked"{/if}><label for="id_avatars_profiles">{#avatars_profiles#}</label></li>
-   <li><input id="id_avatars_disabled" type="radio" name="avatars" value="0"{if $edSet.avatars==0} checked="checked"{/if}><label for="id_avatars_disabled">{#disabled#}</label></li>
+   <li><input id="id_avatars_profiles_postings" type="radio" name="avatars" value="2"{if $edSet.avatars==2} checked="checked"{/if}>
+   <label for="id_avatars_profiles_postings"><span class="icon"></span><span>{#avatars_profiles_postings#}</span></label></li>
+   <li><input id="id_avatars_profiles" type="radio" name="avatars" value="1"{if $edSet.avatars==1} checked="checked"{/if}>
+   <label for="id_avatars_profiles"><span class="icon"></span><span>{#avatars_profiles#}</span></label></li>
+   <li><input id="id_avatars_disabled" type="radio" name="avatars" value="0"{if $edSet.avatars==0} checked="checked"{/if}>
+   <label for="id_avatars_disabled"><span class="icon"></span><span>{#disabled#}</span></label></li>
   </ul>
  </div>
 {assign var="settings_avatar_max_width" value=$edSet.avatar_max_width}
@@ -235,12 +244,16 @@
 <div>
  <p class="label">{#upload_images#}</p>
  <p class="description">{#upload_images_desc#}</p>
- <div class="r-select ml">
+ <div class="radio-button-native">
   <ul>
-   <li><input id="id_upload_images_all" type="radio" name="upload_images" value="3"{if $edSet.upload_images==3} checked="checked"{/if}><label for="id_upload_images_all">{#upload_enabled_all#}</label></li>
-   <li><input id="id_upload_images_users" type="radio" name="upload_images" value="2"{if $edSet.upload_images==2} checked="checked"{/if}><label for="id_upload_images_users">{#upload_enabled_users#}</label></li>
-   <li><input id="id_upload_images_admins_mods" type="radio" name="upload_images" value="1"{if $edSet.upload_images==1} checked="checked"{/if}><label for="id_upload_images_admins_mods">{#upload_enabled_admins_mods#}</label></li>
-   <li><input id="id_upload_images_disabled" type="radio" name="upload_images" value="0"{if $edSet.upload_images==0} checked="checked"{/if}><label for="id_upload_images_disabled">{#disabled#}</label></li>
+   <li><input id="id_upload_images_all" type="radio" name="upload_images" value="3"{if $edSet.upload_images==3} checked="checked"{/if}>
+   <label for="id_upload_images_all"><span class="icon"></span><span>{#upload_enabled_all#}</span></label></li>
+   <li><input id="id_upload_images_users" type="radio" name="upload_images" value="2"{if $edSet.upload_images==2} checked="checked"{/if}>
+   <label for="id_upload_images_users"><span class="icon"></span><span>{#upload_enabled_users#}</span></label></li>
+   <li><input id="id_upload_images_admins_mods" type="radio" name="upload_images" value="1"{if $edSet.upload_images==1} checked="checked"{/if}>
+   <label for="id_upload_images_admins_mods"><span class="icon"></span><span>{#upload_enabled_admins_mods#}</span></label></li>
+   <li><input id="id_upload_images_disabled" type="radio" name="upload_images" value="0"{if $edSet.upload_images==0} checked="checked"{/if}>
+   <label for="id_upload_images_disabled"><span class="icon"></span><span>{#disabled#}</span></label></li>
   </ul>
  </div>
 {assign var="settings_upload_max_width" value=$edSet.upload_max_img_width}
@@ -289,16 +302,16 @@
 <div>
  <p class="label">{#reset_read_state#}</p>
  <p class="description">{#reset_read_state_desc#}</p>
- <div class="r-select ml">
+ <div class="radio-button-native">
  <ul>
    <li><input name="read_state_expiration_method" id="id_rs_no_reset" value="0" type="radio"{if not isset($edSet.read_state_expiration_method) or $edSet.read_state_expiration_method==0} checked="checked"{/if}>
-   <label for="id_rs_no_reset">{#read_state_no_reset#}</label></li>
+   <label for="id_rs_no_reset"><span class="icon"></span><span>{#read_state_no_reset#}</span></label></li>
    <li><input name="read_state_expiration_method" id="id_rs_number_reset" value="1" type="radio"{if $edSet.read_state_expiration_method==1} checked="checked"{/if}>
-   <label for="id_rs_number_reset">{#read_state_numbered_reset#}</label></li>
+   <label for="id_rs_number_reset"><span class="icon"></span><span>{#read_state_numbered_reset#}</span></label></li>
    <li><input name="read_state_expiration_method" id="id_rs_age_reset" value="2" type="radio"{if $edSet.read_state_expiration_method==2} checked="checked"{/if}>
    <label for="id_rs_age_reset">{#read_state_timeout_reset#}</label></li>
    <li><input name="read_state_expiration_method" id="id_rs_lock_reset" value="3" type="radio"{if $edSet.read_state_expiration_method==3} checked="checked"{/if}>
-   <label for="id_rs_lock_reset">{#read_state_locktime_reset#}</label></li>
+   <label for="id_rs_lock_reset"><span class="icon"></span><span>{#read_state_locktime_reset#}</span></label></li>
   </ul>
  </div>
 </div>
