@@ -323,6 +323,61 @@ h1 a:focus, h1 a:hover, h1 a:active {
 [type="checkbox"]:checked + label .icon {
 	background: url("images/check-mark.svg") center center / 66% no-repeat, url("images/marker-square.svg") center center / 100% no-repeat;
 }
+.radio-select h3 {
+	margin: 0 0 0.5rem 0;
+}
+.radio-select ul {
+	margin: 0 0 0.5rem 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+.radio-select:last-of-type ul {
+	margin-bottom: 0;
+}
+.radio-select li {
+	flex: auto;
+}
+.radio-select label {
+	display: inline-block;
+	padding: 0.25rem;
+	width: 100%;
+	text-align: center;
+	border: 1px solid #bacbdf;
+}
+.radio-select input[type="radio"]:not(:checked) ~ label {
+	background-color: #fff;
+	background-image: linear-gradient(#fff, #f0f0f8);
+	color: #555;
+	font-style: italic;
+}
+.radio-select input[type="radio"]:checked ~ label {
+	background-color: #aac8ff;
+	background-image: linear-gradient(#aac8ff, #a0b8f0);
+	color: #000;
+}
+.radio-select input[type="radio"] {
+	display: none;
+}
+
+/* settings forms without table */
+form > div:not(:last-child) {
+	margin: 0 0 1rem 0;
+	padding: 0 0 0.5rem 0;
+	border-bottom: 1px dotted #bacbdf;
+}
+p.label {
+	font-weight: bold;
+}
+form > div p, form > div ul, form > div div {
+	margin: 0 0 0.25rem 0;
+}
+
+input, select option {
+	font-size: 1em;
+}
+/* end: settings forms without table */
 /* end: elements in forms */
 
 /* elements of #sidebar, #bottombar, aside */
@@ -664,71 +719,6 @@ aside section h3 {
 .adminmenu a.unlock-user .icon {
 	background-image: url(images/lock-open.svg);
 }
-/* settings forms without table */
-.r-select:not(:last-of-type) {
-	border-bottom: 1px dotted #bacbdf;
-}
-form > div:not(:last-child) {
-	margin: 0 0 1rem 0;
-	padding: 0 0 0.5rem 0;
-	border-bottom: 1px dotted #bacbdf;
-}
-p.label {
-	font-weight: bold;
-}
-form > div p, form > div ul, form > div div {
-	margin: 0 0 0.25rem 0;
-}
-
-.r-select h3 {
-	margin: 0 0 0.5rem 0;
-}
-.r-select ul {
-	margin: 0 0 0.5rem 0;
-	padding: 0;
-	list-style: none;
-	display: flex;
-}
-.r-select.sl ul {
-	flex-wrap: wrap;
-}
-.r-select.ml ul {
-	flex-direction: column;
-}
-.r-select:last-of-type ul {
-	margin-bottom: 0;
-}
-.r-select li {
-	flex: auto;
-}
-.r-select label {
-	display: inline-block;
-	padding: 0.25rem;
-	width: 100%;
-	text-align: center;
-	border: 1px solid #bacbdf;
-}
-.r-select.ml label {
-	text-align: left;
-}
-.r-select input[type="radio"]:not(:checked) ~ label {
-	background-color: #fff;
-	background-image: linear-gradient(#fff, #f0f0f8);
-	color: #555;
-	font-style: italic;
-}
-.r-select input[type="radio"]:checked ~ label {
-	background-color: #aac8ff;
-	background-image: linear-gradient(#aac8ff, #a0b8f0);
-	color: #000;
-}
-.r-select input[type="radio"] {
-	display: none;
-}
-input, select option {
-	font-size: 1em;
-}
-/* end: settings forms without table */
 
 ul.pagination {
 	margin: 0.75rem 0;

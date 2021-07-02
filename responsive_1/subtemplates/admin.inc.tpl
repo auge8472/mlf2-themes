@@ -29,7 +29,7 @@
 <div>
  <p class="label">{#default_language#}</p>
  <p class="description">{#default_language_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-select">
   <ul>
 {foreach from=$languages item=l}
    <li><input type="radio" name="language_file" id="id_{$l.title}" value="{$l.identifier}"{if $l.identifier==$edSet.language_file} checked="checked"{/if}><label for="id_{$l.title}">{$l.title}</label></li>
@@ -59,7 +59,7 @@
 <div>
  <p class="label">{#default_theme#}</p>
  <p class="description">{#default_theme_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-select">
   <ul>
 {foreach from=$themes item=t}
    <li><input type="radio" name="theme" id="id_{$t.title}" value="{$t.identifier}"{if $t.identifier==$edSet.theme} checked="checked"{/if}><label for="id_{$t.title}">{$t.title}</label></li>
@@ -136,7 +136,7 @@
 <div>
  <p class="label">{#user_area#}</p>
  <p class="description">{#user_area_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-select">
   <ul>
    <li><input id="public" type="radio" name="user_area_public" value="1"{if $edSet.user_area_public==1} checked="checked"{/if}><label for="public">{#public_accessible#}</label></li>
    <li><input id="not_public" type="radio" name="user_area_public" value="0"{if $edSet.user_area_public==0} checked="checked"{/if}><label for="not_public">{#accessible_reg_users_only#}</label></li>
@@ -704,7 +704,7 @@
   <tr>
    <th><strong>{#edit_user_type#}</strong></th>
    <td>
-    <div class="r-select sl">
+    <div class="radio-select">
      <ul>
       <li><input id="edit_user_type_0" type="radio" name="edit_user_type" value="0"{if $edit_user_type==0} checked="checked"{/if}><label for="edit_user_type_0">{#user#}</label></li>
       <li><input id="edit_user_type_1" type="radio" name="edit_user_type" value="1"{if $edit_user_type==1} checked="checked"{/if}><label for="edit_user_type_1">{#mod#}</label></li>
@@ -731,7 +731,7 @@
   <tr>
    <th><strong>{#edit_user_gender#}</strong></th>
    <td>
-    <div class="r-select sl">
+    <div class="radio-select">
      <ul>
       <li><input id="no-gender" type="radio" name="user_gender" value="0"{if $user_gender=="0"} checked="checked"{/if}><label for="no-gender">{#gender_not_specified#}</label></li>
       <li><input id="male" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if}><label for="male">{#male#}</label></li>
@@ -973,7 +973,7 @@
    <th><strong>{#captcha#}</strong>
     <span class="description">{#captcha_desc#}{if !$graphical_captcha_available || !$font_available}<br>{#captcha_graphical_desc#}{/if}</span></th>
    <td>
-    <div class="r-select sl">
+    <div class="radio-select">
      <h3>{#captcha_posting#}</h3>
      <ul>
       <li><input id="captcha_posting_0" type="radio" name="captcha_posting" value="0"{if $captcha_posting==0} checked="checked"{/if}><label for="captcha_posting_0">{#captcha_disabled#}</label></li>
@@ -981,7 +981,7 @@
       <li><input id="captcha_posting_2" type="radio" name="captcha_posting" value="2"{if $captcha_posting==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_posting_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
      </ul>
     </div>
-    <div class="r-select sl">
+    <div class="radio-select">
      <h3>{#captcha_email#}</h3>
      <ul>
       <li><input id="captcha_email_0" type="radio" name="captcha_email" value="0"{if $captcha_email==0} checked="checked"{/if}><label for="captcha_email_0">{#captcha_disabled#}</label></li>
@@ -989,7 +989,7 @@
       <li><input id="captcha_email_2" type="radio" name="captcha_email" value="2"{if $captcha_email==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_email_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
      </ul>
     </div>
-    <div class="r-select sl">
+    <div class="radio-select">
      <h3>{#captcha_register#}</h3>
      <ul>
       <li><input id="captcha_register_0" type="radio" name="captcha_register" value="0"{if $captcha_register==0} checked="checked"{/if}><label for="captcha_register_0">{#captcha_disabled#}</label></li>
@@ -1373,7 +1373,7 @@
   <tr>
    <th><strong>{#page_access#}</strong></th>
    <td>
-    <div class="r-select sl">
+    <div class="radio-select">
      <ul>
       <li><input type="radio" name="access" id="access-public" value="0"{if $access==0} checked="checked"{/if}><label for="access-public">{#page_access_public#}</label></li>
       <li><input type="radio" name="access" id="access-registered" value="1"{if $access==1} checked="checked"{/if}><label for="access-registered">{#page_access_reg_users#}</label></li>
