@@ -1112,13 +1112,15 @@ article blockquote {
 }
 
 .body pre {
-	padding: 0.25em;
+	padding: 0;
 	white-space: pre-wrap;
 	border: 1px solid #ed0;
 	background-color: #ffd;
 	color: #224;
 }
-
+.body pre > code {
+	padding: 0.5em;
+}
 code {
 	color: #224;
 }
