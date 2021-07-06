@@ -109,20 +109,24 @@
 <div>
  <p class="label">{#accession#}</p>
  <p class="description">{#accession_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-button-native">
   <ul>
-   <li><input id="access_for_all" type="radio" name="access_for_users_only" value="0"{if $edSet.access_for_users_only==0} checked="checked"{/if}><label for="access_for_all">{#all_users#}</label></li>
-   <li><input id="access_for_users_only" type="radio" name="access_for_users_only" value="1"{if $edSet.access_for_users_only==1} checked="checked"{/if}><label for="access_for_users_only">{#only_registered_users#}</label></li>
+   <li><input id="access_for_all" type="radio" name="access_for_users_only" value="0"{if $edSet.access_for_users_only==0} checked="checked"{/if}>
+   <label for="access_for_all"><span class="icon"></span><span>{#all_users#}</span></label></li>
+   <li><input id="access_for_users_only" type="radio" name="access_for_users_only" value="1"{if $edSet.access_for_users_only==1} checked="checked"{/if}>
+   <label for="access_for_users_only"><span class="icon"></span><span>{#only_registered_users#}</span></label></li>
   </ul>
  </div>
 </div>
 <div>
  <p class="label">{#post_permission#}</p>
  <p class="description">{#post_permission_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-button-native">
   <ul>
-   <li><input id="entries_by_all" type="radio" name="entries_by_users_only" value="0"{if $edSet.entries_by_users_only==0} checked="checked"{/if}><label for="entries_by_all">{#all_users#}</label></li>
-   <li><input id="entries_by_users" type="radio" name="entries_by_users_only" value="1"{if $edSet.entries_by_users_only==1} checked="checked"{/if}><label for="entries_by_users">{#only_registered_users#}</label></li>
+   <li><input id="entries_by_all" type="radio" name="entries_by_users_only" value="0"{if $edSet.entries_by_users_only==0} checked="checked"{/if}>
+   <label for="entries_by_all"><span class="icon"></span><span>{#all_users#}</span></label></li>
+   <li><input id="entries_by_users" type="radio" name="entries_by_users_only" value="1"{if $edSet.entries_by_users_only==1} checked="checked"{/if}>
+   <label for="entries_by_users"><span class="icon"></span><span>{#only_registered_users#}</span></label></li>
   </ul>
  </div>
 </div>
