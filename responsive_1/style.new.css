@@ -366,6 +366,73 @@ h1 a:focus, h1 a:hover, h1 a:active {
 .radio-select input[type="radio"] {
 	display: none;
 }
+.radio-toggle-switch ul {
+	list-style: none;
+	white-space: nowrap;
+	display: flex;
+	margin: 0.5rem 0;
+	padding: 0;
+	position: relative;
+}
+.radio-toggle-switch label {
+	display: inline-block;
+	line-height: calc(1.5em + 2px);
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+}
+.radio-toggle-switch input[type="radio"]:not(:checked) ~ label {
+	color: #333;
+	font-style: italic;
+}
+.radio-toggle-switch input {
+	opacity: 0;
+	position: absolute;
+}
+.radio-toggle-switch li:first-of-type label {
+	padding-right: 4em;
+}
+.radio-toggle-switch li:last-child label {
+	margin-left: -4.25em;
+	padding-left: 4.25em;
+}
+.radio-toggle-switch label.toggle-actor::before,
+.radio-toggle-switch label.toggle-actor::after {
+	border: 1px solid #aaa;
+	content: "";
+	height: 1.5em;
+	overflow: hidden;
+	pointer-events: none;
+	position: absolute;
+	vertical-align: middle;
+}
+.radio-toggle-switch label.toggle-actor::before {
+	background: #f8f8f8;
+	border: 1px solid #aaa;
+	border-radius: .75em;
+	position: absolute;
+	right: 0.5em;
+	transform: translateX(0em);
+	transition: transform .2s ease-in-out;
+	width: 1.5em;
+	z-index: 2;
+}
+.radio-toggle-switch label.toggle-actor::after {
+	background: #467;
+	border-radius: .75em;
+	margin: 0 0.5em;
+	transition: background .2s ease-in-out;
+	width: 3em;
+}
+.radio-toggle-switch input:first-of-type:checked ~ label:first-of-type::before {
+	transform: translateX(-1.5em);
+}
+.radio-toggle-switch input:first-of-type:checked ~ label:first-of-type::after {
+	background: #8898aa;
+}
+.radio-toggle-switch input:last-of-type:checked ~ label:last-of-type {
+	z-index: 1;
+}
 
 /* settings forms without table */
 form > div:not(:last-child) {

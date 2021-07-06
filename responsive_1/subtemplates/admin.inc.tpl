@@ -81,10 +81,12 @@
 <div>
  <p class="label">{#terms_of_use_settings#}</p>
  <p class="description">{#terms_of_use_settings_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_terms_of_use_agreement-1" type="radio" name="terms_of_use_agreement" value="1"{if $edSet.terms_of_use_agreement==1} checked="checked"{/if}><label for="id_terms_of_use_agreement-1">{#yes#}</label></li>
-   <li><input id="id_terms_of_use_agreement-0" type="radio" name="terms_of_use_agreement" value="0"{if $edSet.terms_of_use_agreement==0} checked="checked"{/if}><label for="id_terms_of_use_agreement-0">{#no#}</label></li>
+   <li><input id="id_terms_of_use_agreement-0" type="radio" name="terms_of_use_agreement" value="0"{if $edSet.terms_of_use_agreement==0} checked="checked"{/if}>
+   <label for="id_terms_of_use_agreement-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_terms_of_use_agreement-1" type="radio" name="terms_of_use_agreement" value="1"{if $edSet.terms_of_use_agreement==1} checked="checked"{/if}>
+   <label for="id_terms_of_use_agreement-1">{#yes#}</label></li>
   </ul>
  </div>
  <p class="label"><label for="id_terms_of_use_url">{#terms_of_use_url#}</label></p>
@@ -93,10 +95,12 @@
 <div>
  <p class="label">{#data_privacy_statement#}</p>
  <p class="description">{#data_privacy_statement_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_data_privacy_agreement-1" type="radio" name="data_privacy_agreement" value="1"{if $edSet.data_privacy_agreement==1} checked="checked"{/if}><label for="id_data_privacy_agreement-1">{#yes#}</label></li>
-   <li><input id="id_data_privacy_agreement-0" type="radio" name="data_privacy_agreement" value="0"{if $edSet.data_privacy_agreement==0} checked="checked"{/if}><label for="id_data_privacy_agreement-0">{#no#}</label></li>
+   <li><input id="id_data_privacy_agreement-0" type="radio" name="data_privacy_agreement" value="0"{if $edSet.data_privacy_agreement==0} checked="checked"{/if}>
+   <label for="id_data_privacy_agreement-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_data_privacy_agreement-1" type="radio" name="data_privacy_agreement" value="1"{if $edSet.data_privacy_agreement==1} checked="checked"{/if}>
+   <label for="id_data_privacy_agreement-1">{#yes#}</label></li>
   </ul>
  </div>
  <p class="label"><label for="id_data_privacy_url">{#data_privacy_url#}</label></p>
@@ -154,10 +158,12 @@
 <div>
  <p class="label">{#tag_cloud#}</p>
  <p class="description">{#tag_cloud_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_tag_cloud-1" type="radio" name="tag_cloud" value="1"{if $edSet.tag_cloud==1} checked="checked"{/if}><label for="id_tag_cloud-1">{#yes#}</label></li>
-   <li><input id="id_tag_cloud-0" type="radio" name="tag_cloud" value="0"{if $edSet.tag_cloud==0} checked="checked"{/if}><label for="id_tag_cloud-0">{#no#}</label></li>
+   <li><input id="id_tag_cloud-0" type="radio" name="tag_cloud" value="0"{if $edSet.tag_cloud==0} checked="checked"{/if}>
+   <label for="id_tag_cloud-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_tag_cloud-1" type="radio" name="tag_cloud" value="1"{if $edSet.tag_cloud==1} checked="checked"{/if}>
+   <label for="id_tag_cloud-1">{#yes#}</label></li>
   </ul>
  </div>
 </div>
@@ -213,10 +219,12 @@
 <div>
  <p class="label">{#smilies#}</p>
  <p class="description">{#smilies_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_smilies-1" type="radio" name="smilies" value="1"{if $edSet.smilies==1} checked="checked"{/if}><label for="id_smilies-1">{#yes#}</label></li>
-   <li><input id="id_smilies-0" type="radio" name="smilies" value="0"{if $edSet.smilies==0} checked="checked"{/if}><label for="id_smilies-0">{#no#}</label></li>
+   <li><input id="id_smilies-0" type="radio" name="smilies" value="0"{if $edSet.smilies==0} checked="checked"{/if}>
+   <label for="id_smilies-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_smilies-1" type="radio" name="smilies" value="1"{if $edSet.smilies==1} checked="checked"{/if}>
+   <label for="id_smilies-1">{#yes#}</label></li>
   </ul>
  </div>
 </div>
@@ -267,30 +275,36 @@
 <div>
  <p class="label">{#autolink#}</p>
  <p class="description">{#autolink_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_autolink-1" type="radio" name="autolink" value="1"{if $edSet.autolink==1} checked="checked"{/if}><label for="id_autolink-1">{#yes#}</label></li>
-   <li><input id="id_autolink-0" type="radio" name="autolink" value="0"{if $edSet.autolink==0} checked="checked"{/if}><label for="id_autolink-0">{#no#}</label></li>
+   <li><input id="id_autolink-0" type="radio" name="autolink" value="0"{if $edSet.autolink==0} checked="checked"{/if}>
+   <label for="id_autolink-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_autolink-1" type="radio" name="autolink" value="1"{if $edSet.autolink==1} checked="checked"{/if}>
+   <label for="id_autolink-1">{#yes#}</label></li>
   </ul>
  </div>
 </div>
 <div>
  <p class="label">{#count_views#}</p>
  <p class="description">{#count_views_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_count_views-1" type="radio" name="count_views" value="1"{if $edSet.count_views==1} checked="checked"{/if}><label for="id_count_views-1">{#yes#}</label></li>
-   <li><input id="id_count_views-0" type="radio" name="count_views" value="0"{if $edSet.count_views==0} checked="checked"{/if}><label for="id_count_views-0">{#no#}</label></li>
+   <li><input id="id_count_views-0" type="radio" name="count_views" value="0"{if $edSet.count_views==0} checked="checked"{/if}>
+   <label for="id_count_views-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_count_views-1" type="radio" name="count_views" value="1"{if $edSet.count_views==1} checked="checked"{/if}>
+   <label for="id_count_views-1">{#yes#}</label></li>
   </ul>
  </div>
 </div>
 <div>
  <p class="label">{#rss_feed#}</p>
  <p class="description">{#rss_feed_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_rss_feed-1" type="radio" name="rss_feed" value="1"{if $edSet.rss_feed==1} checked="checked"{/if}><label for="id_rss_feed-1">{#yes#}</label></li>
-   <li><input id="id_rss_feed-0" type="radio" name="rss_feed" value="0"{if $edSet.rss_feed==0} checked="checked"{/if}><label for="id_rss_feed-0">{#no#}</label></li>
+   <li><input id="id_rss_feed-0" type="radio" name="rss_feed" value="0"{if $edSet.rss_feed==0} checked="checked"{/if}>
+   <label for="id_rss_feed-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_rss_feed-1" type="radio" name="rss_feed" value="1"{if $edSet.rss_feed==1} checked="checked"{/if}>
+   <label for="id_rss_feed-1">{#yes#}</label></li>
   </ul>
  </div>
 </div>
@@ -333,10 +347,12 @@
 <div>
  <p class="label">{#forum_enabled_marking#}</p>
  <p class="description">{#forum_enabled_desc#}</p>
- <div class="r-select sl">
+ <div class="radio-toggle-switch">
   <ul>
-   <li><input id="id_forum_enabled-1" type="radio" name="forum_enabled" value="1"{if $edSet.forum_enabled==1} checked="checked"{/if}><label for="id_forum_enabled-1">{#yes#}</label></li>
-   <li><input id="id_forum_enabled-0" type="radio" name="forum_enabled" value="0"{if $edSet.forum_enabled==0} checked="checked"{/if}><label for="id_forum_enabled-0">{#no#}</label></li>
+   <li><input id="id_forum_enabled-0" type="radio" name="forum_enabled" value="0"{if $edSet.forum_enabled==0} checked="checked"{/if}>
+   <label for="id_forum_enabled-0" class="toggle-actor">{#no#}</label></li>
+   <li><input id="id_forum_enabled-1" type="radio" name="forum_enabled" value="1"{if $edSet.forum_enabled==1} checked="checked"{/if}>
+   <label for="id_forum_enabled-1">{#yes#}</label></li>
   </ul>
  </div>
 </div>
