@@ -302,6 +302,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	color: #444;
 	display: flex;
 	align-items: center;
+	font-style: italic;
 }
 [type="checkbox"] + label .icon, .radio-button-native [type="radio"] + label .icon {
 	display: inline-block;
@@ -328,6 +329,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 }
 [type="checkbox"]:checked + label, .radio-button-native [type="radio"]:checked + label {
 	color: #031;
+	font-style: normal;
 }
 .radio-select h3 {
 	margin: 0 0 0.5rem 0;
@@ -355,7 +357,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 .radio-select input[type="radio"]:not(:checked) ~ label {
 	background-color: #c8cfdd;
 	background-image: linear-gradient(#c8cfdd, #c2cedb);
-	color: #333;
+	color: #444;
 	font-style: italic;
 }
 .radio-select input[type="radio"]:checked ~ label {
@@ -382,7 +384,7 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	cursor: pointer;
 }
 .radio-toggle-switch input[type="radio"]:not(:checked) ~ label {
-	color: #333;
+	color: #444;
 	font-style: italic;
 }
 .radio-toggle-switch input {
