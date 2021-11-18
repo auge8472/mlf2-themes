@@ -2,7 +2,7 @@
 {if $action=='settings'}
 <h2>{#subnav_settings#}</h2>
 {if $saved}<p class="ok">{#settings_saved#}</p>{/if}
-<form id="settings" action="index.php" method="post" accept-charset="{#charset#}">
+<form id="settings" class="new-forms" action="index.php" method="post" accept-charset="{#charset#}">
 <input type="hidden" name="mode" value="admin">
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
 <div>
