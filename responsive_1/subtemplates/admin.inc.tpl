@@ -327,7 +327,7 @@
    <li><input name="read_state_expiration_method" id="id_rs_number_reset" value="1" type="radio"{if $edSet.read_state_expiration_method==1} checked="checked"{/if}>
    <label for="id_rs_number_reset"><span class="icon"></span><span>{#read_state_numbered_reset#}</span></label></li>
    <li><input name="read_state_expiration_method" id="id_rs_age_reset" value="2" type="radio"{if $edSet.read_state_expiration_method==2} checked="checked"{/if}>
-   <label for="id_rs_age_reset">{#read_state_timeout_reset#}</label></li>
+   <label for="id_rs_age_reset"><span class="icon"></span><span>{#read_state_timeout_reset#}</span></label></li>
    <li><input name="read_state_expiration_method" id="id_rs_lock_reset" value="3" type="radio"{if $edSet.read_state_expiration_method==3} checked="checked"{/if}>
    <label for="id_rs_lock_reset"><span class="icon"></span><span>{#read_state_locktime_reset#}</span></label></li>
   </ul>
