@@ -996,90 +996,84 @@
 </section>
 {/if}
 {if $saved}<p class="ok">{#spam_protection_saved#}</p>{/if}
-<form action="index.php" method="post" accept-charset="{#charset#}">
-<div>
+<form class="new-forms" action="index.php" method="post" accept-charset="{#charset#}">
 <input type="hidden" name="mode" value="admin">
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
-<table class="settings">
- <tbody>
-  <tr>
-   <th><strong>{#captcha#}</strong>
-    <span class="description">{#captcha_desc#}{if !$graphical_captcha_available || !$font_available}<br>{#captcha_graphical_desc#}{/if}</span></th>
-   <td>
-    <div class="radio-select">
-     <h3>{#captcha_posting#}</h3>
-     <ul>
-      <li><input id="captcha_posting_0" type="radio" name="captcha_posting" value="0"{if $captcha_posting==0} checked="checked"{/if}><label for="captcha_posting_0">{#captcha_disabled#}</label></li>
-      <li><input id="captcha_posting_1" type="radio" name="captcha_posting" value="1"{if $captcha_posting==1} checked="checked"{/if}><label for="captcha_posting_1">{#captcha_mathematical#}</label></li>
-      <li><input id="captcha_posting_2" type="radio" name="captcha_posting" value="2"{if $captcha_posting==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_posting_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
-     </ul>
-    </div>
-    <div class="radio-select">
-     <h3>{#captcha_email#}</h3>
-     <ul>
-      <li><input id="captcha_email_0" type="radio" name="captcha_email" value="0"{if $captcha_email==0} checked="checked"{/if}><label for="captcha_email_0">{#captcha_disabled#}</label></li>
-      <li><input id="captcha_email_1" type="radio" name="captcha_email" value="1"{if $captcha_email==1} checked="checked"{/if}><label for="captcha_email_1">{#captcha_mathematical#}</label></li>
-      <li><input id="captcha_email_2" type="radio" name="captcha_email" value="2"{if $captcha_email==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_email_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
-     </ul>
-    </div>
-    <div class="radio-select">
-     <h3>{#captcha_register#}</h3>
-     <ul>
-      <li><input id="captcha_register_0" type="radio" name="captcha_register" value="0"{if $captcha_register==0} checked="checked"{/if}><label for="captcha_register_0">{#captcha_disabled#}</label></li>
-      <li><input id="captcha_register_1" type="radio" name="captcha_register" value="1"{if $captcha_register==1} checked="checked"{/if}><label for="captcha_register_1">{#captcha_mathematical#}</label></li>
-      <li><input id="captcha_register_2" type="radio" name="captcha_register" value="2"{if $captcha_register==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_register_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
-     </ul>
-    </div>
- {if !$graphical_captcha_available || !$font_available}
-    <p class="xsmall"><sup>*</sup> {if !$graphical_captcha_available}{#gr_captcha_not_available#}{elseif !$font_available}{#gr_captcha_no_font#}{/if}</p>
- {/if}
-   </td>
-  </tr>
-  <tr>
-   <th><strong>{#stop_forum_spam#}</strong>
-    <span class="description">{#stop_forum_spam_desc#}</span></th>
-   <td><input id="stop_forum_spam" type="checkbox" name="stop_forum_spam" value="1"{if $stop_forum_spam==1} checked="checked"{/if}><label for="stop_forum_spam"><span class="icon"></span><span>{#stop_forum_spam_enable#}</span></label></td>
-  </tr>
-  <tr>
-   <th><strong>{#bad_behavior#}</strong>
-    <span class="description">{#bad_behavior_desc#}</span></th>
-   <td><input id="bad_behavior" type="checkbox" name="bad_behavior" value="1"{if $bad_behavior==1} checked="checked"{/if}><label for="bad_behavior"><span class="icon"></span><span>{#bad_behavior_enable#}</span></label></td>
-  </tr>
-  <tr>
-   <th><strong>{#akismet#}</strong>
-    <span class="description">{#akismet_desc#}</span></th>
-   <td>
-    <p>{#akismet_key#}<br><input type="text" name="akismet_key" value="{$akismet_key}" size="25"></p>
-    <p>
-     <input id="akismet_entry_check" type="checkbox" name="akismet_entry_check" value="1"{if $akismet_entry_check==1} checked="checked"{/if}><label for="akismet_entry_check"><span class="icon"></span><span>{#akismet_entry#}</span></label><br>
-     <input id="akismet_mail_check" type="checkbox" name="akismet_mail_check" value="1"{if $akismet_mail_check==1} checked="checked"{/if}><label for="akismet_mail_check"><span class="icon"></span><span>{#akismet_mail#}</span></label><br>
-     <input id="akismet_check_registered" type="checkbox" name="akismet_check_registered" value="1"{if $akismet_check_registered==1} checked="checked"{/if}><label for="akismet_check_registered"><span class="icon"></span><span>{#akismet_registered#}</span></label>
-    </p>
-    <p>
-     <input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if}><label for="save_spam"><span class="icon"></span><span>{#akismet_save_spam#}</span></label><br>{#akismet_auto_delete_spam#}<br>
-     <input type="text" name="auto_delete_spam" value="{$auto_delete_spam}" size="5">
-    </p>
-   </td>
-  </tr>
-  <tr>
-   <th><strong>{#not_accepted_words#}</strong>
-    <span class="description">{#not_accepted_words_desc#}</span></th>
-   <td><textarea name="not_accepted_words" cols="35" rows="10">{$not_accepted_words}</textarea></td>
-  </tr>
-  <tr>
-   <th><strong>{#banned_ips#}</strong>
-    <span class="description">{#banned_ips_desc#}</span></th>
-   <td><textarea name="banned_ips" cols="35" rows="5">{$banned_ips}</textarea></td>
-  </tr>
-  <tr>
-   <th><strong>{#banned_user_agents#}</strong>
-    <span class="description">{#banned_user_agents_desc#}</span></th>
-   <td><textarea name="banned_user_agents" cols="35" rows="5">{$banned_user_agents}</textarea></td>
-  </tr>
- </tbody>
-</table>
-<p><button name="spam_protection_submit" value="{#spam_protection_submit#}">{#spam_protection_submit#}</button></p>
+<div>
+ <p class="label">{#captcha#}</p>
+ <p class="description">{#captcha_desc#}{if !$graphical_captcha_available || !$font_available}<br>{#captcha_graphical_desc#}{/if}</p>
+{if !$graphical_captcha_available || !$font_available}
+ <p class="xsmall"><sup>*</sup> {if !$graphical_captcha_available}{#gr_captcha_not_available#}{elseif !$font_available}{#gr_captcha_no_font#}{/if}</p>
+{/if}
+ <div class="radio-select">
+  <p class="label">{#captcha_posting#}</p>
+  <ul>
+   <li><input id="captcha_posting_0" type="radio" name="captcha_posting" value="0"{if $captcha_posting==0} checked="checked"{/if}><label for="captcha_posting_0">{#captcha_disabled#}</label></li>
+   <li><input id="captcha_posting_1" type="radio" name="captcha_posting" value="1"{if $captcha_posting==1} checked="checked"{/if}><label for="captcha_posting_1">{#captcha_mathematical#}</label></li>
+   <li><input id="captcha_posting_2" type="radio" name="captcha_posting" value="2"{if $captcha_posting==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_posting_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
+  </ul>
+ </div>
+ <div class="radio-select">
+  <p class="label">{#captcha_email#}</p>
+  <ul>
+   <li><input id="captcha_email_0" type="radio" name="captcha_email" value="0"{if $captcha_email==0} checked="checked"{/if}><label for="captcha_email_0">{#captcha_disabled#}</label></li>
+   <li><input id="captcha_email_1" type="radio" name="captcha_email" value="1"{if $captcha_email==1} checked="checked"{/if}><label for="captcha_email_1">{#captcha_mathematical#}</label></li>
+   <li><input id="captcha_email_2" type="radio" name="captcha_email" value="2"{if $captcha_email==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_email_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
+  </ul>
+ </div>
+ <div class="radio-select">
+  <p class="label">{#captcha_register#}</p>
+  <ul>
+   <li><input id="captcha_register_0" type="radio" name="captcha_register" value="0"{if $captcha_register==0} checked="checked"{/if}><label for="captcha_register_0">{#captcha_disabled#}</label></li>
+   <li><input id="captcha_register_1" type="radio" name="captcha_register" value="1"{if $captcha_register==1} checked="checked"{/if}><label for="captcha_register_1">{#captcha_mathematical#}</label></li>
+   <li><input id="captcha_register_2" type="radio" name="captcha_register" value="2"{if $captcha_register==2} checked="checked"{/if}{if !$graphical_captcha_available} disabled="disabled"{/if}><label for="captcha_register_2"{if !$graphical_captcha_available} class="unavailable"{/if}>{#captcha_graphical#}{if !$graphical_captcha_available || !$font_available}<sup>*</sup>{/if}</label></li>
+  </ul>
+ </div>
 </div>
+<div>
+ <p class="label">{#stop_forum_spam#}</p>
+ <p class="description">{#stop_forum_spam_desc#}</p>
+ <p><input id="stop_forum_spam" type="checkbox" name="stop_forum_spam" value="1"{if $stop_forum_spam==1} checked="checked"{/if}><label for="stop_forum_spam"><span class="icon"></span><span>{#stop_forum_spam_enable#}</span></label></p>
+</div>
+<div>
+ <p class="label">{#bad_behavior#}</p>
+ <p class="description">{#bad_behavior_desc#}</p>
+ <p><input id="bad_behavior" type="checkbox" name="bad_behavior" value="1"{if $bad_behavior==1} checked="checked"{/if}><label for="bad_behavior"><span class="icon"></span><span>{#bad_behavior_enable#}</span></label></p>
+</div>
+<div>
+ <p class="label">{#akismet#}</p>
+ <p class="description">{#akismet_desc#}</p>
+ <div>
+  <p class="label"><label for="id_akismet_key">{#akismet_key#}</label></p>
+  <input type="text" id="id_akismet_key" name="akismet_key" value="{$akismet_key}" size="25">
+ </div>
+ <ul class="checkboxlist">
+  <li><input id="akismet_entry_check" type="checkbox" name="akismet_entry_check" value="1"{if $akismet_entry_check==1} checked="checked"{/if}><label for="akismet_entry_check"><span class="icon"></span><span>{#akismet_entry#}</span></label></li>
+  <li><input id="akismet_mail_check" type="checkbox" name="akismet_mail_check" value="1"{if $akismet_mail_check==1} checked="checked"{/if}><label for="akismet_mail_check"><span class="icon"></span><span>{#akismet_mail#}</span></label></li>
+  <li><input id="akismet_check_registered" type="checkbox" name="akismet_check_registered" value="1"{if $akismet_check_registered==1} checked="checked"{/if}><label for="akismet_check_registered"><span class="icon"></span><span>{#akismet_registered#}</span></label></li>
+  <li><input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if}><label for="save_spam"><span class="icon"></span><span>{#akismet_save_spam#}</span></label></li>
+ </ul>
+ <div>
+  <p class="label"><label for="id_auto_delete_spam">{#akismet_auto_delete_spam#}</label></p>
+  <input type="text" id="id_auto_delete_spam" name="auto_delete_spam" value="{$auto_delete_spam}" size="5">
+ </div>
+</div>
+<div>
+ <p class="label"><label for="id_not_accepted_words">{#not_accepted_words#}</label></p>
+ <p class="description">{#not_accepted_words_desc#}</p>
+ <textarea id="id_not_accepted_words" name="not_accepted_words" cols="35" rows="10">{$not_accepted_words}</textarea>
+</div>
+<div>
+ <p class="label"><label for="id_banned_ips">{#banned_ips#}</label></p>
+ <p class="description">{#banned_ips_desc#}</p>
+ <textarea id="id_banned_ips" name="banned_ips" cols="35" rows="5">{$banned_ips}</textarea>
+</div>
+<div>
+ <p class="label"><label for="id_banned_user_agents">{#banned_user_agents#}</label></p>
+ <p class="description">{#banned_user_agents_desc#}</p>
+ <textarea id="id_banned_user_agents" name="banned_user_agents" cols="35" rows="5">{$banned_user_agents}</textarea>
+</div>
+<p><button name="spam_protection_submit" value="{#spam_protection_submit#}">{#spam_protection_submit#}</button></p>
 </form>
 {elseif $action=='reset_uninstall'}
 <p class="caution">{#caution#}</p>
