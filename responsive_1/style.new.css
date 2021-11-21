@@ -478,7 +478,7 @@ form > div p, form > div ul, form > div div {
 	margin: 0 0 0.25rem 0;
 }
 
-input, select option {
+input, select {
 	font-size: 1em;
 }
 /* end: settings forms without table */
