@@ -396,18 +396,22 @@
 {elseif $action=='categories'}
 {if $entries_in_not_existing_categories>0}
 <form action="index.php" method="post" accept-charset="{#charset#}">
-<div class="caution">
-<input type="hidden" name="mode" value="admin">
-<p>{#entries_in_not_ex_cat#}</p>
-<p><input type="radio" name="entry_action" value="delete" checked="checked">{#entries_in_not_ex_cat_del#}<br>
-<input type="radio" name="entry_action" value="move">{#entries_in_not_ex_cat_mov#}
-<select class="kat" size="1" name="move_category">
+ <input type="hidden" name="mode" value="admin">
+ <div class="caution">
+  <p>{#entries_in_not_ex_cat#}</p>
+ </div>
+ <div class="radio-button-native">
+  <ul>
+   <li><input type="radio" name="entry_action" value="delete" checked="checked"><span class="icon"></span><span>{#entries_in_not_ex_cat_del#}</span></li>
+   <li><input type="radio" name="entry_action" value="move"><span class="icon"></span><span>{#entries_in_not_ex_cat_mov#}</span></li>
+  </ul>
+  <select class="kat" size="1" name="move_category">
 {foreach key=key item=val from=$categories}
-{if $key!=0}<option value="{$key}">{$val}</option>{/if}
+{if $key!=0}   <option value="{$key}">{$val}</option>{/if}
 {/foreach}
-</select>
-</p>
-<p><button name="entries_in_not_existing_categories_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
+  </select>
+ </div>
+ <p><button name="entries_in_not_existing_categories_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
 </form>
 {/if}
