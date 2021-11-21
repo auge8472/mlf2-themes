@@ -29,29 +29,3 @@
 </select>
 <button value="&raquo;">{#go#}</button>
 </div></form>{/if}
-{if $pagination_top}
-<!-- subnavigation_2.inc.tpl, $pagination_top -->
-<div id="subnav-4">
-<div>
-{if $pagination_top.previous}<a href="index.php?mode={$mode}&amp;page={$pagination_top.previous}{if $category}&amp;category={$category}{/if}"><img class="previous" src="{$THEMES_DIR}/{$theme}/images/arrow-left-active.svg" alt="[&laquo;]" width="15" height="15" /></a>
-{else}<a><img class="previous" src="{$THEMES_DIR}/{$theme}/images/arrow-left-inactive.svg" alt="[&laquo;]" width="15" height="15" /></a>
-{/if}
-</div>
-<form action="index.php" method="get"><div>
-<input type="hidden" name="mode" value="{$mode}" />
-{if $order}<input type="hidden" name="order" value="{$order}" />{/if}
-{if $category}<input type="hidden" name="category" value="{$category}" />{/if}
-<select size="1" name="page">
-{foreach from=$pagination_top.items item=item}
-{if $item!=0} <option value="{$item}"{if $item==$page} selected="selected"{/if}>{$item}</option>{/if}
-{/foreach}
-</select>
-<button value="&raquo;">{#go#}</button>
-</div></form>
-<div>
-{if $pagination_top.next}<a href="index.php?mode={$mode}&amp;page={$pagination_top.next}{if $category}&amp;category={$category}{/if}"><img class="next" src="{$THEMES_DIR}/{$theme}/images/arrow-right-active.svg" alt="[&raquo;]" width="15" height="15" /></a>
-{else}<a><img class="next" src="{$THEMES_DIR}/{$theme}/images/arrow-right-inactive.svg" alt="[&raquo;]" width="15" height="15" /></a>
-{/if}
-</div>
-</div>
-{/if}

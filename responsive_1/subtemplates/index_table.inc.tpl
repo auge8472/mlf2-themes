@@ -42,6 +42,15 @@
 {/if}
 
 <section id="main-thread-list">
+{if $pagination}
+<ul class="pagination pagination-index-table">
+{if $pagination.previous}<li><a href="index.php?mode={$mode}&amp;page={$pagination.previous}{if $category}&amp;category={$category}{/if}">{#previous_page_link#}</a></li>{/if}
+{foreach from=$pagination.items item=item}
+{if $item==0}<li>…</li>{elseif $item==$pagination.current}<li><a>{$item}</a></li>{else}<li><a href="index.php?mode={$mode}&amp;page={$item}{if $category}&amp;category={$category}{/if}">{$item}</a></li>{/if}
+{/foreach}
+{if $pagination.next}<li><a href="index.php?mode={$mode}&amp;page={$pagination.next}{if $category}&amp;category={$category}{/if}">{#next_page_link#}</a></li>{/if}
+</ul>
+{/if}
 {if $threads}
 <table>
  <thead>
