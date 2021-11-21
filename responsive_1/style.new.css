@@ -897,6 +897,11 @@ ul.pagination a:not([href]) {
 	width: 18em;
 }
 
+/* table definitions for all cases */
+table {
+	border-collapse: collapse;
+}
+
 .settings {
 	margin: 0 0 0.25em 0;
 }
@@ -1591,7 +1596,6 @@ div.warning {
 	/* table definitions */
 	table {
 		border: none;
-		border-collapse: collapse;
 		width: 100%;
 	}
 	thead {
