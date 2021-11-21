@@ -1385,41 +1385,31 @@
 </section>
 {/if}
 <form action="index.php" method="post" accept-charset="{#charset#}">
-<div>
-<input type="hidden" name="mode" value="admin">
-<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
-{if $id}<input type="hidden" name="id" value="{$id}">{/if}
-<table class="settings">
- <tbody>
-  <tr>
-   <th><strong>{#page_title#}</strong></th>
-   <td><input type="text" name="title" value="{$title|default:""}" size="50"></td>
-  </tr>
-  <tr>
-   <th><strong>{#page_content#}</strong>
-    <span class="description">{#page_content_desc#}</span></th>
-   <td><textarea name="content" cols="70" rows="20">{$content|default:""}</textarea></td>
-  </tr>
-  <tr>
-   <th><strong>{#page_menu_linkname#}</strong>
-    <span class="description">{#page_menu_linkname_desc#}</span></th>
-   <td><input type="text" name="menu_linkname" value="{$menu_linkname|default:""}" size="50"></td>
-  </tr>
-  <tr>
-   <th><strong>{#page_access#}</strong></th>
-   <td>
-    <div class="radio-select">
-     <ul>
-      <li><input type="radio" name="access" id="access-public" value="0"{if $access==0} checked="checked"{/if}><label for="access-public">{#page_access_public#}</label></li>
-      <li><input type="radio" name="access" id="access-registered" value="1"{if $access==1} checked="checked"{/if}><label for="access-registered">{#page_access_reg_users#}</label></li>
-     </ul>
-    </div>
-   </td>
-  </tr>
- </tbody>
-</table>
-<p><button name="edit_page_submit" value="{#edit_page_submit#}">{#edit_page_submit#}</button></p>
-</div>
+ <input type="hidden" name="mode" value="admin">
+ <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
+{if $id} <input type="hidden" name="id" value="{$id}">{/if}
+ <div>
+  <p class="label"><label for="id_title">{#page_title#}</label></p>
+  <input type="text" id="id_title" name="title" value="{$title|default:""}" size="50">
+ </div>
+ <div>
+  <p class="label"><label for="id_content">{#page_content#}</label></p>
+  <p class="description">{#page_content_desc#}</p>
+  <textarea id="id_content" name="content" cols="70" rows="20">{$content|default:""}</textarea>
+ </div>
+ <div>
+  <p class="label"><label for="id_menu_linkname">{#page_menu_linkname#}</label></p>
+  <p class="description">{#page_menu_linkname_desc#}</p>
+  <input type="text" id="id_menu_linkname" name="menu_linkname" value="{$menu_linkname|default:""}" size="50">
+ </div>
+ <div class="radio-select">
+  <p class="label">{#page_access#}</td>
+  <ul>
+   <li><input type="radio" name="access" id="access-public" value="0"{if $access==0} checked="checked"{/if}><label for="access-public">{#page_access_public#}</label></li>
+   <li><input type="radio" name="access" id="access-registered" value="1"{if $access==1} checked="checked"{/if}><label for="access-registered">{#page_access_reg_users#}</label></li>
+  </ul>
+ </div>
+ <p><button name="edit_page_submit" value="{#edit_page_submit#}">{#edit_page_submit#}</button></p>
 </form>
 {elseif $action=='delete_page'}
 {if $page}
