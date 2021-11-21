@@ -461,17 +461,21 @@
 {/if}
 <br>
 <form action="index.php" method="post" class="normalform" accept-charset="{#charset#}">
-<div>
-<input type="hidden" name="mode" value="admin">
-<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
-<p><label for="new_category" class="main">{#new_category#}</label><br>
-<input id="new_category" type="text" name="new_category" size="25" value="{if $new_category}{$new_category}{/if}"></p>
-<p><strong>{#category_accessible_by#}</strong><br>
-<input id="cat_accessible_all" type="radio" name="accession" value="0"{if !$accession || acession==0} checked="checked"{/if}><label for="cat_accessible_all">{#cat_accessible_all#}</label><br>
-<input id="cat_accessible_reg_users" type="radio" name="accession" value="1"{if acession==1} checked="checked"{/if}><label for="cat_accessible_reg_users">{#cat_accessible_reg_users#}</label><br>
-<input id="cat_accessible_admin_mod" type="radio" name="accession" value="2"{if acession==2} checked="checked"{/if}><label for="cat_accessible_admin_mod">{#cat_accessible_admin_mod#}</label></p>
-<p><button value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
-</div>
+ <div>
+  <input type="hidden" name="mode" value="admin">
+  <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
+  <p class="label"><label for="new_category" class="main">{#new_category#}</label><br>
+  <input id="new_category" type="text" name="new_category" size="25" value="{if $new_category}{$new_category}{/if}"></p>
+ </div>
+ <div class="radio-button-native">
+  <p class="label">{#category_accessible_by#}</p>
+  <ul>
+   <li><input id="cat_accessible_all" type="radio" name="accession" value="0"{if !$accession || acession==0} checked="checked"{/if}><label for="cat_accessible_all"><span class="icon"></span><span>{#cat_accessible_all#}</span></label></li>
+   <li><input id="cat_accessible_reg_users" type="radio" name="accession" value="1"{if acession==1} checked="checked"{/if}><label for="cat_accessible_reg_users"><span class="icon"></span><span>{#cat_accessible_reg_users#}</span></label></li>
+   <li><input id="cat_accessible_admin_mod" type="radio" name="accession" value="2"{if acession==2} checked="checked"{/if}><label for="cat_accessible_admin_mod"><span class="icon"></span><span>{#cat_accessible_admin_mod#}</span></label></li>
+  </ul>
+ </div>
+ <p><button value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </form>
 {elseif $action=='edit_category'}
 {if $errors}
