@@ -159,6 +159,40 @@ a.stronglink:visited {
 }
 /* end: strong links */
 
+/* links in header, nav, aside and footer*/
+header a:link,
+header a:visited,
+nav a:link,
+nav a:visited,
+#modmenu a:link,
+#modmenu a:visited,
+footer a:link,
+footer a:visited,
+#assistancemenu a:link,
+#assistancemenu a:visited {
+	color: var(--spot-dark-minus-5);
+}
+header a:focus,
+header a:hover,
+nav a:focus,
+nav a:hover,
+#modmenu a:focus,
+#modmenu a:hover,
+footer a:focus,
+footer a:hover,
+#assistancemenu a:focus,
+#assistancemenu a:hover {
+	color: #00f;
+	text-decoration: none;
+}
+header a:active,
+nav a:active,
+#modmenu a:active,
+footer a:active,
+#assistancemenu a:active {
+	color: #f00;
+}
+
 
 /* elements of the page header */
 .home, h1, .index, #nav {
@@ -834,7 +868,8 @@ ul.pagination li:first-child {
 }
 ul.pagination a {
 	border: 1px solid var(--border-light);
-	background: #e8eff8;
+	background: var(--spot-light-plus-10);
+	color: var(--spot-dark-minus-5);
 	font-weight: bold;
 	padding: 0.1em 0.4em;
 }
@@ -845,8 +880,8 @@ ul.pagination a[href]:focus, ul.pagination a[href]:hover, ul.pagination a[href]:
 	text-decoration:none;
 }
 ul.pagination a:not([href]) {
-	color: #949494;
-	background: #f8fbff;
+	color: var(--spot-light-plus-10);
+	background: var(--spot-dark-plus-10);
 	text-decoration:none;
 }
 
