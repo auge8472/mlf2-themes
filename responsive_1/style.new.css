@@ -726,10 +726,6 @@ aside section h3 {
 .adminmenu a span:not([class]) {
 	flex: 1 1 auto;
 }
-.adminmenu a img {
-	margin:0 5px -3px 0;
-	padding:0;
-}
 .adminmenu a[href*='&action=settings'] .icon {
 	background-image: url("images/settings-sliders.svg");
 }
