@@ -91,9 +91,6 @@
 {/foreach}
  </tbody>
 </table>
-{else}<p>{if $category!=0}{#no_messages_in_category#}{else}{#no_messages#}{/if}</p>{/if}
-</section>
-</div>
 {if $pagination}
 <ul class="pagination pagination-index-table">
 {if $pagination.previous}<li><a href="index.php?mode={$mode}&amp;page={$pagination.previous}{if $category}&amp;category={$category}{/if}">{#previous_page_link#}</a></li>{/if}
@@ -103,3 +100,6 @@
 {if $pagination.next}<li><a href="index.php?mode={$mode}&amp;page={$pagination.next}{if $category}&amp;category={$category}{/if}">{#next_page_link#}</a></li>{/if}
 </ul>
 {/if}
+{else}<p>{if $category!=0}{#no_messages_in_category#}{else}{#no_messages#}{/if}</p>{/if}
+</section>
+</div>
