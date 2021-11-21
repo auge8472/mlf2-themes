@@ -7,6 +7,33 @@
 * <http://developer.yahoo.com/yui/compressor/>.                        *
 ***********************************************************************/
 
+/**
+ * colour definition for texts and backgrounds in the light and the dark theme
+ *
+ * bg: background
+ * fg: foreground
+ * light: light theme (day mode)
+ * dark: dark theme (niǵht mode)
+ */
+:root {
+	/* light spot shades */
+	--spot-light-plus-15: hsl(220, 24%, 98%);
+	--spot-light-plus-10: hsl(220, 24%, 93%);
+	--spot-light-plus-5: hsl(220, 24%, 88%);
+	--spot-light: hsl(220, 24%, 83%);
+	--spot-light-minus-5: hsl(220, 24%, 78%);
+	--spot-light-minus-10: hsl(220, 24%, 73%);
+	--spot-light-minus-15: hsl(220, 24%, 68%);
+	/* dark spot shading */
+	--spot-dark-plus-15: hsl(200, 27%, 52%);
+	--spot-dark-plus-10: hsl(200, 27%, 47%);
+	--spot-dark-plus-5: hsl(200, 27%, 42%);
+	--spot-dark: hsl(200, 27%, 37%);
+	--spot-dark-minus-5: hsl(200, 27%, 32%);
+	--spot-dark-minus-10: hsl(200, 27%, 27%);
+	--spot-dark-minus-15: hsl(200, 27%, 22%);
+}
+
 *, ::before, ::after {
 	box-sizing: border-box;
 }
