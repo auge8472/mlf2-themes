@@ -777,6 +777,9 @@ aside section h3 {
 .adminmenu a[href*='&action=smilies'] .icon, .adminmenu a[href*='&enable_smilies=true'] .icon {
 	background-image: url("images/smilies.svg");
 }
+.adminmenu a[href*='&action=list_uploads'] .icon {
+	background-image: url("images/images.svg");
+}
 .adminmenu a[href*='&action=pages'] .icon {
 	background-image: url("images/files.svg");
 }

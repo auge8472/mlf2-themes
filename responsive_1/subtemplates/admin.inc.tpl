@@ -1427,6 +1427,43 @@
 {else}
 <p>{#page_doesnt_exist#}</p>
 {/if}
+
+{elseif $action=='list_uploads'}
+<h2 id="admin_header">{#upload_administration#}</h2>
+{if $images}
+
+
+<form action="index.php" method="post" accept-charset="{#charset#}">
+<input type="hidden" name="mode" value="admin" />
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
+ <ul id="uploadlist">
+{section name=nr loop=$images start=$start max=$images_per_page}
+  <li><p class="image_container"><img src="images/uploaded/{$images[nr]}" alt="{$images[nr]}" /></p>
+  <p class="management_container"><input type="checkbox" id="{$images[nr]}" name="uploads_remove[]" value="{$images[nr]}" /><label for="{$images[nr]}">{#mark_upload_for_removal#}</label></p></li>
+{/section}
+ </ul>
+ <p><button name="delete_selected_uploads" value="{#delete#}">{#delete#}</button></p>
+</form>
+{else}
+<p>{#no_uploads_found#}</p>
+{/if}
+{elseif $action=='delete_uploads'}
+<h2 id="admin_header">{#upload_administration#}</h2>
+<p class="caution">{#caution#}</p>
+<p>{if $selected_uploads_count>1}{#delete_uploads_confirmation#}{else}{#delete_upload_confirmation#}{/if}</p>
+<form action="index.php" method="post" accept-charset="{#charset#}">
+<div>
+ <input type="hidden" name="mode" value="admin" />
+ <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
+ <ul class="confirm-selection">
+{section name=nr loop=$selected_uploads}
+  <li><input type="hidden" name="selected_confirmed[]" value="{$selected_uploads[nr].name}" />
+   <p class="item"><img src="images/uploaded/{$selected_uploads[nr].name}" width="64" alt="" /></p><p class="info">{$selected_uploads[nr].name}</p></li>
+{/section}
+ </ul>
+<p><button name="delete_uploads_confirmed" value="{#delete_submit#}">{#delete_submit#}</button></p>
+</div>
+</form>
 {else}
 <div id="admin-menu-container">
  <aside id="additional-admin-info">
@@ -1458,6 +1495,7 @@
   <li><a href="index.php?mode=admin&amp;action=user"><span class="icon"></span><span>{#user_administr_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=categories"><span class="icon"></span><span>{#category_administr_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=smilies"><span class="icon"></span><span>{#smilies_administr_link#}</span></a></li>
+  <li><a href="index.php?mode=admin&amp;action=list_uploads"><span class="icon"></span><span>{#upload_administr_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=pages"><span class="icon"></span><span>{#pages_administr_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=spam_protection"><span class="icon"></span><span>{#spam_protection_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=backup"><span class="icon"></span><span>{#backup_restore_link#}</span></a></li>

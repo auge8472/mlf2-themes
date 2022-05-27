@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <defs>
+  <linearGradient id="photo" x1="20%" y1="0%" x2="50%" y2="100%">
+   <stop offset="0%" stop-color="#a8b0f8" />
+   <stop offset="100%" stop-color="#68d080" />
+  </linearGradient>
+ </defs>
+ <style type="text/css">
+  <![CDATA[
+  svg { border: 1px solid #444; }
+  .paper { fill: #f8f8f8; stroke: none; }
+  .photo { fill: url(#photo); stroke: none; }
+  .blend { fill: #ccccccbb; stroke: none; }
+  ]]>
+ </style>
+ <g>
+  <rect class="paper" x="4" y="15" width="108" height="81" />
+  <rect class="photo" x="8" y="19" width="100" height="73" />
+  <rect class="blend" x="8" y="19" width="100" height="73" />
+ </g>
+ <g>
+  <rect class="paper" x="16" y="30" width="108" height="81" />
+  <rect class="photo" x="20" y="34" width="100" height="73" />
+ </g>
+</svg>
+
