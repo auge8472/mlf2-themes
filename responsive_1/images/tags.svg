@@ -8,7 +8,7 @@
  </defs>
  <style type="text/css">
   <![CDATA[
-  path { fill: url(#plate); stroke-width: 6px; stroke: #222; }
+  path { fill: url(#plate); stroke-width: 6px; stroke: #222; stroke-linejoin: round; }
   circle { fill #222; stroke: none; }
   ]]>
  </style>

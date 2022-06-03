@@ -9,9 +9,9 @@
  </defs>
  <style type="text/css">
   <![CDATA[
-  path { fill: url(#shield); stroke-width: 4px; stroke: #cc4; }
+  path { fill: url(#shield); stroke-width: 6px; stroke: #cc4; stroke-linejoin: round; }
   ]]>
  </style>
- <path d="M64,126 106,87 106,2 22,2 22,87 z" fill="url(#shield)" />
+ <path d="M64,124 106,84 106,4 22,4 22,84 z" fill="url(#shield)" />
 </svg>
 
