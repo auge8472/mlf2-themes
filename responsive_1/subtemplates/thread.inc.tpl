@@ -61,9 +61,12 @@
 {else}
 <p>{#no_text#}</p>
 {/if}
+</div>
 {if $data.$element.signature}
-<p class="signature">--<br />
+<div class="signature">
+<p>--<br />
 {$data.$element.signature}</p>
+</div>
 {/if}
 </div>
 <footer class="posting-footer">
@@ -92,7 +95,6 @@
 {/if}
 </ul>
 </footer>
-</div>
 </article>
 {if is_array($child_array[$element])}
 {foreach from=$child_array[$element] item=child}{tree element=$child level=$level+1}{/foreach}

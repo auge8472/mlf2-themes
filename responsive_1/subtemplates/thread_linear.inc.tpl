@@ -61,9 +61,12 @@
 {else}
 <p>{#no_text#}</p>
 {/if}
+</div>
 {if $element.signature}
-<p class="signature">--<br />
+<div class="signature">
+<p>--<br />
 {$element.signature}</p>
+</div>
 {/if}
 </div>
 <footer class="posting-footer">
@@ -92,7 +95,6 @@
 {/if}
 </ul>
 </footer>
-</div>
 </article>
 {/foreach}
 </div>

@@ -1197,13 +1197,16 @@ article blockquote {
 	z-index: 3;
 }
 
-.body .signature {
+.wrapper .signature {
 	margin: 0.5em 0 0 0;
 	margin: 0.5rem 0 0 0;
-	padding: 0;
+	padding: 0 5px 5px 5px;
 	color: #808080;
 	font-size: 0.82em;
 	line-height: 1.4em;
+}
+.wrapper .signature p:last-child {
+	margin: 0;
 }
 
 .body pre {
