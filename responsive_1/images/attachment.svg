@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+ <style type="text/css">
+  <![CDATA[
+  path { fill: none; stroke-width: 6px; stroke: #222; }
+  ]]>
+ </style>
+ <path transform="rotate(45, 64, 64)" id="paper-clip" d="M56,37 v46 a 8 8 180 0 0 16 0 v-59 a 12 12 180 0 0 -24 0 v76 a 16 16 180 0 0 32 0 v-55" stroke-linecap="round" />
+</svg>
