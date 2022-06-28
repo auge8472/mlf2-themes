@@ -149,7 +149,7 @@
 
 <fieldset id="message">
 <p>
-<label for="text">{#message_marking#}</label>
+<label for="text" class="textarea">{#message_marking#}</label>
 </p>
 
 <div id="format-bar">
