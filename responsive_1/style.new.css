@@ -1139,6 +1139,8 @@ article header .posting-hp, article header .posting-location, article header .po
 
 article .tags {
 	clear: both;
+}
+article footer .tags {
 	margin: 0 0 0.5em 0;
 }
 
