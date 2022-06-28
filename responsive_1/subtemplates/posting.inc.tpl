@@ -242,21 +242,6 @@ JavaScript isn't available.
 {/if}
 {if $provide_email_notification} <li><input id="email_notification" type="checkbox" name="email_notification" value="1"{if $email_notification && $email_notification==1} checked="checked"{/if} class="small-input" /><label for="email_notification"><span class="icon"></span><span>{if $id==0}{#email_notific_reply_thread#}{else}{#email_notific_reply_post#}{/if}</span></label></li>
 {/if}
-
-{if $provide_sticky}
-<div class="radio-button-native">
- <ul>
-  <li><input id="sticky_none" type="radio" name="sticky" value="0"{if !$sticky or ($sticky && $sticky==0)} checked="checked"{/if} />&nbsp;<label for="sticky_none">{#sticky_none#}</label></li>
-{if $categories}
-  <li><input id="sticky_cat" type="radio" name="sticky" value="1"{if $sticky && $sticky==1} checked="checked"{/if} />&nbsp;<label for="sticky_cat">{#sticky_single_cat#}</label></li>
-  <li><input id="sticky_all" type="radio" name="sticky" value="2"{if $sticky && $sticky==2} checked="checked"{/if} />&nbsp;<label for="sticky_all">{#sticky_all_cats#}</label></li>
-{else}
-  <li><input id="sticky_nocat" type="radio" name="sticky" value="1"{if $sticky && $sticky==1} checked="checked"{/if} />&nbsp;<label for="sticky_nocat">{#sticky_thread#}</label></li>
-{/if}
- </ul>
-</div>
-{/if}
-
 {if $terms_of_use_agreement}
 {assign var=terms_of_use_url value=$settings.terms_of_use_url}
  <li><input id="terms_of_use_agree" tabindex="8" type="checkbox" name="terms_of_use_agree" value="1"{if $terms_of_use_agree && $terms_of_use_agree==1} checked="checked"{/if} class="small-input" /><label for="terms_of_use_agree"><span class="icon"></span><span>{if $terms_of_use_url}{#terms_of_use_agreement#|replace:"[[":"<a id=\"terms_of_use\" href=\"$terms_of_use_url\">"|replace:"]]":"</a>"}{else}{#terms_of_use_agreement#|replace:"[[":""|replace:"]]":""}{/if}</span></label></li>
@@ -266,6 +251,25 @@ JavaScript isn't available.
  <li><input id="data_privacy_statement_agree" tabindex="9" type="checkbox" name="data_privacy_statement_agree" value="1"{if $data_privacy_statement_agree && $data_privacy_statement_agree==1} checked="checked"{/if} /><label for="data_privacy_statement_agree"><span class="icon"></span><span>{if $data_privacy_statement_url}{#data_privacy_agreement#|replace:"[[":"<a id=\"data_privacy_statement\" href=\"$data_privacy_statement_url\">"|replace:"]]":"</a>"}{else}{#data_privacy_agreement#|replace:"[[":""|replace:"]]":""}{/if}</span></label></li>
 {/if}
 </ul>
+
+{if $provide_sticky}
+<div class="radio-button-native">
+ <ul>
+  <li><input id="sticky_none" type="radio" name="sticky" value="0"{if !$sticky or ($sticky && $sticky==0)} checked="checked"{/if} />
+   <label for="sticky_none"><span class="icon"></span><span>{#sticky_none#}</span></label></li>
+{if $categories}
+  <li><input id="sticky_cat" type="radio" name="sticky" value="1"{if $sticky && $sticky==1} checked="checked"{/if} />
+   <label for="sticky_cat"><span class="icon"></span><span>{#sticky_single_cat#}</span></label></li>
+  <li><input id="sticky_all" type="radio" name="sticky" value="2"{if $sticky && $sticky==2} checked="checked"{/if} />
+   <label for="sticky_all"><span class="icon"></span><span>{#sticky_all_cats#}</span></label></li>
+{else}
+  <li><input id="sticky_nocat" type="radio" name="sticky" value="1"{if $sticky && $sticky==1} checked="checked"{/if} />
+   <label for="sticky_nocat"><span class="icon"></span><span>{#sticky_thread#}</span></label></li>
+{/if}
+ </ul>
+</div>
+{/if}
+
 </fieldset>
 {/if}
 
