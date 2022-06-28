@@ -149,8 +149,9 @@
  <p class="description">{#user_area_desc#}</p>
  <div class="radio-select">
   <ul>
-   <li><input id="public" type="radio" name="user_area_public" value="1"{if $edSet.user_area_public==1} checked="checked"{/if}><label for="public">{#public_accessible#}</label></li>
-   <li><input id="not_public" type="radio" name="user_area_public" value="0"{if $edSet.user_area_public==0} checked="checked"{/if}><label for="not_public">{#accessible_reg_users_only#}</label></li>
+   <li><input id="public" type="radio" name="user_area_access" value="2"{if $edSet.user_area_access==2} checked="checked"{/if}><label for="public">{#public_accessible#}</label></li>
+   <li><input id="restricted_2_users" type="radio" name="user_area_access" value="1"{if $edSet.user_area_access==1} checked="checked"{/if}><label for="restricted_2_users">{#accessible_reg_users_only#}</label></li>
+   <li><input id="restricted_2_team" type="radio" name="user_area_access" value="0"{if $edSet.user_area_access==0} checked="checked"{/if}><label for="restricted_2_team">{#accessible_team_users_only#}</label></li>
   </ul>
  </div>
 </div>
