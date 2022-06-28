@@ -1069,13 +1069,19 @@
  <ul class="checkboxlist">
   <li><input id="akismet_entry_check" type="checkbox" name="akismet_entry_check" value="1"{if $akismet_entry_check==1} checked="checked"{/if}><label for="akismet_entry_check"><span class="icon"></span><span>{#akismet_entry#}</span></label></li>
   <li><input id="akismet_mail_check" type="checkbox" name="akismet_mail_check" value="1"{if $akismet_mail_check==1} checked="checked"{/if}><label for="akismet_mail_check"><span class="icon"></span><span>{#akismet_mail#}</span></label></li>
-  <li><input id="akismet_check_registered" type="checkbox" name="akismet_check_registered" value="1"{if $akismet_check_registered==1} checked="checked"{/if}><label for="akismet_check_registered"><span class="icon"></span><span>{#akismet_registered#}</span></label></li>
-  <li><input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if}><label for="save_spam"><span class="icon"></span><span>{#akismet_save_spam#}</span></label></li>
  </ul>
- <div>
-  <p class="label"><label for="id_auto_delete_spam">{#akismet_auto_delete_spam#}</label></p>
-  <input type="text" id="id_auto_delete_spam" name="auto_delete_spam" value="{$auto_delete_spam}" size="5">
- </div>
+</div>
+<div>
+ <p class="label">{#spam_check_registered#}</p>
+ <p class="description">{#spam_check_registered_desc#}</p>
+ <p><input id="spam_check_registered" type="checkbox" name="spam_check_registered" value="1"{if $spam_check_registered==1} checked="checked"{/if} /><label for="spam_check_registered"><span class="icon"></span><span>{#spam_check_registered_enable#}</span></label></p>
+</div>
+<div>
+ <p class="label">{#auto_delete_spam#}</p>
+ <p class="description">{#auto_delete_spam_desc#}</p>
+ <p><input id="save_spam" type="checkbox" name="save_spam" value="1"{if $save_spam==1} checked="checked"{/if}><label for="save_spam"><span class="icon"></span><span>{#akismet_save_spam#}</span></label></p>
+ <p class="label"><label for="id_auto_delete_spam">{#auto_delete_spam_timespan#}</label></p>
+ <input type="text" id="id_auto_delete_spam" name="auto_delete_spam" value="{$auto_delete_spam}" size="5">
 </div>
 <div>
  <p class="label"><label for="id_not_accepted_words">{#not_accepted_words#}</label></p>
