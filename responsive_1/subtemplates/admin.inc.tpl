@@ -1039,6 +1039,17 @@
  </div>
 </div>
 <div>
+ <p class="label">{#b8#}</p>
+ <p class="description">{#b8_desc#}</p>
+ <ul class="checkboxlist">
+  <li><input id="b8_entry_check" type="checkbox" name="b8_entry_check" value="1"{if $b8_entry_check==1} checked="checked"{/if} /><label for="b8_entry_check"><span class="icon"></span><span>{#b8_entry_check_enable#}</span></label></li>
+  <li><input id="b8_mail_check" type="checkbox" name="b8_mail_check" value="1"{if $b8_mail_check==1} checked="checked"{/if} /><label for="b8_mail_check"><span class="icon"></span><span>{#b8_mail_check_enable#}</span></label></li>
+  <li><input id="b8_auto_training" type="checkbox" name="b8_auto_training" value="1"{if $b8_auto_training==1} checked="checked"{/if} /><label for="b8_auto_training"><span class="icon"></span><span>{#b8_auto_training_enable#}</span></label></li>
+ </ul>
+ <p class="label"><label for="id_b8_spam_probability_threshold">{#b8_spam_probability_threshold#}</label></p>
+  <input id="id_b8_spam_probability_threshold" type="input" name="b8_spam_probability_threshold" value="{$b8_spam_probability_threshold}" size="25" />
+</div>
+<div>
  <p class="label">{#stop_forum_spam#}</p>
  <p class="description">{#stop_forum_spam_desc#}</p>
  <p><input id="stop_forum_spam" type="checkbox" name="stop_forum_spam" value="1"{if $stop_forum_spam==1} checked="checked"{/if}><label for="stop_forum_spam"><span class="icon"></span><span>{#stop_forum_spam_enable#}</span></label></p>
