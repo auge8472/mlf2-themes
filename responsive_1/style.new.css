@@ -503,6 +503,29 @@ h1 a:focus, h1 a:hover, h1 a:active {
 .radio-toggle-switch input:last-of-type:checked ~ label:last-of-type {
 	z-index: 1;
 }
+/* upload list */
+#uploadlist {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+#uploadlist > li {
+	padding: 0.5em;
+	border: 1px solid var(--border-light);
+}
+#uploadlist .image-container {
+	width: 16em;
+	height: 16em;
+}
+#uploadlist .image-container img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+}
 
 /* settings forms without table */
 form > div:not(:last-child) {

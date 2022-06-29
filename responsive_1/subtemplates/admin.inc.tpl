@@ -1456,8 +1456,14 @@
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
  <ul id="uploadlist">
 {section name=nr loop=$images start=$start max=$images_per_page}
-  <li><p class="image_container"><img src="images/uploaded/{$images[nr]}" alt="{$images[nr]}" /></p>
-  <p class="management_container"><input type="checkbox" id="{$images[nr]}" name="uploads_remove[]" value="{$images[nr]}" /><label for="{$images[nr]}">{#mark_upload_for_removal#}</label></p></li>
+  <li>
+   <div class="image-container"><img src="images/uploaded/{$images[nr]}" alt="{$images[nr]}" /></div>
+   <div class="management-container">
+    <ul class="checkboxlist">
+     <li><input type="checkbox" id="{$images[nr]}" name="uploads_remove[]" value="{$images[nr]}" /><label for="{$images[nr]}"><span class="icon"></span><span>{#mark_upload_for_removal#}</span></label></li>
+    </ul>
+   </div>
+  </li>
 {/section}
  </ul>
  <p><button name="delete_selected_uploads" value="{#delete#}">{#delete#}</button></p>
