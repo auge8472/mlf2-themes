@@ -49,6 +49,7 @@ html, body, body > header, #subnav, main, body > footer, #assistancemenu {
 html, body {
 	width: 100%;
 	min-height: 100%;
+	text-align: start;
 }
 
 body {
@@ -912,7 +913,7 @@ table {
 }
 .settings th {
 	background-color: hsl(210, 100%, 92%);
-	text-align: left;
+	text-align: start;
 }
 .settings th strong {
 	display: block;
@@ -1330,7 +1331,7 @@ section.thread-tree header p {
 }
 #ajax-preview-header {
 	background-color: #118;
-	text-align: right;
+	text-align: end;
 	padding: 0 0.2em;
 }
 #ajax-preview-content {
@@ -1722,7 +1723,7 @@ div.warning {
 		margin: 0 0 0.5em 0;
 	}
 	.thread-feed {
-		text-align: right;
+		text-align: end;
 	}
 }
 
@@ -1805,7 +1806,7 @@ div.warning {
 	}
 	th {
 		font-weight: bold;
-		text-align: left;
+		text-align: start;
 		padding: 0.1rem 0.25rem;
 	}
 	th span.header-cell {
@@ -1830,12 +1831,12 @@ div.warning {
 		background: #fafac0;
 	}
 	th .sorting-ui a:first-of-type {
-		text-align: right;
+		text-align: end;
 		border-top-left-radius: 0.25em;
 		border-bottom-left-radius: 0.25em;
 	}
 	th .sorting-ui a:last-of-type {
-		text-align: left;
+		text-align: start;
 		border-top-right-radius: 0.25em;
 		border-bottom-right-radius: 0.25em;
 	}
