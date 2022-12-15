@@ -904,6 +904,7 @@ ul.pagination a:not([href]) {
 /* table definitions for all cases */
 table {
 	border-collapse: collapse;
+	width: 100%;
 }
 
 .settings {
