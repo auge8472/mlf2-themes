@@ -10,7 +10,6 @@ body, header, #wrapper { margin: 0; }
 body, #nav-1, #nav-2 { padding: 0; }
 body { color: #000; background: #fff; font-family: verdana, arial, sans-serif; font-size: 1em; font-size: 1rem; }
 header { padding: 0 0.5em; background: hsl(210, 100%, 90%); border-bottom: 1px solid #bacbdf; display: flex; justify-content: space-between; }
-#nav-1 a, #nav-2 a { border: 1px solid; }
 #nav-1 a, #nav-2 a, h1 { padding: 0.25em; }
 h1 { font-size: 1em; font-weight: bold; text-align: center; }
 #imgtab { margin: 1em 0; padding: 0 0.5em; list-style: none; display: flex; flex-wrap: wrap; }
@@ -108,7 +107,7 @@ window.onresize = getMaxWidth;
 {elseif $browse_images}
  <header>
   <p id="nav-1"><a href="index.php?mode=upload_image">{#back#}</a></p>
-  <p id="nav-2">{if $previous}<a href="index.php?mode=upload_image&amp;browse_images={$previous}" title="{#previous_page_link_title#}">&laquo;</a>{/if}{if $previous && next} {/if}{if $next}<a href="index.php?mode=upload_image&amp;browse_images={$next}" title="{#next_page_link_title#}">&raquo;</a>{/if}</p>
+  <p id="nav-2">{if $previous}<a href="index.php?mode=upload_image&amp;browse_images={$previous}">&laquo; <span>{#previous_page_link_title#}</span></a>{/if}{if $previous && next} {/if}{if $next}<a href="index.php?mode=upload_image&amp;browse_images={$next}"><span>{#next_page_link_title#}</span> &raquo;</a>{/if}</p>
  </header>
 {if $images}
 <ul id="imgtab">

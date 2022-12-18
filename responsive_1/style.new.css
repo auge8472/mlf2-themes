@@ -1367,6 +1367,10 @@ section.thread-tree header p {
 	margin: 0;
 	padding: 0;
 }
+span.tail {
+	margin: 0;
+	padding: 0;
+}
 .item-tools li:not(:last-child) {
 	margin: 0 0.125em 0 0;
 	margin: 0 0.125rem 0 0;
@@ -1384,7 +1388,13 @@ section.thread-tree header p {
 	background-size: 1em 1em;
 	background-position: center center;
 }
-.item-tools a span:not([class="icon"]), .item-tools span.replace-tool span:not([class="icon"]) {
+span.tail a img {
+	display: inline-block;
+	width: 0.75em;
+	height: 0.75em;
+	margin-right: 0.125em;
+}
+.item-tools a span:not([class="icon"]), span.tail a span, .item-tools span.replace-tool span:not([class="icon"]) {
 	position: absolute !important;
 	height: 1px;
 	width: 1px;
