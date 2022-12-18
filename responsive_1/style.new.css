@@ -615,7 +615,7 @@ aside section h3 {
 	text-decoration: underline;
 	color: #013;
 }
-#latest-postings a .entry-date {
+#latest-postings a .entry-metadata, #latest-postings a .entry-date {
 	color: #666;
 	font-size: 0.9em;
 }
