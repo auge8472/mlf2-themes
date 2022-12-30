@@ -99,22 +99,30 @@ window.onresize = getMaxWidth;
 {*<script type="text/javascript">/* <![CDATA[ */document.write('<p>{#insert_image_exp#|escape:quotes}<\/p>'); /* ]]> */</script>*}
 <noscript><p>{#insert_image_exp_no_js#}</p>
 <p><code>[img]images/uploaded/{$uploaded_file}[/img]</code></p></noscript>
-<img class="uploaded" src="images/uploaded/{$uploaded_file}" title="{#insert_image#}" {*onclick="insertCode('images/uploaded/{$uploaded_file}'); return false;" *}alt="{#insert_image#}" />
+<button type="button" class="image-inserter">
+ <img class="uploaded" src="images/uploaded/{$uploaded_file}" alt="[img]images/uploaded/{$uploaded_file}[/img]" />
+ <p>{#insert_image#}</p>
+</button>
 {if $image_downsized}<p class="small">{$smarty.config.image_downsized|replace:"[width]":$new_width|replace:"[height]":$new_height|replace:"[filesize]":$new_filesize}</p>{/if}
 <p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
 </div>
-<script type="text/javascript">/* <![CDATA[ */ insertCode('images/uploaded/{$uploaded_file}'); /* ]]> */</script>
 {elseif $browse_images}
  <header>
   <p id="nav-1"><a href="index.php?mode=upload_image">{#back#}</a></p>
   <p id="nav-2">{if $previous}<a href="index.php?mode=upload_image&amp;browse_images={$previous}">&laquo; <span>{#previous_page_link_title#}</span></a>{/if}{if $previous && next} {/if}{if $next}<a href="index.php?mode=upload_image&amp;browse_images={$next}"><span>{#next_page_link_title#}</span> &raquo;</a>{/if}</p>
  </header>
 {if $images}
-<ul id="imgtab">
+ <ul id="imgtab">
 {section name=nr loop=$images start=$start max=$images_per_page}
-<li><button type="button" onclick="insertCode('images/uploaded/{$images[nr]}');"><img class="browse" src="images/uploaded/{$images[nr]}" alt="{#insert_image#}" /><br />{#insert_image#}</button>{if $admin || $mod}<br /><a class="deletelink" href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a>{/if}</li>
+  <li>
+   <button type="button" class="image-inserter">
+    <img class="browse" src="images/uploaded/{$images[nr]}" alt="[img]images/uploaded/{$images[nr]}[/img]" />
+    <p>{#insert_image#}</p>
+   </button>
+   {if $admin || $mod}<p><a class="deletelink" href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a></p>{/if}
+  </li>
 {/section}
-</ul>
+ </ul>
 {else}
 <div id="wrapper">
 <p>{#no_images#}</p>
