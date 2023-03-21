@@ -91,21 +91,12 @@ window.onresize = getMaxWidth;
    <p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
   </main>
 {elseif $uploaded_file}
- <header>
-  <h1>{#upload_image_hl#}</h1>
- </header>
-<div id="wrapper">
-<p class="ok">{#upload_successful#}</p>
+  <header>
+   <h1>{#upload_image_hl#}</h1>
+  </header>
+  <main role="main">
+   <p class="ok">{#upload_successful#}</p>
 {*<script type="text/javascript">/* <![CDATA[ */document.write('<p>{#insert_image_exp#|escape:quotes}<\/p>'); /* ]]> */</script>*}
-<noscript><p>{#insert_image_exp_no_js#}</p>
-<p><code>[img]images/uploaded/{$uploaded_file}[/img]</code></p></noscript>
-<button type="button" class="image-inserter">
- <img class="uploaded" src="images/uploaded/{$uploaded_file}" alt="[img]images/uploaded/{$uploaded_file}[/img]" />
- <p>{#insert_image#}</p>
-</button>
-{if $image_downsized}<p class="small">{$smarty.config.image_downsized|replace:"[width]":$new_width|replace:"[height]":$new_height|replace:"[filesize]":$new_filesize}</p>{/if}
-<p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
-</div>
    <noscript><p>{#insert_image_exp_no_js#}</p>
    <p><code>[img]images/uploaded/{$uploaded_file}[/img]</code></p></noscript>
    <button type="button" class="image-inserter">
