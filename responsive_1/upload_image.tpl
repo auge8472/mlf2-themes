@@ -69,27 +69,27 @@ window.onresize = getMaxWidth;
 </head>
  <body>
 {if $form}
- <header>
-  <h1>{#upload_image_hl#}</h1>
- </header>
-<div id="wrapper">
+  <header>
+   <h1>{#upload_image_hl#}</h1>
+  </header>
+  <main role="main">
 {if $errors}
-<p class="caution">{#error_headline#}</p>
-<ul>
+   <p class="caution">{#error_headline#}</p>
+   <ul>
 {section name=mysec loop=$errors}
- <li>{assign var="error" value=$errors[mysec]}{$smarty.config.$error|replace:"[width]":$width|replace:"[height]":$height|replace:"[filesize]":$filesize|replace:"[max_width]":$max_width|replace:"[max_height]":$max_height|replace:"[max_filesize]":$max_filesize|replace:"[server_max_filesize]":$server_max_filesize}</li>
+    <li>{assign var="error" value=$errors[mysec]}{$smarty.config.$error|replace:"[width]":$width|replace:"[height]":$height|replace:"[filesize]":$filesize|replace:"[max_width]":$max_width|replace:"[max_height]":$max_height|replace:"[max_filesize]":$max_filesize|replace:"[server_max_filesize]":$server_max_filesize}</li>
 {/section}
-</ul>
+   </ul>
 {/if}
-<form id="uploadform" action="index.php" method="post" enctype="multipart/form-data" accept-charset="{#charset#}">
-<div>
-<input type="hidden" name="mode" value="upload_image" />
-<p><input type="file" name="probe" size="17" /></p>
-<p><input type="submit" name="" value="{#upload_image_button#}" onclick="document.getElementById('throbber-submit').style.visibility='visible'" /> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber.svg" alt="" width="16" height="16" /></p>
-</div>
-</form>
-<p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
-</div>
+   <form id="uploadform" action="index.php" method="post" enctype="multipart/form-data" accept-charset="{#charset#}">
+    <input type="hidden" name="mode" value="upload_image" />
+    <div>
+     <p><input type="file" name="probe" size="17" /></p>
+     <p><input type="submit" name="" value="{#upload_image_button#}" onclick="document.getElementById('throbber-submit').style.visibility='visible'" /> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber.svg" alt="" width="16" height="16" /></p>
+    </div>
+   </form>
+   <p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
+  </main>
 {elseif $uploaded_file}
  <header>
   <h1>{#upload_image_hl#}</h1>
