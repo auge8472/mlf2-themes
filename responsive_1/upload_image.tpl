@@ -67,7 +67,7 @@ window.onresize = getMaxWidth;
 {/if}
 </script>
 </head>
-<body>
+ <body>
 {if $form}
  <header>
   <h1>{#upload_image_hl#}</h1>
@@ -163,5 +163,5 @@ window.onresize = getMaxWidth;
    <p class="caution">{#image_upload_not_enabled#}</p>
   </main>
 {/if}
-</body>
+ </body>
 </html>
