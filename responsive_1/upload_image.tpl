@@ -129,21 +129,21 @@ window.onresize = getMaxWidth;
 </div>
 {/if}
 {elseif $delete_confirm}
- <header>
-  <p id="nav-1"><a href="index.php?mode=upload_image&amp;browse_images={$current|default:'1'}">{#back#}</a></p>
- </header>
-<div id="wrapper">
-<p class="caution">{#delete_image_confirm#}</p>
-<p><img class="delete" src="images/uploaded/{$delete}" alt="{$delete}" /></p>
-<form id="uploadform" action="index.php" method="post" accept-charset="{#charset#}">
-<div>
-<input type="hidden" name="mode" value="upload_image" />
-<input type="hidden" name="delete" value="{$delete}" />
-{if $current}<input type="hidden" name="current" value="{$current}" />{/if}
-<input type="submit" name="delete_confirm" value="{#delete_image_button#}" />
-</div>
-</form>
-</div>
+  <header>
+   <p class="nav"><a href="index.php?mode=upload_image&amp;browse_images={$current|default:'1'}"><span>{#back#}</span></a></p>
+  </header>
+  <main role="main">
+   <p class="caution">{#delete_image_confirm#}</p>
+   <p><img class="delete" src="images/uploaded/{$delete}" alt="{$delete}" /></p>
+   <form id="uploadform" action="index.php" method="post" accept-charset="{#charset#}">
+    <input type="hidden" name="mode" value="upload_image" />
+    <input type="hidden" name="delete" value="{$delete}" />
+    {if $current}<input type="hidden" name="current" value="{$current}" />{/if}
+    <div>
+     <input type="submit" name="delete_confirm" value="{#delete_image_button#}" />
+    </div>
+   </form>
+  </main>
 {else}
   <header>
    <h1>{#upload_image_hl#}</h1>
