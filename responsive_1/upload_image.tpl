@@ -124,9 +124,9 @@ window.onresize = getMaxWidth;
 {/section}
  </ul>
 {else}
-<div id="wrapper">
-<p>{#no_images#}</p>
-</div>
+  <main role="main" id="wrapper">
+   <p>{#no_images#}</p>
+  </main>
 {/if}
 {elseif $delete_confirm}
   <header>
