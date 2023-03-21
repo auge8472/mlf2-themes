@@ -1522,7 +1522,6 @@
   <li><a href="index.php?mode=admin&amp;action=list_uploads"><span class="icon"></span><span>{#upload_administr_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=pages"><span class="icon"></span><span>{#pages_administr_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=spam_protection"><span class="icon"></span><span>{#spam_protection_link#}</span></a></li>
-  <li><a href="index.php?mode=admin&amp;action=backup"><span class="icon"></span><span>{#backup_restore_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=update"><span class="icon"></span><span>{#update_link#}</span></a></li>
   <li><a href="index.php?mode=admin&amp;action=reset_uninstall"><span class="icon"></span><span>{#reset_uninstall_link#}</span></a></li>
  </ul>
