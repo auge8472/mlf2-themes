@@ -106,23 +106,34 @@ window.onresize = getMaxWidth;
 {if $image_downsized}<p class="small">{$smarty.config.image_downsized|replace:"[width]":$new_width|replace:"[height]":$new_height|replace:"[filesize]":$new_filesize}</p>{/if}
 <p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
 </div>
-{elseif $browse_images}
- <header>
-  <p id="nav-1"><a href="index.php?mode=upload_image">{#back#}</a></p>
-  <p id="nav-2">{if $previous}<a href="index.php?mode=upload_image&amp;browse_images={$previous}">&laquo; <span>{#previous_page_link_title#}</span></a>{/if}{if $previous && next} {/if}{if $next}<a href="index.php?mode=upload_image&amp;browse_images={$next}"><span>{#next_page_link_title#}</span> &raquo;</a>{/if}</p>
- </header>
-{if $images}
- <ul id="imgtab">
-{section name=nr loop=$images start=$start max=$images_per_page}
-  <li>
+   <noscript><p>{#insert_image_exp_no_js#}</p>
+   <p><code>[img]images/uploaded/{$uploaded_file}[/img]</code></p></noscript>
    <button type="button" class="image-inserter">
-    <img class="browse" src="images/uploaded/{$images[nr]}" alt="[img]images/uploaded/{$images[nr]}[/img]" />
+    <img class="uploaded" src="images/uploaded/{$uploaded_file}" alt="[img]images/uploaded/{$uploaded_file}[/img]" />
     <p>{#insert_image#}</p>
    </button>
-   {if $admin || $mod}<p><a class="deletelink" href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a></p>{/if}
-  </li>
+   {if $image_downsized}<p class="small">{$smarty.config.image_downsized|replace:"[width]":$new_width|replace:"[height]":$new_height|replace:"[filesize]":$new_filesize}</p>{/if}
+   <p class="small"><a href="index.php?mode=upload_image&amp;browse_images=1">{#browse_uploaded_images#}</a></p>
+  </main>
+{elseif $browse_images}
+  <header>
+   <p class="nav"><a href="index.php?mode=upload_image"><span>{#back#}</span></a></p>
+   <p class="nav">{if $previous}<a href="index.php?mode=upload_image&amp;browse_images={$previous}">&laquo; <span>{#previous_page_link_title#}</span></a>{/if}{if $previous && next} {/if}{if $next}<a href="index.php?mode=upload_image&amp;browse_images={$next}"><span>{#next_page_link_title#}</span> &raquo;</a>{/if}</p>
+  </header>
+{if $images}
+  <main role="main">
+   <ul id="image-table">
+{section name=nr loop=$images start=$start max=$images_per_page}
+    <li>
+     <button type="button" class="image-inserter">
+      <img class="browse" src="images/uploaded/{$images[nr]}" alt="[img]images/uploaded/{$images[nr]}[/img]" />
+      <p>{#insert_image#}</p>
+     </button>
+     {if $admin || $mod}<p class="deletelink"><a href="index.php?mode=upload_image&amp;delete={$images[nr]}&amp;current={$current}">{#delete#}</a></p>{/if}
+    </li>
 {/section}
- </ul>
+   </ul>
+  </main>
 {else}
   <main role="main" id="wrapper">
    <p>{#no_images#}</p>
