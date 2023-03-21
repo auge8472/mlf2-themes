@@ -8,7 +8,6 @@
  </defs>
  <style type="text/css">
   <![CDATA[
-  svg { border: 1px solid #444; }
   .paper { fill: #f8f8f8; stroke: none; }
   .photo { fill: url(#photo); stroke: none; }
   .blend { fill: #ccccccbb; stroke: none; }
