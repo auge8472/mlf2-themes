@@ -5,26 +5,101 @@
 <title>{$settings.forum_name}{if $page_title} - {$page_title}{elseif $subnav_location} - {$subnav_location}{/if}</title>
 <style type="text/css">
 {literal}
-body, header, #wrapper { margin: 0; }
-#nav-1, #nav-2, h1 { margin: 0.25em 0; }
-body, #nav-1, #nav-2 { padding: 0; }
-body { color: #000; background: #fff; font-family: verdana, arial, sans-serif; font-size: 1em; font-size: 1rem; }
-header { padding: 0 0.5em; background: hsl(210, 100%, 90%); border-bottom: 1px solid #bacbdf; display: flex; justify-content: space-between; }
-#nav-1 a, #nav-2 a, h1 { padding: 0.25em; }
-h1 { font-size: 1em; font-weight: bold; text-align: center; }
-#imgtab { margin: 1em 0; padding: 0 0.5em; list-style: none; display: flex; flex-wrap: wrap; }
-#imgtab li { text-align: center; margin: 0 0.25em 0.25em 0; padding: 0.15em; background: #e4eff8; }
-#imgtab button { padding: 0 0 0.2em 0; font-size: 1em; font-weight: bold; border: none; border-bottom: 1px dotted #aaa; background: transparent; cursor: pointer; }
-#imgtab img { height: 9em; }
-#imgtab a.deletelink { margin: 0.2em 0 0 0; display: inline-block; }
+html {
+	margin: 0;
+	color: #000;
+	background: #fff;
+	font-family: verdana, arial, sans-serif;
+	text-align: start;
+	font-size: 1em;
+	font-size: 1rem;
+}
+body,
+header,
+main,
+#image-table {
+	margin: 0;
+}
+body {
+	padding: 0;
+}
+header {
+	padding: 0 0.5em;
+	background: hsl(210, 100%, 90%);
+	border-bottom: 1px solid #bacbdf;
+	display: flex;
+	justify-content: space-between;
+}
+h1 {
+	font-size: 1em;
+	font-weight: bold;
+}
+.nav, h1 {
+	margin: 0.25em 0;
+	padding: 0.25em;
+}
+.nav a,
+h1 { padding: 0.25em;
+}
+main {
+	padding: 0.5em;
+}
+img {
+	border: none;
+}
+#image-table {
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+}
+#image-table li {
+	text-align: center;
+	padding: 0;
+	background: #e4eff8;
+}
+#image-table button {
+	padding: 0;
+	margin-bottom: 0.25em;
+	font-size: 1em;
+	font-weight: bold;
+	border: none;
+	border-bottom: 1px dotted #aaa;
+	background: transparent;
+	cursor: pointer;
+}
+#image-table img {
+	height: 9em;
+}
+#image-table p {
+	margin: 0.25em 0;
+}
+#image-table .deletelink a {
+	margin: 0.2em 0 0 0;
+	display: inline-block;
+}
 
-img { border: none; }
-#wrapper { padding: 0.5em; }
-
-.caution, .ok, .deletelink { padding: 0 0 0 1.2em; font-weight: bold; background-repeat: no-repeat; background-position: left center; background-size: 1em 1em; }
-.caution { color: red; background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg); }
-.ok { color: red; background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg); }
-.deletelink { background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/marker-cross.svg); }
+.caution,
+.ok,
+.deletelink a {
+	padding: 0 0 0 1.2em;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 1em 1em;
+}
+.caution {
+	color: red;
+	background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/warning.svg);
+}
+.ok {
+	color: red;
+	background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/check-mark.svg);
+}
+.deletelink a {
+	background-image: url({/literal}{$THEMES_DIR}/{$settings.theme}{literal}/images/marker-cross.svg);
+}
 
 img.delete { max-width: 300px; max-height: 150px; }
 img.uploaded { max-width: 300px; max-height: 110px; }
