@@ -145,12 +145,12 @@ window.onresize = getMaxWidth;
 </form>
 </div>
 {else}
- <header>
-  <h1>{#upload_image_hl#}</h1>
- </header>
-<div id="wrapper">
-<p class="caution">{#image_upload_not_enabled#}</p>
-</div>
+  <header>
+   <h1>{#upload_image_hl#}</h1>
+  </header>
+  <main role="main">
+   <p class="caution">{#image_upload_not_enabled#}</p>
+  </main>
 {/if}
 </body>
 </html>
