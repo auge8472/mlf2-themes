@@ -21,7 +21,7 @@
 <div>
 <input type="hidden" name="mode" value="contact" />
 {if $id}<input type="hidden" name="id" value="{$id}" />{/if}
-{if $recipient_user_id}<input type="hidden" name="user_id" value="{$recipient_user_id}" />{/if}
+{if $recipient_user_id}<input type="hidden" name="recipient_user_id" value="{$recipient_user_id}" />{/if}
 {if $session}<input type="hidden" name="{$session.name}" value="{$session.id}" />{/if}
 <p><label for="sender_email">{#sender_address_caption#}</label><br />
 <input id="sender_email" type="text" name="sender_email" value="{$sender_email}" size="50" /></p>
