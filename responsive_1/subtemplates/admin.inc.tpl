@@ -892,7 +892,7 @@
 <ul>
 {section name=mysec loop=$errors}
 {assign var="error" value=$errors[mysec]}
-<li>{$smarty.config.$error}</li>
+<li>{$smarty.config.$error|replace:"[word]":$ar_username}</li>
 {/section}
 </ul>
 </section>
