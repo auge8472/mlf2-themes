@@ -39,8 +39,17 @@
    <th><strong>{#edit_user_email#}</strong></th>
    <td>
     <span>{$user_email}</span>&nbsp;
-    <span class="small">[ <a href="index.php?mode=user&amp;action=edit_email">{#edit_email#}</a> ]</span><br />
-    <span class="small"><input id="email_contact" type="checkbox" name="email_contact" value="1"{if $email_contact==1} checked="checked"{/if} class="small-input" /><label for="email_contact"><span class="icon"></span><span>{#edit_user_email_contact#}</span></label></span>
+    <span class="small">[ <a href="index.php?mode=user&amp;action=edit_email">{#edit_email#}</a> ]</span>
+   </td>
+  </tr>
+  <tr>
+   <th><strong>{#edit_user_contacting#}</strong></th>
+   <td class="radio-button-native">
+    <ul>
+     <li><input id="email_contact_disabled" type="radio" name="email_contact" value="0"{if $email_contact=="0"} checked="checked"{/if} /><label for="email_contact_disabled"><span class="icon"></span><span>{#edit_user_contacting_disabled#}</span></label></li>
+     <li><input id="email_contact_registered" type="radio" name="email_contact" value="1"{if $email_contact=="1"} checked="checked"{/if} /><label for="email_contact_registered"><span class="icon"></span><span>{#edit_user_contacting_registered#}</span></label></li>
+     <li><input id="email_contact_public" type="radio" name="email_contact" value="2"{if $email_contact=="2"} checked="checked"{/if} /><label for="email_contact_public"><span class="icon"></span><span>{#edit_user_contacting_public#}</span></label></li>
+    </ul>
    </td>
   </tr>
   <tr>
