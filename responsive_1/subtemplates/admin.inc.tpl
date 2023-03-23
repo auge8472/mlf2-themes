@@ -25,6 +25,11 @@
  <p class="description">{#forum_email_desc#}</p>
  <input type="text" name="forum_email" id="id_forum_email" value="{$edSet.forum_email|escape}" size="40">
 </div>
+<div>
+ <p class="label"><label for="id_link_open_target">{#forum_target_name#}</label>
+ <p class="description">{#forum_target_name_desc#}</p>
+ <input type="text" name="link_open_target" id="id_link_open_target" value="{$edSet.link_open_target|escape}" size="20" />
+</div>
 {if $languages}
 <div>
  <p class="label">{#default_language#}</p>
