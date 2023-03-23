@@ -152,6 +152,17 @@
   </tr>
 {/if}
   <tr>
+   <th><strong>{#edit_user_where_to_open_links#}</strong></th>
+   <td class="radio-button-native">
+    <ul>
+     <li><input id="same-browser-window-forum-default" type="radio" name="browser_link_open" value="0"{if $browser_link_open=="0"} checked="checked"{/if} /><label for="same-browser-window-forum-default"><span class="icon"></span><span>{#where_to_open_links_forum_def#}</span></label></li>
+     <li><input id="same-browser-window-no" type="radio" name="browser_link_open" value="1"{if $browser_link_open=="1"} checked="checked"{/if} /><label for="same-browser-window-no"><span class="icon"></span><span>{#where_to_open_links_same#}</span></label></li>
+     <li><input id="new-browser-window-ext" type="radio" name="browser_link_open" value="2"{if $browser_link_open=="2"} checked="checked"{/if} /><label for="new-browser-window-ext"><span class="icon"></span><span>{#where_to_open_links_external#}</span></label></li>
+     <li><input id="new-browser-window-all" type="radio" name="browser_link_open" value="3"{if $browser_link_open=="3"} checked="checked"{/if} /><label for="new-browser-window-all"><span class="icon"></span><span>{#where_to_open_links_all#}</span></label></li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
    <th><strong class="caution">{#remove_user_account#}</strong></th>
    <td><span class="small">[ <a href="index.php?mode=user&amp;action=remove_account">{#remove_user_account_link#}</a> ]</span></td>
   </tr>
