@@ -10,7 +10,7 @@
   <![CDATA[
   rect { stroke: none; fill: url(#plate); }
   circle { stroke: none; fill: #fff; }
-  path { fill: none; stroke-width: 11px; stroke: #fff; }
+  path { fill: none; stroke-width: 11px; stroke: #fff; stroke-linecap: round; }
   ]]>
  </style>
  <rect x="1" y="1" width="126" height="126" rx="18" ry="18" />
