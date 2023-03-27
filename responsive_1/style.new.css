@@ -1091,6 +1091,12 @@ ul.reply li {
 	text-decoration: none;
 	font-weight: bold;
 }
+.thread li > a.spam {
+	color: #d10;
+	font-style: italic;
+	background-color: #ffff78;
+	padding: 0 3px 0 calc(1.2em + 3px);
+}
 .registered_user {
 	color: #048;
 }
