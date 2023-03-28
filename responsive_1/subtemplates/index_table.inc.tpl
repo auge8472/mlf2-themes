@@ -90,7 +90,7 @@
 {if $settings.count_views}   <td data-header="{#views#}" class="cell-count-views"><span class="value">{$total_views.$thread}</span></td>
 {/if}
    <td data-header="{#replies#}" class="cell-count-replies"><span class="value">{$replies.$thread}</span></td>
-{if $categories && $category<=0}   <td data-header="{#category#}" class="cell-category>{if $data.$thread.category_name}<a href="index.php?mode=index&amp;category={$data.$thread.category}" title="{#change_category_link#|replace:"[category]":$data.$thread.category_name|escape:"html"}"><span class="value category nowrap">{$data.$thread.category_name}</span></a>{else}&nbsp;{/if}</td>
+{if $categories && $category<=0}   <td data-header="{#category#}" class="cell-category">{if $data.$thread.category_name}<a href="index.php?mode=index&amp;category={$data.$thread.category}" class="category" title="{#change_category_link#|replace:"[category]":$data.$thread.category_name|escape:"html"}"><span class="value category nowrap">{$data.$thread.category_name}</span></a>{else}&nbsp;{/if}</td>
 {/if}
 </tr>
 {/foreach}
