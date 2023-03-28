@@ -1180,10 +1180,15 @@ article header p {
 	padding: 0;
 }
 
-article header .category {
+article header .category,
+.thread a.category,
+.cell-category a.category {
 	font-weight: normal;
-	font-size: 0.82em;
-	font-size: 0.82rem;
+	font-size: 1em;
+	font-size: 1rem;
+	padding: 0.125em;
+	border: 1px solid var(--border-light);
+	background-color: var(--spot-light-plus-10);
 }
 
 article header .author {
@@ -1698,6 +1703,7 @@ div.warning {
 	tr:last-child {
 		margin-bottom: 0;
 	}
+	th, td {
 		padding: 0.125em 0.25em;
 		padding: 0.125rem 0.25rem;
 	}
@@ -1716,6 +1722,12 @@ div.warning {
 	#main-thread-list tbody .cell-subject {
 		background-color: #dfefff;
 		border-bottom: 1px solid var(--border-light);
+	}
+	td.cell-category a.category {
+	 font-size: inherit;
+	 background-color: transparent;
+	 border: none;
+	 padding: 0;
 	}
 }
 
