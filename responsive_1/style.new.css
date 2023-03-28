@@ -1713,7 +1713,7 @@ div.warning {
 	}
 	td[data-header] {
 		background-color: #fff;
-		font-size:0.82em;
+		font-size: 0.82em;
 		line-height: 1.3em;
 	}
 	td[data-header]::before {
