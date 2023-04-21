@@ -1229,6 +1229,7 @@ article .body {
 	margin: 0;
 	padding: 5px;
 	background: #fff;
+	display: flow-root;
 }
 
 article .body > *:not(:last-child) {
@@ -1248,9 +1249,19 @@ article blockquote {
 	max-width: 100%;
 	height: auto;
 }
-.thumbnail {
+.body .thumbnail {
 	width: 9em;
 	height: auto;
+}
+.body img.thumbnail.left,
+.body img.left {
+	float: left;
+	margin: 0.25em 0.25em 0.25em 0;
+}
+.body img.thumbnail.right,
+.body img.right {
+	float: right;
+	margin: 0.25em 0 0.25em 0.25em;
 }
 #image-canvas {
 	position: absolute;
