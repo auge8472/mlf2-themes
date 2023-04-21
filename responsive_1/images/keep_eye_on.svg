@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+ <defs>
+  <linearGradient id="head" x1="50%" y1="0%" x2="50%" y2="75%">
+   <stop offset="0%" stop-color="#c8cfdd" />
+   <stop offset="100%" stop-color="#f8fafe" />
+  </linearGradient>
+ </defs>
+ <style type="text/css">
+  <![CDATA[
+  #pupil { fill: #467; stroke: none; }
+  #spot { fill: #f8fafe; stroke: none; }
+  #lid { fill: none; stroke-width: 8px; stroke: #467; }
+  #eyeball { fill: url(#head); stroke: none; }
+  ]]>
+ </style>
+ <path id="eyeball" d="M 8,64 Q 64,6 120,64 Q 64,122 8,64" />
+ <circle id="pupil" cx="64" cy="64" r="26" />
+ <circle id="spot" cx="64" cy="48" r="8.5" transform="rotate(-45, 64, 64)" />
+ <path id="lid" d="M 11,67 8,64 Q 64,6 120,64" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+
