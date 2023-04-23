@@ -15,7 +15,7 @@
   <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
   <input type="hidden" name="mode" value="user">
   <input type="hidden" name="action" value="edit_profile">
-  <p><label for="password">{#remove_user_confirm_password#}</label><br><input id="password" type="password" name="user_password" size="25"></p>
+  <p><label for="password">{#remove_user_confirm_password#}</label><br><input id="password" type="password" spellcheck="false" autocomplete="off" name="user_password" size="25"></p>
   <button name="remove_account_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button>
  </form>
 </div> 
