@@ -911,7 +911,7 @@
 <p><label for="ar_email" class="main">{#register_email#}</label><br>
 <input id="ar_email" type="text" size="25" name="ar_email" value="{$ar_email|default:''}" maxlength="{$settings.email_maxlength}"></p>
 <p><label for="ar_pw" class="main">{#register_pw#}</label><br>
-<input id="ar_pw" type="password" size="25" name="ar_pw" maxlength="50"></p>
+<input id="ar_pw" type="password" spellcheck="false" autocomplete="off" size="25" name="ar_pw" maxlength="50"></p>
 <p><input id="ar_send_userdata" type="checkbox" name="ar_send_userdata" value="true"{if $ar_send_userdata} checked="checked"{/if}> <label for="ar_send_userdata"><span class="icon"></span><span>{#register_send_userdata#}</span></label></p>
 <p><button name="register_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
@@ -1115,7 +1115,7 @@
 <p><input id="delete_postings" type="checkbox" name="delete_postings" value="true"><label for="delete_postings"> <span class="icon"></span><span>{#delete_postings#}</span></label></p>
 <p><input id="delete_userdata" type="checkbox" name="delete_userdata" value="true"><label for="delete_userdata"> <span class="icon"></span><span>{#delete_userdata#}</span></label></p>
 <p>{#admin_confirm_password#}<br>
-<input type="password" size="20" name="confirm_pw"> <button name="reset_forum_confirmed" value="{#reset_forum_submit#}">{#reset_forum_submit#}</button></p>
+<input type="password" spellcheck="false" autocomplete="off" size="20" name="confirm_pw"> <button name="reset_forum_confirmed" value="{#reset_forum_submit#}">{#reset_forum_submit#}</button></p>
 </div>
 </form>
 
@@ -1128,7 +1128,7 @@
 <input type="hidden" name="mode" value="admin">
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
 <p>{#reset_uninstall_conf_pw#}<br>
-<input type="password" size="20" name="confirm_pw"> <button name="uninstall_forum_confirmed" value="{#uninstall_forum_submit#}">{#uninstall_forum_submit#}</button></p>
+<input type="password" spellcheck="false" autocomplete="off" size="20" name="confirm_pw"> <button name="uninstall_forum_confirmed" value="{#uninstall_forum_submit#}">{#uninstall_forum_submit#}</button></p>
 </div>
 </form>
 {elseif $action=='update'}
@@ -1164,7 +1164,7 @@
 <input type="hidden" name="mode" value="admin">
 <input type="hidden" name="update_file_submit" value="{$update_file}">
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}">
-<p>{#admin_confirm_password#}<br><input type="password" name="update_password" size="25"></p>
+<p>{#admin_confirm_password#}<br><input type="password" spellcheck="false" autocomplete="off" name="update_password" size="25"></p>
 <p><button name="update_submit" value="{#update_submit#}" onclick="document.getElementById('throbber-submit').style.visibility = 'visible';">{#update_submit#}</button> <img id="throbber-submit" style="visibility:hidden;" src="{$THEMES_DIR}/{$theme}/images/throbber.svg" alt="" width="16" height="16"></p>
 </div>
 </form>

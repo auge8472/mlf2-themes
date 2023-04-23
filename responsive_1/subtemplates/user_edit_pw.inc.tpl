@@ -15,9 +15,9 @@
 <input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
 <input type="hidden" name="mode" value="user" />
 <p><strong>{#edit_pw_old#}</strong><br />
-<input type="password" size="25" name="old_pw" /></p>
+<input type="password" spellcheck="false" autocomplete="off" size="25" name="old_pw" /></p>
 <p><strong>{#edit_pw_new#}</strong><br />
-<input type="password" size="25" name="new_pw" maxlength="255" /></p>
+<input type="password" spellcheck="false" autocomplete="off" size="25" name="new_pw" maxlength="255" /></p>
 <p><button name="edit_pw_submit" value="{#submit_button_ok#}">{#submit_button_ok#}</button></p>
 </div>
 </form>
