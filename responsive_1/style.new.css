@@ -36,17 +36,26 @@
 	--border-light: var(--spot-light-minus-5);
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
 	box-sizing: border-box;
 }
 
 /* definitions for the main blocks of the pages */
-html, body, body > header, #subnav, main, body > footer, #assistancemenu {
+html,
+body,
+body > header,
+#subnav,
+main,
+body > footer,
+#assistancemenu {
 	margin: 0;
 	padding: 0;
 }
 
-html, body {
+html,
+body {
 	width: 100%;
 	min-height: 100%;
 	text-align: start;
@@ -141,7 +150,8 @@ a {
 a:visited {
 	color: #00a;
 }
-a:focus, a:hover {
+a:focus,
+a:hover {
 	color: #00f;
 	text-decoration: underline;
 }
@@ -200,16 +210,22 @@ footer a:active,
 
 
 /* elements of the page header */
-.home, h1, .index, #nav {
+.home,
+h1,
+.index,
+#nav {
 	margin: 0;
 	padding: 0.2em 0 0.1em 0;
 	padding: 0.2rem 0 0.1rem 0;
 }
-h1 a, h1 a:visited {
+h1 a,
+h1 a:visited {
 	color:#000;
 	text-decoration: none;
 }
-h1 a:focus, h1 a:hover, h1 a:active {
+h1 a:focus,
+h1 a:hover,
+h1 a:active {
 	color:#00a;
 	text-decoration: underline;
 }
@@ -228,7 +244,8 @@ h1 a:focus, h1 a:hover, h1 a:active {
 
 /* elements of the navigation bar below the page header */
 
-#submenu, #subnav > * {
+#submenu,
+#subnav > * {
 	margin: 0;
 	padding: 0;
 }
@@ -266,7 +283,8 @@ h1 a:focus, h1 a:hover, h1 a:active {
 	background-size: 1em 1em;
 	background-position: center center;
 }
-#subnav a span:not([class]), #subnav a strong {
+#subnav a span:not([class]),
+#subnav a strong {
 	padding: 0 0 0 0.125em;
 	position: absolute;
 	height: 1px;
@@ -341,13 +359,15 @@ h1 a:focus, h1 a:hover, h1 a:active {
 
 /* elements of the main block */
 /* general rules */
-.xsmall, .small {
+.xsmall,
+.small {
 	font-size: 0.69em;
 	line-height: 130%;
 }
 
 /* elements in forms */
-#edit_avatar, #edit_avatar > * {
+#edit_avatar,
+#edit_avatar > * {
 	display: block;
 }
 #edit_avatar {
@@ -361,18 +381,22 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #edit_avatar > span {
 	text-align: center;
 }
-[type="checkbox"], .radio-button-native [type="radio"] {
+[type="checkbox"],
+.radio-button-native [type="radio"] {
 	position: absolute;
 	left: -9999px;
 }
-[type="checkbox"] + label, #postingform [type="checkbox"] + label, .radio-button-native [type="radio"] + label {
+[type="checkbox"] + label,
+#postingform [type="checkbox"] + label,
+.radio-button-native [type="radio"] + label {
 	padding: 0.125em 0.25em;
 	color: #444;
 	display: flex;
 	align-items: center;
 	font-style: italic;
 }
-[type="checkbox"] + label .icon, .radio-button-native [type="radio"] + label .icon {
+[type="checkbox"] + label .icon,
+.radio-button-native [type="radio"] + label .icon {
 	display: inline-block;
 	padding:0;
 	height: 1.15em;
@@ -395,7 +419,8 @@ h1 a:focus, h1 a:hover, h1 a:active {
 .radio-button-native [type="radio"]:checked + label .icon {
 	background: url("images/marker-dot.svg") center center / 100% no-repeat, url("images/marker-circle.svg") center center / 100% no-repeat;
 }
-[type="checkbox"]:checked + label, .radio-button-native [type="radio"]:checked + label {
+[type="checkbox"]:checked + label,
+.radio-button-native [type="radio"]:checked + label {
 	color: #031;
 	font-style: normal;
 }
@@ -564,24 +589,46 @@ form > div:not(:last-child) {
 p.label {
 	font-weight: bold;
 }
-form > div p, form > div ul, form > div div {
+form > div p,
+form > div ul,
+form > div div {
 	margin: 0 0 0.25rem 0;
 }
 
-input, select {
+input,
+select {
 	font-size: 1em;
 }
 /* end: settings forms without table */
 /* end: elements in forms */
 
 /* elements of #sidebar, #bottombar, aside */
-aside h2, #sidebarcontent, aside section h3, aside section p, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li, #latest-postings a, #modmenu a {
+aside h2,
+#sidebarcontent,
+aside section h3,
+aside section p,
+#latest-postings ul,
+#modmenu ul,
+#latest-postings li,
+#modmenu li,
+#latest-postings a,
+#modmenu a {
 	margin:0;
 }
-aside, #sidebar, #bottombar, aside h2, #sidebarcontent, aside section h3, #latest-postings ul, #modmenu ul, #latest-postings li, #modmenu li {
+aside,
+#sidebar,
+#bottombar,
+aside h2,
+#sidebarcontent,
+aside section h3,
+#latest-postings ul,
+#modmenu ul,
+#latest-postings li,
+#modmenu li {
 	padding: 0;
 }
-#sidebar, #bottombar {
+#sidebar,
+#bottombar {
 	margin: 0 0 1em 0;
 }
 /* main header with folding link */
@@ -601,17 +648,21 @@ aside h2 a {
 	width: 100%;
 	text-decoration: none;
 }
-aside h2 a:link, aside h2 a:visited {
+aside h2 a:link,
+aside h2 a:visited {
 	color: #000;
 }
-aside h2 a:focus, aside h2 a:hover {
+aside h2 a:focus,
+aside h2 a:hover {
 	color: #143;
 }
 aside h2 a:active {
 	color: #643;
 }
 /* box containing the sidebars content boxes, the boxes itself and their headers */
-#sidebarcontent, aside section, aside section h3 {
+#sidebarcontent,
+aside section,
+aside section h3 {
 	margin: 0;
 	padding: 0;
 }
@@ -632,17 +683,22 @@ aside section h3 {
 }
 
 /* box with the latest postings and the similar working modmenu */
-#latest-postings ul, #modmenu ul {
+#latest-postings ul,
+#modmenu ul {
 	list-style: none;
 }
-#latest-postings li, #modmenu li {
+#latest-postings li,
+#modmenu li {
 	word-wrap: break-word;
 	overflow: hidden;
-}#latest-postings li:last-child, #modmenu li:last-child {
+}
+#latest-postings li:last-child,
+#modmenu li:last-child {
 	border-bottom: 1px solid var(--border-light);
 	border-bottom: none;
 }
-#latest-postings a, #modmenu a {
+#latest-postings a,
+#modmenu a {
 	line-height: 1.5em;
 	text-decoration: none;
 	display: block;
@@ -653,20 +709,29 @@ aside section h3 {
 #latest-postings a span {
 	display: block;
 }
-#latest-postings a:visited, #latest-postings a.read {
+#latest-postings a:visited,
+#latest-postings a.read {
 	background-color: #fff;
 }
-#latest-postings li a:visited .entry-title, #latest-postings a.read .entry-title {
+#latest-postings li a:visited .entry-title,
+#latest-postings a.read .entry-title {
 	color: #236;
 }
-#latest-postings a:focus, #latest-postings a:hover, #modmenu a:focus, #modmenu a:hover {
+#latest-postings a:focus,
+#latest-postings a:hover,
+#modmenu a:focus,
+#modmenu a:hover {
 	background-color: #ffffcf;
 }
-#latest-postings a:focus .entry-title, #latest-postings a:hover .entry-title, #modmenu a:focus, #modmenu a:hover {
+#latest-postings a:focus .entry-title,
+#latest-postings a:hover .entry-title,
+#modmenu a:focus,
+#modmenu a:hover {
 	text-decoration: underline;
 	color: #013;
 }
-#latest-postings a .entry-metadata, #latest-postings a .entry-date {
+#latest-postings a .entry-metadata,
+#latest-postings a .entry-date {
 	color: #666;
 	font-size: 0.9em;
 }
@@ -709,12 +774,14 @@ aside section h3 {
 	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
 
-#tagcloud ul, #usersonline ul {
+#tagcloud ul,
+#usersonline ul {
 	margin: 0;
 	padding: 5px;
 	list-style: none;
 }
-#tagcloud li, #usersonline li {
+#tagcloud li,
+#usersonline li {
 	display: inline;
 }
 #tagcloud strong {
@@ -738,11 +805,13 @@ aside section h3 {
 #usersonline ul {
 	background-color: #fff;
 }
-#tagcloud a, #usersonline a {
+#tagcloud a,
+#usersonline a {
 	display:inline-block;
 	margin-right:0.25rem;
 }
-#tagcloud a:not(:last-child):after, #usersonline a:not(:last-child):after {
+#tagcloud a:not(:last-child):after,
+#usersonline a:not(:last-child):after {
 	content:", ";
 }
 #additional-admin-info p {
@@ -825,7 +894,8 @@ aside section h3 {
 .adminmenu a[href*='&action=categories'] .icon {
 	background-image: url("images/categories.svg");
 }
-.adminmenu a[href*='&action=smilies'] .icon, .adminmenu a[href*='&enable_smilies=true'] .icon {
+.adminmenu a[href*='&action=smilies'] .icon,
+.adminmenu a[href*='&enable_smilies=true'] .icon {
 	background-image: url("images/smilies.svg");
 }
 .adminmenu a[href*='&action=list_uploads'] .icon {
@@ -837,7 +907,8 @@ aside section h3 {
 .adminmenu a[href*='&action=spam_protection'] .icon {
 	background-image: url("images/shield.svg");
 }
-.adminmenu a[href*='&action=backup'] .icon, .adminmenu a[href$='create_backup=0'] .icon {
+.adminmenu a[href*='&action=backup'] .icon,
+.adminmenu a[href$='create_backup=0'] .icon {
 	background-image: url("images/floppy-disc.svg");
 }
 .adminmenu a[href$='create_backup=1'] .icon {
@@ -879,13 +950,15 @@ aside section h3 {
 .adminmenu a[href*='&action=update'] .icon {
 	background-image: url("images/software-update.svg");
 }
-.adminmenu a[href*='&action=reset_uninstall'] .icon, .adminmenu a[href*='&action=clear_userdata'] .icon {
+.adminmenu a[href*='&action=reset_uninstall'] .icon,
+.adminmenu a[href*='&action=clear_userdata'] .icon {
 	background-image: url("images/marker-cross.svg");
 }
 .adminmenu a[href*='&action=register'] .icon {
 	background: url("images/sign-add.svg") 102% 102% / 60% no-repeat, url("images/user.svg") center / 100% no-repeat;
 }
-.adminmenu a[href*='&action=reset_tou'] .icon, .adminmenu a[href*='&action=reset_dps'] .icon {
+.adminmenu a[href*='&action=reset_tou'] .icon,
+.adminmenu a[href*='&action=reset_dps'] .icon {
 	background: url("images/pencil.svg") 102% 102% / 60% no-repeat, url("images/file.svg") center / 100% no-repeat;
 }
 .adminmenu a[href*='&action=email_list'] .icon {
@@ -932,7 +1005,9 @@ ul.pagination a {
 	font-weight: bold;
 	padding: 0.1em 0.4em;
 }
-ul.pagination a[href]:focus, ul.pagination a[href]:hover, ul.pagination a[href]:active {
+ul.pagination a[href]:focus,
+ul.pagination a[href]:hover,
+ul.pagination a[href]:active {
 	border:1px solid #00c;
 	color: #a42424;
 	background:#fffcdf;
@@ -961,7 +1036,8 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 }
-th, td {
+th,
+td {
 	vertical-align: top;
 }
 
@@ -987,7 +1063,8 @@ td.cell-subject {
 	font-size: 1em;
 	border-bottom: 1px solid var(--border-light);
 }
-.cell-subject a.item, .cell-subject label {
+.cell-subject a.item,
+.cell-subject label {
 	font-weight: bold;
 }
 td a.user-locked {
@@ -1005,7 +1082,8 @@ td a.user-locked {
 
 /* give all textareas and inputs (except radios and checkboxes)
   a proper width for narrow vieworts */
-textarea, input[size="40"] {
+textarea,
+input[size="40"] {
 	width: 100%;
 }
 input[size="5"] {
@@ -1022,7 +1100,9 @@ input[size="3"] {
 #postingform fieldset {
 	margin: 0 0 1em 0;
 }
-#postingform label, #postingform input[type="text"], #postingform select {
+#postingform label,
+#postingform input[type="text"],
+#postingform select {
 	display: block;
 }
 
@@ -1060,7 +1140,9 @@ ul.reply li a {
 	font-weight: normal;
 }
 
-ul.reply, ul.deep-reply, ul.very-deep-reply {
+ul.reply,
+ul.deep-reply,
+ul.very-deep-reply {
 	margin:0;
 	padding: 0 0 0 0.75rem;
 	list-style-type:none;
@@ -1079,10 +1161,12 @@ ul.reply li {
 .thread li > a:link {
 	color: #00c;
 }
-.thread li > a:visited, .thread li > a.read {
+.thread li > a:visited,
+.thread li > a.read {
 	color: #236;
 }
-.thread li > a:focus, .thread li > a:hover {
+.thread li > a:focus,
+.thread li > a:hover {
 	color: #00f;
 	text-decoration: underline;
 }
@@ -1107,7 +1191,8 @@ ul.reply li {
 	color: #082;
 }
 
-.opening-entry, .following-entry {
+.opening-entry,
+.following-entry {
 	padding-left: 1.2em;
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
@@ -1198,7 +1283,14 @@ article header .author {
 	margin: 0;
 }
 
-article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .posting-views, article header .op-link, article header .interpunction {
+article header .posting-hp,
+article header .posting-location,
+article header .posting-time,
+article header .posting-ip,
+article header .posting-edited,
+article header .posting-views,
+article header .op-link,
+article header .interpunction {
 	display: none;
 }
 
@@ -1209,13 +1301,16 @@ article footer .tags {
 	margin: 0 0 0.5em 0;
 }
 
-article .tags h3, article .tags ul {
+article .tags h3,
+article .tags ul {
 	font-size: 0.82em;
 	font-weight: normal;
 	margin: 0;
 }
 
-article .tags h3, article .tags ul, article .tags li {
+article .tags h3,
+article .tags ul,
+article .tags li {
 	display: inline;
 	padding: 0 0.15em 0 0;
 	padding: 0 0.15rem 0 0;
@@ -1333,7 +1428,8 @@ article footer .options li {
 	padding: 0;
 }
 
-article footer .options li a, article footer .options li > span {
+article footer .options li a,
+article footer .options li > span {
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
@@ -1346,7 +1442,8 @@ article footer .options li > span {
 	color: #888;
 	background-color: #f0f0eb;
 }
-article .options li a .icon, article .options li > span .icon {
+article .options li a .icon,
+article .options li > span .icon {
 	display: inline-block;
 	padding: 0;
 	width: 1em;
@@ -1357,10 +1454,12 @@ article .options li a .icon, article .options li > span .icon {
 	background-size: 1em 1em;
 	background-position: center center;
 }
-article footer .options li a:link, article footer .options li a:visited {
+article footer .options li a:link,
+article footer .options li a:visited {
 	background-color: #f9f9f9;
 }
-article footer .options li a:focus, article footer .options li a:hover {
+article footer .options li a:focus,
+article footer .options li a:hover {
 	background-color: #d9efff;
 }
 article footer .options li a:active {
@@ -1384,10 +1483,13 @@ article footer a.move .icon {
 article footer a.report .icon {
 	background-image: url(images/warning.svg);
 }
-article footer a.lock .icon, article footer a.lock-thread .icon, article footer li .locked .icon {
+article footer a.lock .icon,
+article footer a.lock-thread .icon,
+article footer li .locked .icon {
 	background-image: url(images/lock-closed.svg);
 }
-article footer a.unlock .icon, article footer a.unlock-thread .icon {
+article footer a.unlock .icon,
+article footer a.unlock-thread .icon {
 	background-image: url(images/lock-open.svg);
 }
 /* special rules for thread tree below singe posting view*/
@@ -1431,7 +1533,9 @@ section.thread-tree header p {
 .hover-layer > :last-child {
 	margin-bottom: 0;
 }
-.hover-layer input[type="text"], .hover-layer input[type="password"], .hover-layer input[type="email"] {
+.hover-layer input[type="text"],
+.hover-layer input[type="password"],
+.hover-layer input[type="email"] {
 	width: 15.5em;
 }
 .hover-layer input[type="checkbox"] {
@@ -1456,7 +1560,8 @@ span.tail {
 	margin: 0 0.125em 0 0;
 	margin: 0 0.125rem 0 0;
 }
-.item-tools a, .item-tools span.replace-tool {
+.item-tools a,
+.item-tools span.replace-tool {
 	display: flex;
 	align-items: center;
 }
@@ -1475,7 +1580,9 @@ span.tail a img {
 	height: 0.75em;
 	margin-right: 0.125em;
 }
-.item-tools a span:not([class="icon"]), span.tail a span, .item-tools span.replace-tool span:not([class="icon"]) {
+.item-tools a span:not([class="icon"]),
+span.tail a span,
+.item-tools span.replace-tool span:not([class="icon"]) {
 	position: absolute !important;
 	height: 1px;
 	width: 1px;
@@ -1504,7 +1611,8 @@ a.user-profile .icon {
 .editor .icon {
 	background-image: url(images/pencil.svg), url(images/file.svg);
 }
-.terminator .icon, .backup-terminator .icon {
+.terminator .icon,
+.backup-terminator .icon {
 	background-image: url(images/marker-cross.svg);
 }
 .move-item-up .icon {
@@ -1533,13 +1641,21 @@ a.user-profile .icon {
 	color: #620;
 	background: url(images/marker-cross.svg) no-repeat 0.2em center / 1em 1em #fda;
 }
-.ok h2, .ok h3, .ok p, .ok ul, .errormessage h2, .errormessage h3, .errormessage p, .errormessage ul {
+.ok h2,
+.ok h3,
+.ok p,
+.ok ul,
+.errormessage h2,
+.errormessage h3,
+.errormessage p,
+.errormessage ul {
 	margin: 0.25em 0;
 	margin: 0.25rem 0;
 }
 
 /* elements in the user profile edit */
-.checkboxlist, .radio-button-native ul {
+.checkboxlist,
+.radio-button-native ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -1547,7 +1663,10 @@ a.user-profile .icon {
 /* end: elements of the main block */
 
 /* elements of the footer */
-#footer-1, #footer-2, #footermenu, #footermenu li {
+#footer-1,
+#footer-2,
+#footermenu,
+#footermenu li {
 	margin: 0;
 	padding: 0;
 }
@@ -1562,7 +1681,8 @@ a.user-profile .icon {
 #footermenu li:first-child {
 	margin-left: 0;
 }
-.rss, .contact {
+.rss,
+.contact {
 	padding-left: 1.2em;
 	background-repeat: no-repeat;
 	background-size: 1em 1em;
@@ -1592,7 +1712,10 @@ a.user-profile .icon {
 
 /* buttonbar below the textarea */
 
-#bbcode-options ul, #bbcode-options table, #bbcode-options table td, #bbcode-options table a {
+#bbcode-options ul,
+#bbcode-options table,
+#bbcode-options table td,
+#bbcode-options table a {
 	margin: 0;
 	padding: 0;
 }
@@ -1671,7 +1794,8 @@ a.user-profile .icon {
 .js-cursor-pointer       { cursor: pointer; }
 .js-cursor-move          { cursor: move; }
 .js-display-fold .wrapper,
-.js-display-fold #sidebarcontent #latest-postings, .js-display-fold #sidebarcontent #tagcloud {
+.js-display-fold #sidebarcontent #latest-postings,
+.js-display-fold #sidebarcontent #tagcloud {
 	display: none;
 }
 article.js-display-fold header {
@@ -1703,7 +1827,10 @@ div.warning {
 	thead {
 		display: none;
 	}
-	tbody, tr, th, td {
+	tbody,
+	tr,
+	th,
+	td {
 		display: block;
 	}
 	tr {
@@ -1714,11 +1841,14 @@ div.warning {
 	tr:last-child {
 		margin-bottom: 0;
 	}
-	th, td {
+	th,
+	td {
 		padding: 0.125em 0.25em;
 		padding: 0.125rem 0.25rem;
 	}
-	.normaltab .subject, table.normaltab td.c, .settings th {
+	.normaltab .subject,
+	table.normaltab td.c,
+	.settings th {
 		border-bottom: 1px dotted var(--border-light);
 		background: 
 	}
@@ -1744,11 +1874,15 @@ div.warning {
 
 /* navigation on wider screens */
 @media screen and (min-width: 32em) {
-	body > header, nav#subnav, main, body > footer {
+	body > header,
+	nav#subnav,
+	main,
+	body > footer {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 	}
-	#subnav li:not(:first-child), #subnav-2 li:not(:first-child) {
+	#subnav li:not(:first-child),
+	#subnav-2 li:not(:first-child) {
 		margin-left: 0.25em;
 	}
 	#subnav a {
@@ -1757,7 +1891,8 @@ div.warning {
 	#subnav a .icon {
 		background-size: 0.85em 0.85em;
 	}
-	#subnav a span:not([class]), #subnav a strong {
+	#subnav a span:not([class]),
+	#subnav a strong {
 		flex: 1 1 auto;
 		position: static;
 		width: auto;
@@ -1780,16 +1915,26 @@ div.warning {
 	.reply-wrapper {
 		margin: 0 0 0 0.75rem;
 	}
-	article header .posting-hp, article header .posting-location, article header .posting-time, article header .posting-ip, article header .posting-edited, article header .op-link, article header .interpunction {
+	article header .posting-hp,
+	article header .posting-location,
+	article header .posting-time,
+	article header .posting-ip,
+	article header .posting-edited,
+	article header .op-link,
+	article header .interpunction {
 		display: inline;
 	}
-	article.js-display-fold h2, article.js-display-fold .author {
+	article.js-display-fold h2,
+	article.js-display-fold .author {
 		display: inline;
 	}
-	article header .posting-ago, .js-display-fold .author *, .js-display-fold .tags {
+	article header .posting-ago,
+	.js-display-fold .author *,
+	.js-display-fold .tags {
 		display: none;
 	}
-	.js-display-fold .author strong, .js-display-fold .author strong * {
+	.js-display-fold .author strong,
+	.js-display-fold .author strong * {
 		display: inline;
 	}
 	.hover-layer {
@@ -1824,7 +1969,10 @@ div.warning {
 }
 
 @media screen and (min-width: 48em) {
-	body > header, nav#subnav, main, body > footer {
+	body > header,
+	nav#subnav,
+	main,
+	body > footer {
 		padding-left: 1em;
 		padding-right: 1em;
 	}
@@ -1835,7 +1983,8 @@ div.warning {
 	#bottombar {
 		margin-top: 0;
 	}
-	#admin-menu-container, #main-container {
+	#admin-menu-container,
+	#main-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -1843,16 +1992,20 @@ div.warning {
 	#main-container {
 		flex-direction: row-reverse;
 	}
-	#admin-menu-container #additional-admin-info, #main-container #main-thread-list {
+	#admin-menu-container #additional-admin-info,
+	#main-container #main-thread-list {
 		margin-right: 0.5em;
 	}
-	#admin-menu-container .adminmenu, #main-container #sidebar, #main-container #bottombar {
+	#admin-menu-container .adminmenu,
+	#main-container #sidebar,
+	#main-container #bottombar {
 		margin-left: 0.5em;
 	}
 	#additional-admin-info section:first-child {
 		margin-top: 0;
 	}
-	#additional-admin-info, #sidebar, #bottombar {
+	#additional-admin-info,
+	#sidebar, #bottombar {
 		flex: 0 0 15em;
 	}
 	.adminmenu, #main-thread-list {
@@ -1877,7 +2030,10 @@ div.warning {
 		height: 2.25em;
 		flex: 0 0 2.25em;
 	}
-	aside h2, aside section, .thread-posting, .adminmenu a {
+	aside h2,
+	aside section,
+	.thread-posting,
+	.adminmenu a {
 		box-shadow: 0.2em 0.2em 0.4em 0.2em #ced;
 	}
 	/* table definitions */
@@ -1897,7 +2053,8 @@ div.warning {
 	tbody tr:nth-child(even) {
 		background:#fff;
 	}
-	th, td {
+	th,
+	td {
 		border-right: 1px dotted var(--border-light);
 	}
 	th {
@@ -1923,7 +2080,8 @@ div.warning {
 		border: 1px solid var(--border-light);
 		background: #f4f4f4;
 	}
-	th .sorting-ui a:focus, th .sorting-ui a:hover {
+	th .sorting-ui a:focus,
+	th .sorting-ui a:hover {
 		background: #fafac0;
 	}
 	th .sorting-ui a:first-of-type {
@@ -1972,13 +2130,17 @@ div.warning {
 }
 
 @media screen and (min-width: 64em) {
-	#additional-admin-info, #sidebar, #bottombar {
+	#additional-admin-info,
+	#sidebar,
+	#bottombar {
 		flex: 0 0 17.5em;
 	}
 }
 
 @media screen and (min-width: 72em) {
-	#additional-admin-info, #sidebar, #bottombar {
+	#additional-admin-info,
+	#sidebar,
+	#bottombar {
 		flex: 0 0 20em;
 	}
 }
