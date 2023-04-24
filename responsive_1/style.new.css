@@ -381,6 +381,7 @@ h1 a:active {
 #edit_avatar > span {
 	text-align: center;
 }
+.radio-select input[type="radio"],
 [type="checkbox"],
 .radio-button-native [type="radio"] {
 	border: 0;
@@ -465,9 +466,6 @@ h1 a:active {
 	background-color: #467;
 	background-image: linear-gradient(#467, #456a79);
 	color: #fff;
-}
-.radio-select input[type="radio"] {
-	display: none;
 }
 .radio-toggle-switch ul {
 	list-style: none;
