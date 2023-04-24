@@ -361,9 +361,18 @@ h1 a:focus, h1 a:hover, h1 a:active {
 #edit_avatar > span {
 	text-align: center;
 }
-[type="checkbox"], .radio-button-native [type="radio"] {
+[type="checkbox"],
+.radio-button-native [type="radio"] {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
 	position: absolute;
-	left: -9999px;
+	word-wrap: normal !important;
 }
 [type="checkbox"] + label, #postingform [type="checkbox"] + label, .radio-button-native [type="radio"] + label {
 	padding: 0.125em 0.25em;
