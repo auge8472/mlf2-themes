@@ -85,12 +85,12 @@
 
 <p>
 <label for="name">{#name_marking#}</label>
-<input id="name" type="text" size="40" name="{$fld_user_name}" value="{if $name}{$name}{/if}" maxlength="{$settings.username_maxlength}"  tabindex="1" />
+<input id="name" type="text" size="40" name="{$fld_user_name}" value="{if $name}{$name}{/if}" maxlength="{$settings.username_maxlength}" />
 </p>
 
 <p>
 <label for="email">{#email_marking#} <span class="xsmall">{#optional_email#}</span></label>
-<input id="email" type="text" size="40" name="{$fld_user_email}" value="{if $email}{$email}{/if}" maxlength="{$settings.email_maxlength}" tabindex="2" />
+<input id="email" type="text" size="40" name="{$fld_user_email}" value="{if $email}{$email}{/if}" maxlength="{$settings.email_maxlength}" />
 </p>
 
 <p class="hp">
@@ -100,7 +100,7 @@
 
 <p>
 <label for="hp">{#hp_marking#} <span class="xsmall">{#optional#}</span></label>
-<input id="hp" type="text" size="40" name="{$fld_hp}" value="{if $hp}{$hp}{/if}" maxlength="{$settings.hp_maxlength}" tabindex="3" />
+<input id="hp" type="text" size="40" name="{$fld_hp}" value="{if $hp}{$hp}{/if}" maxlength="{$settings.hp_maxlength}" />
 </p>
 
 <p class="hp">
@@ -110,7 +110,7 @@
 
 <p>
 <label for="location">{#location_marking#} <span class="xsmall">{#optional#}</span></label>
-<input id="location" type="text" size="40" name="{$fld_location}" value="{if $location}{$location}{/if}" maxlength="{$settings.location_maxlength}" tabindex="4" />
+<input id="location" type="text" size="40" name="{$fld_location}" value="{if $location}{$location}{/if}" maxlength="{$settings.location_maxlength}" />
 </p>
 
 {if $settings.remember_userdata == 1 && $posting_mode==0 && !$user}
@@ -125,7 +125,7 @@
 <fieldset>
 {if $categories}
 <p><label for="p_category">{#category_marking#}</label>
-<select id="p_category" size="1" name="p_category" tabindex="5"{if $posting_mode==0 && $id>0 || $posting_mode==1 && $pid>0} disabled="disabled"{/if}>
+<select id="p_category" size="1" name="p_category" {if $posting_mode==0 && $id>0 || $posting_mode==1 && $pid>0} disabled="disabled"{/if}>
 {foreach key=key item=val from=$categories}
 {if $key!=0}<option value="{$key}"{if $key==$p_category} selected="selected"{/if}>{$val}</option>{/if}
 {/foreach}
@@ -136,13 +136,13 @@
 {/if}
 
 <p><label for="subject">{#subject_marking#}</label>
-<input id="subject" type="text" size="50" name="{$fld_subject}" value="{if $subject}{$subject}{/if}" maxlength="{$settings.subject_maxlength}" tabindex="6" />
+<input id="subject" type="text" size="50" name="{$fld_subject}" value="{if $subject}{$subject}{/if}" maxlength="{$settings.subject_maxlength}" />
 </p>
 
 {if $settings.tags > 0 && ( ($settings.tags == 1 && ($admin || $mod)) || ($settings.tags == 2 && ($user_type === 0 || $admin || $mod)) || $settings.tags > 2 )}
 <p>
 <label for="tags">{#tags_marking#} <span class="xsmall">{#tags_note#}</span></label>
-<input id="tags" type="text" size="50" name="tags" value="{$tags|default:""}" maxlength="253" tabindex="-1" />
+<input id="tags" type="text" size="50" name="tags" value="{$tags|default:""}" maxlength="253" />
 </p>
 {/if}
 </fieldset>
@@ -232,7 +232,7 @@ JavaScript isn't available.
 {/if}
 
 </div>
-<textarea id="text" cols="80" rows="21" name="text" tabindex="7">{if $text}{$text}{/if}</textarea>
+<textarea id="text" cols="80" rows="21" name="text" >{if $text}{$text}{/if}</textarea>
 </fieldset>
 
 {if $signature || $provide_email_notification || $provide_sticky || $terms_of_use_agreement || $data_privacy_agreement}
@@ -244,11 +244,11 @@ JavaScript isn't available.
 {/if}
 {if $terms_of_use_agreement}
 {assign var=terms_of_use_url value=$settings.terms_of_use_url}
- <li><input id="terms_of_use_agree" tabindex="8" type="checkbox" name="terms_of_use_agree" value="1"{if $terms_of_use_agree && $terms_of_use_agree==1} checked="checked"{/if} class="small-input" /><label for="terms_of_use_agree"><span class="icon"></span><span>{if $terms_of_use_url}{#terms_of_use_agreement#|replace:"[[":"<a id=\"terms_of_use\" href=\"$terms_of_use_url\">"|replace:"]]":"</a>"}{else}{#terms_of_use_agreement#|replace:"[[":""|replace:"]]":""}{/if}</span></label></li>
+ <li><input id="terms_of_use_agree" type="checkbox" name="terms_of_use_agree" value="1"{if $terms_of_use_agree && $terms_of_use_agree==1} checked="checked"{/if} class="small-input" /><label for="terms_of_use_agree"><span class="icon"></span><span>{if $terms_of_use_url}{#terms_of_use_agreement#|replace:"[[":"<a id=\"terms_of_use\" href=\"$terms_of_use_url\">"|replace:"]]":"</a>"}{else}{#terms_of_use_agreement#|replace:"[[":""|replace:"]]":""}{/if}</span></label></li>
 {/if}
 {if $data_privacy_agreement}
 {assign var=data_privacy_statement_url value=$settings.data_privacy_statement_url}
- <li><input id="data_privacy_statement_agree" tabindex="9" type="checkbox" name="data_privacy_statement_agree" value="1"{if $data_privacy_statement_agree && $data_privacy_statement_agree==1} checked="checked"{/if} /><label for="data_privacy_statement_agree"><span class="icon"></span><span>{if $data_privacy_statement_url}{#data_privacy_agreement#|replace:"[[":"<a id=\"data_privacy_statement\" href=\"$data_privacy_statement_url\">"|replace:"]]":"</a>"}{else}{#data_privacy_agreement#|replace:"[[":""|replace:"]]":""}{/if}</span></label></li>
+ <li><input id="data_privacy_statement_agree" type="checkbox" name="data_privacy_statement_agree" value="1"{if $data_privacy_statement_agree && $data_privacy_statement_agree==1} checked="checked"{/if} /><label for="data_privacy_statement_agree"><span class="icon"></span><span>{if $data_privacy_statement_url}{#data_privacy_agreement#|replace:"[[":"<a id=\"data_privacy_statement\" href=\"$data_privacy_statement_url\">"|replace:"]]":"</a>"}{else}{#data_privacy_agreement#|replace:"[[":""|replace:"]]":""}{/if}</span></label></li>
 {/if}
 </ul>
 
@@ -279,16 +279,16 @@ JavaScript isn't available.
 {if $captcha.type==2}
 <p><img class="captcha" src="modules/captcha/captcha_image.php?{$session.name}={$session.id}" alt="{#captcha_image_alt#}" width="180" height="40" /><br />
 <label for="captcha_code">{#captcha_expl_image#}</label><br />
-<input id="captcha_code" type="text" name="captcha_code" value="" size="10" tabindex="10" /></p>
+<input id="captcha_code" type="text" name="captcha_code" value="" size="10" /></p>
 {else}
-<p><label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><input id="captcha_code" type="text" name="captcha_code" value="" size="5" maxlength="5" tabindex="9" /></p>
+<p><label for="captcha_code">{#captcha_expl_math#} {$captcha.number_1} + {$captcha.number_2} = </label><input id="captcha_code" type="text" name="captcha_code" value="" size="5" maxlength="5" /></p>
 {/if}
 </fieldset>
 {/if}
 
 <p>
- <button name="save_entry" value="{#message_submit_button#}" tabindex="12">{#message_submit_button#}</button>
- <button name="preview" value="{#message_preview_button#}" tabindex="11">{#message_preview_button#}</button>
+ <button name="save_entry" value="{#message_submit_button#}">{#message_submit_button#}</button>
+ <button name="preview" value="{#message_preview_button#}">{#message_preview_button#}</button>
 </p>
 </div>
 </form>
