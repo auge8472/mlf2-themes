@@ -1291,7 +1291,8 @@ article header p {
 
 article header .category,
 .thread a.category,
-.cell-category a.category {
+.cell-category a.category,
+.searchresults a.category {
 	font-weight: normal;
 	font-size: 1em;
 	font-size: 1rem;
