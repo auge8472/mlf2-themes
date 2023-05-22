@@ -406,6 +406,12 @@ h1 a:active {
 	align-items: center;
 	font-style: italic;
 }
+/* format the labels of focussed checkboxes and "normal" displayed radio buttons */
+[type="checkbox"]:focus + label,
+.radio-button-native [type="radio"]:focus + label {
+	color: #311;
+	text-decoration: underline dotted 0.2em;
+}
 /* replace checkboxes and "normal" displayed radio buttons with graphics */
 [type="checkbox"] + label .icon,
 .radio-button-native [type="radio"] + label .icon {
@@ -471,6 +477,10 @@ h1 a:active {
 	background-image: linear-gradient(#467, #456a79);
 	color: #fff;
 }
+/* format the labels of focussed radiobuttons, that are displayed as buttons */
+.radio-select [type="radio"]:focus + label {
+	text-decoration: underline dotted 0.2em;
+}
 /* format radio buttons, displayed as toggle switches */
 .radio-toggle-switch ul {
 	list-style: none;
@@ -490,6 +500,10 @@ h1 a:active {
 .radio-toggle-switch input[type="radio"]:not(:checked) ~ label {
 	color: #444;
 	font-style: italic;
+}
+/* format the labels of focussed radiobuttons, that are displayed as toggle switches */
+.radio-toggle-switch [type="radio"]:focus + label {
+	text-decoration: underline dotted 0.2em;
 }
 .radio-toggle-switch input {
 	opacity: 0;
