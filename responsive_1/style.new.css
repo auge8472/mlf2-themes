@@ -931,46 +931,6 @@ aside section h3 {
 .adminmenu a[href*='&action=spam_protection'] .icon {
 	background-image: url("images/shield.svg");
 }
-.adminmenu a[href*='&action=backup'] .icon,
-.adminmenu a[href$='create_backup=0'] .icon {
-	background-image: url("images/floppy-disc.svg");
-}
-.adminmenu a[href$='create_backup=1'] .icon {
-	background: url("images/entries-listing.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=2'] .icon {
-	background: url("images/users.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=3'] .icon {
-	background: url("images/settings-sliders.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=4'] .icon {
-	background: url("images/categories.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=5'] .icon {
-	background: url("images/files.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=6'] .icon {
-	background: url("images/smilies.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=7'] .icon {
-	background: url("images/warning.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=8'] .icon {
-	background: url("images/bookmark.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=9'] .icon {
-	background: url("images/warning.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=10'] .icon {
-	background: url("images/clock.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=11'] .icon {
-	background: url("images/contact-email.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
-.adminmenu a[href$='create_backup=12'] .icon {
-	background: url("images/tags.svg") 100% 100% / 75% no-repeat, url("images/floppy-disc.svg") left top / 60% no-repeat;
-}
 .adminmenu a[href*='&action=update'] .icon {
 	background-image: url("images/software-update.svg");
 }
