@@ -398,7 +398,6 @@ h1 a:active {
 }
 /* format the labels of checkboxes as well as "normal" displayed radio buttons */
 [type="checkbox"] + label,
-#postingform [type="checkbox"] + label,
 .radio-button-native [type="radio"] + label {
 	padding: 0.125em 0.25em;
 	color: #444;
