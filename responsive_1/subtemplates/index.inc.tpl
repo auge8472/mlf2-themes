@@ -57,9 +57,7 @@
 <li><a class="{if $data.$element.pid==0}opening-entry{else}following-entry{/if}{if $data.$element.new} new{/if}{if $data.$element.sticky>0} sticky{/if}{if $data.$element.locked==1} locked{/if}{if $data.$element.is_read} read{/if}{if $data.$element.spam==1} spam{/if}" href="index.php?id={$data.$element.id}">{$data.$element.subject}</a>
 {if $data.$element.no_text} <img class="no-text" src="{$THEMES_DIR}/{$theme}/images/no_content.svg" alt="{#no_text_alt#}" width="12" height="12" />{/if} - 
 <strong{if $data.$element.user_type==2} class="admin registered_user"{elseif $data.$element.user_type==1} class="mod registered_user"{elseif $data.$element.user_id>0} class="registered_user"{/if}>{$data.$element.name}</strong> <time>{$data.$element.formated_time}</time>
-
 {if $data.$element.category_name && $data.$element.pid==0 && $category<=0} <a href="index.php?mode=index&amp;category={$data.$element.category}" class="category" title="{#change_category_link#|replace:"[category]":$data.$element.category_name|escape:"html"}"><span class="category">{$data.$element.category_name}</span></a>{/if} · 
-
 <span id="p{$data.$element.id}" class="tail">{if $data.$element.pid==0}<a href="index.php?mode=thread&amp;id={$data.$element.id}"><img src="{$THEMES_DIR}/{$theme}/images/thread-entries-nested.svg" alt="" width="12" height="12" /><span>{#open_whole_thread#}</span></a>{/if}{if $admin || $mod}
 {if $data.$element.not_classified_spam_ham==1}<a><img src="{$THEMES_DIR}/{$theme}/images/keep_eye_on.svg" title="{#unclassified_linktitle#}" alt="[!]" width="11" height="11" /></a>{/if}
 {if $data.$element.marked==0} <a id="marklink_{$data.$element.id}" href="index.php?mode=posting&amp;mark={$data.$element.id}"><img id="markimg_{$data.$element.id}" src="{$THEMES_DIR}/{$theme}/images/unmarked.png" alt="" width="11" height="11" /><span>{#mark_linktitle#}</span></a>

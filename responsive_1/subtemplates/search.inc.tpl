@@ -20,7 +20,10 @@
 <p>{if $search_results_count>1}{$smarty.config.several_postings_found|replace:"[number]":$search_results_count}{else}{#one_posting_found#}{/if}</p>
 <ul class="searchresults">
 {section name=result loop=$search_results}
-<li><a class="{if $search_results[result].pid==0}thread-search{else}reply-search{/if}{if $search_results[result].is_read} read{/if}" href="index.php?id={$search_results[result].id}">{$search_results[result].subject}</a>{if $search_results[result].no_text} <img class="no-text" src="{$THEMES_DIR}/{$theme}/images/no_content.svg" alt="{#no_text_alt#}" width="12" height="12" />{/if} - <strong>{$search_results[result].name}</strong>, <span id="p{$search_results[result].id}" class="tail">{$search_results[result].formated_time} <a href="index.php?mode=thread&amp;id={$search_results[result].id}"><img src="{$THEMES_DIR}/{$theme}/images/thread-entries-nested.svg" alt="{#open_whole_thread#}" width="12" height="12" /></a> {if $search_results[result].category}<a href="index.php?mode=index&amp;category={$search_results[result].category}"><span class="category">({$search_results[result].category_name})</span></a>{/if}</span></li>
+<li><a class="{if $search_results[result].pid==0}thread-search{else}reply-search{/if}{if $search_results[result].is_read} read{/if}" href="index.php?id={$search_results[result].id}">{$search_results[result].subject}</a>{if $search_results[result].no_text} <img class="no-text" src="{$THEMES_DIR}/{$theme}/images/no_content.svg" alt="{#no_text_alt#}" width="12" height="12" />{/if} - 
+<strong>{$search_results[result].name}</strong> <time>{$search_results[result].formated_time}</time>
+{if $search_results[result].category && $category<=0} <a href="index.php?mode=index&amp;category={$search_results[result].category}" class="category" title="{#change_category_link#|replace:"[category]":$search_results[result].category_name|escape:"html"}"><span class="category">{$search_results[result].category_name}</span></a>{/if} · 
+<span id="p{$search_results[result].id}" class="tail"><a href="index.php?mode=thread&amp;id={$search_results[result].id}"><img src="{$THEMES_DIR}/{$theme}/images/thread-entries-nested.svg" alt="{#open_whole_thread#}" width="12" height="12" /></a></span></li>
 {/section}
 </ul>
 {if $page_browse && $page_browse.total_items > $page_browse.items_per_page}
