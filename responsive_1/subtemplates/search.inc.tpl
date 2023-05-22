@@ -22,7 +22,7 @@
 {section name=result loop=$search_results}
 <li><a class="{if $search_results[result].pid==0}thread-search{else}reply-search{/if}{if $search_results[result].is_read} read{/if}" href="index.php?id={$search_results[result].id}">{$search_results[result].subject}</a>{if $search_results[result].no_text} <img class="no-text" src="{$THEMES_DIR}/{$theme}/images/no_content.svg" alt="{#no_text_alt#}" width="12" height="12" />{/if} - 
 <strong>{$search_results[result].name}</strong> <time>{$search_results[result].formated_time}</time>
-{if $search_results[result].category && $category<=0} <a href="index.php?mode=index&amp;category={$search_results[result].category}" class="category" title="{#change_category_link#|replace:"[category]":$search_results[result].category_name|escape:"html"}"><span class="category">{$search_results[result].category_name}</span></a>{/if} · 
+{if $search_results[result].category && $category<=0} <a href="index.php?mode=index&amp;category={$search_results[result].category}" class="category" title="{#change_category_link#|replace:"[category]":$search_results[result].category_name|escape:"html"}">{$search_results[result].category_name}</a>{/if} · 
 <span id="p{$search_results[result].id}" class="tail"><a href="index.php?mode=thread&amp;id={$search_results[result].id}"><img src="{$THEMES_DIR}/{$theme}/images/thread-entries-nested.svg" alt="{#open_whole_thread#}" width="12" height="12" /></a></span></li>
 {/section}
 </ul>
