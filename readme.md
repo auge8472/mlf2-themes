@@ -11,9 +11,18 @@ The project and testing forum resides under [www.projekt-mlf.de/forum](https://w
 
 First attempt to adapt the default theme and to modernise it.
 
+### Compatibility
+
+- latest version in the 0.1-branch: [0.1.22](https://github.com/auge8472/mlf2-themes/releases/tag/v0.1.22), compatilbe with MLF2 versions 2.4.22, 2.4.23, 2.4.24
+- latest version in the 0.2-branch: [0.2.2](https://github.com/auge8472/mlf2-themes/releases/tag/v0.2.2), compatible with MLF2 versions between 20220508.1 and 20220803.1
+
 ## Default theme with dark mode
 
 A theme which is strictly replicating the default theme of MLF2. The theme can automatically switch to dark mode based on the system settings of the visitor.
+
+### Compatibility
+
+- latest code status (download of the master branch): compatible with MLF 20251129.1 and *mostly* compatible with 20260208.1
 
 ## Installation
 
