@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="264" height="264" viewBox="0 0 264 264">
+ <defs>
+  <linearGradient id="frame-bottom" x1="0%" y1="0%" x2="0%" y2="80%">
+   <stop offset="0%" stop-color="#87c97d" />
+   <stop offset="100%" stop-color="#286824" />
+  </linearGradient>
+  <linearGradient id="plate-bottom" x1="0%" y1="0%" x2="0%" y2="80%">
+   <stop offset="0%" stop-color="#a5d49c" />
+   <stop offset="100%" stop-color="#79bd73" />
+  </linearGradient>
+  <linearGradient id="frame-top" x1="0%" y1="80%" x2="80%" y2="0%">
+   <stop offset="0%" stop-color="#87c97d" />
+   <stop offset="100%" stop-color="#286824" />
+  </linearGradient>
+  <linearGradient id="plate-top" x1="0%" y1="80%" x2="80%" y2="0%">
+   <stop offset="0%" stop-color="#a5d49c" />
+   <stop offset="100%" stop-color="#79bd73" />
+  </linearGradient>
+ </defs>
+ <style type="text/css">
+  <![CDATA[
+  svg { fill: transparent; }
+  .arrow-bottom, .arrow-top { stroke-width: 12; stroke-linejoin: round; }
+  .arrow-bottom { fill: url(#plate-bottom); stroke: url(#frame-bottom); }
+  .arrow-top { fill: url(#plate-top); stroke: url(#frame-top); }
+  ]]>
+ </style>
+ <symbol id="arrow" viewBox="0 0 132 264">
+  <path d="M 66,22 l60,60 -32,0 0,74 a 32 32, 0, 0, 0, 32,32 v56 a 88 88, 0, 0, 1,-88,-88 v-74 h-32 z" />
+ </symbol>
+ <g transform="rotate(90, 132, 132)">
+  <use href="#arrow" class="arrow-top" x="17" y="33" width="121" height="242" />
+  <use href="#arrow" class="arrow-bottom" x="149" y="33" width="121" height="242" transform="rotate(180, 198, 132)" />
+ </g>
+</svg>

@@ -1,0 +1,180 @@
+{config_load file=$language_file section="user_edit"}
+{if $errors}
+<p class="notice caution">{#error_headline#}</p>
+<ul>
+{section name=mysec loop=$errors}
+{assign var="error" value=$errors[mysec]}
+<li>{$smarty.config.$error|replace:"[profile_length]":$profil_length|replace:"[profile_maxlength]":$settings.profile_maxlength|replace:"[signature_length]":$signature_length|replace:"[signature_maxlength]":$settings.signature_maxlength|replace:"[word]":$word|replace:"[not_accepted_word]":$not_accepted_word|replace:"[not_accepted_words]":$not_accepted_words}</li>
+{/section}
+</ul>
+{/if}
+{if $msg}<p class="notice ok">{$smarty.config.$msg}</p>{/if}
+<form action="index.php" method="post" accept-charset="{#charset#}">
+<div>
+<input type="hidden" name="csrf_token" value="{$CSRF_TOKEN}" />
+<input type="hidden" name="mode" value="user" />
+<table class="normaltab descript">
+<tbody>
+<tr>
+<td><strong>{#edit_user_name#}</strong></td>
+<td><strong>{$user_name}</strong></td>
+</tr>
+{if $settings.avatars>0}
+<tr>
+<td><strong>{#edit_avatar#}</strong></td>
+<td>
+<div id="avatar_wrapper">{if $avatar}<img src="{$avatar.image}" alt="{#edit_avatar_link_title#}" width="{$avatar.width}" height="{$avatar.height}" />{/if}</div>
+<span class="small">[ <a id="edit_avatar" href="index.php?mode=avatar">{#edit_avatar_link#}</a> ]</span>
+</td>
+</tr>
+{/if}
+<tr>
+<td><strong>{#edit_user_pw#}</strong></td>
+<td><span class="small">[ <a href="index.php?mode=user&amp;action=edit_pw">{#edit_pw#}</a> ]</span></td>
+</tr>
+<tr>
+<td><strong>{#edit_user_email#}</strong></td>
+<td><!--<a href="mailto:{$user_email}">-->{$user_email}<!--</a>--> &nbsp;<span class="small">[ <a href="index.php?mode=user&amp;action=edit_email">{#edit_email#}</a> ]</span></td>
+</tr>
+<tr>
+<td><strong>{#edit_user_contacting#}</strong></td>
+<td>
+<input id="email_contact_disabled"   type="radio" name="email_contact" value="0"{if $email_contact=="0"} checked="checked"{/if} /><label for="email_contact_disabled">{#edit_user_contacting_disabled#}</label><br/>
+<input id="email_contact_registered" type="radio" name="email_contact" value="1"{if $email_contact=="1"} checked="checked"{/if} /><label for="email_contact_registered">{#edit_user_contacting_registered#}</label><br/>
+<input id="email_contact_public"     type="radio" name="email_contact" value="2"{if $email_contact=="2"} checked="checked"{/if} /><label for="email_contact_public">{#edit_user_contacting_public#}</label></td>
+</tr>
+<tr>
+<td><label for="user_hp"><strong>{#edit_user_hp#}</strong></label></td>
+<td><input id="user_hp" type="url" size="40" name="user_hp" value="{$user_hp}" maxlength="{$settings.hp_maxlength}" /></td>
+</tr>
+<tr>
+<td><label for="user_real_name"><strong>{#edit_user_real_name#}</strong></label></td>
+<td><input id="user_real_name" type="text" size="40" name="user_real_name" value="{$user_real_name}" maxlength="{$settings.name_maxlength}" /></td>
+</tr>
+<tr>
+<td><strong>{#edit_user_gender#}</strong></td>
+<td>
+<input id="no-gender" type="radio" name="user_gender" value="0"{if $user_gender=="0"} checked="checked"{/if} /><label for="no-gender">{#gender_not_specified#}</label><br />
+<input id="male" type="radio" name="user_gender" value="1"{if $user_gender=="1"} checked="checked"{/if} /><label for="male">{#male#}</label><br />
+<input id="female" type="radio" name="user_gender" value="2"{if $user_gender=="2"} checked="checked"{/if} /><label for="female">{#female#}</label></td>
+</tr>
+<tr>
+<td><label for="user_birthday"><strong>{#edit_user_birthday#}</strong></label></td>
+<td><input id="user_birthday" type="date" size="40" name="user_birthday" value="{$user_birthday}" /> <span class="small">({#birthday_format#})</span></td>
+</tr>
+<tr>
+<td><label for="user_location"><strong>{#edit_user_location#}</strong></label></td>
+<td><input id="user_location" type="text" size="40" name="user_location" value="{$user_location}" maxlength="{$settings.location_maxlength}" /></td>
+</tr>
+<tr>
+<td><label for="profile"><strong>{#edit_user_profile#}</strong></label></td>
+<td><textarea id="profile" cols="65" rows="12" name="profile">{$profile}</textarea></td>
+</tr>
+<tr>
+<td><label for="signature"><strong>{#edit_user_signature#}</strong></label></td>
+<td><textarea id="signature" cols="65" rows="4" name="signature">{$signature}</textarea></td>
+</tr>
+{if $categories}
+<tr>
+<td><strong>{#edit_user_cat_selection#}</strong></td>
+<td>
+<ul class="checkboxlist">
+{foreach key=key item=val from=$categories}
+{if $key!=0}<li><input id="category_{$key}" type="checkbox" name="category_selection[]" value="{$key}"{if isset($category_selection) && in_array($key,$category_selection)} checked="checked"{/if} /><label for="category_{$key}">{$val}</label></li>{/if}
+{/foreach}
+</ul>
+</td>
+</tr>
+{/if}
+
+{if $languages}
+<tr>
+<td><strong><label for="user_language">{#edit_user_language#}</label></strong></td>
+<td>
+<select id="user_language" name="user_language" size="1">
+<option value=""{if $user_language==''} selected="selected"{/if}>{#edit_user_default_language#|replace:"[default_language]":$default_language}</option>
+{foreach from=$languages item=l}
+<option value="{$l.identifier}"{if $l.identifier==$user_language} selected="selected"{/if}>{$l.title}</option>
+{/foreach}
+</select>
+</td>
+</tr>
+{/if}
+
+<tr>
+<td><strong>{if $time_zones}<label for="user_time_zone">{#edit_user_time_zone#}</label>{else}{#edit_user_time_zone#}{/if}</strong></td>
+<td>
+{if $time_zones}
+<p>
+<select id="user_time_zone" name="user_time_zone" size="1">
+<option value=""{if $user_time_zone==''} selected="selected"{/if}>{if $default_time_zone}{#edit_user_default_time_zone#|replace:"[default_time_zone]":$default_time_zone}{else}{#edit_user_default_time_zone_svr#}{/if}</option>
+{foreach from=$time_zones item=tz}
+<option value="{$tz}"{if $tz==$user_time_zone} selected="selected"{/if}>{$tz}</option>
+{/foreach}
+</select>
+</p>
+{/if}
+<p><span class="small"><label for="user_time_difference">{#edit_user_time_difference#}</label></span><br /><input id="user_time_difference" type="text" size="6" name="user_time_difference" value="{$user_time_difference}" maxlength="6" /></p>
+</td>
+</tr>
+
+{if $themes}
+<tr>
+<td><strong><label for="user_theme">{#edit_user_theme#}</label></strong></td>
+<td>
+<select id="user_theme" name="user_theme" size="1">
+<option value=""{if $user_theme==''} selected="selected"{/if}>{#edit_user_default_theme#|replace:"[default_theme]":$default_theme}</option>
+{foreach from=$themes item=t}
+<option value="{$t.identifier}"{if $t.identifier==$user_theme} selected="selected"{/if}>{$t.title}</option>
+{/foreach}
+</select>
+</td>
+</tr>
+{/if}
+
+{if $settings.autologin==1}
+<tr>
+<td><strong>{#edit_user_auto_login#}</strong></td>
+<td>
+ <ul>
+  <li><input id="auto_login" type="checkbox" name="auto_login" value="1"{if $auto_login==1} checked="checked"{/if} /><label for="auto_login">{#enable_auto_login#}</label></li>
+ </ul>
+</td>
+</tr>
+{/if}
+
+<tr>
+<td><strong>{#edit_user_where_to_open_links#}</strong></td>
+<td>
+ <ul>
+  <li><input id="same-browser-window-forum-default" type="radio" name="browser_link_open" value="0"{if $browser_link_open=="0"} checked="checked"{/if} /><label for="same-browser-window-forum-default">{#where_to_open_links_forum_def#}</label></li>
+  <li><input id="same-browser-window-no" type="radio" name="browser_link_open" value="1"{if $browser_link_open=="1"} checked="checked"{/if} /><label for="same-browser-window-no">{#where_to_open_links_same#}</label></li>
+  <li><input id="new-browser-window-ext" type="radio" name="browser_link_open" value="2"{if $browser_link_open=="2"} checked="checked"{/if} /><label for="new-browser-window-ext">{#where_to_open_links_external#}</label></li>
+  <li><input id="new-browser-window-all" type="radio" name="browser_link_open" value="3"{if $browser_link_open=="3"} checked="checked"{/if} /><label for="new-browser-window-all">{#where_to_open_links_all#}</label></li>
+ </ul>
+</td>
+</td>
+</tr>
+<tr>
+<td><strong class="caution">{#remove_user_account#}</strong></td>
+<td><span class="small">[ <a href="index.php?mode=user&amp;action=remove_account">{#remove_user_account_link#}</a> ]</span></td>
+</tr>
+
+{if $mod||$admin}
+<tr>
+<td><strong>{#edit_user_notification#}</strong></td>
+<td>
+ <ul>
+  <li><input id="new_posting_notification" type="checkbox" name="new_posting_notification" value="1"{if $new_posting_notification=="1"} checked="checked"{/if} /><label for="new_posting_notification">{#admin_mod_notif_posting#}</label></li>
+  <li><input id="new_user_notification" type="checkbox" name="new_user_notification" value="1"{if $new_user_notification=="1"} checked="checked"{/if} /><label for="new_user_notification">{#admin_mod_notif_register#}</label></li>
+ </ul>
+</td>
+</tr>
+{/if}
+</tbody>
+</table>
+<div class="buttonbar">
+ <button name="edit_user_submit" value="{#userdata_submit_button#}">{#userdata_submit_button#}</button>
+</div>
+</div>
+</form>
