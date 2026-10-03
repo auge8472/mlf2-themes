@@ -9,7 +9,7 @@ The project and testing forum resides under [www.projekt-mlf.de/forum](https://w
 
 ## Responsive1
 
-First attempt to adapt the default theme and to modernise it.
+First attempt to adapt the default theme and to modernise it. You can find the theme in the directory `responsive_1`.
 
 ### Compatibility
 
@@ -18,7 +18,7 @@ First attempt to adapt the default theme and to modernise it.
 
 ## Default theme with dark mode
 
-A theme which is strictly replicating the default theme of MLF2. The theme can automatically switch to dark mode based on the system settings of the visitor.
+A theme which is strictly replicating the default theme of MLF2. The theme can automatically switch to dark mode based on the system settings of the visitor. You can find the theme in the directory `mlf-default-with-dark`.
 
 ### Compatibility
 
