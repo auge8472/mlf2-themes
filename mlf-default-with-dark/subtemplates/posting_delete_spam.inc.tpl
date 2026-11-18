@@ -1,9 +1,9 @@
 {config_load file=$language_file section="delete_posting"}
 {if $no_authorisation}
- <p class="notice caution">{#no_authorisation#}</p>
+ <p class="notice caution"><img src="{$FORUM_ADDRESS}/{$THEMES_DIR}/{$theme}/images/general-caution.svg" class="icon" alt="" height="20" width="20">{#no_authorisation#}</p>
 {else}
  <h1>{#delete_spam_hl#}</h1>
- <p class="notice caution">{#caution#}</p>
+ <p class="notice caution"><img src="{$FORUM_ADDRESS}/{$THEMES_DIR}/{$theme}/images/general-caution.svg" class="icon" alt="" height="20" width="20">{#caution#}</p>
  <p>{#delete_spam_confirm#}</p>
  <form action="index.php" method="post" accept-charset="{#charset#}">
   <input type="hidden" name="mode" value="posting" />

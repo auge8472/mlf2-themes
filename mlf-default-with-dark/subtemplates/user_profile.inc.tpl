@@ -85,5 +85,5 @@
 {/if}
 
 {else}
-<p class="notice caution">{#user_account_doesnt_exist#}</p>
+<p class="notice caution"><img src="{$FORUM_ADDRESS}/{$THEMES_DIR}/{$theme}/images/general-caution.svg" class="icon" alt="" height="20" width="20">{#user_account_doesnt_exist#}</p>
 {/if}

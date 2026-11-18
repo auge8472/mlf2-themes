@@ -48,7 +48,7 @@
 	
 {elseif $action=='delete_bookmark'}
 	{if $bookmark}
-		<p class="notice caution">{#caution#}</p>
+		<p class="notice caution"><img src="{$FORUM_ADDRESS}/{$THEMES_DIR}/{$theme}/images/general-caution.svg" class="icon" alt="" height="20" width="20">{#caution#}</p>
 		<p>{#delete_bookmark_confirm#}</p>
 		<p><strong>{$bookmark.subject}</strong></p>
 		<form action="index.php" method="post" accept-charset="{#charset#}">
@@ -64,7 +64,7 @@
 	
 {elseif $action=='edit_bookmark'}
 	{if $errors}
-		<p class="notice caution">{#error_headline#}</p>
+		<p class="notice caution"><img src="{$FORUM_ADDRESS}/{$THEMES_DIR}/{$theme}/images/general-caution.svg" class="icon" alt="" height="20" width="20">{#error_headline#}</p>
 		<ul style="margin-bottom:25px;">
 		{section name=mysec loop=$errors}
 			<li>{assign var="error" value=$errors[mysec]}{$smarty.config.$error|replace:"[word]":$word}</li>

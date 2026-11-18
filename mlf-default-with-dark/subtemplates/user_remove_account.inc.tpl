@@ -1,8 +1,8 @@
 {config_load file=$language_file section="remove_user_account"}
 <h1>{#remove_user_account_h1#}</h1>
-<p class="notice caution">{#remove_user_account_warning#|replace:"[user_name]":$user_name}</p>
+<p class="notice caution"><img src="{$FORUM_ADDRESS}/{$THEMES_DIR}/{$theme}/images/general-caution.svg" class="icon" alt="" height="20" width="20">{#remove_user_account_warning#|replace:"[user_name]":$user_name}</p>
 {if $errors}
-<p class="notice caution">{#error_headline#}</p>
+<p class="notice caution"><img src="{$FORUM_ADDRESS}/{$THEMES_DIR}/{$theme}/images/general-caution.svg" class="icon" alt="" height="20" width="20">{#error_headline#}</p>
 <ul>
 {section name=mysec loop=$errors}
  {assign var="error" value=$errors[mysec]}
