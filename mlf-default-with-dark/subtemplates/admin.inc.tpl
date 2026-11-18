@@ -564,11 +564,11 @@
 <p><em>{#no_users#}</em></p>
 {/if}
 <ul class="adminmenu">
-<li><a href="index.php?mode=admin&amp;action=register"><img src="{$THEMES_DIR}/{$theme}/images/user-add.svg" alt="" width="18" height="18" /><span>{#add_user#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=reset_tou"><img src="{$THEMES_DIR}/{$theme}/images/file-edit.svg" alt="" width="18" height="18" /><span>{#reset_terms_of_use#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=reset_dps"><img src="{$THEMES_DIR}/{$theme}/images/file-edit.svg" alt="" width="18" height="18" /><span>{#reset_data_privacy_statement#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=email_list"><img src="{$THEMES_DIR}/{$theme}/images/e-mail-envelope.svg" alt="" width="18" height="18" /><span>{#email_list#}</span></a></li>
-<li><a href="index.php?mode=admin&amp;action=clear_userdata"><img src="{$THEMES_DIR}/{$theme}/images/delete-bin.svg" alt="" width="18" height="18" /><span>{#clear_userdata#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=register"><img src="{$THEMES_DIR}/{$theme}/images/user-add.svg" alt="" width="18" height="18" class="icon" /><span>{#add_user#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=reset_tou"><img src="{$THEMES_DIR}/{$theme}/images/file-edit.svg" alt="" width="18" height="18" class="icon" /><span>{#reset_terms_of_use#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=reset_dps"><img src="{$THEMES_DIR}/{$theme}/images/file-edit.svg" alt="" width="18" height="18" class="icon" /><span>{#reset_data_privacy_statement#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=email_list"><img src="{$THEMES_DIR}/{$theme}/images/e-mail-envelope.svg" alt="" width="18" height="18" class="icon" /><span>{#email_list#}</span></a></li>
+<li><a href="index.php?mode=admin&amp;action=clear_userdata"><img src="{$THEMES_DIR}/{$theme}/images/delete-bin.svg" alt="" width="18" height="18" class="icon" /><span>{#clear_userdata#}</span></a></li>
 </ul>
 {elseif $action=='edit_user'}
 {config_load file=$language_file section="user_edit"}
@@ -1140,7 +1140,7 @@
 {else}
 <p>{#no_pages#}</p>
 {/if}
-<ul class="adminmenu"><li><a href="index.php?mode=admin&amp;action=edit_page"><img src="{$THEMES_DIR}/{$theme}/images/file-add.svg" alt="" width="18" height="18" /><span>{#add_page_link#}</span></a></li></ul>
+<ul class="adminmenu"><li><a href="index.php?mode=admin&amp;action=edit_page"><img src="{$THEMES_DIR}/{$theme}/images/file-add.svg" alt="" width="18" height="18" class="icon" /><span>{#add_page_link#}</span></a></li></ul>
 {elseif $action=='edit_page'}
 {if $errors}
 <p class="notice caution">{#error_headline#}</p>
